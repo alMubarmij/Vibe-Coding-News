@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>البرمجة بالذكاء الاصطناعي — نشرة الروابط | الاثنين ٣ أغسطس ٢٠٢٦</title>
+<meta name="description" content="مدونة روابط يومية لأحدث أخبار البرمجة بالذكاء الاصطناعي وأدواتها.">
+<meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي — الاثنين ٣ أغسطس ٢٠٢٦">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#18181B; --on-primary:#FFFFFF; --secondary:#3F3F46;
+  --accent:#EC4899; --bg:#FAFAFA; --fg:#09090B; --muted:#E8ECF0;
+  --surface:#FFFFFF; --border:#E4E4E7; --ring:#18181B;
+  --dim:#52525B;
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s6:3rem; --s8:4rem;
+  --r:14px;
+  --shadow:0 1px 2px rgba(9,9,11,.04),0 8px 24px -12px rgba(9,9,11,.12);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --primary:#FAFAFA; --on-primary:#09090B; --secondary:#A1A1AA;
+    --bg:#09090B; --fg:#FAFAFA; --muted:#18181B;
+    --surface:#111114; --border:#27272A; --ring:#EC4899; --dim:#A1A1AA;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 8px 24px -12px rgba(0,0,0,.8);
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:'Tajawal',system-ui,sans-serif; font-size:17px; line-height:1.8;
+  font-weight:400; text-rendering:optimizeLegibility;
+  padding-inline:var(--s3); padding-block-end:var(--s8);
+}
+h1,h2,h3{font-family:'Cairo',system-ui,sans-serif;line-height:1.3;margin:0}
+a{color:inherit}
+.wrap{max-width:820px;margin-inline:auto}
+
+/* ── Header ─────────────────────────────── */
+.hero{padding-block:var(--s8) var(--s6);border-block-end:2px solid var(--fg)}
+.kicker{
+  display:inline-flex;align-items:center;gap:.5rem;font-family:'Cairo',sans-serif;
+  font-size:.78rem;font-weight:700;letter-spacing:.08em;color:var(--accent);
+  text-transform:uppercase;margin-block-end:var(--s2);
+}
+.kicker::before{content:"";width:28px;height:2px;background:var(--accent)}
+h1{
+  font-size:clamp(1.02rem,4.4vw,2.9rem);font-weight:900;letter-spacing:-.02em;
+  margin-block-end:var(--s2);white-space:nowrap;
+}
+.h1-accent{color:var(--accent)}
+.lede{font-size:1.06rem;color:var(--dim);max-width:60ch;margin:0 0 var(--s3)}
+.stamp{
+  display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);align-items:center;
+  font-family:'Cairo',sans-serif;font-size:.86rem;font-weight:600;color:var(--dim);
+}
+.stamp b{color:var(--fg)}
+
+/* ── Category chips ─────────────────────── */
+.chips{
+  display:flex;gap:var(--s1);flex-wrap:wrap;
+  padding-block:var(--s3);position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-block-end:1px solid var(--border);
+}
+.chip{
+  display:inline-flex;align-items:center;min-height:38px;padding:0 .95rem;
+  font-family:'Cairo',sans-serif;font-size:.83rem;font-weight:600;
+  border:1px solid var(--border);border-radius:999px;background:var(--surface);
+  text-decoration:none;cursor:pointer;transition:all .18s ease;
+}
+.chip:hover{border-color:var(--fg);background:var(--fg);color:var(--bg)}
+
+/* ── Items ──────────────────────────────── */
+.cat{padding-block:var(--s6) var(--s2);scroll-margin-top:80px}
+.cat-title{
+  font-size:clamp(1.35rem,3.6vw,1.85rem);font-weight:800;letter-spacing:-.02em;
+  display:flex;align-items:center;gap:.6rem;margin-block-end:var(--s3);
+}
+.cat-count{
+  font-size:.72rem;font-weight:700;color:var(--dim);background:var(--muted);
+  border-radius:999px;padding:.15rem .6rem;
+}
+.items{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.item{
+  position:relative;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
+  padding:var(--s3);padding-left:3.6rem;
+  transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+.item:hover{border-color:var(--fg);transform:translateY(-2px);box-shadow:var(--shadow)}
+.item-link{text-decoration:none;display:block}
+.item-title{
+  font-size:1.14rem;font-weight:700;letter-spacing:-.01em;
+  display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;
+}
+.item-link:hover .item-title{color:var(--accent)}
+.item-summary{margin:.6rem 0 var(--s2);color:var(--dim);font-size:.97rem}
+.item-foot{
+  display:flex;justify-content:space-between;align-items:center;gap:var(--s2);
+  flex-wrap:wrap;padding-block-start:var(--s1);border-block-start:1px dashed var(--border);
+}
+.item-meta{font-family:'Cairo',sans-serif;font-size:.78rem;color:var(--dim);font-weight:600}
+.item-url{
+  display:inline-flex;align-items:center;gap:.4rem;min-height:44px;
+  font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:700;
+  color:var(--accent);text-decoration:none;cursor:pointer;
+}
+.item-url svg{width:15px;height:15px;transition:transform .2s ease}
+.item-url:hover svg{transform:translateX(4px)}
+.badge{
+  font-family:'Cairo',sans-serif;font-size:.68rem;font-weight:700;
+  padding:.12rem .5rem;border-radius:999px;
+}
+.badge-video{background:var(--accent);color:#fff}
+
+/* ── Copy button (left edge of each card) ─ */
+.copy-btn{
+  position:absolute;top:var(--s2);left:var(--s2);
+  width:44px;height:44px;display:grid;place-items:center;
+  background:var(--muted);border:1px solid var(--border);border-radius:10px;
+  color:var(--dim);cursor:pointer;padding:0;
+  transition:all .18s ease;
+}
+.copy-btn:hover{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.copy-btn svg{width:17px;height:17px}
+.copy-btn .ic-done{display:none}
+.copy-btn.is-copied{background:var(--accent);border-color:var(--accent);color:#fff}
+.copy-btn.is-copied .ic-copy{display:none}
+.copy-btn.is-copied .ic-done{display:block}
+
+.toast{
+  position:fixed;bottom:var(--s3);left:50%;transform:translateX(-50%) translateY(140%);
+  background:var(--fg);color:var(--bg);padding:.7rem 1.3rem;border-radius:999px;
+  font-family:'Cairo',sans-serif;font-size:.86rem;font-weight:700;
+  z-index:60;opacity:0;transition:transform .28s cubic-bezier(.2,.8,.2,1),opacity .28s ease;
+  pointer-events:none;box-shadow:var(--shadow);
+}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* ── Reading progress bar ───────────────── */
+.progress{
+  position:fixed;top:0;right:0;left:0;height:3px;z-index:70;
+  background:transparent;pointer-events:none;
+}
+.progress-fill{
+  height:100%;width:0;background:var(--accent);
+  transform-origin:right center;transition:width .08s linear;
+}
+
+/* ── Header actions ─────────────────────── */
+.actions{display:flex;gap:var(--s1);flex-wrap:wrap;margin-block-start:var(--s3)}
+.act-btn{
+  display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:0 1rem;
+  font-family:'Cairo',sans-serif;font-size:.83rem;font-weight:700;
+  background:var(--surface);color:var(--fg);
+  border:1px solid var(--border);border-radius:999px;cursor:pointer;
+  transition:all .18s ease;
+}
+.act-btn:hover{border-color:var(--fg);background:var(--fg);color:var(--bg)}
+.act-btn svg{width:16px;height:16px}
+.act-btn[aria-pressed="true"]{
+  background:var(--accent);border-color:var(--accent);color:#fff;
+}
+
+/* ── Back to top ────────────────────────── */
+.to-top{
+  position:fixed;bottom:var(--s3);right:var(--s3);
+  width:48px;height:48px;display:grid;place-items:center;
+  background:var(--fg);color:var(--bg);border:none;border-radius:50%;
+  cursor:pointer;z-index:55;box-shadow:var(--shadow);
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .25s ease,transform .25s ease,visibility .25s;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:hover{background:var(--accent);color:#fff}
+.to-top svg{width:20px;height:20px}
+
+/* ── Corporate professional mode ────────── */
+body.corp{
+  --accent:#1D4ED8; --ring:#1D4ED8;
+  --bg:#FFFFFF; --surface:#FFFFFF; --muted:#F1F5F9;
+  --border:#CBD5E1; --fg:#0F172A; --dim:#475569;
+  --r:4px;
+  font-size:16px;
+}
+@media (prefers-color-scheme:dark){
+  body.corp{
+    --accent:#60A5FA; --ring:#60A5FA;
+    --bg:#0B1120; --surface:#111827; --muted:#1E293B;
+    --border:#334155; --fg:#F1F5F9; --dim:#94A3B8;
+  }
+}
+body.corp h1{font-weight:700;letter-spacing:-.01em}
+body.corp .kicker{color:var(--dim)}
+body.corp .kicker::before{background:var(--dim)}
+body.corp .cat-title{font-weight:700}
+body.corp .item{border-radius:4px}
+body.corp .item:hover{transform:none;border-color:var(--accent)}
+body.corp .chip,body.corp .act-btn,body.corp .arc-item{border-radius:4px}
+body.corp .to-top{border-radius:4px}
+body.corp .badge{border-radius:3px}
+body.corp .item-title{font-weight:600}
+body.corp .hero{border-block-end-width:1px}
+body.corp .archive{border-block-start-width:1px}
+
+/* ── Archive ────────────────────────────── */
+.archive{margin-block-start:var(--s8);padding-block-start:var(--s4);border-block-start:2px solid var(--fg)}
+.archive h2{font-size:1.5rem;font-weight:800;margin-block-end:var(--s3)}
+.arc-list{display:grid;gap:.4rem}
+.arc-item{
+  display:flex;justify-content:space-between;align-items:center;gap:var(--s2);
+  min-height:48px;padding:.35rem var(--s2);border:1px solid var(--border);
+  border-radius:10px;background:var(--surface);text-decoration:none;
+  font-family:'Cairo',sans-serif;font-size:.88rem;font-weight:600;
+  cursor:pointer;transition:all .18s ease;
+}
+.arc-item:hover{border-color:var(--fg);transform:translateX(-3px)}
+.arc-item.is-current{border-color:var(--accent);border-inline-start-width:4px}
+.arc-count{font-size:.76rem;color:var(--dim);font-weight:500}
+
+footer{
+  margin-block-start:var(--s8);padding-block-start:var(--s3);
+  border-block-start:1px solid var(--border);
+  font-size:.85rem;color:var(--dim);text-align:center;
+}
+footer a{color:var(--accent);text-decoration:none;font-weight:600}
+
+:where(a,button):focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+@media (max-width:480px){
+  body{padding-inline:var(--s2);font-size:16px}
+  .hero{padding-block:var(--s4) var(--s3)}
+}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="kicker">نشرة يومية</span>
+    <h1>البرمجة <span class="h1-accent">بالذكاء الاصطناعي</span></h1>
+    <p class="lede">مختارات يومية من أحدث ما نُشر حول البرمجة بالذكاء الاصطناعي: أدوات جديدة، أخبار عاجلة، منصات، تحليلات نقدية، وشروح ودورات. كل عنصر برابط مصدره الأصلي.</p>
+    <div class="stamp">
+      <span>ــ 🗓️ <b>الاثنين ٣ أغسطس ٢٠٢٦</b></span>
+      <span>ــ 🔗 <b>٢١</b> رابطاً</span>
+    </div>
+    <div class="actions">
+      <button class="act-btn" type="button" id="corpToggle" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="7" width="18" height="13" rx="2"/>
+          <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/>
+        </svg>
+        <span id="corpLabel">النمط المؤسسي</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="chips" aria-label="الفئات">
+      <a class="chip" href="#cat-أخبار-عاجلة">أخبار عاجلة</a>
+      <a class="chip" href="#cat-أدوات-جديدة">أدوات جديدة</a>
+      <a class="chip" href="#cat-المنصات">المنصات</a>
+      <a class="chip" href="#cat-مقالات-بارزة">مقالات بارزة</a>
+      <a class="chip" href="#cat-تحليلات-ونقد">تحليلات ونقد</a>
+      <a class="chip" href="#cat-شروح-ودورات">شروح ودورات</a>
+  </nav>
+
+  <main>
+    <section class="cat" id="cat-أخبار-عاجلة">
+      <h2 class="cat-title">ــ 🚨 أخبار عاجلة <span class="cat-count">٣</span></h2>
+      <ul class="items">
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ ديزني تستغني عن GitHub Copilot وتعتمد Codex من OpenAI**
+&gt; أفادت التقارير بأن ديزني أوقفت اعتمادها على GitHub Copilot لصالح Codex من OpenAI في أجزاء من فرقها الهندسية، وهو تحوّل مؤسسي لافت في سوق أدوات البرمجة بالذكاء الاصطناعي. تكشف هذه الخطوة عن احتدام المنافسة بين مايكروسوفت وOpenAI على وكلاء البرمجة.
+https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTVE2Q2R3QTU1WlZybE1acUtvSHlEaFhLZVVvSldERjhxbUlZSzlqbkVrOUVNSWRiS0JxRnJkNjZPVUpKd0NhM1BJNkpYRDFfOENnYjV3RWx2Qm9QcTd2dHRHck9zeTdwZ2hBSWdzV0dmNlRaRHY3dTM4dHpKN1g0a19SWEw0VnJDRkk1SW5kbExwNTFXN0N2NkhUZU9vRDZjeFEtdzlseWlxdw?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTVE2Q2R3QTU1WlZybE1acUtvSHlEaFhLZVVvSldERjhxbUlZSzlqbkVrOUVNSWRiS0JxRnJkNjZPVUpKd0NhM1BJNkpYRDFfOENnYjV3RWx2Qm9QcTd2dHRHck9zeTdwZ2hBSWdzV0dmNlRaRHY3dTM4dHpKN1g0a19SWEw0VnJDRkk1SW5kbExwNTFXN0N2NkhUZU9vRDZjeFEtdzlseWlxdw?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">ديزني تستغني عن GitHub Copilot وتعتمد Codex من OpenAI</h3>
+          </a>
+          <p class="item-summary">أفادت التقارير بأن ديزني أوقفت اعتمادها على GitHub Copilot لصالح Codex من OpenAI في أجزاء من فرقها الهندسية، وهو تحوّل مؤسسي لافت في سوق أدوات البرمجة بالذكاء الاصطناعي. تكشف هذه الخطوة عن احتدام المنافسة بين مايكروسوفت وOpenAI على وكلاء البرمجة.</p>
+          <div class="item-foot">
+            <span class="item-meta">Google News · ٢٩-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTVE2Q2R3QTU1WlZybE1acUtvSHlEaFhLZVVvSldERjhxbUlZSzlqbkVrOUVNSWRiS0JxRnJkNjZPVUpKd0NhM1BJNkpYRDFfOENnYjV3RWx2Qm9QcTd2dHRHck9zeTdwZ2hBSWdzV0dmNlRaRHY3dTM4dHpKN1g0a19SWEw0VnJDRkk1SW5kbExwNTFXN0N2NkhUZU9vRDZjeFEtdzlseWlxdw?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ تقييم أمني من Anthropic: نموذج Claude ينشر شيفرة خبيثة ويهاجم ثلاث شركات حقيقية**
+&gt; نشرت Anthropic نتائج تقييم للأمن السيبراني نشر فيه نموذج Claude شيفرة خبيثة ونفّذ هجمات فعلية ضد ثلاث شركات ضمن بيئة اختبار محكومة. أشعلت هذه الإفصاحات النقاش حول مخاطر الاستخدام المزدوج لوكلاء البرمجة المستقلين.
+https://news.google.com/rss/articles/CBMixgFBVV95cUxPTTRWNDd6Z3FzOGRseFdhbVR1c1QtMkp0NmNHMGpSWlVMTFhRVklySFppd0x6al9FVXMyOHlaci02Um1JUWdvM3ZUSFdXeTQ4a29MSDh0bHdvTHpCbUdXZFF5dnVaYnRUOVo2MFpQbzFheDV4aWg2cnRQN2RzQUJqVFk5UWZrdXVQQy1rSXg1MlE1WFA0TFZjaXhkbTZQOTE4Y0ZzbXUyOE94UGpJUkluSDFwZmlrVE5HcEk0MU1nZTRMVm5abUE?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPTTRWNDd6Z3FzOGRseFdhbVR1c1QtMkp0NmNHMGpSWlVMTFhRVklySFppd0x6al9FVXMyOHlaci02Um1JUWdvM3ZUSFdXeTQ4a29MSDh0bHdvTHpCbUdXZFF5dnVaYnRUOVo2MFpQbzFheDV4aWg2cnRQN2RzQUJqVFk5UWZrdXVQQy1rSXg1MlE1WFA0TFZjaXhkbTZQOTE4Y0ZzbXUyOE94UGpJUkluSDFwZmlrVE5HcEk0MU1nZTRMVm5abUE?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">تقييم أمني من Anthropic: نموذج Claude ينشر شيفرة خبيثة ويهاجم ثلاث شركات حقيقية</h3>
+          </a>
+          <p class="item-summary">نشرت Anthropic نتائج تقييم للأمن السيبراني نشر فيه نموذج Claude شيفرة خبيثة ونفّذ هجمات فعلية ضد ثلاث شركات ضمن بيئة اختبار محكومة. أشعلت هذه الإفصاحات النقاش حول مخاطر الاستخدام المزدوج لوكلاء البرمجة المستقلين.</p>
+          <div class="item-foot">
+            <span class="item-meta">Google News · ٣١-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPTTRWNDd6Z3FzOGRseFdhbVR1c1QtMkp0NmNHMGpSWlVMTFhRVklySFppd0x6al9FVXMyOHlaci02Um1JUWdvM3ZUSFdXeTQ4a29MSDh0bHdvTHpCbUdXZFF5dnVaYnRUOVo2MFpQbzFheDV4aWg2cnRQN2RzQUJqVFk5UWZrdXVQQy1rSXg1MlE1WFA0TFZjaXhkbTZQOTE4Y0ZzbXUyOE94UGpJUkluSDFwZmlrVE5HcEk0MU1nZTRMVm5abUE?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ ثغرة حرجة بتصنيف CVE ناتجة عن خلل «تهيّأ» للذكاء الاصطناعي في شيفرة SQLite**
+&gt; تناول نقاش واسع على Hacker News إصدار تصنيف CVE حرج لثغرة أنتجها مساعد برمجي بالذكاء الاصطناعي عبر «هلوسة» شيفرة SQLite. يمثّل ذلك مثالاً ملموساً وحديثاً على المخاطر الأمنية التي تلاحق البرمجة بالذكاء الاصطناعي.
+https://news.ycombinator.com/item?id=49156891">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.ycombinator.com/item?id=49156891" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">ثغرة حرجة بتصنيف CVE ناتجة عن خلل «تهيّأ» للذكاء الاصطناعي في شيفرة SQLite</h3>
+          </a>
+          <p class="item-summary">تناول نقاش واسع على Hacker News إصدار تصنيف CVE حرج لثغرة أنتجها مساعد برمجي بالذكاء الاصطناعي عبر «هلوسة» شيفرة SQLite. يمثّل ذلك مثالاً ملموساً وحديثاً على المخاطر الأمنية التي تلاحق البرمجة بالذكاء الاصطناعي.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ٠٣-٠٨-٢٠٢٦</span>
+            <a class="item-url" href="https://news.ycombinator.com/item?id=49156891" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-أدوات-جديدة">
+      <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">٣</span></h2>
+      <ul class="items">
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ OpenAI تطلق جهاز Codex Micro المخصص للبرمجة بالذكاء الاصطناعي**
+&gt; كشفت OpenAI عن «Codex Micro»، جهاز صغير مخصص يدمج وكيل برمجة بالذكاء الاصطناعي داخل محطة العمل، وبسعر يقارب ٢٣٠ دولاراً عند الإطلاق. تشير التغطيات إلى أنه تحوّل سريعاً إلى قطعة يقتنيها الهواة وتُباع بأضعاف سعرها.
+https://news.google.com/rss/articles/CBMia0FVX3lxTE84c3g3a2hDclJ1YlZGenJmbi0tMEhscG1DSUdLb0Qyc20tSHZZdmlBdmw4cDF5YnJnTmZzRWZ2OFJOMkdvOC1NZV92Q2tTYTFXQ0NHNG1ieE13TTBIaVNPQTJVb3A4SlZnNzJV?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMia0FVX3lxTE84c3g3a2hDclJ1YlZGenJmbi0tMEhscG1DSUdLb0Qyc20tSHZZdmlBdmw4cDF5YnJnTmZzRWZ2OFJOMkdvOC1NZV92Q2tTYTFXQ0NHNG1ieE13TTBIaVNPQTJVb3A4SlZnNzJV?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">OpenAI تطلق جهاز Codex Micro المخصص للبرمجة بالذكاء الاصطناعي</h3>
+          </a>
+          <p class="item-summary">كشفت OpenAI عن «Codex Micro»، جهاز صغير مخصص يدمج وكيل برمجة بالذكاء الاصطناعي داخل محطة العمل، وبسعر يقارب ٢٣٠ دولاراً عند الإطلاق. تشير التغطيات إلى أنه تحوّل سريعاً إلى قطعة يقتنيها الهواة وتُباع بأضعاف سعرها.</p>
+          <div class="item-foot">
+            <span class="item-meta">Google News · ٢٤-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMia0FVX3lxTE84c3g3a2hDclJ1YlZGenJmbi0tMEhscG1DSUdLb0Qyc20tSHZZdmlBdmw4cDF5YnJnTmZzRWZ2OFJOMkdvOC1NZV92Q2tTYTFXQ0NHNG1ieE13TTBIaVNPQTJVb3A4SlZnNzJV?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Cursor تطلق برنامج شركاء قياس الأداء Benchmark Partners**
+&gt; أطلقت Cursor برنامج «شركاء قياس الأداء» لتوحيد طريقة قياس أداء وكلاء البرمجة والإفصاح عنه. تعكس المبادرة توجهاً نحو تقييمات شفافة وقابلة للمقارنة مع نضج سوق البرمجة بالذكاء الاصطناعي.
+https://news.google.com/rss/articles/CBMiU0FVX3lxTE1TTW5DR1F2VGloRlEyNlotZXNzWDFqY1VXMHZXVHhUYmJLSkVOQVFGUWM2ZzN6MThzdWtZaUNMZUg0cG5MMk1lTnpsWnRybEVYT1Mw?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1TTW5DR1F2VGloRlEyNlotZXNzWDFqY1VXMHZXVHhUYmJLSkVOQVFGUWM2ZzN6MThzdWtZaUNMZUg0cG5MMk1lTnpsWnRybEVYT1Mw?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Cursor تطلق برنامج شركاء قياس الأداء Benchmark Partners</h3>
+          </a>
+          <p class="item-summary">أطلقت Cursor برنامج «شركاء قياس الأداء» لتوحيد طريقة قياس أداء وكلاء البرمجة والإفصاح عنه. تعكس المبادرة توجهاً نحو تقييمات شفافة وقابلة للمقارنة مع نضج سوق البرمجة بالذكاء الاصطناعي.</p>
+          <div class="item-foot">
+            <span class="item-meta">Google News · ٣٠-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMiU0FVX3lxTE1TTW5DR1F2VGloRlEyNlotZXNzWDFqY1VXMHZXVHhUYmJLSkVOQVFGUWM2ZzN6MThzdWtZaUNMZUg0cG5MMk1lTnpsWnRybEVYT1Mw?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Perplexity تفتح مصدر أداة Numbat لمراقبة وكلاء البرمجة الخطرين**
+&gt; فتحت Perplexity مصدر أداة Numbat التي تراقب وكلاء البرمجة وترصد العمليات الخطرة وتحجبها. تنتمي الأداة إلى فئة متنامية من «حواجز الأمان» الهادفة إلى جعل البرمجة بالذكاء الاصطناعي أكثر أماناً في بيئات المؤسسات.
+https://news.google.com/rss/articles/CBMiugFBVV95cUxNemRFWDVhMWxwMHhqQndmWGJUcHU1QjRjc3JJay1jS3FFRzlDSVhVLVFlS1FmQ010YW1wdjRKbXRkVTlLRGRmVnVTb3BDdWk0Q0g0YlJ6MWI4N2JYcktuLXIxNW9XUVI4Sk5UUl9ZNjB6eVk4M1JjR0p3N0ZsWG1Scm1BRG5PWGFwNjE1amZsazVmOXlocmlod3Y2aWZYZTJQdEhodTBIa2N4VWhtVS1wZmt5V3RvOHBwQ2c?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNemRFWDVhMWxwMHhqQndmWGJUcHU1QjRjc3JJay1jS3FFRzlDSVhVLVFlS1FmQ010YW1wdjRKbXRkVTlLRGRmVnVTb3BDdWk0Q0g0YlJ6MWI4N2JYcktuLXIxNW9XUVI4Sk5UUl9ZNjB6eVk4M1JjR0p3N0ZsWG1Scm1BRG5PWGFwNjE1amZsazVmOXlocmlod3Y2aWZYZTJQdEhodTBIa2N4VWhtVS1wZmt5V3RvOHBwQ2c?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Perplexity تفتح مصدر أداة Numbat لمراقبة وكلاء البرمجة الخطرين</h3>
+          </a>
+          <p class="item-summary">فتحت Perplexity مصدر أداة Numbat التي تراقب وكلاء البرمجة وترصد العمليات الخطرة وتحجبها. تنتمي الأداة إلى فئة متنامية من «حواجز الأمان» الهادفة إلى جعل البرمجة بالذكاء الاصطناعي أكثر أماناً في بيئات المؤسسات.</p>
+          <div class="item-foot">
+            <span class="item-meta">Google News · ٣١-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMiugFBVV95cUxNemRFWDVhMWxwMHhqQndmWGJUcHU1QjRjc3JJay1jS3FFRzlDSVhVLVFlS1FmQ010YW1wdjRKbXRkVTlLRGRmVnVTb3BDdWk0Q0g0YlJ6MWI4N2JYcktuLXIxNW9XUVI4Sk5UUl9ZNjB6eVk4M1JjR0p3N0ZsWG1Scm1BRG5PWGFwNjE1amZsazVmOXlocmlod3Y2aWZYZTJQdEhodTBIa2N4VWhtVS1wZmt5V3RvOHBwQ2c?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-المنصات">
+      <h2 class="cat-title">ــ 🏗️ المنصات <span class="cat-count">٣</span></h2>
+      <ul class="items">
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ محرّك اللقطات في Replit: التقنية التي تجعل وكلاء الذكاء الاصطناعي آمنين**
+&gt; نشرت Replit تحليلاً تقنياً معمّقاً لمحرّك اللقطات Snapshot Engine الذي يتيح لوكيلها التراجع إلى حالة سليمة معروفة حين تُفسد الشيفرة المولّدة المشروع. يقدّم المقال التنفيذ القابل للتراجع بوصفه ركيزة الأمان التي تمكّن غير المتخصصين من إطلاق تطبيقاتهم دون إتلاف بيئة عملهم.
+https://replit.com/blog/inside-replits-snapshot-engine">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://replit.com/blog/inside-replits-snapshot-engine" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">محرّك اللقطات في Replit: التقنية التي تجعل وكلاء الذكاء الاصطناعي آمنين</h3>
+          </a>
+          <p class="item-summary">نشرت Replit تحليلاً تقنياً معمّقاً لمحرّك اللقطات Snapshot Engine الذي يتيح لوكيلها التراجع إلى حالة سليمة معروفة حين تُفسد الشيفرة المولّدة المشروع. يقدّم المقال التنفيذ القابل للتراجع بوصفه ركيزة الأمان التي تمكّن غير المتخصصين من إطلاق تطبيقاتهم دون إتلاف بيئة عملهم.</p>
+          <div class="item-foot">
+            <span class="item-meta">Replit Blog · ٢١-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://replit.com/blog/inside-replits-snapshot-engine" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ نماذج OpenAI وCodex والوكلاء المُدارون تصل إلى AWS**
+&gt; أعلنت OpenAI إتاحة نماذجها ووكيل Codex والوكلاء المُدارين على AWS، ما يمكّن المؤسسات من تشغيل وكلاء البرمجة داخل حساباتها السحابية. يمثّل ذلك توسعاً مهماً في التوزيع يضع منظومة OpenAI البرمجية جنباً إلى جنب مع Bedrock.
+https://news.google.com/rss/articles/CBMiWEFVX3lxTE8yUmlDZ29pZlZFNHNfSzBVbXkxRkZXNTZ0cjVpOG5DWHMtTGpNOV82dG5WeVZpbVktQjViSHRRZ0lEVWx3N0ZIZGo0UllDV3A4Z1R1R29HbzU?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE8yUmlDZ29pZlZFNHNfSzBVbXkxRkZXNTZ0cjVpOG5DWHMtTGpNOV82dG5WeVZpbVktQjViSHRRZ0lEVWx3N0ZIZGo0UllDV3A4Z1R1R29HbzU?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">نماذج OpenAI وCodex والوكلاء المُدارون تصل إلى AWS</h3>
+          </a>
+          <p class="item-summary">أعلنت OpenAI إتاحة نماذجها ووكيل Codex والوكلاء المُدارين على AWS، ما يمكّن المؤسسات من تشغيل وكلاء البرمجة داخل حساباتها السحابية. يمثّل ذلك توسعاً مهماً في التوزيع يضع منظومة OpenAI البرمجية جنباً إلى جنب مع Bedrock.</p>
+          <div class="item-foot">
+            <span class="item-meta">Google News · ٣٠-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE8yUmlDZ29pZlZFNHNfSzBVbXkxRkZXNTZ0cjVpOG5DWHMtTGpNOV82dG5WeVZpbVktQjViSHRRZ0lEVWx3N0ZIZGo0UllDV3A4Z1R1R29HbzU?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Snowflake تنضم إلى برنامج Cursor لمساعدة المؤسسات على توظيف الذكاء الاصطناعي**
+&gt; انضمت Snowflake إلى برنامج شركاء Cursor، فدمجت منصتها للبيانات ليتمكّن مطورو المؤسسات من الاستعلام والبناء عليها مباشرة من داخل المحرّر. يكشف ذلك عن سعي مزوّدي البيانات التقليديين للبقاء داخل حلقة عمل المطوّر.
+https://news.google.com/rss/articles/CBMioAFBVV95cUxQVUhxNzlaSXZoZlBnWGFhaEFVcG9zcHlkWXRJOVpEVFZ1VjFnUjktRFZsYVNUUjZTc3NULW1MY2FkWWd4c1pZQ3g4WUZKRWNBOWRXM1Y3cFRVbHl0Zm84SEhlWHZyRW5fY212c1JGa3FlVENQQWFYbVRGMHlPNHZtaW5aLWdPM0xWOTgxaDJCNGlqazUyY3R6M2dneW1Oa0dx?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQVUhxNzlaSXZoZlBnWGFhaEFVcG9zcHlkWXRJOVpEVFZ1VjFnUjktRFZsYVNUUjZTc3NULW1MY2FkWWd4c1pZQ3g4WUZKRWNBOWRXM1Y3cFRVbHl0Zm84SEhlWHZyRW5fY212c1JGa3FlVENQQWFYbVRGMHlPNHZtaW5aLWdPM0xWOTgxaDJCNGlqazUyY3R6M2dneW1Oa0dx?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Snowflake تنضم إلى برنامج Cursor لمساعدة المؤسسات على توظيف الذكاء الاصطناعي</h3>
+          </a>
+          <p class="item-summary">انضمت Snowflake إلى برنامج شركاء Cursor، فدمجت منصتها للبيانات ليتمكّن مطورو المؤسسات من الاستعلام والبناء عليها مباشرة من داخل المحرّر. يكشف ذلك عن سعي مزوّدي البيانات التقليديين للبقاء داخل حلقة عمل المطوّر.</p>
+          <div class="item-foot">
+            <span class="item-meta">Google News · ٠١-٠٨-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQVUhxNzlaSXZoZlBnWGFhaEFVcG9zcHlkWXRJOVpEVFZ1VjFnUjktRFZsYVNUUjZTc3NULW1MY2FkWWd4c1pZQ3g4WUZKRWNBOWRXM1Y3cFRVbHl0Zm84SEhlWHZyRW5fY212c1JGa3FlVENQQWFYbVRGMHlPNHZtaW5aLWdPM0xWOTgxaDJCNGlqazUyY3R6M2dneW1Oa0dx?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-مقالات-بارزة">
+      <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٣</span></h2>
+      <ul class="items">
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ مبتكر Claude Code يدعوك إلى الكفّ عن الإدارة التفصيلية للوكلاء**
+&gt; يرى المهندس صاحب Claude Code في هذا الحوار أن النتائج تتحسّن حين تمنح الوكيل استقلالية ونيّة واضحة بدل توجيهه خطوة بخطوة. يعكس الحوار نضج النقاش حول القدر المناسب من التحكّم في وكلاء البرمجة.
+https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWE9HZ3gzNnZRMTEyWkc5RXVRT0RWMjB4MHcxZDZzX0lzMHVGbi15cU5HQUFteFpwdXBGUGFDQ3JhbmhLbVZ6VkZPU1lHR01PVzJhV0RRVW52ODQ0R3JrOFFmMmVuRWpXNmJjaHNLV1Z1ckxqWU10LUxfbThhVFB6TFV4ZkN6N0t0SDZjSFZ5WVVoR0ZlYWRYZ0NiTXgxcnlvcHViNHFHalI?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWE9HZ3gzNnZRMTEyWkc5RXVRT0RWMjB4MHcxZDZzX0lzMHVGbi15cU5HQUFteFpwdXBGUGFDQ3JhbmhLbVZ6VkZPU1lHR01PVzJhV0RRVW52ODQ0R3JrOFFmMmVuRWpXNmJjaHNLV1Z1ckxqWU10LUxfbThhVFB6TFV4ZkN6N0t0SDZjSFZ5WVVoR0ZlYWRYZ0NiTXgxcnlvcHViNHFHalI?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">مبتكر Claude Code يدعوك إلى الكفّ عن الإدارة التفصيلية للوكلاء</h3>
+          </a>
+          <p class="item-summary">يرى المهندس صاحب Claude Code في هذا الحوار أن النتائج تتحسّن حين تمنح الوكيل استقلالية ونيّة واضحة بدل توجيهه خطوة بخطوة. يعكس الحوار نضج النقاش حول القدر المناسب من التحكّم في وكلاء البرمجة.</p>
+          <div class="item-foot">
+            <span class="item-meta">Google News · ٢٧-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWE9HZ3gzNnZRMTEyWkc5RXVRT0RWMjB4MHcxZDZzX0lzMHVGbi15cU5HQUFteFpwdXBGUGFDQ3JhbmhLbVZ6VkZPU1lHR01PVzJhV0RRVW52ODQ0R3JrOFFmMmVuRWpXNmJjaHNLV1Z1ckxqWU10LUxfbThhVFB6TFV4ZkN6N0t0SDZjSFZ5WVVoR0ZlYWRYZ0NiTXgxcnlvcHViNHFHalI?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ راهن على العناصر الأولية في البرمجة بالوكلاء**
+&gt; يذهب هذا المقال المطوّل إلى أن الأنظمة المستدامة للبرمجة بالوكلاء تُبنى على عناصر أولية صغيرة ومستقرة لا على خطوط أنابيب هشّة تمتد من الطرف إلى الطرف. يقدّم إسهاماً في فلسفة تصميم أدوات وكلاء البرمجة داخل الفرق.
+https://www.robinwieruch.de/agentic-coding-bet-on-primitives/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.robinwieruch.de/agentic-coding-bet-on-primitives/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">راهن على العناصر الأولية في البرمجة بالوكلاء</h3>
+          </a>
+          <p class="item-summary">يذهب هذا المقال المطوّل إلى أن الأنظمة المستدامة للبرمجة بالوكلاء تُبنى على عناصر أولية صغيرة ومستقرة لا على خطوط أنابيب هشّة تمتد من الطرف إلى الطرف. يقدّم إسهاماً في فلسفة تصميم أدوات وكلاء البرمجة داخل الفرق.</p>
+          <div class="item-foot">
+            <span class="item-meta">robinwieruch.de · ٠٣-٠٨-٢٠٢٦</span>
+            <a class="item-url" href="https://www.robinwieruch.de/agentic-coding-bet-on-primitives/" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ منظومة CUDA من Nvidia تواجه تهديدات جديدة من وكلاء البرمجة**
+&gt; ذكرت Business Insider أن وكلاء البرمجة بدأوا يولّدون شيفرة معالجة رسومية عابرة للمنصات تقلّل الاعتماد على CUDA المكتوبة يدوياً، ما يهدد قبضة Nvidia على السوق. يصوّر المقال البرمجة بالوكلاء عاملاً محتملاً لزعزعة منظومة CUDA.
+https://www.businessinsider.com/nvidia-cuda-new-threats-ai-coding-agents-2026-8">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.businessinsider.com/nvidia-cuda-new-threats-ai-coding-agents-2026-8" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">منظومة CUDA من Nvidia تواجه تهديدات جديدة من وكلاء البرمجة</h3>
+          </a>
+          <p class="item-summary">ذكرت Business Insider أن وكلاء البرمجة بدأوا يولّدون شيفرة معالجة رسومية عابرة للمنصات تقلّل الاعتماد على CUDA المكتوبة يدوياً، ما يهدد قبضة Nvidia على السوق. يصوّر المقال البرمجة بالوكلاء عاملاً محتملاً لزعزعة منظومة CUDA.</p>
+          <div class="item-foot">
+            <span class="item-meta">Business Insider · ٠٣-٠٨-٢٠٢٦</span>
+            <a class="item-url" href="https://www.businessinsider.com/nvidia-cuda-new-threats-ai-coding-agents-2026-8" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-تحليلات-ونقد">
+      <h2 class="cat-title">ــ 🧭 تحليلات ونقد <span class="cat-count">٥</span></h2>
+      <ul class="items">
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ تطبيقات مبنية بالذكاء الاصطناعي تعجّ بثغرات أمنية قابلة للاستغلال**
+&gt; أفادت SecurityWeek بأن التطبيقات المنتَجة عبر البرمجة بالذكاء الاصطناعي تُطلَق غالباً بثغرات قابلة للاستغلال لأن المستخدمين يقبلون مخرجات النموذج دون مراجعة. يستعرض التقرير حوادث حديثة أدخلت فيها الشيفرة المولّدة ثغرات حقن SQL وتجاوز المصادقة إلى بيئات الإنتاج.
+https://news.google.com/rss/articles/CBMijgFBVV95cUxQd3lrTm1GTUJmQ3RWQWl4eXlnMUViTHVZRUdXckp2VGxVTkp0TmFRRG83Z080d19zektOTldSOWJVNmYtQ05ZYTBGRDdNLXg3bGRESGFXalhBcGxsYVY0eFgzVkNTd19DYlM4TlJnb0RYd1gzbnBJYTYwd0dYdU5GMGxGcTcxUHFCcFlOajNB0gGTAUFVX3lxTE5UTHFram1mazBYRlVmMWVOa0ZyOEltUHRhUFNMeWZhXzc2bzB2VUh4Sm5ObTByb1dZY19rY2d3YkNobUF0U0E3QTJkN1p0RGEtd0ppTVZ2RnZSc3dSUUc1WlZMRzRyNndVSXdGVnA4N3psWURDZlBRZ0J3SU04ZXROYU91WE1LMmRLbmpwYnlJRUZRcw?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQd3lrTm1GTUJmQ3RWQWl4eXlnMUViTHVZRUdXckp2VGxVTkp0TmFRRG83Z080d19zektOTldSOWJVNmYtQ05ZYTBGRDdNLXg3bGRESGFXalhBcGxsYVY0eFgzVkNTd19DYlM4TlJnb0RYd1gzbnBJYTYwd0dYdU5GMGxGcTcxUHFCcFlOajNB0gGTAUFVX3lxTE5UTHFram1mazBYRlVmMWVOa0ZyOEltUHRhUFNMeWZhXzc2bzB2VUh4Sm5ObTByb1dZY19rY2d3YkNobUF0U0E3QTJkN1p0RGEtd0ppTVZ2RnZSc3dSUUc1WlZMRzRyNndVSXdGVnA4N3psWURDZlBRZ0J3SU04ZXROYU91WE1LMmRLbmpwYnlJRUZRcw?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">تطبيقات مبنية بالذكاء الاصطناعي تعجّ بثغرات أمنية قابلة للاستغلال</h3>
+          </a>
+          <p class="item-summary">أفادت SecurityWeek بأن التطبيقات المنتَجة عبر البرمجة بالذكاء الاصطناعي تُطلَق غالباً بثغرات قابلة للاستغلال لأن المستخدمين يقبلون مخرجات النموذج دون مراجعة. يستعرض التقرير حوادث حديثة أدخلت فيها الشيفرة المولّدة ثغرات حقن SQL وتجاوز المصادقة إلى بيئات الإنتاج.</p>
+          <div class="item-foot">
+            <span class="item-meta">SecurityWeek · ٢٢-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQd3lrTm1GTUJmQ3RWQWl4eXlnMUViTHVZRUdXckp2VGxVTkp0TmFRRG83Z080d19zektOTldSOWJVNmYtQ05ZYTBGRDdNLXg3bGRESGFXalhBcGxsYVY0eFgzVkNTd19DYlM4TlJnb0RYd1gzbnBJYTYwd0dYdU5GMGxGcTcxUHFCcFlOajNB0gGTAUFVX3lxTE5UTHFram1mazBYRlVmMWVOa0ZyOEltUHRhUFNMeWZhXzc2bzB2VUh4Sm5ObTByb1dZY19rY2d3YkNobUF0U0E3QTJkN1p0RGEtd0ppTVZ2RnZSc3dSUUc1WlZMRzRyNndVSXdGVnA4N3psWURDZlBRZ0J3SU04ZXROYU91WE1LMmRLbmpwYnlJRUZRcw?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ بين الابتكار والاستقرار: مخاطر البرمجة بالذكاء الاصطناعي في القطاع الحكومي**
+&gt; فحصت GovTech التوتر بين سرعة البرمجة بالذكاء الاصطناعي وما تفرضه من أعباء حوكمة ومعايير على برمجيات القطاع العام. ويخلص المقال إلى أن الجهات الحكومية تحتاج ضوابط وخطوط مراجعة قبل التوسّع في تبنّي التوليد الآلي للشيفرة.
+https://news.google.com/rss/articles/CBMikwFBVV95cUxQMWFqUzlmYjhvUll6dmp0RGhuYjBBUEtYeXI3RWFZNXVFT2xOQTBmYUZnREZldUN5RkZoQi1rUjJYRVFaSFdSY2s0YzRpcjBSd2cwMEtBZEJRZl9lS25rcUZkdG9tWjZmRGlXTm40Y1VMZnN4ZlZYNHdETGFtcXA3VDR3Z3g5RW1BVmNwZ0E0UFluMmc?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxQMWFqUzlmYjhvUll6dmp0RGhuYjBBUEtYeXI3RWFZNXVFT2xOQTBmYUZnREZldUN5RkZoQi1rUjJYRVFaSFdSY2s0YzRpcjBSd2cwMEtBZEJRZl9lS25rcUZkdG9tWjZmRGlXTm40Y1VMZnN4ZlZYNHdETGFtcXA3VDR3Z3g5RW1BVmNwZ0E0UFluMmc?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">بين الابتكار والاستقرار: مخاطر البرمجة بالذكاء الاصطناعي في القطاع الحكومي</h3>
+          </a>
+          <p class="item-summary">فحصت GovTech التوتر بين سرعة البرمجة بالذكاء الاصطناعي وما تفرضه من أعباء حوكمة ومعايير على برمجيات القطاع العام. ويخلص المقال إلى أن الجهات الحكومية تحتاج ضوابط وخطوط مراجعة قبل التوسّع في تبنّي التوليد الآلي للشيفرة.</p>
+          <div class="item-foot">
+            <span class="item-meta">GovTech · ٢٤-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxQMWFqUzlmYjhvUll6dmp0RGhuYjBBUEtYeXI3RWFZNXVFT2xOQTBmYUZnREZldUN5RkZoQi1rUjJYRVFaSFdSY2s0YzRpcjBSd2cwMEtBZEJRZl9lS25rcUZkdG9tWjZmRGlXTm40Y1VMZnN4ZlZYNHdETGFtcXA3VDR3Z3g5RW1BVmNwZ0E0UFluMmc?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ تنسيق الوكلاء العشوائي سيقتلك: كيف أعدتُ بناء منظومة وكلاء البرمجة لدي**
+&gt; يعرض مطوّر تشريحاً لتجربته في تنسيق عدة وكلاء برمجة بأسلوب فضفاض، وكيف قاده ذلك إلى أنظمة معطوبة يصعب صيانتها، ثم كيف أعاد بناء منظومة أضيق وأكثر حتمية. يقدّم النص تحذيراً عملياً من التوسّع خارج حدود الوكيل الواحد.
+https://news.google.com/rss/articles/CBMisgFBVV95cUxPME11dU1XWmpfNHZ0U2ZBREdaZmZZMWU4b1J3Y0NId2tBZU1EMGFTVXJrT3NWSEFvZTIyWGFKMUgyT3dZMy04c1RYdU9zaXZzeXF2aWZUZGlVTUlpcXZfNmVzWVhmcU9LMTBsMTc4ZVZrYjJKVURCbzBWZldkdENfeXVWUms0dm5OWTViN3pJMjZ1dFJScGVQMU5lWERBZ0FrY0dQWUh4MDlFZ1ZrbkZLLU1B?oc=5">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPME11dU1XWmpfNHZ0U2ZBREdaZmZZMWU4b1J3Y0NId2tBZU1EMGFTVXJrT3NWSEFvZTIyWGFKMUgyT3dZMy04c1RYdU9zaXZzeXF2aWZUZGlVTUlpcXZfNmVzWVhmcU9LMTBsMTc4ZVZrYjJKVURCbzBWZldkdENfeXVWUms0dm5OWTViN3pJMjZ1dFJScGVQMU5lWERBZ0FrY0dQWUh4MDlFZ1ZrbkZLLU1B?oc=5" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">تنسيق الوكلاء العشوائي سيقتلك: كيف أعدتُ بناء منظومة وكلاء البرمجة لدي</h3>
+          </a>
+          <p class="item-summary">يعرض مطوّر تشريحاً لتجربته في تنسيق عدة وكلاء برمجة بأسلوب فضفاض، وكيف قاده ذلك إلى أنظمة معطوبة يصعب صيانتها، ثم كيف أعاد بناء منظومة أضيق وأكثر حتمية. يقدّم النص تحذيراً عملياً من التوسّع خارج حدود الوكيل الواحد.</p>
+          <div class="item-foot">
+            <span class="item-meta">Google News · ٢٧-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPME11dU1XWmpfNHZ0U2ZBREdaZmZZMWU4b1J3Y0NId2tBZU1EMGFTVXJrT3NWSEFvZTIyWGFKMUgyT3dZMy04c1RYdU9zaXZzeXF2aWZUZGlVTUlpcXZfNmVzWVhmcU9LMTBsMTc4ZVZrYjJKVURCbzBWZldkdENfeXVWUms0dm5OWTViN3pJMjZ1dFJScGVQMU5lWERBZ0FrY0dQWUh4MDlFZ1ZrbkZLLU1B?oc=5" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ تجنّب الدين المعرفي بإعادة كتابة شيفرة النموذج يدوياً**
+&gt; يرى منشور لاقى نقاشاً واسعاً على Hacker News أن «الدين المعرفي» يتراكم حين يقبل المطوّرون شيفرة مولّدة لا يفهمونها، وأن العلاج هو إعادة كتابتها يدوياً لا مراجعتها فحسب. أثار النقاش جدلاً حول قابلية هذه الممارسة للتوسّع في فرق الإنتاج.
+https://news.ycombinator.com/item?id=49157006">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.ycombinator.com/item?id=49157006" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">تجنّب الدين المعرفي بإعادة كتابة شيفرة النموذج يدوياً</h3>
+          </a>
+          <p class="item-summary">يرى منشور لاقى نقاشاً واسعاً على Hacker News أن «الدين المعرفي» يتراكم حين يقبل المطوّرون شيفرة مولّدة لا يفهمونها، وأن العلاج هو إعادة كتابتها يدوياً لا مراجعتها فحسب. أثار النقاش جدلاً حول قابلية هذه الممارسة للتوسّع في فرق الإنتاج.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ٠٣-٠٨-٢٠٢٦</span>
+            <a class="item-url" href="https://news.ycombinator.com/item?id=49157006" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ فجوة المؤسسات: من البرمجة بالذكاء الاصطناعي إلى الإنتاج**
+&gt; يناقش المقال الفجوة بين سهولة توليد نموذج أولي بالذكاء الاصطناعي وصعوبة تحويله إلى نظام مؤسسي جاهز للإنتاج. ويحدد متطلبات الحوكمة والاختبار والصيانة التي تفصل بين النموذج الأولي والمنتج.
+https://wolkensteiner.substack.com/p/the-enterprise-gap-from-vibe-coding">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://wolkensteiner.substack.com/p/the-enterprise-gap-from-vibe-coding" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">فجوة المؤسسات: من البرمجة بالذكاء الاصطناعي إلى الإنتاج</h3>
+          </a>
+          <p class="item-summary">يناقش المقال الفجوة بين سهولة توليد نموذج أولي بالذكاء الاصطناعي وصعوبة تحويله إلى نظام مؤسسي جاهز للإنتاج. ويحدد متطلبات الحوكمة والاختبار والصيانة التي تفصل بين النموذج الأولي والمنتج.</p>
+          <div class="item-foot">
+            <span class="item-meta">Substack · ٣١-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://wolkensteiner.substack.com/p/the-enterprise-gap-from-vibe-coding" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-شروح-ودورات">
+      <h2 class="cat-title">ــ 🎓 شروح ودورات <span class="cat-count">٤</span></h2>
+      <ul class="items">
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ دليل تعليمي: ابنِ تطبيقك الأول باستخدام Claude Code**
+&gt; درس تطبيقي من roadmap.sh يقود المبتدئ خطوة بخطوة لبناء تطبيق كامل باستخدام Claude Code، من تهيئة البيئة حتى النشر. يركّز على صياغة المطالبات وتقسيم المهام ومراجعة مخرجات الوكيل.
+https://roadmap.sh/vibe-coding/tutorial">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://roadmap.sh/vibe-coding/tutorial" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">دليل تعليمي: ابنِ تطبيقك الأول باستخدام Claude Code</h3>
+          </a>
+          <p class="item-summary">درس تطبيقي من roadmap.sh يقود المبتدئ خطوة بخطوة لبناء تطبيق كامل باستخدام Claude Code، من تهيئة البيئة حتى النشر. يركّز على صياغة المطالبات وتقسيم المهام ومراجعة مخرجات الوكيل.</p>
+          <div class="item-foot">
+            <span class="item-meta">roadmap.sh · ١٣-٠٤-٢٠٢٦</span>
+            <a class="item-url" href="https://roadmap.sh/vibe-coding/tutorial" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ البرمجة بالذكاء الاصطناعي للمبتدئين — دورة كاملة ٢٠٢٦**
+&gt; دورة مجانية كاملة على YouTube من Riley Brown تشرح البرمجة بالذكاء الاصطناعي من الصفر: اختيار الأدوات، كتابة المطالبات الفعّالة، بناء تطبيق حقيقي، ثم نشره. مناسبة لمن لا يملك خلفية برمجية سابقة، وتغطي الأخطاء الشائعة التي يقع فيها المبتدئون.
+https://www.youtube.com/watch?v=BpOsHF5Oj_I">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=BpOsHF5Oj_I" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">البرمجة بالذكاء الاصطناعي للمبتدئين — دورة كاملة ٢٠٢٦<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">دورة مجانية كاملة على YouTube من Riley Brown تشرح البرمجة بالذكاء الاصطناعي من الصفر: اختيار الأدوات، كتابة المطالبات الفعّالة، بناء تطبيق حقيقي، ثم نشره. مناسبة لمن لا يملك خلفية برمجية سابقة، وتغطي الأخطاء الشائعة التي يقع فيها المبتدئون.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · Riley Brown · ٠٧-٠٥-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=BpOsHF5Oj_I" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ كيف تبرمج بالذكاء الاصطناعي في ٢٠٢٦ — درس كامل للمبتدئين**
+&gt; يقدّم هذا الفيديو من Tech With Lucy جولة محدّثة على منظومة أدوات ٢٠٢٦، ويعرض سير عمل عملياً من الفكرة إلى التطبيق المنشور. يوازن بين شرح الأدوات وبين التحذير من الاعتماد الأعمى على مخرجات النموذج.
+https://www.youtube.com/watch?v=syrDx15PHCs">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=syrDx15PHCs" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">كيف تبرمج بالذكاء الاصطناعي في ٢٠٢٦ — درس كامل للمبتدئين<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">يقدّم هذا الفيديو من Tech With Lucy جولة محدّثة على منظومة أدوات ٢٠٢٦، ويعرض سير عمل عملياً من الفكرة إلى التطبيق المنشور. يوازن بين شرح الأدوات وبين التحذير من الاعتماد الأعمى على مخرجات النموذج.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · Tech With Lucy · ١٦-٠٢-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=syrDx15PHCs" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ الدليل الشامل للمبتدئين في البرمجة بالذكاء الاصطناعي**
+&gt; دليل مصوّر من Metics Media يشرح المفاهيم الأساسية للبرمجة بالذكاء الاصطناعي ويقارن بين أبرز الأدوات المتاحة للمبتدئ. يختم بمشروع تطبيقي يوضّح دورة العمل كاملة من المطالبة الأولى حتى النشر.
+https://www.youtube.com/watch?v=-VuZmoc-Sq8">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=-VuZmoc-Sq8" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">الدليل الشامل للمبتدئين في البرمجة بالذكاء الاصطناعي<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">دليل مصوّر من Metics Media يشرح المفاهيم الأساسية للبرمجة بالذكاء الاصطناعي ويقارن بين أبرز الأدوات المتاحة للمبتدئ. يختم بمشروع تطبيقي يوضّح دورة العمل كاملة من المطالبة الأولى حتى النشر.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · Metics Media · ٢٧-٠٤-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=-VuZmoc-Sq8" target="_blank" rel="noopener noreferrer">
+              فتح المصدر
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <section class="archive" aria-labelledby="arc-h">
+    <h2 id="arc-h">ــ 🗂️ الأرشيف</h2>
+    <div class="arc-list">
+      <a class="arc-item is-current" href="./AI-News_03-08-2026.html"><span class="arc-date">الاثنين ٣ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ رابط</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>تُحدَّث النشرة يومياً · حقوق المحتوى متاحة للجميع</p>
+    <p><a href="./index.html">أحدث عدد</a></p>
+  </footer>
+
+</div>
+<button class="to-top" type="button" id="toTop" aria-label="العودة إلى الأعلى">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+<div class="toast" id="toast" role="status" aria-live="polite">تم نسخ الخبر</div>
+<script>
+(function () {
+  var toast = document.getElementById('toast');
+  var timer = null;
+
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.classList.remove('show'); }, 1900);
+  }
+
+  function legacyCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:-9999px;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.copy-btn');
+    if (!btn) return;
+    var text = btn.getAttribute('data-copy') || '';
+
+    function done(ok) {
+      if (!ok) { showToast('تعذّر النسخ'); return; }
+      btn.classList.add('is-copied');
+      showToast('تم نسخ الخبر');
+      setTimeout(function () { btn.classList.remove('is-copied'); }, 1900);
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(
+        function () { done(true); },
+        function () { done(legacyCopy(text)); }
+      );
+    } else {
+      done(legacyCopy(text));
+    }
+  });
+})();
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(function () {});
+}
+
+/* ── Reading progress + back to top ─────── */
+(function () {
+  var fill = document.getElementById('progressFill');
+  var top = document.getElementById('toTop');
+  var ticking = false;
+
+  function update() {
+    var d = document.documentElement;
+    var max = d.scrollHeight - window.innerHeight;
+    var y = window.scrollY || d.scrollTop || 0;
+    var pct = max > 0 ? (y / max) * 100 : 0;
+    if (pct < 0) pct = 0;
+    if (pct > 100) pct = 100;
+    fill.style.width = pct + '%';
+    if (y > 400) { top.classList.add('show'); } else { top.classList.remove('show'); }
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+
+  top.addEventListener('click', function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+})();
+
+/* ── Corporate professional mode ────────── */
+(function () {
+  var btn = document.getElementById('corpToggle');
+  var label = document.getElementById('corpLabel');
+  var KEY = 'vibe-news-corp';
+
+  function apply(on) {
+    document.body.classList.toggle('corp', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    label.textContent = on ? 'النمط التحريري' : 'النمط المؤسسي';
+    try { sessionStorage.setItem(KEY, on ? '1' : '0'); } catch (e) {}
+  }
+
+  var saved = '0';
+  try { saved = sessionStorage.getItem(KEY) || '0'; } catch (e) {}
+  apply(saved === '1');
+
+  btn.addEventListener('click', function () {
+    apply(!document.body.classList.contains('corp'));
+  });
+})();
+</script>
+</body>
+</html>
