@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>البرمجة بالذكاء الاصطناعي — نشرة الروابط | الخميس ٣٠ أبريل ٢٠٢٦</title>
+<title>البرمجة بالذكاء الاصطناعي، نشرة الروابط | الخميس ٣٠ أبريل ٢٠٢٦</title>
 <meta name="description" content="مدونة روابط يومية لأحدث أخبار البرمجة بالذكاء الاصطناعي وأدواتها.">
 <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي — الخميس ٣٠ أبريل ٢٠٢٦">
+<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي، الخميس ٣٠ أبريل ٢٠٢٦">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -167,6 +167,23 @@ h1{
 .badge-video{
   background:var(--badge-bg);color:var(--badge-fg);
   box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
+}
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
 }
 
 /* ── Copy button (left edge of each card) ─ */
@@ -366,7 +383,7 @@ footer a:hover{text-decoration:underline}
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
         </svg>
-        <b>٣٩</b> خبراً
+        <b>٣٩</b> خبر
       </span>
     </div>
     <div class="actions">
@@ -421,7 +438,7 @@ https://news.google.com/rss/articles/CBMiWkFVX3lxTE1rS2xYRnJxOV9fQjgxWkl0OHlJRFh
           <div class="item-foot">
             <span class="item-meta">Anthropic · ١٦-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1rS2xYRnJxOV9fQjgxWkl0OHlJRFhxMktsVmtTdGV6dnhPTXQzSXcwRE5hQXhOUGdVMXNwVVBZb01wYTVlY0tCT3VKZTBVQzZtVXRGY25XME5rUQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -451,7 +468,7 @@ https://news.google.com/rss/articles/CBMiWEFVX3lxTE5NNXhTM0RLTTBMTktqSFdCbUUxTXN
           <div class="item-foot">
             <span class="item-meta">OpenAI · ٢٣-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5NNXhTM0RLTTBMTktqSFdCbUUxTXN2cC1xdmJPcEpjbktUdm43SlB0cFI3UGNRMnRXODFHZHZab3hOMlUwSlFKa1ZjWUg3R0c0NG1PZ0hWcnQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -481,7 +498,7 @@ https://news.google.com/rss/articles/CBMiggFBVV95cUxNWF9xQlE4S0FsTWZubkN5bnhDbS1
           <div class="item-foot">
             <span class="item-meta">The Hacker News · ٠١-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNWF9xQlE4S0FsTWZubkN5bnhDbS1qRkxuNnRBUUFGSmY5U3dvcnBOYVNPX0ZJM0x4RHBiMGI5czFsN2JfTUI4Qy0yUXhqM0VVc0tRcmF1LVA1c0s2MHZtWlZoaUJaUy1GLXZFdWk3SkxxMkdXaS1ULW9jT3Q4ZEp5MkF3?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -511,7 +528,7 @@ https://news.google.com/rss/articles/CBMilwFBVV95cUxPWmY0ZXFfR01nRkVFc1IxcDVwSGx
           <div class="item-foot">
             <span class="item-meta">AP News · ٢٢-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPWmY0ZXFfR01nRkVFc1IxcDVwSGxIMVhXbmtqSzljTXJHSUxscFZXTjZwQnJCUzd5UEh0U0k5Nk9sU0RScVNOd2d6R21nSVlodVRXYTFfbWRJeHRKdExEY1pJM3U5allYU3J0WlJxTzE2SEpxb3NicEJWYm1DT25RXzZXN0cwUUtmaFJ2YU40MTU5cHhraFZN?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -541,7 +558,7 @@ https://news.google.com/rss/articles/CBMie0FVX3lxTE82QUtHTXZkWTJ1RTFuaE5WbFZXa3h
           <div class="item-foot">
             <span class="item-meta">CNBC · ٠١-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMie0FVX3lxTE82QUtHTXZkWTJ1RTFuaE5WbFZXa3hEdnExWTRkQXI2YjB0c19rQ3Q5dDFtUy1qc09tNm5mWmFjMUxyN0hsNHUtR2pOdWZVdUluN1R5Qk1DaGlZNTZSRVJWQlFMRkdtLW9DT1JKUHhfY2QyZmVMblJ0UVUtWQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -576,7 +593,7 @@ https://news.google.com/rss/articles/CBMikwFBVV95cUxNSVdtWkRoRllVMVdKbDh5LUVRbGM
           <div class="item-foot">
             <span class="item-meta">The Verge · ١٦-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNSVdtWkRoRllVMVdKbDh5LUVRbGMzb3ZxeUhucWZnM0JKOUxfMFROdlgxa2FYS3BxUGRZOTBJcmlTaWlzY3g3a2djNXRfeWU0dldvNFlmLVRSeXlkUGtWR0k5S3lQcXp0eEFKV1NPZHpEX1BYSUNJdkswQkZqbkpkSjJYRmNveF9XeXY0X1l3MmYzVVE?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -606,7 +623,7 @@ https://news.google.com/rss/articles/CBMibEFVX3lxTFBrb0Qxb2F0UWM5aEpuY1EtV3FKUnI
           <div class="item-foot">
             <span class="item-meta">The New Stack · ٢٦-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBrb0Qxb2F0UWM5aEpuY1EtV3FKUnI2cDQyUEI5UklpWXd1dXhkQ3FqRTNfajhtU09JcUwybWJtaVhlUy1zTHZ0TmFvQ3padXdQSVR6RTRJY0xqX2dtN3YyQk9WQl96WjRCbXZKeg?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -636,7 +653,7 @@ https://news.google.com/rss/articles/CBMikwFBVV95cUxQNkM2bzhMUmFsd0l3VGF2ck5kQ1R
           <div class="item-foot">
             <span class="item-meta">SitePoint · ٢٤-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxQNkM2bzhMUmFsd0l3VGF2ck5kQ1RwRVR3ODBoUTcxQ2JJQkFMVVlXa1JZM3FlSkpiOXdxTGZ3UEdERm0zLUdfQUZuYTYxSFdKSkpQbWRCVTU2bGFDWDdjeENCbkJ1d0FVc0hCUGM2NXZxcHNETWpFMUlPLWZZNTF2S2JzaFJsdUxJNXgxOEkybEFWVXc?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -666,7 +683,7 @@ https://news.google.com/rss/articles/CBMikgFBVV95cUxNMlFRWlFJQ09XNzh0TnRxVEpNSWF
           <div class="item-foot">
             <span class="item-meta">HackerNoon · ٢٩-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNMlFRWlFJQ09XNzh0TnRxVEpNSWFJRS0yeFhxaG5fT1hHXzRjOTMwRXNSdEpmYVl2RkhPT21MOFpxc0h4dUFVNnN1aG13dDY5TmFoMFkyNjl6bEpkcWQwajZWUElyTFBjcWlCbXFubmVIVnFHQlF0TkhMV3BMb1hQNE1TWEFOUE9wVVhaRVZaSDFZQQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -696,7 +713,7 @@ https://news.google.com/rss/articles/CBMioAFBVV95cUxQVXdOaURyRFVUWTRMbG52dk9KSjh
           <div class="item-foot">
             <span class="item-meta">EPAM · ١٤-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQVXdOaURyRFVUWTRMbG52dk9KSjhialRHaG0zekYzbWNKeXdhdXBreHdhMFJPNEJzMXlkODRMYUFuaWRnQmR1OElYcFNfYnFteVJPeVNXLVlQN2huNkdGd19ySmlCTmh4d09BSFVaLVFMMU94WWNubFBmNjJ2LWVoaHRCczEyM3o4RmVwVnVpZy1TMkI0OE9HZEFBNGdFdU9a?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -731,7 +748,7 @@ https://news.google.com/rss/articles/CBMilAFBVV95cUxOb2RiUFpkMUhLUkxncDd3aUtsZzV
           <div class="item-foot">
             <span class="item-meta">SiliconANGLE · ٠٢-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOb2RiUFpkMUhLUkxncDd3aUtsZzV4VXo3b2ZyVER1dEtacTV1THd0ZmZ6cGp0blk5NVNocWc0TTlFcUpmOFl1OTRzX1F2UXNQbm1mM2ZEcjRNUkhnTjBYdGZtUF9fWDM2ZWEyQ21Bb0JJUm43MEZmZWdnWTYzZ3hueDdrWnZEUGhlTWJVVmh2UG9xTlNP?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -766,7 +783,7 @@ https://news.google.com/rss/articles/CBMiaEFVX3lxTE9lbzBkRXBGLTl2YjRQU2NDT0piaWd
           <div class="item-foot">
             <span class="item-meta">Anthropic · ٢٣-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE9lbzBkRXBGLTl2YjRQU2NDT0piaWdaZks2ckFNNXYwXzdEOERUZHBEWVZSTktyZ0xQLTNrM2h3NXZnY3N2Ty0xdUJFRzNfUFRqWHl3VW5hMGxpTkttOVR1YXRSMnVJNWR5?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -796,7 +813,7 @@ https://news.google.com/rss/articles/CBMivAFBVV95cUxOYm52d3hQV25lMzl4bXo4SGVhUG1
           <div class="item-foot">
             <span class="item-meta">Forbes · ٢٢-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxOYm52d3hQV25lMzl4bXo4SGVhUG1xRjdZXzAzaElIMl9PazU1cTdRaWE0WVh1eVl4RDdqcEdHcThUYU8tdkx5UDJiWHRuSm1jNVdIb0xpQlVzMWJfXzdHanQ3TjlYWWEtRU5Ja3RSakJwWGJ1d3piUnBwcDJQbnZiTmtoQ3N0OXp6MHg5NVM4QmpFMXZhUlRzVnJTWHJ2M0ZOY1U3c3htN0wwclg2Z2V3ZHJndHoyeEZicjdyVA?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -826,7 +843,7 @@ https://news.google.com/rss/articles/CBMiowFBVV95cUxNeFpxMVdDT3hlcXE4QlZwdHp6cV9
           <div class="item-foot">
             <span class="item-meta">Business Insider · ٢٩-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNeFpxMVdDT3hlcXE4QlZwdHp6cV9OMU5fMnQ2cy14MkF5aHNSZDlhX09XY3lKWHNibTNnU2JjUEtQS21PLVRjQlJ6dG4wNUktNmNqSkpQLUJXU01XNDJsdVBLS05QRUJnTnZFOTZRY2NHd0h6Tkw1LXo0WGtESE94S2g4T2lQcHJtbTV0aGpjS25aTFlSTW50QWV0QVdBd093UHZN?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -856,7 +873,7 @@ https://news.google.com/rss/articles/CBMimAFBVV95cUxQRzVHaHBOd082S1c5VWNnRTJlQVR
           <div class="item-foot">
             <span class="item-meta">Techzine Global · ٢٩-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQRzVHaHBOd082S1c5VWNnRTJlQVRnb0g4LTZlTWRxbzduUmo2OV9HVkNnS2owakFpeWVRTW9BUkYyQ3U2aG5zajZSOEpCYjBFazFpZGVUMTgzUnl2MHVBOXI5UlR6YzNnd3NmanNrVTdwWGZ5bWpFNW1lbnowWk5XMElnZFpCX3ZIbkY3eGVYYXFYdDVpSnVxcQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -891,7 +908,7 @@ https://news.google.com/rss/articles/CBMidkFVX3lxTE9zVGVwMEphWDhiellka2hpVk4zM2h
           <div class="item-foot">
             <span class="item-meta">InfoQ · ١٥-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMidkFVX3lxTE9zVGVwMEphWDhiellka2hpVk4zM2hIaUFSN2hjdElmaXlzc2RkVl9RMjFfc0dPakJZYnUzZng2dld1TWVZV1RFY1lxekpaUVlkQWgzU0E1N01CVkJBakdvWmhZMkJKeEk3VTFKS2RENEQ4N0E1cGc?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -921,7 +938,7 @@ https://news.google.com/rss/articles/CBMikwFBVV95cUxOQTFVbVBLUXBoNENOdmt5dHFCdHp
           <div class="item-foot">
             <span class="item-meta">Business Insider · ٢٢-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxOQTFVbVBLUXBoNENOdmt5dHFCdHpYQzEzY3JZUzllWV9aUDBQZEp6Vkc4SHE4YUktQTR6TkljRXZoOEs4cGpjNzR4WmkxVlJWelVNaVdjZEE5M1NZdE1yRnkxMFlWQy11Y0pHZnV1OFptZmRDZ05pdVI2MjJUNGhwRG9hZXBnWUVqT1AtSEo0UmVGTms?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -951,7 +968,7 @@ https://news.google.com/rss/articles/CBMikwFBVV95cUxPd2djTE11UENwWnM2RTIzY3M1TVd
           <div class="item-foot">
             <span class="item-meta">Business Insider · ٣٠-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPd2djTE11UENwWnM2RTIzY3M1TVdLRjJjdTdPU1laZnFWcUZYTDUxaF9iSW1RUzZCT2FmSUZTU1VMMWpvWXUtY1ZHZldBYkV0Z2ZXU2plX2ZHS1VqMjZfNzl3MXpnc2lCeFZwbFlnZzdXZklYNk9RNXpBUmxMV2gzQVBGZXljTmlxN3k5X2t1VFZ1LTA?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -981,7 +998,7 @@ https://news.google.com/rss/articles/CBMisgFBVV95cUxOX3NqQVVpVXVIMDJ2M0NUTlJuNDV
           <div class="item-foot">
             <span class="item-meta">Breaking Defense · ٢٣-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOX3NqQVVpVXVIMDJ2M0NUTlJuNDVPY20wUmZBZlNJZzNCcmlWVVY1R0RQM0cyTks2a1dBSDhZWkFqS0hkRk9BSkNPcF9yR0I5YlBhU1EtYW9nb0dJalFvR2djYjdXa1lvSFVVaUtIeHlfZkJRSC1tNkFRSmFudmd6SG5aSGkyYWZ1Z3k2WWVDakE3Ym5VajFZaE43dFNKajVLRU9ZT2RxTkV1VVJ3LWhLRjd3?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1016,7 +1033,7 @@ https://news.google.com/rss/articles/CBMiogFBVV95cUxOTU5fWE5HbkkyNW9ybGdZN0RybFQ
           <div class="item-foot">
             <span class="item-meta">SiliconANGLE · ١٤-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOTU5fWE5HbkkyNW9ybGdZN0RybFQ4ZEJQekFGZHBUazRPa2xHSWxSczZqeWc4eGthQ0xxVVFWekJ3RGlDakQwbHVaRk9mcjI2WkpEa0dQWFkxQ2dLOFhqVU83VFAyeDVUQTVUWllMakF6djdLckNQM0RwVWtia3JzbWJOYTB5ejRpSEpnWnNJeV9DMjdyY0pXWDhLRWNBSVdROXc?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1046,7 +1063,7 @@ https://news.google.com/rss/articles/CBMiV0FVX3lxTFBael9QVGlTSmk4a2Vjd0l2dFN3czB
           <div class="item-foot">
             <span class="item-meta">Cognition · ١٥-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiV0FVX3lxTFBael9QVGlTSmk4a2Vjd0l2dFN3czBWazEzbXdleDlsemtmcGExTmVrcjl3RDRPSEZCWmMyVHlaZWVldVhyMGk4TVFrcVlzTUZrNGNEc3pzcw?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1076,7 +1093,7 @@ https://news.google.com/rss/articles/CBMiqwFBVV95cUxNd1BLSnRDRFk3NWw1bERCRlVoZ3N
           <div class="item-foot">
             <span class="item-meta">Game Developer · ٣٠-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNd1BLSnRDRFk3NWw1bERCRlVoZ3N1b1ByX3dVRnFQSi0wczV1R3Y1R2k1RC1BRkRmallUcmptNExyNEhUUWx6cVlJRUYyamFYdUxZcnM1Qm5HdEFzaGR5Zjl4S0ZCVmJDN3pBS0p5MWo0TVFuOU1rVjg5MmwxR0ZBc3B3Ri1QZGZ0b2Y1SzhVdWJ4akFDS1dKQmhTZTQ1QXIwdUM3aDlCMGRfTWs?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1106,7 +1123,7 @@ https://news.google.com/rss/articles/CBMi6gFBVV95cUxNbkdCSlJ5d3dzYWJ0WjVraFhVQjJ
           <div class="item-foot">
             <span class="item-meta">IBM · ٢٨-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxNbkdCSlJ5d3dzYWJ0WjVraFhVQjJycnZYc2RWck1rWHREbXdZS1pBSTF0UEFFQ0N5dTBheFp6NU9DNWJLYlh0RkNrUUdfSmxfSlJGZ2c4OHdWYmNYYTBWeWlHOHlYODhtOTdTNTItQnNBRlZSbXdzVjc3a0VCUVJpdmk3RzhCb09lX0M1WEZ1ZDJuYmZqV0l4dkVnQnhsNVk3QTFoSmJlOWJNaW9oR3F2eFB1Y29VaDlldHFiSXpWQ1VOR3FUTTZVTFY2YmFXQ3RqQ1JmSWlYcVZ0ZERXNlJOWjBReWJEZkVSVFE?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1141,7 +1158,7 @@ https://news.google.com/rss/articles/CBMiugFBVV95cUxPekQ2ZjlROGlmVU9LMjJ6Qmh0TDB
           <div class="item-foot">
             <span class="item-meta">Google · ٢٧-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPekQ2ZjlROGlmVU9LMjJ6Qmh0TDBrM0dJNl9IemN4eVlua19HTkZtbEpvRThfVTQxV1l4ak1JT1piYVZrcWhmT0t5NlFhY0lPS2dVT2ViY1NOYW5SNEYxRU5LbHlyWnV3UHZEVE1hOVZ1V3VoMy1uanpVN3dfWmtqdTdLcFNaaC1mQjIzWi0yZmZ4SktCcnp6bGMxdXBpR21yRG9yT0pwX3lFUXFzellpS0piWlZjaUR0cFE?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1176,7 +1193,7 @@ https://news.google.com/rss/articles/CBMikAFBVV95cUxORkVpWFQ4TWx2ME5nQmxob1hoU00
           <div class="item-foot">
             <span class="item-meta">Google · ٢٠-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMikAFBVV95cUxORkVpWFQ4TWx2ME5nQmxob1hoU00yXzBTaTVRVkxOb3hZYlRYd3N2ZkdkMVJuX1dSNzZlOFdPUlVxSE1yamlTaVJZUUMwVHJ3TTUzNzBSbVp4Tkw2ME1aQ3ViWkFXYnAtaDRzY19QWjlESUhMekRBeW5nb1VFUURVVWFxbWxYRnc4S01rUVJKem8?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1211,7 +1228,7 @@ https://news.google.com/rss/articles/CBMixgFBVV95cUxQaFVtQzBsV2IyOE9kQnc5T2NyU3d
           <div class="item-foot">
             <span class="item-meta">Game Developer · ٢٨-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQaFVtQzBsV2IyOE9kQnc5T2NyU3dta3l2eTFxQTRWNlBfb0JNTWg0VmxxMEdmUjVDN3lzT0c0LTc1Wm5lYnZid0lIRmpHQk5JclFfVkE4dlprTkdaQVlLR3hiNDNjenl4SnE5dDhxX1FfZng0M3hnUmVtdU5IeDhrZmp0RUFETUtQV2JUT09zTmtRNEhlRHdrcDRnZFFRbE05dmR2NWp3UzNvU2k4czlaZGd6b2dhNzNzYnNiY29RNXVjU1MxVFE?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1241,7 +1258,7 @@ https://news.google.com/rss/articles/CBMijgFBVV95cUxQZGVpV1U1b3A5cHg3YTctN0ZRS0M
           <div class="item-foot">
             <span class="item-meta">9to5Mac · ٢٨-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxQZGVpV1U1b3A5cHg3YTctN0ZRS0M0RTdJeHhWQzlnaEk5a1pZUkJWakFGazNuUlJSWnk4U1ppZUY4NWM5aEFpenlRWWJZcG5IbFFMbVMyUmJaMXpOYmtMYlRORng5Vk43NGtoSklxT3p3eG5tZjc0SnZySHdWQjZZWmxQcWVUcWNvQ1FLQU5B?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1271,7 +1288,7 @@ https://news.google.com/rss/articles/CBMixAFBVV95cUxOSnhpMFlsZ3RKZGtFSUtSNUxvUU1
           <div class="item-foot">
             <span class="item-meta">Accenture · ٠٩-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOSnhpMFlsZ3RKZGtFSUtSNUxvUU1oZ3dpR25tZ2lmeW54UnQydFhTYWVJSmwya2V0c1NXMzJuUW9pNXBaMFByeHpKRFpRUzFWWnlzaUgxbnZQSC1HY3hFRzNqZHh6SERLcmZrSTJfcGM4WHdfQ3JXTmd3djJZcnE3Z2RwazZ6dXQ3X2tITlFqTlV6Q0pQa3kwSlY0alRQQ09Jd1RhSlhyaWJ1VzlMNW5VejhOWXNRdkQ1VFhiUUt1eEJIWWtT?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1301,7 +1318,7 @@ https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWtCbDFzOG9mZDV2dmpINHZNSmR
           <div class="item-foot">
             <span class="item-meta">Tech Funding News · ٢٤-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWtCbDFzOG9mZDV2dmpINHZNSmRGdmRfcGxycnQ4UG8xSEZzcmhuQzM1Mmo1SG44OC01VHVSWkZzaEtYRzI0OFM5LU5lR2N6Z0RZdW9vWklVa0p2TkxkT01leEk5NDJjU2xQNjJmYlhmRUJtWWNaY0dVWUR3dG5zTzZaRjcxdnVKQWc2Yy1NLVBGX3JUMFk1TQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1331,7 +1348,7 @@ https://news.google.com/rss/articles/CBMimAFBVV95cUxOVy1jZUJ6d19vQ29LYmVoelg4N3J
           <div class="item-foot">
             <span class="item-meta">The Next Web · ١٨-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMimAFBVV95cUxOVy1jZUJ6d19vQ29LYmVoelg4N3JycXd0dG05aFIxUjFVZF9ZclRqTzRVbTd3ZE9ZdTRwWS1YUm45R2RzM0x4cndTdUc2bWZEWnpxbDZXR0I3UTlybWZLNktLa1JBY1I2aGlsRG9nUDRyaFZtLUFoLXBZVmpka2s2TXBjblFPcEF3NXJ6NnBTTTBJTFdsVVRGZw?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1361,7 +1378,7 @@ https://news.google.com/rss/articles/CBMipAFBVV95cUxOZGVMcU5rbG9XdEVuOEFVNlFkZ0x
           <div class="item-foot">
             <span class="item-meta">Dealroom · ١٧-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOZGVMcU5rbG9XdEVuOEFVNlFkZ0xtQU1jTlI0ZVdIb3hrSEw4cVVxcUFFRVdTdlhwdEFOWlRlQ1ZtQkozaDRiWnhkZlMyUVNhb1B0cGZQS3kzd2lISl82NWVuc1JzWklFOWFpWGl3ZzNOLTFxWG1RU25RUVBzUzNBN0dreVVfQlUzRGF6VllSR2t1TzNTN29YSXpRMnBUYVBlQV81bQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1371,9 +1388,9 @@ https://news.google.com/rss/articles/CBMipAFBVV95cUxOZGVMcU5rbG9XdEVuOEFVNlFkZ0x
         </li>
         <li class="item">
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Codex من OpenAI يبلغ 4 ملايين مستخدم أسبوعيًا**
-&gt; أعلنت OpenAI أن أداة Codex بلغت 4 ملايين مستخدم نشط أسبوعيًا، مضيفةً مليون مستخدم خلال أسبوعين فقط.
-https://news.google.com/rss/articles/CBMisgFBVV95cUxPTkF4d2FTSVRtbDRZNk8weGRPMmlOX0NpQnMzeE9OTXBaMkpfXzhDbUtsYTBJMVIwR0Q2Um4wZGV3V3NwR0ZsdjBRYzZTemhBT3ZhcWdiOUI2WV9ZRUY3dm9PaFQ1WGd1SlJUM1pRUG1FamtyZnVWclhGWjcweEZCVWdlZTFtdGhuSGZWRFJqS1MxRFR4NkIybS10MXNhVGFsVjVTYWU3MHh3d290UzdqNlhB0gGwAUFVX3lxTFA4Q1pfNEtDcDE0M3N6NzlDNHpYQjYtTkhSODZCTDBhM2pPOUVqQUhpVDJ6ZkFiUzdnZ19VQlY3aXotVWpVMjNjcm5zeElyNUZjWjNmUGM2Y3RVeHYtVzk4Y0Q3eVZNb3VzRWlNSFZQNzhxbTFmYVBhci1TSWI0LU91YzhmUXAwcFRZS2VFUHYxaldpY2RNZ1J3c0gzekpqVWV3U000Vmx1S3J4RG4wTWJB?oc=5">
+                  data-copy="**ــ Codex من OpenAI يبلغ ٤ ملايين مستخدم نشط أسبوعيًا**
+&gt; بلغت أداة Codex من OpenAI أربعة ملايين مستخدم نشط أسبوعيًا بعد نمو نسبته ٣٣٪ خلال أسبوعين، من ثلاثة ملايين إلى أربعة.
+https://news.ycombinator.com/item?id=47852554">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="9" y="9" width="13" height="13" rx="2"/>
@@ -1384,14 +1401,14 @@ https://news.google.com/rss/articles/CBMisgFBVV95cUxPTkF4d2FTSVRtbDRZNk8weGRPMml
               <path d="M20 6 9 17l-5-5"/>
             </svg>
           </button>
-          <a class="item-link" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPTkF4d2FTSVRtbDRZNk8weGRPMmlOX0NpQnMzeE9OTXBaMkpfXzhDbUtsYTBJMVIwR0Q2Um4wZGV3V3NwR0ZsdjBRYzZTemhBT3ZhcWdiOUI2WV9ZRUY3dm9PaFQ1WGd1SlJUM1pRUG1FamtyZnVWclhGWjcweEZCVWdlZTFtdGhuSGZWRFJqS1MxRFR4NkIybS10MXNhVGFsVjVTYWU3MHh3d290UzdqNlhB0gGwAUFVX3lxTFA4Q1pfNEtDcDE0M3N6NzlDNHpYQjYtTkhSODZCTDBhM2pPOUVqQUhpVDJ6ZkFiUzdnZ19VQlY3aXotVWpVMjNjcm5zeElyNUZjWjNmUGM2Y3RVeHYtVzk4Y0Q3eVZNb3VzRWlNSFZQNzhxbTFmYVBhci1TSWI0LU91YzhmUXAwcFRZS2VFUHYxaldpY2RNZ1J3c0gzekpqVWV3U000Vmx1S3J4RG4wTWJB?oc=5" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Codex من OpenAI يبلغ 4 ملايين مستخدم أسبوعيًا</h3>
+          <a class="item-link" href="https://news.ycombinator.com/item?id=47852554" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Codex من OpenAI يبلغ ٤ ملايين مستخدم نشط أسبوعيًا</h3>
           </a>
-          <p class="item-summary">أعلنت OpenAI أن أداة Codex بلغت 4 ملايين مستخدم نشط أسبوعيًا، مضيفةً مليون مستخدم خلال أسبوعين فقط.</p>
+          <p class="item-summary">بلغت أداة Codex من OpenAI أربعة ملايين مستخدم نشط أسبوعيًا بعد نمو نسبته ٣٣٪ خلال أسبوعين، من ثلاثة ملايين إلى أربعة.</p>
           <div class="item-foot">
-            <span class="item-meta">Neowin · ٢١-٠٤-٢٠٢٦</span>
-            <a class="item-url" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxPTkF4d2FTSVRtbDRZNk8weGRPMmlOX0NpQnMzeE9OTXBaMkpfXzhDbUtsYTBJMVIwR0Q2Um4wZGV3V3NwR0ZsdjBRYzZTemhBT3ZhcWdiOUI2WV9ZRUY3dm9PaFQ1WGd1SlJUM1pRUG1FamtyZnVWclhGWjcweEZCVWdlZTFtdGhuSGZWRFJqS1MxRFR4NkIybS10MXNhVGFsVjVTYWU3MHh3d290UzdqNlhB0gGwAUFVX3lxTFA4Q1pfNEtDcDE0M3N6NzlDNHpYQjYtTkhSODZCTDBhM2pPOUVqQUhpVDJ6ZkFiUzdnZ19VQlY3aXotVWpVMjNjcm5zeElyNUZjWjNmUGM2Y3RVeHYtVzk4Y0Q3eVZNb3VzRWlNSFZQNzhxbTFmYVBhci1TSWI0LU91YzhmUXAwcFRZS2VFUHYxaldpY2RNZ1J3c0gzekpqVWV3U000Vmx1S3J4RG4wTWJB?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+            <span class="item-meta">Hacker News · ٢١-٠٤-٢٠٢٦</span>
+            <a class="item-url" href="https://news.ycombinator.com/item?id=47852554" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1421,7 +1438,7 @@ https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWkd4QWtMeU1zc28wWkFlX0ZMN2V
           <div class="item-foot">
             <span class="item-meta">TechCrunch · ١٥-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWkd4QWtMeU1zc28wWkFlX0ZMN2VTMHhpZkRlQm94UnlNX18yUHpLUml3SXRfOUd3ZEZJdmUxdnU5VG9jdmxKaUFXRFM5eXI0ajRaV25KdXhBMkNnUHp4aVZ2QzAxQ2FXNVc1dC1fb1pZNmVuRjRXM0pSRWc1bVktd2k3RWM5Z1p6Z0JGZEx0cTEzODlTaDBSeE1OaHNpODN0MFA3QTVqY29pQQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1451,7 +1468,7 @@ https://news.google.com/rss/articles/CBMikgFBVV95cUxNa0c1YTM0R0ZGb0FRRi12aEE3YnZ
           <div class="item-foot">
             <span class="item-meta">CNET · ٠٩-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNa0c1YTM0R0ZGb0FRRi12aEE3YnZuQXBxZVlYcEgyVS0zWkZyMmdBMUhJS0ZIcUVlWGc4VXd5NGtvRndiWW5fS0x1eG9Fck9iVEFZUDFXeTFSak1QeU5CY2dEYXQwZHhfZS1xWFRBZXM2dzFXTzBsMlhxX0U4czdFZk1OWDI2bnF5d2J0SGtycVVwdw?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1486,7 +1503,7 @@ https://news.google.com/rss/articles/CBMiugFBVV95cUxPUklOTm9BZ2xka3M3VU5zNkNha29
           <div class="item-foot">
             <span class="item-meta">Ars Technica · ٢٩-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPUklOTm9BZ2xka3M3VU5zNkNha29ORFB3R0FKdVJ2eFJDelpWQVlDUzZocVZwdmRqZkpJbWtVUEtNUkRIUU5mQkVJUjd6YTFyOGN0SXZzTFFjX3BMYjlyOWRtNk0wcDF6X0dKaEMwcmZhSVJEU2JrQ1djc0J2QUVaT0VWNjZQUzJZNDdUM3c2X3NuQVlTNFFvMi1QdUNKeXlrTmdrMGpvaC1wdGp2cWo0Y2lpcWYxc2lFTmc?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1516,7 +1533,7 @@ https://news.google.com/rss/articles/CBMiigFBVV95cUxOM3RvT0tQdmZfT2xzTTBnbHJiQXZ
           <div class="item-foot">
             <span class="item-meta">The Guardian · ٢٩-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOM3RvT0tQdmZfT2xzTTBnbHJiQXZRVTc2WFJKM3FNNk9WMFpuWWdlMXBZSVF4emYxOXB1Uk03aTJYcmpMeUFON1dDNWhSdDJBdXotSUcyZWxkaFU1ZzRncmFVc0R6QVN3am1iTzBjNndscFBkRzVvel9YWHZpZzAxMmtJOVRPT3RZVmc?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1551,7 +1568,7 @@ https://news.google.com/rss/articles/CBMinAFBVV95cUxOdEhzcmpQLXFzdHRCTjMteHItZUV
           <div class="item-foot">
             <span class="item-meta">Harvard Gazette · ٠١-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOdEhzcmpQLXFzdHRCTjMteHItZUVkdGZlRjlXdDNBa29OWFZ2OEdDcjJ5dVlFM29mRjNJdXJzN0IzcVFTM2sxUTF3NFFrRlVqVk9ERjk5NUZWb3FnZDl4bWdVbDRmbzJMWC1zeFk2U2Q3T1hyR3hEV1F3ai1LNFoxNE9BSkhuejhnMzREN2J1NTZYSXR1SzlKajl5Rmg?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1581,7 +1598,7 @@ https://news.google.com/rss/articles/CBMifkFVX3lxTFB0YmNoSjZpQjR0ekxMallzRWhwbFp
           <div class="item-foot">
             <span class="item-meta">Fast Company · ١٧-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMifkFVX3lxTFB0YmNoSjZpQjR0ekxMallzRWhwbFpETWc2eXdKeXp3M0pGUVN4bmhFcThDbzI2ZjcwUHRRbUZUcllCRmlJSXdiSEp2NXB4YlV6WlJjQkNfSEVWSDZ2aGZjR0V3d1dFUDB4WGZTd3RoX2JLaXpPXzFGMEJ3RTRyQQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1611,7 +1628,7 @@ https://news.google.com/rss/articles/CBMilAFBVV95cUxOdjA3eGJjejNqaDFMUGxQTXNQVlg
           <div class="item-foot">
             <span class="item-meta">SiliconANGLE · ١٥-٠٤-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOdjA3eGJjejNqaDFMUGxQTXNQVlgxb1oteGxxNjJoMk5zVU03ZnZfNDF2ZkRqVXNKWkJZUXoydExlSHpWazM1amxVLTVjbnVsTTlCbkVuQWRLYUt3NlJwZV9nT3o4WElfRFF2eXJfV2FHTTFjZFVBYzRjbWNJRF9NckJSaGdQNm5RcGhUSTlmajREU2xf?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1636,7 +1653,7 @@ https://news.google.com/rss/articles/CBMilAFBVV95cUxOdjA3eGJjejNqaDFMUGxQTXNQVlg
       <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count">٣٢ خبر</span></a>
-      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ خبر</span></a>
       <a class="arc-item" href="./AI-News_06-08-2026.html"><span class="arc-date">الخميس ٦ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_05-08-2026.html"><span class="arc-date">الأربعاء ٥ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_04-08-2026.html"><span class="arc-date">الثلاثاء ٤ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
@@ -1665,7 +1682,7 @@ https://news.google.com/rss/articles/CBMilAFBVV95cUxOdjA3eGJjejNqaDFMUGxQTXNQVlg
     <path d="M12 19V5M5 12l7-7 7 7"/>
   </svg>
 </button>
-<div class="toast" id="toast" role="status" aria-live="polite">تم نسخ الخبر</div>
+<div class="toast" id="toast" role="status" aria-live="polite">نُسخ الخبر</div>
 <script>
 (function () {
   var toast = document.getElementById('toast');
@@ -1699,7 +1716,7 @@ https://news.google.com/rss/articles/CBMilAFBVV95cUxOdjA3eGJjejNqaDFMUGxQTXNQVlg
     function done(ok) {
       if (!ok) { showToast('تعذّر النسخ'); return; }
       btn.classList.add('is-copied');
-      showToast('تم نسخ الخبر');
+      showToast('نُسخ الخبر');
       setTimeout(function () { btn.classList.remove('is-copied'); }, 1900);
     }
 
