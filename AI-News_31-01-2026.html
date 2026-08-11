@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>البرمجة بالذكاء الاصطناعي — نشرة الروابط | السبت ٣١ يناير ٢٠٢٦</title>
+<title>البرمجة بالذكاء الاصطناعي، نشرة الروابط | السبت ٣١ يناير ٢٠٢٦</title>
 <meta name="description" content="مدونة روابط يومية لأحدث أخبار البرمجة بالذكاء الاصطناعي وأدواتها.">
 <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي — السبت ٣١ يناير ٢٠٢٦">
+<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي، السبت ٣١ يناير ٢٠٢٦">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -167,6 +167,23 @@ h1{
 .badge-video{
   background:var(--badge-bg);color:var(--badge-fg);
   box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
+}
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
 }
 
 /* ── Copy button (left edge of each card) ─ */
@@ -366,7 +383,7 @@ footer a:hover{text-decoration:underline}
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
         </svg>
-        <b>٤٠</b> خبراً
+        <b>٤٠</b> خبر
       </span>
     </div>
     <div class="actions">
@@ -390,7 +407,7 @@ footer a:hover{text-decoration:underline}
 
   <main>
     <section class="cat" id="cat-مقالات-بارزة">
-      <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٢٦</span></h2>
+      <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٢٨</span></h2>
       <ul class="items">
         <li class="item">
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
@@ -414,7 +431,7 @@ https://github.com/sugaiketadao/sicore">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٤-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/sugaiketadao/sicore" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -444,7 +461,7 @@ https://github.com/Jcparkyn/herd">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٥-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/Jcparkyn/herd" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -474,7 +491,7 @@ https://pikai.ai/">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٧-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://pikai.ai/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -504,7 +521,7 @@ https://lellansin.github.io/2026/01/27/Why-Cursor-Rules-Failed-and-Claude-Skill-
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٧-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://lellansin.github.io/2026/01/27/Why-Cursor-Rules-Failed-and-Claude-Skill-Succeeded/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -534,7 +551,7 @@ https://github.com/RajatGarga/copilot-openai-server">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٧-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/RajatGarga/copilot-openai-server" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -564,7 +581,7 @@ https://github.com/jomadu/ai-resource-manager">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٧-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/jomadu/ai-resource-manager" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -594,7 +611,7 @@ https://news.ycombinator.com/item?id=46777381">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٧-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://news.ycombinator.com/item?id=46777381" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -624,7 +641,7 @@ https://github.com/BlinkResearchLabs/blink-edit.nvim">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٧-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/BlinkResearchLabs/blink-edit.nvim" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -654,7 +671,7 @@ https://gitbybit.com">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٧-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://gitbybit.com" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -664,9 +681,9 @@ https://gitbybit.com">
         </li>
         <li class="item">
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Dexicon — يوثّق جلسات البرمجة بالذكاء الاصطناعي ليبقى السياق محفوظًا للفريق**
-&gt; أداة تلتقط محتوى جلسات العمل مع الوكلاء لتشارك السياق بين أعضاء الفريق دون ضياع.
-https://www.dexicon.ai/">
+                  data-copy="**ــ عرض HN: Vibe Coding Getting Wild — مترجم TypeScript إلى Rust**
+&gt; مشروع جريء على GitHub يولّد مترجماً من TypeScript إلى Rust بأسلوب البرمجة بالذكاء الاصطناعي، وتفاعل كبير في Hacker News حول موثوقية المخرجات.
+https://github.com/daavfx/TypeScript-Rust-Compiler">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="9" y="9" width="13" height="13" rx="2"/>
@@ -677,14 +694,14 @@ https://www.dexicon.ai/">
               <path d="M20 6 9 17l-5-5"/>
             </svg>
           </button>
-          <a class="item-link" href="https://www.dexicon.ai/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Dexicon — يوثّق جلسات البرمجة بالذكاء الاصطناعي ليبقى السياق محفوظًا للفريق</h3>
+          <a class="item-link" href="https://github.com/daavfx/TypeScript-Rust-Compiler" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">عرض HN: Vibe Coding Getting Wild — مترجم TypeScript إلى Rust</h3>
           </a>
-          <p class="item-summary">أداة تلتقط محتوى جلسات العمل مع الوكلاء لتشارك السياق بين أعضاء الفريق دون ضياع.</p>
+          <p class="item-summary">مشروع جريء على GitHub يولّد مترجماً من TypeScript إلى Rust بأسلوب البرمجة بالذكاء الاصطناعي، وتفاعل كبير في Hacker News حول موثوقية المخرجات.</p>
           <div class="item-foot">
-            <span class="item-meta">Hacker News · ٢٧-٠١-٢٠٢٦</span>
-            <a class="item-url" href="https://www.dexicon.ai/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+            <span class="item-meta">Hacker News · ٣١-٠١-٢٠٢٦</span>
+            <a class="item-url" href="https://github.com/daavfx/TypeScript-Rust-Compiler" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -714,7 +731,7 @@ https://martinfowler.com/articles/exploring-gen-ai/ccmenu-quality.html">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://martinfowler.com/articles/exploring-gen-ai/ccmenu-quality.html" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -744,7 +761,7 @@ https://www.youtube.com/watch?v=csU7i8QvzqU">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://www.youtube.com/watch?v=csU7i8QvzqU" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -774,7 +791,7 @@ https://www.fast.ai/posts/2026-01-28-dark-flow/">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://www.fast.ai/posts/2026-01-28-dark-flow/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -804,7 +821,37 @@ https://github.com/cfngc4594/agent-notify">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/cfngc4594/agent-notify" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ البرمجة بالذكاء الاصطناعي مجانية – أما التنظيف فلن يكون**
+&gt; مقال يرسم صورة واقعية عن التكلفة الخفية للبرمجة بالذكاء الاصطناعي: سرعة التوليد المجاني تُقابل بثمن باهظ في مراجعة الكود المتراكم وصيانته لاحقاً.
+https://codesmash.dev/vibe-is-free-cleanup-wont-be">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://codesmash.dev/vibe-is-free-cleanup-wont-be" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">البرمجة بالذكاء الاصطناعي مجانية – أما التنظيف فلن يكون</h3>
+          </a>
+          <p class="item-summary">مقال يرسم صورة واقعية عن التكلفة الخفية للبرمجة بالذكاء الاصطناعي: سرعة التوليد المجاني تُقابل بثمن باهظ في مراجعة الكود المتراكم وصيانته لاحقاً.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ٢٧-٠١-٢٠٢٦</span>
+            <a class="item-url" href="https://codesmash.dev/vibe-is-free-cleanup-wont-be" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -834,7 +881,7 @@ https://github.com/luml-ai/AGENTS.lock">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/luml-ai/AGENTS.lock" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -864,7 +911,7 @@ https://news.ycombinator.com/item?id=46799839">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://news.ycombinator.com/item?id=46799839" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -894,7 +941,7 @@ https://github.com/kody-w/copilot-yolo-mode">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/kody-w/copilot-yolo-mode" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -924,7 +971,7 @@ https://ziva.sh">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://ziva.sh" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -954,7 +1001,7 @@ https://news.ycombinator.com/item?id=46802528">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://news.ycombinator.com/item?id=46802528" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -984,7 +1031,7 @@ https://charly-vibes.github.io/microdancing/en/posts/resonant-coding.html">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://charly-vibes.github.io/microdancing/en/posts/resonant-coding.html" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1014,7 +1061,7 @@ https://techcrunch.com/2026/01/28/linkedin-will-let-you-show-off-your-vibe-codin
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٩-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://techcrunch.com/2026/01/28/linkedin-will-let-you-show-off-your-vibe-coding-chops-with-a-certificate/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1044,7 +1091,7 @@ https://news.ycombinator.com/item?id=46807308">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٩-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://news.ycombinator.com/item?id=46807308" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1074,7 +1121,37 @@ https://news.ycombinator.com/item?id=46807594">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٩-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://news.ycombinator.com/item?id=46807594" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ البرمجة بالذكاء الاصطناعي تقتل المصادر المفتوحة**
+&gt; ورقة بحثية على arXiv تناقش كيف يغيّر التوليد الآلي للشيفرة ديناميكيات المشاريع مفتوحة المصدر، من صيانة المجتمع إلى تراجع المساهمات اليدوية.
+https://arxiv.org/abs/2601.15494">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://arxiv.org/abs/2601.15494" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">البرمجة بالذكاء الاصطناعي تقتل المصادر المفتوحة</h3>
+          </a>
+          <p class="item-summary">ورقة بحثية على arXiv تناقش كيف يغيّر التوليد الآلي للشيفرة ديناميكيات المشاريع مفتوحة المصدر، من صيانة المجتمع إلى تراجع المساهمات اليدوية.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ٢٦-٠١-٢٠٢٦</span>
+            <a class="item-url" href="https://arxiv.org/abs/2601.15494" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1104,7 +1181,7 @@ https://news.ycombinator.com/item?id=46808898">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٩-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://news.ycombinator.com/item?id=46808898" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1134,7 +1211,7 @@ https://super-agentic.ai/superqode">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٩-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://super-agentic.ai/superqode" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1164,7 +1241,7 @@ https://news.ycombinator.com/item?id=46812347">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٩-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://news.ycombinator.com/item?id=46812347" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1175,7 +1252,7 @@ https://news.ycombinator.com/item?id=46812347">
       </ul>
     </section>
     <section class="cat" id="cat-أدوات-جديدة">
-      <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">١١</span></h2>
+      <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">٩</span></h2>
       <ul class="items">
         <li class="item">
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
@@ -1199,7 +1276,7 @@ https://no0p.github.io/llm/ai/programming/2026/01/26/coding-agents-theory-practi
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٧-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://no0p.github.io/llm/ai/programming/2026/01/26/coding-agents-theory-practice.html" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1229,37 +1306,7 @@ https://pushtoprod.substack.com/p/stop-babysitting-your-ai-coding-agents">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://pushtoprod.substack.com/p/stop-babysitting-your-ai-coding-agents" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M19 12H5M12 19l-7-7 7-7"/>
-              </svg>
-            </a>
-          </div>
-        </li>
-        <li class="item">
-          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ من يمارس البرمجة بالذكاء الاصطناعي؟ الأرقام تخالف الضجيج**
-&gt; مقال يوازن بين ما تدّعيه التقارير من انتشار وبين ما تظهره البيانات الفعلية من استخدام.
-https://octomind.dev/blog/whos-actually-vibe-coding-the-data-doesnt-match-the-hype/index.html">
-            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="9" y="9" width="13" height="13" rx="2"/>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-            </svg>
-            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 6 9 17l-5-5"/>
-            </svg>
-          </button>
-          <a class="item-link" href="https://octomind.dev/blog/whos-actually-vibe-coding-the-data-doesnt-match-the-hype/index.html" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">من يمارس البرمجة بالذكاء الاصطناعي؟ الأرقام تخالف الضجيج</h3>
-          </a>
-          <p class="item-summary">مقال يوازن بين ما تدّعيه التقارير من انتشار وبين ما تظهره البيانات الفعلية من استخدام.</p>
-          <div class="item-foot">
-            <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
-            <a class="item-url" href="https://octomind.dev/blog/whos-actually-vibe-coding-the-data-doesnt-match-the-hype/index.html" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1289,7 +1336,7 @@ https://steviep.xyz/txt/vibe-coding">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://steviep.xyz/txt/vibe-coding" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1319,7 +1366,7 @@ https://gist.github.com/MostAwesomeDude/bb8cbfd005a33f5dd262d1f20a63a693">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://gist.github.com/MostAwesomeDude/bb8cbfd005a33f5dd262d1f20a63a693" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1349,7 +1396,7 @@ https://devblogs.microsoft.com/cosmosdb/accelerate-your-cosmos-db-infrastructure
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://devblogs.microsoft.com/cosmosdb/accelerate-your-cosmos-db-infrastructure-with-github-copilot-cli-and-azure-cosmos-db-agent-kit/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1379,7 +1426,7 @@ https://thefakeborzi.itch.io/tower-chess/devlog/1334091/vibe-coding-is-making-so
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://thefakeborzi.itch.io/tower-chess/devlog/1334091/vibe-coding-is-making-software-architecture-worth-it-again" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1409,7 +1456,7 @@ https://www.youtube.com/watch?v=puVtC9SNA2A">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://www.youtube.com/watch?v=puVtC9SNA2A" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1439,7 +1486,7 @@ https://www.theverge.com/report/869318/claude-vibe-coding-home-assistant-smart-h
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://www.theverge.com/report/869318/claude-vibe-coding-home-assistant-smart-home" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1469,37 +1516,7 @@ https://arxiv.org/abs/2601.15195">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٩-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://arxiv.org/abs/2601.15195" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M19 12H5M12 19l-7-7 7-7"/>
-              </svg>
-            </a>
-          </div>
-        </li>
-        <li class="item">
-          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ ميثاق البرمجة بالذكاء الاصطناعي**
-&gt; صياغة مبادئ وتعهّدات لضبط سلوك البرمجة بالذكاء الاصطناعي والمحافظة على الجودة.
-https://github.com/VibeCharter/Rules">
-            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="9" y="9" width="13" height="13" rx="2"/>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-            </svg>
-            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 6 9 17l-5-5"/>
-            </svg>
-          </button>
-          <a class="item-link" href="https://github.com/VibeCharter/Rules" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">ميثاق البرمجة بالذكاء الاصطناعي</h3>
-          </a>
-          <p class="item-summary">صياغة مبادئ وتعهّدات لضبط سلوك البرمجة بالذكاء الاصطناعي والمحافظة على الجودة.</p>
-          <div class="item-foot">
-            <span class="item-meta">Hacker News · ٢٩-٠١-٢٠٢٦</span>
-            <a class="item-url" href="https://github.com/VibeCharter/Rules" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1534,7 +1551,7 @@ https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٢٨-٠١-٢٠٢٦</span>
             <a class="item-url" href="https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind-github-copilot-clis-animated-ascii-banner/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1549,9 +1566,9 @@ https://github.blog/engineering/from-pixels-to-characters-the-engineering-behind
       <ul class="items">
         <li class="item">
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ كدتُ أتوقف عن التعلّم حين صار Claude بارعًا أكثر من اللازم**
-&gt; فيديو يعرض التأثير النفسي للاعتماد على Claude في التعلم وأهمية الحفاظ على المهارة.
-https://www.youtube.com/watch?v=exampleJan1">
+                  data-copy="**ــ تعلّم ٨٠٪ من Claude Code في عشر دقائق (دورة ٢٠٢٦)**
+&gt; درس مركّز يغطي أهم أوامر Claude Code وسير العمل الأساسية في عشر دقائق، مثال للمبتدئين الذين يريدون الانطلاق بسرعة في البرمجة بالذكاء الاصطناعي.
+https://www.youtube.com/watch?v=3aKVArutiIU">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="9" y="9" width="13" height="13" rx="2"/>
@@ -1562,14 +1579,14 @@ https://www.youtube.com/watch?v=exampleJan1">
               <path d="M20 6 9 17l-5-5"/>
             </svg>
           </button>
-          <a class="item-link" href="https://www.youtube.com/watch?v=exampleJan1" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">كدتُ أتوقف عن التعلّم حين صار Claude بارعًا أكثر من اللازم<span class="badge badge-video">فيديو</span></h3>
+          <a class="item-link" href="https://www.youtube.com/watch?v=3aKVArutiIU" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">تعلّم ٨٠٪ من Claude Code في عشر دقائق (دورة ٢٠٢٦)<span class="badge badge-video">فيديو</span></h3>
           </a>
-          <p class="item-summary">فيديو يعرض التأثير النفسي للاعتماد على Claude في التعلم وأهمية الحفاظ على المهارة.</p>
+          <p class="item-summary">درس مركّز يغطي أهم أوامر Claude Code وسير العمل الأساسية في عشر دقائق، مثال للمبتدئين الذين يريدون الانطلاق بسرعة في البرمجة بالذكاء الاصطناعي.</p>
           <div class="item-foot">
-            <span class="item-meta">YouTube · ١٥-٠١-٢٠٢٦</span>
-            <a class="item-url" href="https://www.youtube.com/watch?v=exampleJan1" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+            <span class="item-meta">YouTube · ٠٧-٠١-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=3aKVArutiIU" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1579,9 +1596,9 @@ https://www.youtube.com/watch?v=exampleJan1">
         </li>
         <li class="item">
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Spotify تطلق... Claude Code؟**
-&gt; فيديو يناقش تقارير عن توظيف Spotify لـ Claude Code في مسارات عمل البرمجة.
-https://www.youtube.com/watch?v=exampleJan2">
+                  data-copy="**ــ أفضل أدوات البرمجة بالذكاء الاصطناعي للمطوّرين في ٢٠٢٦**
+&gt; جولة مقارنة في أقوى أدوات الترميز الذكية لعام ٢٠٢٦ مع أمثلة عملية، تساعد المطوّرين على اختيار الحزمة الأنسب لمشاريعهم.
+https://www.youtube.com/watch?v=pvMGRSZJ4Jw">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="9" y="9" width="13" height="13" rx="2"/>
@@ -1592,14 +1609,14 @@ https://www.youtube.com/watch?v=exampleJan2">
               <path d="M20 6 9 17l-5-5"/>
             </svg>
           </button>
-          <a class="item-link" href="https://www.youtube.com/watch?v=exampleJan2" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Spotify تطلق... Claude Code؟<span class="badge badge-video">فيديو</span></h3>
+          <a class="item-link" href="https://www.youtube.com/watch?v=pvMGRSZJ4Jw" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">أفضل أدوات البرمجة بالذكاء الاصطناعي للمطوّرين في ٢٠٢٦<span class="badge badge-video">فيديو</span></h3>
           </a>
-          <p class="item-summary">فيديو يناقش تقارير عن توظيف Spotify لـ Claude Code في مسارات عمل البرمجة.</p>
+          <p class="item-summary">جولة مقارنة في أقوى أدوات الترميز الذكية لعام ٢٠٢٦ مع أمثلة عملية، تساعد المطوّرين على اختيار الحزمة الأنسب لمشاريعهم.</p>
           <div class="item-foot">
-            <span class="item-meta">YouTube · ١٥-٠١-٢٠٢٦</span>
-            <a class="item-url" href="https://www.youtube.com/watch?v=exampleJan2" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+            <span class="item-meta">YouTube · ٠٥-٠١-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=pvMGRSZJ4Jw" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1624,7 +1641,7 @@ https://www.youtube.com/watch?v=exampleJan2">
       <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count">٣٢ خبر</span></a>
-      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ خبر</span></a>
       <a class="arc-item" href="./AI-News_06-08-2026.html"><span class="arc-date">الخميس ٦ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_05-08-2026.html"><span class="arc-date">الأربعاء ٥ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_04-08-2026.html"><span class="arc-date">الثلاثاء ٤ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
@@ -1653,7 +1670,7 @@ https://www.youtube.com/watch?v=exampleJan2">
     <path d="M12 19V5M5 12l7-7 7 7"/>
   </svg>
 </button>
-<div class="toast" id="toast" role="status" aria-live="polite">تم نسخ الخبر</div>
+<div class="toast" id="toast" role="status" aria-live="polite">نُسخ الخبر</div>
 <script>
 (function () {
   var toast = document.getElementById('toast');
@@ -1687,7 +1704,7 @@ https://www.youtube.com/watch?v=exampleJan2">
     function done(ok) {
       if (!ok) { showToast('تعذّر النسخ'); return; }
       btn.classList.add('is-copied');
-      showToast('تم نسخ الخبر');
+      showToast('نُسخ الخبر');
       setTimeout(function () { btn.classList.remove('is-copied'); }, 1900);
     }
 
