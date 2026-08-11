@@ -168,6 +168,23 @@ h1{
   background:var(--badge-bg);color:var(--badge-fg);
   box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
 }
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
+}
 
 /* ── Copy button (left edge of each card) ─ */
 .copy-btn{
@@ -395,7 +412,7 @@ footer a:hover{text-decoration:underline}
     <section class="cat" id="cat-أخبار-عاجلة">
       <h2 class="cat-title">ــ 🚨 أخبار عاجلة <span class="cat-count">٧</span></h2>
       <ul class="items">
-        <li class="item">
+        <li class="item is-dead">
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ حصن CUDA من Nvidia يواجه تهديده الأول الحقيقي: الذكاء الاصطناعي ذاته**
 &gt; تقرير من The Next Web يكشف أن ميزة CUDA التي طالما اعتمدتها Nvidia بدأت تتآكل مع تعلّم وكلاء البرمجة بالذكاء الاصطناعي إعادة كتابة البرمجيات واستبدالها.
@@ -410,22 +427,16 @@ https://thenextweb.com/news/nvidia-cuda-moat-threat-ai-coding-agents">
               <path d="M20 6 9 17l-5-5"/>
             </svg>
           </button>
-          <a class="item-link" href="https://thenextweb.com/news/nvidia-cuda-moat-threat-ai-coding-agents" target="_blank" rel="noopener noreferrer">
+          <div class="item-link" aria-disabled="true">
             <h3 class="item-title">حصن CUDA من Nvidia يواجه تهديده الأول الحقيقي: الذكاء الاصطناعي ذاته</h3>
-          </a>
+          </div>
           <p class="item-summary">تقرير من The Next Web يكشف أن ميزة CUDA التي طالما اعتمدتها Nvidia بدأت تتآكل مع تعلّم وكلاء البرمجة بالذكاء الاصطناعي إعادة كتابة البرمجيات واستبدالها.</p>
           <div class="item-foot">
             <span class="item-meta">The Next Web · ٠٢-٠٨-٢٠٢٦</span>
-            <a class="item-url" href="https://thenextweb.com/news/nvidia-cuda-moat-threat-ai-coding-agents" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M19 12H5M12 19l-7-7 7-7"/>
-              </svg>
-            </a>
+            <span class="item-dead-note">الرابط الأصلي لم يعد متاحاً</span>
           </div>
         </li>
-        <li class="item">
+        <li class="item is-dead">
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Qwen3.٨-Max يظهر بادعاء جريء: يتفوق على GPT-5.٦ Sol Max و Claude Fable 5**
 &gt; أعلنت Alibaba عن نموذجها Qwen3.٨-Max الذي يدّعي التفوق على GPT-5.٦ Sol Max و Claude Fable 5 في مقارنات البرمجة.
@@ -440,19 +451,13 @@ https://venturebeat.com/ai/qwen3-8-max-outperforms-gpt-5-6-sol/">
               <path d="M20 6 9 17l-5-5"/>
             </svg>
           </button>
-          <a class="item-link" href="https://venturebeat.com/ai/qwen3-8-max-outperforms-gpt-5-6-sol/" target="_blank" rel="noopener noreferrer">
+          <div class="item-link" aria-disabled="true">
             <h3 class="item-title">Qwen3.٨-Max يظهر بادعاء جريء: يتفوق على GPT-5.٦ Sol Max و Claude Fable 5</h3>
-          </a>
+          </div>
           <p class="item-summary">أعلنت Alibaba عن نموذجها Qwen3.٨-Max الذي يدّعي التفوق على GPT-5.٦ Sol Max و Claude Fable 5 في مقارنات البرمجة.</p>
           <div class="item-foot">
             <span class="item-meta">VentureBeat · ٠٢-٠٨-٢٠٢٦</span>
-            <a class="item-url" href="https://venturebeat.com/ai/qwen3-8-max-outperforms-gpt-5-6-sol/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M19 12H5M12 19l-7-7 7-7"/>
-              </svg>
-            </a>
+            <span class="item-dead-note">الرابط الأصلي لم يعد متاحاً</span>
           </div>
         </li>
         <li class="item">
@@ -519,7 +524,7 @@ https://www.reuters.com/business/retail-consumer/alibaba-plans-charge-big-users-
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ المراجعة البشرية تفوّت ثلث الطلبات الخطرة من وكلاء البرمجة بالذكاء الاصطناعي**
 &gt; دراسة جديدة تكشف أن المراجعين البشرين يوافقون على ثلث الطلبات الخطرة الصادرة من وكلاء البرمجة الذكية، مما يثير تساؤلات حول فاعلية المراجعة البشرية في حلقات التحقق.
-https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/">
+https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/5284236">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="9" y="9" width="13" height="13" rx="2"/>
@@ -530,13 +535,13 @@ https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third
               <path d="M20 6 9 17l-5-5"/>
             </svg>
           </button>
-          <a class="item-link" href="https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/" target="_blank" rel="noopener noreferrer">
+          <a class="item-link" href="https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/5284236" target="_blank" rel="noopener noreferrer">
             <h3 class="item-title">المراجعة البشرية تفوّت ثلث الطلبات الخطرة من وكلاء البرمجة بالذكاء الاصطناعي</h3>
           </a>
           <p class="item-summary">دراسة جديدة تكشف أن المراجعين البشرين يوافقون على ثلث الطلبات الخطرة الصادرة من وكلاء البرمجة الذكية، مما يثير تساؤلات حول فاعلية المراجعة البشرية في حلقات التحقق.</p>
           <div class="item-foot">
             <span class="item-meta">The Register · ٠٢-٠٨-٢٠٢٦</span>
-            <a class="item-url" href="https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/" target="_blank" rel="noopener noreferrer">
+            <a class="item-url" href="https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/5284236" target="_blank" rel="noopener noreferrer">
               فتح المصدر
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1222,7 +1227,7 @@ https://www.youtube.com/watch?v=SM17ps6-gAY">
       <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count">٣٢ خبر</span></a>
-      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ خبر</span></a>
       <a class="arc-item" href="./AI-News_06-08-2026.html"><span class="arc-date">الخميس ٦ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_05-08-2026.html"><span class="arc-date">الأربعاء ٥ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_04-08-2026.html"><span class="arc-date">الثلاثاء ٤ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>

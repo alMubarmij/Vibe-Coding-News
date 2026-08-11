@@ -168,6 +168,23 @@ h1{
   background:var(--badge-bg);color:var(--badge-fg);
   box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
 }
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
+}
 
 /* ── Copy button (left edge of each card) ─ */
 .copy-btn{
@@ -862,7 +879,7 @@ https://github.com/numtide/llm-agents.nix">
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الإنسان في الحلقة يغفل عن ثلث طلبات الوكلاء الخطرة**
 &gt; دراسة تكشف أن المراجعين البشر يفوّتون نحو ثلث الطلبات الخطرة الصادرة عن وكلاء البرمجة.
-https://www.theregister.com/ai-and-ml/2026/08/06/humans_in_the_loop_miss_a_third_of_dangerous_ai_coding_agent_requests/">
+https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/5284236">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="9" y="9" width="13" height="13" rx="2"/>
@@ -873,13 +890,13 @@ https://www.theregister.com/ai-and-ml/2026/08/06/humans_in_the_loop_miss_a_third
               <path d="M20 6 9 17l-5-5"/>
             </svg>
           </button>
-          <a class="item-link" href="https://www.theregister.com/ai-and-ml/2026/08/06/humans_in_the_loop_miss_a_third_of_dangerous_ai_coding_agent_requests/" target="_blank" rel="noopener noreferrer">
+          <a class="item-link" href="https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/5284236" target="_blank" rel="noopener noreferrer">
             <h3 class="item-title">الإنسان في الحلقة يغفل عن ثلث طلبات الوكلاء الخطرة</h3>
           </a>
           <p class="item-summary">دراسة تكشف أن المراجعين البشر يفوّتون نحو ثلث الطلبات الخطرة الصادرة عن وكلاء البرمجة.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ١٠-٠٨-٢٠٢٦</span>
-            <a class="item-url" href="https://www.theregister.com/ai-and-ml/2026/08/06/humans_in_the_loop_miss_a_third_of_dangerous_ai_coding_agent_requests/" target="_blank" rel="noopener noreferrer">
+            <a class="item-url" href="https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/5284236" target="_blank" rel="noopener noreferrer">
               فتح المصدر
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1060,7 +1077,7 @@ https://www.youtube.com/watch?v=FD87V5oj5qw">
       <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count">٣٢ خبر</span></a>
-      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ خبر</span></a>
       <a class="arc-item" href="./AI-News_06-08-2026.html"><span class="arc-date">الخميس ٦ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_05-08-2026.html"><span class="arc-date">الأربعاء ٥ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_04-08-2026.html"><span class="arc-date">الثلاثاء ٤ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>

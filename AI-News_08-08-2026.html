@@ -168,6 +168,23 @@ h1{
   background:var(--badge-bg);color:var(--badge-fg);
   box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
 }
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
+}
 
 /* ── Copy button (left edge of each card) ─ */
 .copy-btn{
@@ -427,7 +444,7 @@ https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-o
             </a>
           </div>
         </li>
-        <li class="item">
+        <li class="item is-dead">
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الصفحة الرسمية لوكيل Muse Code من Meta**
 &gt; نشرت Meta صفحة المنتج الرسمية لوكيل Muse Code، وتعرض فيها قدراته وطريقة دمجه في مسار التطوير.
@@ -442,19 +459,13 @@ https://developer.meta.com/ai/products/muse-code/">
               <path d="M20 6 9 17l-5-5"/>
             </svg>
           </button>
-          <a class="item-link" href="https://developer.meta.com/ai/products/muse-code/" target="_blank" rel="noopener noreferrer">
+          <div class="item-link" aria-disabled="true">
             <h3 class="item-title">الصفحة الرسمية لوكيل Muse Code من Meta</h3>
-          </a>
+          </div>
           <p class="item-summary">نشرت Meta صفحة المنتج الرسمية لوكيل Muse Code، وتعرض فيها قدراته وطريقة دمجه في مسار التطوير.</p>
           <div class="item-foot">
             <span class="item-meta">Meta Developers · ٠٨-٠٨-٢٠٢٦</span>
-            <a class="item-url" href="https://developer.meta.com/ai/products/muse-code/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M19 12H5M12 19l-7-7 7-7"/>
-              </svg>
-            </a>
+            <span class="item-dead-note">الرابط الأصلي لم يعد متاحاً</span>
           </div>
         </li>
         <li class="item">
@@ -1414,7 +1425,7 @@ https://github.com/sawfwair/mere-run">
       <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
       <a class="arc-item is-current" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count">٣٢ خبر</span></a>
-      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ خبر</span></a>
       <a class="arc-item" href="./AI-News_06-08-2026.html"><span class="arc-date">الخميس ٦ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_05-08-2026.html"><span class="arc-date">الأربعاء ٥ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_04-08-2026.html"><span class="arc-date">الثلاثاء ٤ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
