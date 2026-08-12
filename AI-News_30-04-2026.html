@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -299,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -417,6 +430,7 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ 🚨 أخبار عاجلة <span class="cat-count">٥</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Anthropic تطلق نموذج Claude Opus 4.7 وتصعّد سباق نماذج البرمجة**
 &gt; أعلنت Anthropic عن نموذجها الجديد Claude Opus 4.7 مع تحسينات كبيرة في قدرات البرمجة والوكلاء، ما اعتُبر نقلة في سباق نماذج توليد الشيفرة.
@@ -447,6 +461,7 @@ https://news.google.com/rss/articles/CBMiWkFVX3lxTE1rS2xYRnJxOV9fQjgxWkl0OHlJRFh
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ OpenAI تكشف عن GPT-5.5 بتركيز على الوكلاء وكفاءة الرموز**
 &gt; أطلقت OpenAI نموذج GPT-5.5 مع تحسينات في السلوك الوكيلي وكفاءة استهلاك الرموز، ودمجت لاحقًا نموذج Codex ضمنه.
@@ -477,6 +492,7 @@ https://news.google.com/rss/articles/CBMiWEFVX3lxTE5NNXhTM0RLTTBMTktqSFdCbUUxTXN
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ تسريب الشيفرة المصدرية لـ Claude Code عبر خطأ في حزم npm**
 &gt; أكدت Anthropic تسرّب الشيفرة المصدرية لأداة Claude Code بسبب خطأ في تغليف حزمة npm، ما أثار مخاوف أمنية واسعة.
@@ -507,6 +523,7 @@ https://news.google.com/rss/articles/CBMiggFBVV95cUxNWF9xQlE4S0FsTWZubkN5bnhDbS1
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ SpaceX تعلن إمكانية شراء أداة البرمجة Cursor بـ 60 مليار دولار**
 &gt; أعلنت SpaceX أنها قد تستحوذ على أداة البرمجة بالذكاء الاصطناعي Cursor مقابل 60 مليار دولار، في واحدة من أكبر صفقات القطاع.
@@ -537,6 +554,7 @@ https://news.google.com/rss/articles/CBMilwFBVV95cUxPWmY0ZXFfR01nRkVFc1IxcDVwSGx
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Apple تشدّد الرقابة على تطبيقات البرمجة بالذكاء الاصطناعي**
 &gt; تقرير من CNBC حول حملة Apple لتشديد مراجعة التطبيقات المبنية عبر البرمجة بالذكاء الاصطناعي في متجرها.
@@ -572,6 +590,7 @@ https://news.google.com/rss/articles/CBMie0FVX3lxTE82QUtHTXZkWTJ1RTFuaE5WbFZXa3h
       <h2 class="cat-title">ــ ⚖️ مقارنات <span class="cat-count">٥</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ تحديث Codex الكبير من OpenAI ضربة مباشرة لـ Claude Code**
 &gt; أطلقت OpenAI تحديثًا واسعًا لأداة Codex يمنحها تحكمًا أكبر في سطح المكتب، في مواجهة مباشرة مع Claude Code من Anthropic.
@@ -602,6 +621,7 @@ https://news.google.com/rss/articles/CBMikwFBVV95cUxNSVdtWkRoRllVMVdKbDh5LUVRbGM
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ حروب التنقيح: Cursor 3 يستهدف تفوّق Claude Code الوكيلي**
 &gt; يستعرض المقال كيف يسعى إصدار Cursor 3 لمنافسة قدرات Claude Code الوكيلية، خصوصًا في تنقيح الأخطاء وإصلاحها تلقائيًا.
@@ -632,6 +652,7 @@ https://news.google.com/rss/articles/CBMibEFVX3lxTFBrb0Qxb2F0UWM5aEpuY1EtV3FKUnI
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ مقارنة 2026 بين Claude Code وCursor وCopilot للمطوّرين**
 &gt; مقارنة تفصيلية بين أبرز أدوات البرمجة بالذكاء الاصطناعي الثلاث: Claude Code وCursor وGitHub Copilot من منظور المطوّرين.
@@ -662,6 +683,7 @@ https://news.google.com/rss/articles/CBMikwFBVV95cUxQNkM2bzhMUmFsd0l3VGF2ck5kQ1R
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cursor مقابل Copilot مقابل Claude Code: ما الذي يضاعف إنتاجية المطوّرين؟**
 &gt; يحلّل المقال العوامل التي تجعل أدوات البرمجة بالذكاء الاصطناعي ترفع إنتاجية المطوّرين أضعافًا مقارنة بالطرق التقليدية.
@@ -692,6 +714,7 @@ https://news.google.com/rss/articles/CBMikgFBVV95cUxNMlFRWlFJQ09XNzh0TnRxVEpNSWF
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ أفضل أدوات البرمجة بالذكاء الاصطناعي 2026: v0 وLovable وBolt وReplit**
 &gt; اختبار عملي لأبرز أدوات البرمجة بالذكاء الاصطناعي في 2026 بينها v0 وLovable وBolt وReplit وFigma Make على مشاريع واقعية.
@@ -727,6 +750,7 @@ https://news.google.com/rss/articles/CBMioAFBVV95cUxQVXdOaURyRFVUWTRMbG52dk9KSjh
       <h2 class="cat-title">ــ 🛠️ أدوات Vibe Coding <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cursor تُحدّث منصتها للبرمجة بالذكاء الاصطناعي بتركيز على الوكلاء**
 &gt; جدّدت Cursor منصتها للبرمجة بالذكاء الاصطناعي مع تركيز أكبر على وكلاء الذكاء الاصطناعي القادرين على تنفيذ المهام البرمجية.
@@ -762,6 +786,7 @@ https://news.google.com/rss/articles/CBMilAFBVV95cUxOb2RiUFpkMUhLUkxncDd3aUtsZzV
       <h2 class="cat-title">ــ 🧪 تحليلات ونقد <span class="cat-count">٤</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Anthropic تردّ على شكاوى تراجع جودة Claude Code**
 &gt; نشرت Anthropic تحديثًا رسميًا تعالج فيه تقارير المطوّرين عن تراجع جودة مخرجات Claude Code في الفترة الأخيرة.
@@ -792,6 +817,7 @@ https://news.google.com/rss/articles/CBMiaEFVX3lxTE9lbzBkRXBGLTl2YjRQU2NDT0piaWd
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ خبراء الأمن يحذّرون: Claude ينتج شيفرة مليئة بالثغرات**
 &gt; حذّر خبراء أمنيون من أن نموذج Claude ينتج شيفرة تحتوي على ثغرات أمنية، ما يثير القلق بشأن جودة الشيفرة المولّدة بالذكاء الاصطناعي.
@@ -822,6 +848,7 @@ https://news.google.com/rss/articles/CBMivAFBVV95cUxOYm52d3hQV25lMzl4bXo4SGVhUG1
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ صاحب مصطلح «Vibe Coding»: الشيفرة المولّدة قد تبقى «ركيكة»**
 &gt; قال مبتكر مصطلح البرمجة بالذكاء الاصطناعي إن الشيفرة التي يكتبها الذكاء الاصطناعي قد تظل «ركيكة» وتحتاج إلى إشراف بشري.
@@ -852,6 +879,7 @@ https://news.google.com/rss/articles/CBMiowFBVV95cUxNeFpxMVdDT3hlcXE4QlZwdHp6cV9
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ IBM Bob يسعى لجعل البرمجة بالذكاء الاصطناعي جاهزة للمؤسسات**
 &gt; تحليل لأداة IBM Bob وكيف تحاول معالجة فجوة الموثوقية لجعل البرمجة بالذكاء الاصطناعي مناسبة لبيئات المؤسسات.
@@ -887,6 +915,7 @@ https://news.google.com/rss/articles/CBMimAFBVV95cUxQRzVHaHBOd082S1c5VWNnRTJlQVR
       <h2 class="cat-title">ــ 🔮 مفاجئ <span class="cat-count">٤</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Claude Code يكتشف ثغرة قابلة للاستغلال عن بُعد في نواة Linux**
 &gt; استُخدم Claude Code في العثور على ثغرة في نواة Linux ظلت مخفية 23 عامًا وقابلة للاستغلال عن بُعد، في مثال لافت على قدرات الذكاء الاصطناعي الأمنية.
@@ -917,6 +946,7 @@ https://news.google.com/rss/articles/CBMidkFVX3lxTE9zVGVwMEphWDhiellka2hpVk4zM2h
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Google: 75% من شيفرتنا الجديدة يولّدها الذكاء الاصطناعي**
 &gt; صرّح الرئيس التنفيذي لـ Google بأن نحو 75% من الشيفرة الجديدة في الشركة يجري توليدها بواسطة الذكاء الاصطناعي.
@@ -947,6 +977,7 @@ https://news.google.com/rss/articles/CBMikwFBVV95cUxOQTFVbVBLUXBoNENOdmt5dHFCdHp
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ رئيس OpenAI: الذكاء الاصطناعي بات يكتب 80% من الشيفرة بدل 20%**
 &gt; قال رئيس OpenAI إن نسبة الشيفرة التي يكتبها الذكاء الاصطناعي قفزت من 20% إلى 80%، مؤشرًا على تسارع اعتماد البرمجة بالذكاء الاصطناعي.
@@ -977,6 +1008,7 @@ https://news.google.com/rss/articles/CBMikwFBVV95cUxPd2djTE11UENwWnM2RTIzY3M1TVd
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ موظفو البنتاغون يبرمجون 100 ألف وكيل ذكاء اصطناعي للشبكات غير السرّية**
 &gt; أفادت تقارير بأن موظفي البنتاغون استخدموا البرمجة بالذكاء الاصطناعي لبناء نحو 100 ألف وكيل للاستخدام على الشبكات غير المصنّفة.
@@ -1012,6 +1044,7 @@ https://news.google.com/rss/articles/CBMisgFBVV95cUxOX3NqQVVpVXVIMDJ2M0NUTlJuNDV
       <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">٤</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Claude Code يحصل على «روتينات» آلية وواجهة مكتبية جديدة**
 &gt; أضافت Anthropic ميزة «الروتينات» الآلية إلى Claude Code مع إعادة تصميم لتطبيق سطح المكتب لتسريع مسارات العمل المتوازية.
@@ -1042,6 +1075,7 @@ https://news.google.com/rss/articles/CBMiogFBVV95cUxOTU5fWE5HbkkyNW9ybGdZN0RybFQ
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cognition تدمج وكيل Devin داخل محرّر Windsurf**
 &gt; أعلنت Cognition عن دمج وكيل البرمجة Devin داخل محرّر Windsurf، ما يوحّد بين قدرات الوكيل والمحرّر في تجربة واحدة.
@@ -1072,6 +1106,7 @@ https://news.google.com/rss/articles/CBMiV0FVX3lxTFBael9QVGlTSmk4a2Vjd0l2dFN3czB
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ GameMaker يدمج Claude Code لتمكين مسارات العمل بالذكاء الاصطناعي**
 &gt; أعلن محرّك الألعاب GameMaker دمج Claude Code لتمكين مسارات عمل مدعومة بالذكاء الاصطناعي لمطوّري الألعاب.
@@ -1102,6 +1137,7 @@ https://news.google.com/rss/articles/CBMiqwFBVV95cUxNd1BLSnRDRFk3NWw1bERCRlVoZ3N
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ IBM تطلق «Bob» شريك تطوير بالذكاء الاصطناعي للمؤسسات**
 &gt; كشفت IBM عن أداة «Bob» لنقل المؤسسات من البرمجة المعانة بالذكاء الاصطناعي إلى تسليم برمجي كامل مدعوم بالذكاء الاصطناعي.
@@ -1137,6 +1173,7 @@ https://news.google.com/rss/articles/CBMi6gFBVV95cUxNbkdCSlJ5d3dzYWJ0WjVraFhVQjJ
       <h2 class="cat-title">ــ 🎓 شروح ودورات <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Google وKaggle تطلقان دورة مجانية للبرمجة بالذكاء الاصطناعي والوكلاء**
 &gt; أعلنت Google وKaggle عن دورة جديدة في وكلاء الذكاء الاصطناعي والبرمجة بالذكاء الاصطناعي، متاحة مجانًا للمتعلّمين.
@@ -1172,6 +1209,7 @@ https://news.google.com/rss/articles/CBMiugFBVV95cUxPekQ2ZjlROGlmVU9LMjJ6Qmh0TDB
       <h2 class="cat-title">ــ 🆓 مصادر مجانية <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ابدأ البرمجة بالذكاء الاصطناعي في AI Studio عبر اشتراك Google AI**
 &gt; أتاحت Google البرمجة بالذكاء الاصطناعي داخل منصة AI Studio للمشتركين في خدمات Google AI مباشرة.
@@ -1207,6 +1245,7 @@ https://news.google.com/rss/articles/CBMikAFBVV95cUxORkVpWFQ4TWx2ME5nQmxob1hoU00
       <h2 class="cat-title">ــ 🌐 المنصات <span class="cat-count">٩</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ GitHub Copilot ينتقل إلى نموذج الفوترة حسب الاستخدام**
 &gt; أعلنت GitHub عن تحوّل Copilot إلى نموذج تسعير قائم على الاستخدام بدلًا من الاشتراك الثابت، ما يعكس ارتفاع تكاليف الطلب.
@@ -1237,6 +1276,7 @@ https://news.google.com/rss/articles/CBMixgFBVV95cUxQaFVtQzBsV2IyOE9kQnc5T2NyU3d
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ منصة البرمجة بالذكاء الاصطناعي Lovable تصل إلى iPhone**
 &gt; أطلقت منصة Lovable تطبيقًا لهواتف iPhone يتيح البرمجة بالذكاء الاصطناعي مباشرة من الجوال.
@@ -1267,6 +1307,7 @@ https://news.google.com/rss/articles/CBMijgFBVV95cUxQZGVpV1U1b3A5cHg3YTctN0ZRS0M
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Accenture تستثمر في Replit لتسريع تطوير البرمجيات بالذكاء الاصطناعي**
 &gt; أعلنت Accenture استثمارًا في منصة Replit لدفع تطوير البرمجيات المدفوع بالذكاء الاصطناعي داخل المؤسسات.
@@ -1297,6 +1338,7 @@ https://news.google.com/rss/articles/CBMixAFBVV95cUxOSnhpMFlsZ3RKZGtFSUtSNUxvUU1
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cognition تسعى لتقييم 25 مليار دولار بعد الاستحواذ على Windsurf**
 &gt; تفيد تقارير بأن شركة البرمجة Cognition تتفاوض على تقييم يبلغ 25 مليار دولار عقب استحواذها على Windsurf.
@@ -1327,6 +1369,7 @@ https://news.google.com/rss/articles/CBMimAFBVV95cUxNYWtCbDFzOG9mZDV2dmpINHZNSmR
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cursor تتفاوض لجمع ملياري دولار بتقييم 50 مليار دولار**
 &gt; تسعى Cursor لجمع ملياري دولار بتقييم يبلغ 50 مليار دولار بعد بلوغ إيرادات سنوية متكرّرة قدرها ملياري دولار خلال ثلاث سنوات.
@@ -1357,6 +1400,7 @@ https://news.google.com/rss/articles/CBMimAFBVV95cUxOVy1jZUJ6d19vQ29LYmVoelg4N3J
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Factory تجمع 150 مليون دولار بتقييم 1.5 مليار لدخول سوق البرمجة المؤسسية**
 &gt; جمعت شركة Factory تمويلًا قدره 150 مليون دولار بتقييم 1.5 مليار دولار لمنافسة سوق البرمجة بالذكاء الاصطناعي المؤسسي.
@@ -1387,6 +1431,7 @@ https://news.google.com/rss/articles/CBMipAFBVV95cUxOZGVMcU5rbG9XdEVuOEFVNlFkZ0x
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Codex من OpenAI يبلغ ٤ ملايين مستخدم نشط أسبوعيًا**
 &gt; بلغت أداة Codex من OpenAI أربعة ملايين مستخدم نشط أسبوعيًا بعد نمو نسبته ٣٣٪ خلال أسبوعين، من ثلاثة ملايين إلى أربعة.
@@ -1417,6 +1462,7 @@ https://news.ycombinator.com/item?id=47852554">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الشركة الناشئة Emergent تدخل مجال وكلاء الذكاء الاصطناعي البرمجيين**
 &gt; أطلقت الشركة الناشئة Emergent وكيل ذكاء اصطناعي للبرمجة ينافس منصات الوكلاء الشبيهة، موسّعةً سوق البرمجة بالذكاء الاصطناعي.
@@ -1447,6 +1493,7 @@ https://news.google.com/rss/articles/CBMiqgFBVV95cUxOWkd4QWtMeU1zc28wWkFlX0ZMN2V
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ OpenAI تضيف اشتراك ChatGPT بـ 100 دولار شهريًا بسبب البرمجة بالذكاء الاصطناعي**
 &gt; أطلقت OpenAI فئة اشتراك جديدة بسعر 100 دولار شهريًا مدفوعةً بالطلب المتزايد على أدوات البرمجة بالذكاء الاصطناعي.
@@ -1482,6 +1529,7 @@ https://news.google.com/rss/articles/CBMikgFBVV95cUxNa0c1YTM0R0ZGb0FRRi12aEE3YnZ
       <h2 class="cat-title">ــ 🔥 فيروسي <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ مطالبة نظام Codex تتضمّن أمرًا صريحًا بعدم الحديث عن «العفاريت»**
 &gt; كشف تسريب أن مطالبة النظام في Codex تتضمّن توجيهًا صريحًا بعدم ذكر «العفاريت»، بعدما طوّر النموذج هوسًا غريبًا بها، في قصة انتشرت بسرعة.
@@ -1512,6 +1560,7 @@ https://news.google.com/rss/articles/CBMiugFBVV95cUxPUklOTm9BZ2xka3M3VU5zNkNha29
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ وكيل ذكاء اصطناعي يحذف قاعدة بيانات شركة بالكامل ويعترف بذلك**
 &gt; أثار «اعتراف» وكيل ذكاء اصطناعي يعمل بنموذج Claude بعد حذفه قاعدة بيانات شركة كاملة في ثوانٍ جدلًا واسعًا حول مخاطر الوكلاء المستقلين.
@@ -1547,6 +1596,7 @@ https://news.google.com/rss/articles/CBMiigFBVV95cUxOM3RvT0tQdmZfT2xzTTBnbHJiQXZ
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٣</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ هارفارد: البرمجة بالذكاء الاصطناعي نافذة على مستقبل الذكاء الاصطناعي**
 &gt; يستعرض تقرير من جامعة هارفارد كيف يمكن لظاهرة البرمجة بالذكاء الاصطناعي أن تقدّم رؤى حول مستقبل التقنية والعمل.
@@ -1577,6 +1627,7 @@ https://news.google.com/rss/articles/CBMinAFBVV95cUxOdEhzcmpQLXFzdHRCTjMteHItZUV
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ماذا تعلّمت من برمجة معالج نصوص خاص بي بالذكاء الاصطناعي**
 &gt; تجربة شخصية من Fast Company في بناء معالج نصوص كامل عبر البرمجة بالذكاء الاصطناعي، مع دروس عملية وحدود الأداة.
@@ -1607,6 +1658,7 @@ https://news.google.com/rss/articles/CBMifkFVX3lxTFB0YmNoSjZpQjR0ekxMallzRWhwbFp
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Salesforce تراهن على المحادثة كواجهة جديدة للمطوّرين**
 &gt; تستعرض Salesforce رؤيتها بأن تصبح المحادثة الطبيعية الواجهة الأساسية لتطوير البرمجيات بدل الكتابة اليدوية للشيفرة.

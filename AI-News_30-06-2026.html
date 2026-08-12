@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -299,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -412,6 +425,7 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ 🚨 أخبار عاجلة <span class="cat-count">٨</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Microsoft تلغي تراخيص Claude Code وتنقل فرقها إلى Copilot**
 &gt; أوقفت Microsoft تجديد تراخيص Claude Code لمطوريها ووجّهتهم نحو حلول Copilot الخاصة بها، في مؤشر واضح على اشتداد المنافسة في سوق أدوات البرمجة بالذكاء الاصطناعي.
@@ -442,6 +456,7 @@ https://news.google.com/rss/articles/CBMisgFBVV95cUxObUUwR09rNy1SeDZBaGZ5VGtxN3k
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ نماذج OpenAI المتطورة وCodex تتوفر رسميًا على AWS**
 &gt; أصبحت نماذج OpenAI الرائدة ووكيل البرمجة Codex متاحة بشكل عام على Amazon Bedrock، في خطوة تتيح للمؤسسات تشغيلها داخل سحابة AWS دون مغادرتها.
@@ -472,6 +487,7 @@ https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-a
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ثغرة في إجراء Claude Code على GitHub تسمح باختطاف المستودعات**
 &gt; اكتشف باحثون أن تعليقًا ضارًا واحدًا داخل إجراء GitHub Action خاص بـClaude Code يمكن أن يختطف مستودعات الأكواد، ما استدعى إصدار تحديث أمني عاجل.
@@ -502,6 +518,7 @@ https://news.google.com/rss/articles/CBMigwFBVV95cUxPYnZxN1VTeWJSMVFSS19tazFLdm9
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Anthropic تطلق Claude Fable 5 للبرمجة وClaude Mythos 5 للتفكير العميق**
 &gt; أعلنت Anthropic عن نموذجين جديدين من عائلة Claude، الأول موجه للبرمجة والمهام اليومية، والثاني للاستدلال المعمّق، وسط توقعات بمنافسة قوية في سوق النماذج.
@@ -532,6 +549,7 @@ https://www.anthropic.com/news/claude-fable-5-mythos-5">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ OpenAI تستحوذ على Ona لدعم وكيل البرمجة Codex**
 &gt; أعلنت OpenAI اتفاقًا للاستحواذ على شركة Ona لتعزيز قدرات وكيلها Codex وتوسيع أدواته أمام المطورين والمؤسسات.
@@ -562,6 +580,7 @@ https://news.google.com/rss/articles/CBMidEFVX3lxTE55b0NuQ2NnRUxsRnl1MlBBX2pFNUI
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ خطأ في تسجيل Codex قد يكتب تيرابايتات على أقراص SSD المحلية**
 &gt; رصد مطورون خللًا في آلية تسجيل Codex يسبب كتابة كميات هائلة من البيانات على أقراص التخزين، ما قد يقصّر عمر الأقراص ويهدد بيانات المستخدمين.
@@ -592,6 +611,7 @@ https://github.com/openai/codex/issues/28224">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Reddit يحجب الوصول المجاني إلى واجهات API عدا تطبيق RedReader**
 &gt; أغلقت Reddit الوصول المجاني إلى واجهاتها البرمجية أمام التطبيقات الخارجية، مستثنية تطبيق RedReader فقط، في خطوة أثارت موجة اعتراض من مجتمع المطورين.
@@ -622,6 +642,7 @@ https://news.ycombinator.com/item?id=48640168">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Claude Code يوسم الطلبات بعلامات خفية عبر تقنية الإخفاء المعلوماتي**
 &gt; اكتشف مطورون أن Claude Code يدمج رموزًا خفية في الطلبات عبر بروتوكول MCP، فيما رجّح باحثون أن الهدف تتبع الاستخدام غير المصرح به للنموذج.
@@ -657,6 +678,7 @@ https://thereallo.dev/blog/claude-code-prompt-steganography">
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٥</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ MiniMax M3 يتفوق على GPT-5.5 وGemini 3.1 Pro في المعايير القياسية**
 &gt; كشف نموذج MiniMax M3 الجديد عن نتائج تتفوق على أحدث نماذج OpenAI وGoogle في معايير رئيسية بتكلفة أقل، ما يزيد حدة المنافسة بين نماذج اللغات الكبيرة.
@@ -687,6 +709,7 @@ https://news.google.com/rss/articles/CBMi3AFBVV95cUxNVjJnVDMxM3Q1RWdaV3VBLWJPV2V
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Google تطلق Gemma 4 12B نموذجًا متعدد الوسائط بلا مشفّر**
 &gt; قدّمت Google نموذج Gemma 4 12B المفتوح الذي يجمع النص والصوت والرؤية في بنية واحدة خالية من المشفّر، ويعمل محليًا على الأجهزة الشخصية.
@@ -717,6 +740,7 @@ https://blog.google/innovation-and-ai/technology/developers-tools/introducing-ge
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ هندسة البيئة التشغيلية: كيف توظف OpenAI Codex في عالم الوكلاء أولًا**
 &gt; مقال من OpenAI يشرح مفهوم هندسة البيئة التشغيلية Harness Engineering ويوضح كيف يتحول التركيز من المطالبات إلى تصميم بيئة عمل كاملة تمكّن الوكيل من الإنجاز.
@@ -747,6 +771,7 @@ https://openai.com/index/harness-engineering/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ من MCP إلى هندسة البيئة التشغيلية: كيف تطوّرت هندسة البرمجة الذكية في عام**
 &gt; يتتبع المقال تطور ممارسات هندسة البرمجيات بالذكاء الاصطناعي خلال عام واحد، من بروتوكول MCP والبرمجة بالذكاء الاصطناعي إلى هندسة البيئات التشغيلية الكاملة.
@@ -777,6 +802,7 @@ https://news.google.com/rss/articles/CBMidkFVX3lxTFBwSkdzbFVqSWUtVkVjRVBSTy1NQ0p
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ DHH يشرح مستقبل Rails في عصر البرمجة بالذكاء الاصطناعي**
 &gt; في حلقة بودكاست من Rails، يتحدث ديفيد هاينماير هانسون عن تجربته مع البرمجة بالذكاء الاصطناعي في Basecamp 5 ومستقبل إطار العمل Rails.
@@ -812,6 +838,7 @@ https://podcast.rubyonrails.org/2462975/episodes/19335416-dhh-basecamp-5-vibe-co
       <h2 class="cat-title">ــ 🏗️ المنصات <span class="cat-count">٥</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Codex يتوسع نحو المؤسسات بميزة Sites وملحقات للموظفين غير التقنيين**
 &gt; أضافت OpenAI إلى Codex أدوات إنشاء مواقع العمل الجماعية وملحقات متخصصة بالأدوار، لتتيح للموظفين غير المطورين بناء أدوات رقمية ضمن بيئة عملهم.
@@ -842,6 +869,7 @@ https://news.google.com/rss/articles/CBMihwFBVV95cUxPT19WZ2dXSVJXOXo3OGlXeG5UZW1
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Nous Research تطلق Hermes Desktop واجهة سطح مكتب مفتوحة المصدر لوكيل Hermes**
 &gt; أخرجت Nous Research وكيلها Hermes من الطرفية إلى تطبيق سطح مكتب متعدد المنصات، يدعم الملفات والنوافذ والوكلاء المتوازيين، ومتاح للجميع برخصة مفتوحة.
@@ -872,6 +900,7 @@ https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWEdQTlE5d0JXV0NqMEdvTzhTZm5
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Moonshot AI تطلق Kimi Code CLI وكيل برمجة طرفيًا بلغة TypeScript**
 &gt; أصدرت الشركة الصينية Moonshot AI واجهة سطر أوامر لوكيل البرمجة Kimi مبنية بلغة TypeScript، لتضيف خيارًا جديدًا لوكلاء البرمجة في الطرفية.
@@ -902,6 +931,7 @@ https://news.google.com/rss/articles/CBMi2gFBVV95cUxNRGQ4YVlDMjViam1XdlIyNXN0VTN
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ GitHub تطلق تطبيق Copilot المكتبي موطنًا جديدًا لوكلاء البرمجة**
 &gt; أطلقت GitHub تطبيق سطح مكتب يجمع وكلاء البرمجة والأدوات في واجهة موحدة، ما يسهّل إدارة جلسات التطوير بالذكاء الاصطناعي من مكان واحد.
@@ -932,6 +962,7 @@ https://news.google.com/rss/articles/CBMihgFBVV95cUxNbXdfT1ZBZ1BYWU9IaWtvanNZaHd
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ تطبيق Claude Desktop يتوفر على لينكس في نسخة تجريبية**
 &gt; أصدرت Anthropic تطبيق Claude Desktop لنظام لينكس كإصدار تجريبي، ليتاح سطح مكتب الوكيل على المنصات مفتوحة المصدر أخيرًا.
@@ -967,6 +998,7 @@ https://code.claude.com/docs/en/desktop-linux">
       <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">٨</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Launch HN: Hyper — عقل الشركة لتشغيل البرمجة الوكلائية**
 &gt; أداة جديدة تمنح فرق التطوير قاعدة معرفة موحدة تتيح للوكلاء الأذكياء الوصول إلى قرارات الشركة وسياق مشاريعها أثناء العمل.
@@ -997,6 +1029,7 @@ https://news.ycombinator.com/item?id=48387095">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cost.dev يجعل الوكلاء مدركين للتكلفة وأقل إنفاقًا**
 &gt; أداة من حاضنة Y Combinator تتيح للمطورين تتبع تكاليف استدعاءات النماذج أثناء جلسات البرمجة الوكلائية وتقليصها.
@@ -1027,6 +1060,7 @@ https://cost.dev/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Launch HN: Adam — برنامج تصميم هندسي بالذكاء الاصطناعي مفتوح المصدر**
 &gt; مشروع من حاضنة Y Combinator يقدم أداة CAD مفتوحة المصدر تعتمد على الوكلاء الأذكياء لإنشاء التصاميم الهندسية وتعديلها بأوامر طبيعية.
@@ -1057,6 +1091,7 @@ https://github.com/Adam-CAD/CADAM">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Mira مراجع أكواد مفتوح المصدر وذاتي الاستضافة**
 &gt; أداة مراجعة أكواد تعمل بالذكاء الاصطناعي يمكن تشغيلها على خوادمك الخاصة، لمراجعة طلبات الدمج وتقديم ملاحظات مباشرة للمطورين.
@@ -1087,6 +1122,7 @@ https://github.com/miracodeai/mira">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Launch HN: TesterArmy — وكلاء يختبرون تطبيقات الويب والجوال**
 &gt; منصة من حاضنة Y Combinator تشغّل وكلاء اختبار يحاكيون سلوك المستخدمين لفحص تطبيقات الويب والجوال واكتشاف الأعطال قبل الإصدار.
@@ -1117,6 +1153,7 @@ https://tester.army">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ توجيه ذكي للنماذج داخل Claude Code وCodex وCursor**
 &gt; أداة WorkWeave تختار النموذج الأنسب لكل طلب داخل أدوات البرمجة بالذكاء الاصطناعي، فتوجّه المهام البسيطة لنماذج سريعة رخيصة والمهام المعقدة لنماذج أقوى.
@@ -1147,6 +1184,7 @@ https://news.ycombinator.com/item?id=48688700">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Ornith-1.0 نماذج مفتوحة تعلّم نفسها بنفسها للبرمجة الوكلائية**
 &gt; مجموعة نماذج مفتوحة المصدر متخصصة في مهام البرمجة بالوكلاء، تعتمد آلية تحسين ذاتي يبني عليها النموذج مهارات أعمق من تجاربه السابقة.
@@ -1177,6 +1215,7 @@ https://github.com/ornith-ai/Ornith-1">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ 143.dev تنشر بنيتها الداخلية لوكلاء البرمجة مفتوحة المصدر**
 &gt; شركة ناشئة تفتح مصدر بنيتها التحتية الداخلية لتشغيل وكلاء البرمجة، في خطوة تتيح للفرق استنساخ إعداد متكامل لجلسات التطوير الذكية.
@@ -1212,6 +1251,7 @@ https://news.ycombinator.com/item?id=48736251">
       <h2 class="cat-title">ــ 🆓 مصادر مجانية <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Qwable نموذج محلي مجاني يفكر بأسلوب Claude Fable**
 &gt; نموذج لغوي مفتوح يعمل على الأجهزة الشخصية يحاكي أسلوب استدلال Claude Fable، ويقدم بديلًا مجانيًا لمن يريدون تجربة تفكير مشابه دون اشتراك.
@@ -1242,6 +1282,7 @@ https://news.google.com/rss/articles/CBMihgFBVV95cUxQVGNtUDVZcGJwNm9jN2FwMW1FWm5
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ DeepSeek Flash يقلب اقتصاد منتجات الوكلاء رأسًا على عقب**
 &gt; تجربة عملية تُظهر كيف أن انخفاض تكلفة نموذج DeepSeek Flash يجعل البرمجة الوكلائية أرخص بكثير، مع إعادة النظر في نماذج التسعير القائمة.
@@ -1277,6 +1318,7 @@ https://rtrvr.ai/blog/code-as-plan-deepseek-flash-text-only-browser-agent">
       <h2 class="cat-title">ــ 🧭 تحليلات ونقد <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ GitHub يتحول إلى مزبلة ضخمة للأكواد المولدة بالذكاء الاصطناعي**
 &gt; تحليل يناقش تدفق المستودعات المولدة آليًا على GitHub، ويسأل عما يعنيه ذلك لجودة الأكواد وقيمة الأرشيف المفتوح أمام المطورين.
@@ -1307,6 +1349,7 @@ https://maref.cc/en/blog/vibe-coding-crisis/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ تثبيت Cursor على iOS يغيّر إعدادات الخصوصية بشكل دائم**
 &gt; تقرير يحذر من أن تثبيت تطبيق Cursor على أجهزة iOS يعدّل إعدادات الخصوصية على نحو لا يمكن التراجع عنه، ما أثار نقاشًا واسعًا حول صلاحيات التطبيق.

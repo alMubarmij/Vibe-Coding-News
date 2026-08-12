@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -299,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -410,8 +423,9 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٢٧</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Mindpm — ذاكرة مستمرة للمهام والمشاريع عبر MCP**
+                  data-copy="**ــ Mindpm — ذاكرة مستمرة للمهام والمشاريع عبر MCP**
 &gt; أداة تمنح مساعدي البرمجة بالذكاء الاصطناعي ذاكرة دائمة للمهام عبر بروتوكول MCP.
 https://github.com/umitkavala/mindpm">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -425,7 +439,7 @@ https://github.com/umitkavala/mindpm">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/umitkavala/mindpm" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Mindpm — ذاكرة مستمرة للمهام والمشاريع عبر MCP</h3>
+            <h3 class="item-title">Mindpm — ذاكرة مستمرة للمهام والمشاريع عبر MCP</h3>
           </a>
           <p class="item-summary">أداة تمنح مساعدي البرمجة بالذكاء الاصطناعي ذاكرة دائمة للمهام عبر بروتوكول MCP.</p>
           <div class="item-foot">
@@ -440,8 +454,9 @@ https://github.com/umitkavala/mindpm">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: AIOffice — بديل عن تبويبات الطرفية عند تشغيل عدّة وكلاء**
+                  data-copy="**ــ AIOffice — بديل عن تبويبات الطرفية عند تشغيل عدّة وكلاء**
 &gt; أداة تدير عدة وكلاء ذكاء اصطناعي في واجهة واحدة بعدما تعجز التبويبات التقليدية عن ذلك.
 https://github.com/ChristianFJung/AIOffice">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -455,7 +470,7 @@ https://github.com/ChristianFJung/AIOffice">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/ChristianFJung/AIOffice" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: AIOffice — بديل عن تبويبات الطرفية عند تشغيل عدّة وكلاء</h3>
+            <h3 class="item-title">AIOffice — بديل عن تبويبات الطرفية عند تشغيل عدّة وكلاء</h3>
           </a>
           <p class="item-summary">أداة تدير عدة وكلاء ذكاء اصطناعي في واجهة واحدة بعدما تعجز التبويبات التقليدية عن ذلك.</p>
           <div class="item-foot">
@@ -470,8 +485,9 @@ https://github.com/ChristianFJung/AIOffice">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: ClankerRank — سبيل لإثبات أن البرمجة بالذكاء الاصطناعي مهارة حقيقية**
+                  data-copy="**ــ ClankerRank — سبيل لإثبات أن البرمجة بالذكاء الاصطناعي مهارة حقيقية**
 &gt; منصة تقيس جودة مشاريع البرمجة بالذكاء الاصطناعي وتعطي المطوّر تقييمًا موثوقًا.
 https://clankerrank.xyz">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -485,7 +501,7 @@ https://clankerrank.xyz">
             </svg>
           </button>
           <a class="item-link" href="https://clankerrank.xyz" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: ClankerRank — سبيل لإثبات أن البرمجة بالذكاء الاصطناعي مهارة حقيقية</h3>
+            <h3 class="item-title">ClankerRank — سبيل لإثبات أن البرمجة بالذكاء الاصطناعي مهارة حقيقية</h3>
           </a>
           <p class="item-summary">منصة تقيس جودة مشاريع البرمجة بالذكاء الاصطناعي وتعطي المطوّر تقييمًا موثوقًا.</p>
           <div class="item-foot">
@@ -500,8 +516,9 @@ https://clankerrank.xyz">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: إطار عمل مفتوح المصدر تصريحي لـ MCP مع بحث وتنفيذ**
+                  data-copy="**ــ إطار عمل مفتوح المصدر تصريحي لـ MCP مع بحث وتنفيذ**
 &gt; مشروع يبسّط بناء ملحقات MCP عبر صياغة تصريحية تجمع البحث والتنفيذ.
 https://hyperterse.com">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -515,7 +532,7 @@ https://hyperterse.com">
             </svg>
           </button>
           <a class="item-link" href="https://hyperterse.com" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: إطار عمل مفتوح المصدر تصريحي لـ MCP مع بحث وتنفيذ</h3>
+            <h3 class="item-title">إطار عمل مفتوح المصدر تصريحي لـ MCP مع بحث وتنفيذ</h3>
           </a>
           <p class="item-summary">مشروع يبسّط بناء ملحقات MCP عبر صياغة تصريحية تجمع البحث والتنفيذ.</p>
           <div class="item-foot">
@@ -530,8 +547,9 @@ https://hyperterse.com">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: مساعد Copilot لـ Xcode**
+                  data-copy="**ــ مساعد Copilot لـ Xcode**
 &gt; إضافة تجلب قدرات Copilot إلى بيئة تطوير Xcode من Apple.
 https://github.com/mobile-ar/xcode-assistant-copilot-server">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -545,7 +563,7 @@ https://github.com/mobile-ar/xcode-assistant-copilot-server">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/mobile-ar/xcode-assistant-copilot-server" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: مساعد Copilot لـ Xcode</h3>
+            <h3 class="item-title">مساعد Copilot لـ Xcode</h3>
           </a>
           <p class="item-summary">إضافة تجلب قدرات Copilot إلى بيئة تطوير Xcode من Apple.</p>
           <div class="item-foot">
@@ -560,6 +578,7 @@ https://github.com/mobile-ar/xcode-assistant-copilot-server">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ البرمجة بالذكاء الاصطناعي تتهدّد المصادر المفتوحة**
 &gt; رأي يحذّر من أثر الشيفرة المولّدة آليًا على جودة واستدامة مشاريع المصادر المفتوحة.
@@ -590,8 +609,9 @@ https://www.infoq.com/news/2026/02/ai-floods-close-projects/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Memograph CLI — يشخّص «فشل الذاكرة» في وكلاء الذكاء الاصطناعي**
+                  data-copy="**ــ Memograph CLI — يشخّص «فشل الذاكرة» في وكلاء الذكاء الاصطناعي**
 &gt; أداة سطر أوامر تكشف أين يفقد الوكيل السياق أثناء العمل الطويل.
 https://news.ycombinator.com/item?id=47153242">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -605,7 +625,7 @@ https://news.ycombinator.com/item?id=47153242">
             </svg>
           </button>
           <a class="item-link" href="https://news.ycombinator.com/item?id=47153242" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Memograph CLI — يشخّص «فشل الذاكرة» في وكلاء الذكاء الاصطناعي</h3>
+            <h3 class="item-title">Memograph CLI — يشخّص «فشل الذاكرة» في وكلاء الذكاء الاصطناعي</h3>
           </a>
           <p class="item-summary">أداة سطر أوامر تكشف أين يفقد الوكيل السياق أثناء العمل الطويل.</p>
           <div class="item-foot">
@@ -620,8 +640,9 @@ https://news.ycombinator.com/item?id=47153242">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: بنيتُ وكيلًا كبير المعماريين — حيث تلتقي البرمجة بالذكاء الاصطناعي بتصميم المنظومة**
+                  data-copy="**ــ بنيتُ وكيلًا كبير المعماريين — حيث تلتقي البرمجة بالذكاء الاصطناعي بتصميم المنظومة**
 &gt; أداة تلعب دور مهندس معماري يراجع القرارات ويقترح بنية المشروع قبل الكتابة.
 https://www.sysdesai.com">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -635,7 +656,7 @@ https://www.sysdesai.com">
             </svg>
           </button>
           <a class="item-link" href="https://www.sysdesai.com" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: بنيتُ وكيلًا كبير المعماريين — حيث تلتقي البرمجة بالذكاء الاصطناعي بتصميم المنظومة</h3>
+            <h3 class="item-title">بنيتُ وكيلًا كبير المعماريين — حيث تلتقي البرمجة بالذكاء الاصطناعي بتصميم المنظومة</h3>
           </a>
           <p class="item-summary">أداة تلعب دور مهندس معماري يراجع القرارات ويقترح بنية المشروع قبل الكتابة.</p>
           <div class="item-foot">
@@ -650,8 +671,9 @@ https://www.sysdesai.com">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: AI-runtime-guard — طبقة تطبيق سياسات لوكلاء MCP**
+                  data-copy="**ــ AI-runtime-guard — طبقة تطبيق سياسات لوكلاء MCP**
 &gt; أداة تفرض قيودًا وتوجيهات على ماذا يحقّ للوكيل فعله أثناء التشغيل.
 https://github.com/jimmyracheta/ai-runtime-guard">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -665,7 +687,7 @@ https://github.com/jimmyracheta/ai-runtime-guard">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/jimmyracheta/ai-runtime-guard" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: AI-runtime-guard — طبقة تطبيق سياسات لوكلاء MCP</h3>
+            <h3 class="item-title">AI-runtime-guard — طبقة تطبيق سياسات لوكلاء MCP</h3>
           </a>
           <p class="item-summary">أداة تفرض قيودًا وتوجيهات على ماذا يحقّ للوكيل فعله أثناء التشغيل.</p>
           <div class="item-foot">
@@ -680,8 +702,9 @@ https://github.com/jimmyracheta/ai-runtime-guard">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Tesseract — محرّر معماريات ثلاثي الأبعاد مع MCP للتصميم بمساعدة الذكاء**
+                  data-copy="**ــ Tesseract — محرّر معماريات ثلاثي الأبعاد مع MCP للتصميم بمساعدة الذكاء**
 &gt; أداة تتيح تصميم البنى المعمارية ثلاثية الأبعاد عبر حوار مع وكيل.
 https://tesseract.infrastellar.dev">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -695,7 +718,7 @@ https://tesseract.infrastellar.dev">
             </svg>
           </button>
           <a class="item-link" href="https://tesseract.infrastellar.dev" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Tesseract — محرّر معماريات ثلاثي الأبعاد مع MCP للتصميم بمساعدة الذكاء</h3>
+            <h3 class="item-title">Tesseract — محرّر معماريات ثلاثي الأبعاد مع MCP للتصميم بمساعدة الذكاء</h3>
           </a>
           <p class="item-summary">أداة تتيح تصميم البنى المعمارية ثلاثية الأبعاد عبر حوار مع وكيل.</p>
           <div class="item-foot">
@@ -710,8 +733,9 @@ https://tesseract.infrastellar.dev">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: OpenTrace — خادم مراقبة ذاتي الاستضافة بـ ٧٥ أداة MCP**
+                  data-copy="**ــ OpenTrace — خادم مراقبة ذاتي الاستضافة بـ ٧٥ أداة MCP**
 &gt; منصة مراقبة تُستضاف محليًا وتوفّر سبعًا وسبعين أداة MCP لفحص سلوك الوكلاء.
 https://github.com/adham90/opentrace">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -725,7 +749,7 @@ https://github.com/adham90/opentrace">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/adham90/opentrace" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: OpenTrace — خادم مراقبة ذاتي الاستضافة بـ ٧٥ أداة MCP</h3>
+            <h3 class="item-title">OpenTrace — خادم مراقبة ذاتي الاستضافة بـ ٧٥ أداة MCP</h3>
           </a>
           <p class="item-summary">منصة مراقبة تُستضاف محليًا وتوفّر سبعًا وسبعين أداة MCP لفحص سلوك الوكلاء.</p>
           <div class="item-foot">
@@ -740,6 +764,7 @@ https://github.com/adham90/opentrace">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ توقّف عن البرمجة بالذكاء الاصطناعي: متى ترتدّ التنمية المدفوعة بالذكاء وتصحّ**
 &gt; مقال يسرد حالات فشل ويسمّي الممارسات التي تنجح فعليًا مع الوكلاء.
@@ -770,8 +795,9 @@ https://ssebs.com/blog/vibe-coding-1/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Ship or Slop — الوكلاء يقدّمون مشاريع والبشر يحكمون عليها**
+                  data-copy="**ــ Ship or Slop — الوكلاء يقدّمون مشاريع والبشر يحكمون عليها**
 &gt; منصة يتنافس فيها وكلاء الذكاء الاصطناعي ببناء مشاريع ويقيّمها بشر.
 https://shiporslop.xyz">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -785,7 +811,7 @@ https://shiporslop.xyz">
             </svg>
           </button>
           <a class="item-link" href="https://shiporslop.xyz" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Ship or Slop — الوكلاء يقدّمون مشاريع والبشر يحكمون عليها</h3>
+            <h3 class="item-title">Ship or Slop — الوكلاء يقدّمون مشاريع والبشر يحكمون عليها</h3>
           </a>
           <p class="item-summary">منصة يتنافس فيها وكلاء الذكاء الاصطناعي ببناء مشاريع ويقيّمها بشر.</p>
           <div class="item-foot">
@@ -800,8 +826,9 @@ https://shiporslop.xyz">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: جسر يربط Copilot SDK بوكلاء ACP**
+                  data-copy="**ــ جسر يربط Copilot SDK بوكلاء ACP**
 &gt; أداة تتيح لوكلاء ACP الاستفادة من قدرات حزمة Copilot SDK.
 https://github.com/offbeatport/meshaway">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -815,7 +842,7 @@ https://github.com/offbeatport/meshaway">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/offbeatport/meshaway" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: جسر يربط Copilot SDK بوكلاء ACP</h3>
+            <h3 class="item-title">جسر يربط Copilot SDK بوكلاء ACP</h3>
           </a>
           <p class="item-summary">أداة تتيح لوكلاء ACP الاستفادة من قدرات حزمة Copilot SDK.</p>
           <div class="item-foot">
@@ -830,8 +857,9 @@ https://github.com/offbeatport/meshaway">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Mission Control — إدارة مهام مفتوحة المصدر للوكلاء**
+                  data-copy="**ــ Mission Control — إدارة مهام مفتوحة المصدر للوكلاء**
 &gt; أداة تنظّم مهام الوكلاء وتتابع تقدّمها في لوحة تحكّم واحدة.
 https://github.com/MeisnerDan/mission-control">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -845,7 +873,7 @@ https://github.com/MeisnerDan/mission-control">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/MeisnerDan/mission-control" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Mission Control — إدارة مهام مفتوحة المصدر للوكلاء</h3>
+            <h3 class="item-title">Mission Control — إدارة مهام مفتوحة المصدر للوكلاء</h3>
           </a>
           <p class="item-summary">أداة تنظّم مهام الوكلاء وتتابع تقدّمها في لوحة تحكّم واحدة.</p>
           <div class="item-foot">
@@ -860,8 +888,9 @@ https://github.com/MeisnerDan/mission-control">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: ArteSync — مدير حزم لمهارات وكلاء البرمجة بالذكاء الاصطناعي**
+                  data-copy="**ــ ArteSync — مدير حزم لمهارات وكلاء البرمجة بالذكاء الاصطناعي**
 &gt; أداة تثبّت مهارات الوكلاء وتحدّثها كما تُدار الحزم البرمجية.
 https://github.com/tsurupong/artesync">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -875,7 +904,7 @@ https://github.com/tsurupong/artesync">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/tsurupong/artesync" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: ArteSync — مدير حزم لمهارات وكلاء البرمجة بالذكاء الاصطناعي</h3>
+            <h3 class="item-title">ArteSync — مدير حزم لمهارات وكلاء البرمجة بالذكاء الاصطناعي</h3>
           </a>
           <p class="item-summary">أداة تثبّت مهارات الوكلاء وتحدّثها كما تُدار الحزم البرمجية.</p>
           <div class="item-foot">
@@ -890,6 +919,7 @@ https://github.com/tsurupong/artesync">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الذكاء الاصطناعي يقضي على برمجيات B2B**
 &gt; مقال نان ديال على مدونته يرى أن أدوات البرمجة بالذكاء الاصطناعي ستقضي على جزء كبير من سوق برمجيات الأعمال، مع تحليل للفائزين والخاسرين.
@@ -920,8 +950,9 @@ https://nmn.gl/blog/ai-killing-b2b-saas">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: خادم MCP يتحقق من سبق وجود فكرتك**
+                  data-copy="**ــ خادم MCP يتحقق من سبق وجود فكرتك**
 &gt; أداة تبحث عن مشاريع مشابهة لفكرتك قبل الشروع في بنائها.
 https://github.com/mnemox-ai/idea-reality-mcp">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -935,7 +966,7 @@ https://github.com/mnemox-ai/idea-reality-mcp">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/mnemox-ai/idea-reality-mcp" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: خادم MCP يتحقق من سبق وجود فكرتك</h3>
+            <h3 class="item-title">خادم MCP يتحقق من سبق وجود فكرتك</h3>
           </a>
           <p class="item-summary">أداة تبحث عن مشاريع مشابهة لفكرتك قبل الشروع في بنائها.</p>
           <div class="item-foot">
@@ -950,8 +981,9 @@ https://github.com/mnemox-ai/idea-reality-mcp">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: AgentSecrets — وسيط بيانات اعتماد بلا كشف لمصلحته للوكلاء**
+                  data-copy="**ــ AgentSecrets — وسيط بيانات اعتماد بلا كشف لمصلحته للوكلاء**
 &gt; أداة تمرّر بيانات الاعتماد للوكلاء دون كشفها ضمن الشيفرة.
 https://github.com/The-17/agentsecrets">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -965,7 +997,7 @@ https://github.com/The-17/agentsecrets">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/The-17/agentsecrets" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: AgentSecrets — وسيط بيانات اعتماد بلا كشف لمصلحته للوكلاء</h3>
+            <h3 class="item-title">AgentSecrets — وسيط بيانات اعتماد بلا كشف لمصلحته للوكلاء</h3>
           </a>
           <p class="item-summary">أداة تمرّر بيانات الاعتماد للوكلاء دون كشفها ضمن الشيفرة.</p>
           <div class="item-foot">
@@ -980,6 +1012,7 @@ https://github.com/The-17/agentsecrets">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ هل تنتهي البرمجة بالذكاء الاصطناعي كما انتهت حركة الـ Maker**
 &gt; مقال يقارن بين مسار البرمجة بالذكاء الاصطناعي وحركة صنّاع الأجهزة سابقًا.
@@ -1010,8 +1043,9 @@ https://read.technically.dev/p/vibe-coding-and-the-maker-movement">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Depwire — رسم التبعيات وأدوات MCP لينهي تعديل الوكيل بلا بصيرة**
+                  data-copy="**ــ Depwire — رسم التبعيات وأدوات MCP لينهي تعديل الوكيل بلا بصيرة**
 &gt; أداة تطلع الوكيل على خريطة تبعيات المشروع كي لا يعدّل في عمى.
 https://github.com/depwire/depwire">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1025,7 +1059,7 @@ https://github.com/depwire/depwire">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/depwire/depwire" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Depwire — رسم التبعيات وأدوات MCP لينهي تعديل الوكيل بلا بصيرة</h3>
+            <h3 class="item-title">Depwire — رسم التبعيات وأدوات MCP لينهي تعديل الوكيل بلا بصيرة</h3>
           </a>
           <p class="item-summary">أداة تطلع الوكيل على خريطة تبعيات المشروع كي لا يعدّل في عمى.</p>
           <div class="item-foot">
@@ -1040,8 +1074,9 @@ https://github.com/depwire/depwire">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: محرّر .NET في المتصفح مع مصمّم مرئي وحزم NuGet ومشاركة الشيفرة**
+                  data-copy="**ــ محرّر .NET في المتصفح مع مصمّم مرئي وحزم NuGet ومشاركة الشيفرة**
 &gt; بيئة تطوير .NET تعمل في المتصفح وتتيح التصميم المرئي وتبادل الشيفرة.
 https://xaml.io/s/Samples/Newtonsoft">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1055,7 +1090,7 @@ https://xaml.io/s/Samples/Newtonsoft">
             </svg>
           </button>
           <a class="item-link" href="https://xaml.io/s/Samples/Newtonsoft" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: محرّر .NET في المتصفح مع مصمّم مرئي وحزم NuGet ومشاركة الشيفرة</h3>
+            <h3 class="item-title">محرّر .NET في المتصفح مع مصمّم مرئي وحزم NuGet ومشاركة الشيفرة</h3>
           </a>
           <p class="item-summary">بيئة تطوير .NET تعمل في المتصفح وتتيح التصميم المرئي وتبادل الشيفرة.</p>
           <div class="item-foot">
@@ -1070,8 +1105,9 @@ https://xaml.io/s/Samples/Newtonsoft">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ اسأل HN: لماذا يمتنع وكلاء البرمجة عن حفظ ملاحظاتهم**
+                  data-copy="**ــ لماذا يمتنع وكلاء البرمجة عن حفظ ملاحظاتهم**
 &gt; نقاش حول غياب ذاكرة الاستمرار لدى الوكلاء وسبل معالجته.
 https://news.ycombinator.com/item?id=47170501">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1085,7 +1121,7 @@ https://news.ycombinator.com/item?id=47170501">
             </svg>
           </button>
           <a class="item-link" href="https://news.ycombinator.com/item?id=47170501" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">اسأل HN: لماذا يمتنع وكلاء البرمجة عن حفظ ملاحظاتهم</h3>
+            <h3 class="item-title">لماذا يمتنع وكلاء البرمجة عن حفظ ملاحظاتهم</h3>
           </a>
           <p class="item-summary">نقاش حول غياب ذاكرة الاستمرار لدى الوكلاء وسبل معالجته.</p>
           <div class="item-foot">
@@ -1100,8 +1136,9 @@ https://news.ycombinator.com/item?id=47170501">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Safari-CLI — تحكّم في Safari بلا MCP**
+                  data-copy="**ــ Safari-CLI — تحكّم في Safari بلا MCP**
 &gt; أداة سطر أوامر تتحكّم في متصفّح Safari لأتمتة مهام الاختبار.
 https://www.npmjs.com/package/@tamasno1/safari-cli">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1115,7 +1152,7 @@ https://www.npmjs.com/package/@tamasno1/safari-cli">
             </svg>
           </button>
           <a class="item-link" href="https://www.npmjs.com/package/@tamasno1/safari-cli" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Safari-CLI — تحكّم في Safari بلا MCP</h3>
+            <h3 class="item-title">Safari-CLI — تحكّم في Safari بلا MCP</h3>
           </a>
           <p class="item-summary">أداة سطر أوامر تتحكّم في متصفّح Safari لأتمتة مهام الاختبار.</p>
           <div class="item-foot">
@@ -1130,6 +1167,7 @@ https://www.npmjs.com/package/@tamasno1/safari-cli">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ AIlways — ناصح الحقيقة والسياق في الاجتماعات**
 &gt; أداة تلخّص اجتماعات الفريق وتربط السياق بمسار العمل البرمجي.
@@ -1160,8 +1198,9 @@ https://news.ycombinator.com/item?id=47174250">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Agentplace — الأداة التي بنيناها لنصبح شركة بكفاءة عشرين ضعفًا**
+                  data-copy="**ــ Agentplace — الأداة التي بنيناها لنصبح شركة بكفاءة عشرين ضعفًا**
 &gt; منصّة تستعين بالوكلاء لرفع إنتاجية الفريق بشكل جذري.
 https://agentplace.io/">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1175,7 +1214,7 @@ https://agentplace.io/">
             </svg>
           </button>
           <a class="item-link" href="https://agentplace.io/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Agentplace — الأداة التي بنيناها لنصبح شركة بكفاءة عشرين ضعفًا</h3>
+            <h3 class="item-title">Agentplace — الأداة التي بنيناها لنصبح شركة بكفاءة عشرين ضعفًا</h3>
           </a>
           <p class="item-summary">منصّة تستعين بالوكلاء لرفع إنتاجية الفريق بشكل جذري.</p>
           <div class="item-foot">
@@ -1190,8 +1229,9 @@ https://agentplace.io/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: ClawCare — ماسح أمني وحارس تشغيل لمهارات الوكلاء**
+                  data-copy="**ــ ClawCare — ماسح أمني وحارس تشغيل لمهارات الوكلاء**
 &gt; أداة تفحص مهارات الوكلاء وتحجب ما يضرّ أمن النظام عند التشغيل.
 https://github.com/natechensan/ClawCare">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1205,7 +1245,7 @@ https://github.com/natechensan/ClawCare">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/natechensan/ClawCare" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: ClawCare — ماسح أمني وحارس تشغيل لمهارات الوكلاء</h3>
+            <h3 class="item-title">ClawCare — ماسح أمني وحارس تشغيل لمهارات الوكلاء</h3>
           </a>
           <p class="item-summary">أداة تفحص مهارات الوكلاء وتحجب ما يضرّ أمن النظام عند التشغيل.</p>
           <div class="item-foot">
@@ -1225,6 +1265,7 @@ https://github.com/natechensan/ClawCare">
       <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">١٠</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ وكلاء مراجعة الوصولية لـ Claude Code وGitHub Copilot وClaude Desktop**
 &gt; أدوات تفحص نتائج البرمجة بالذكاء الاصطناعي من حيث إتاحة الوصول لذوي الاحتياجات.
@@ -1255,6 +1296,7 @@ https://github.com/taylorarndt/a11y-agent-team">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ بنيتُ طبقة حوكمة لتعدّد وكلاء البرمجة بالذكاء الاصطناعي — دروس بعد ستة أشهر**
 &gt; مقال يستعرض تجربة فعلية في إدارة فرق من الوكلاء وضبط عملها على مدى نصف عام.
@@ -1285,6 +1327,7 @@ https://news.ycombinator.com/item?id=47139978">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ التطوير المبني على المواصفات: من البرمجة بالذكاء الاصطناعي إلى التطوير المنهجي**
 &gt; مقال ينقل المسار من البرمجة العفوية إلى تطوير محكوم بمواصفات واضحة.
@@ -1315,6 +1358,7 @@ https://zarar.dev/spec-driven-development-from-vibe-coding-to-structured-develop
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ UAA — مواصفة للتعاون بين الذكاء الاصطناعي والإنسان في البرمجة**
 &gt; اقتراح مواصفة تحدّد كيفية تقاسم العمل بين المطوّر والوكيل بوضوح.
@@ -1345,6 +1389,7 @@ https://news.ycombinator.com/item?id=47151334">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Workday: «لن تنتج البرمجة بالذكاء الاصطناعي نظام موارد بشرية أو تخطيط موارد»**
 &gt; وثيقة تشكّك في قدرة البرمجة بالذكاء الاصطناعي على بناء أنظمة مؤسسية معقدة.
@@ -1375,6 +1420,7 @@ https://investor.workday.com/files/doc_earnings/2026/q4/generic/Q4-FY26-Earnings
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ GitHub Copilot CLI أصبح متاحًا للعموم**
 &gt; أعلنت GitHub عمومية Copilot CLI بعد فترة تجريبية، ليصبح جاهزًا للاستخدام الإنتاجي.
@@ -1405,6 +1451,7 @@ https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-ava
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Squad — فرق من وكلاء الذكاء الاصطناعي تنمو مع شيفرتك**
 &gt; أداة تنسّق فريقًا من الوكلاء عبر Copilot CLI ليتوسّع تلقائيًا مع حجم المشروع.
@@ -1435,8 +1482,9 @@ https://github.com/bradygaster/squad">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ أخبر HN: تصنيف أنواع البرمجة بالذكاء الاصطناعي**
+                  data-copy="**ــ تصنيف أنواع البرمجة بالذكاء الاصطناعي**
 &gt; محاولة لتصنيف أساليب البرمجة بالذكاء الاصطناعي وتمييزها عن بعضها.
 https://news.ycombinator.com/item?id=47157670">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1450,7 +1498,7 @@ https://news.ycombinator.com/item?id=47157670">
             </svg>
           </button>
           <a class="item-link" href="https://news.ycombinator.com/item?id=47157670" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">أخبر HN: تصنيف أنواع البرمجة بالذكاء الاصطناعي</h3>
+            <h3 class="item-title">تصنيف أنواع البرمجة بالذكاء الاصطناعي</h3>
           </a>
           <p class="item-summary">محاولة لتصنيف أساليب البرمجة بالذكاء الاصطناعي وتمييزها عن بعضها.</p>
           <div class="item-foot">
@@ -1465,6 +1513,7 @@ https://news.ycombinator.com/item?id=47157670">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ هل تكفي اقتراحات GitHub Copilot البرمجية**
 &gt; تحليل لجدوى اقتراحات Copilot في خفض الجهد اليومي للمطوّر.
@@ -1495,6 +1544,7 @@ https://news.ycombinator.com/item?id=47171565">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ لوكيل البرمجة بالذكاء نغمته: ٢٨ حزمة و٢٢٥ صوتًا**
 &gt; مشروع ترفيهي يضيف مؤثرات صوتية للوكلاء أثناء العمل لتحسين الأجواء.
@@ -1530,6 +1580,7 @@ https://github.com/Citedy/game-sounds">
       <h2 class="cat-title">ــ 🔍 تحليلات ونقد <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ اختبار هجمات البرمجة بالذكاء الاصطناعي على استراتيجيات البنى الحرجة**
 &gt; دراسة تختبر مدى قدرة الوكلاء على استهداف بنى تحتية حساسة عند إساءة التوجيه.
@@ -1565,6 +1616,7 @@ https://recursion.wtf/posts/vibe_coding_critical_infrastructure/">
       <h2 class="cat-title">ــ 🎥 فيديوهات Free API <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Claude Code — دورة كاملة للمبتدئين**
 &gt; دورة شاملة بالعربية المشروحة من Tech With Tim تأخذك من التثبيت إلى بناء مشاريع حقيقية باستخدام Claude Code خطوة بخطوة.
@@ -1595,6 +1647,7 @@ https://www.youtube.com/watch?v=ntDIxaeo3Wg">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ أدوات البرمجة بالذكاء الاصطناعي الوحيدة الجديرة بالتعلّم في ٢٠٢٦**
 &gt; فيديو يرشّح الأدوات الأكثر تأثيراً لعام ٢٠٢٦ بدل تشتيت الانتباه بين عشرات الخيارات، مع معايير واضحة لاختيار ما يناسب سير عملك.

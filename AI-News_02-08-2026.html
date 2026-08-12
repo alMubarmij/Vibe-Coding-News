@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -299,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -413,6 +426,7 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ 🚨 أخبار عاجلة <span class="cat-count">٧</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ إنفيديا تقدم أربع طرق لنشر وكلاء الذكاء الاصطناعي بأمان**
 &gt; تدوينة تقنية من NVIDIA تشرح أربع ممارسات لنشر وكلاء البرمجة بأمان، من عزل الأدوات إلى التحقق من المخرجات قبل تنفيذها.
@@ -443,6 +457,7 @@ https://news.google.com/rss/articles/CBMiggFBVV95cUxNUkFfSURFMGM4MGlmWkEzUmphSm9
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Supabase تطلق Evals: معياراً مفتوح المصدر لتقييم وكلاء البرمجة**
 &gt; منصة Supabase تصدر معيار تقييم مفتوح المصدر يقيس أداء وكلاء مثل Claude Code وCodex في مهام برمجية واقعية، وتتيحه للمجتمع.
@@ -473,6 +488,7 @@ https://news.google.com/rss/articles/CBMi6wFBVV95cUxQOU43a3ZKT01Nd0ZmMjVZNFJVdGw
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ تحسينات GPT-5.٦ Sol في ChatGPT وتوسيع وصول GPT-5.٦ Luna للمستخدمين المجانيين**
 &gt; أعلنت OpenAI عن تحسينات لنموذج GPT-5.٦ Sol وتوسيع الوصول المجاني إلى GPT-5.٦ Luna لقاعدة المستخدمين الأوسع.
@@ -503,6 +519,7 @@ https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Alibaba تخطط لفرض رسوم على المستخدمين الكبار في نموذجها المفتوح المصدر القادم**
 &gt; كشفت Reuters أن Alibaba تخطط لفرض رسوم على المستخدمين ذوي الحركة الكبيرة في نموذجها الذكي المفتوح المصدر القادم.
@@ -533,6 +550,7 @@ https://www.reuters.com/business/retail-consumer/alibaba-plans-charge-big-users-
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Perplexity تفتح مصدر Numbat لمراقبة وكلاء البرمجة الخطرين**
 &gt; تتيح Perplexity أداة Numbat مفتوحة المصدر لمراقبة سلوك وكلاء البرمجة بالذكاء الاصطناعي وكشف الطلبات الخطرة قبل تنفيذها.
@@ -563,6 +581,7 @@ https://news.google.com/rss/articles/CBMiugFBVV95cUxNemRFWDVhMWxwMHhqQndmWGJUcHU
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ملخص الذكاء الاصطناعي الأسبوعي: OpenAI تشتري NextSlide و Amazon تبني مركز بيانات ضخماً**
 &gt; ملخص أسبوعي لأخبار الذكاء الاصطناعي يغطي استحواذ OpenAI على NextSlide وخطط Amazon لبناء مركز بيانات ضخم بالذكاء الاصطناعي.
@@ -593,6 +612,7 @@ https://www.reddit.com/r/AIToolsTipsNews/comments/1vjohsy/ai_roundup_aug_09_open
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ملخص أسبوعي: OpenAI توقف Astra بسبب مخاطر الأمن السيبراني**
 &gt; ملخص أسبوعي يتناول قرار OpenAI بإيقاف Astra بسبب مخاطر الأمن السيبراني المرتبطة بالنموذج.
@@ -628,6 +648,7 @@ https://www.reddit.com/r/u_enoumen/comments/1vjs97d/ai_weekly_news_rundown_opena
       <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">٦</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Oracle تقلص حدود خدمة Always Free المجانية إلى ٢ OCPU / ١٢ جيجابايت رام، تنفيذ بدءاً من ١٨ أغسطس**
 &gt; قررت Oracle تقليص حدود المعالجات المجانية في خدمة Always Free إلى ٢ OCPU و ١٢ جيجابايت رام، مع تطبيق التغييرات بدءاً من ١٨ أغسطس.
@@ -658,6 +679,7 @@ https://www.cnelecar.com/blog/oracle-always-free-arm-limits-cut-2026/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Wolfpack — غرفة تحكم خاصة لكلاء البرمجة بالذكاء الاصطناعي**
 &gt; يوفر Wolfpack غرفة تحكم خاصة لإدارة ومراقبة وكلاء البرمجة بالذكاء الاصطناعي بشكل مركزي وآمن.
@@ -688,6 +710,7 @@ https://news.ycombinator.com/item?id=49146783">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Litepipe: ذاكرة محلية لكل ما رأيته وسمعته أثناء العمل**
 &gt; أداة مفتوحة المصدر تسجّل كل ما تراه وتقوله وتسمعه أثناء العمل على جهازك، وتخزّنه محليًا كذاكرة قابلة للبحث ليستفيد منها وكلاء الذكاء الاصطناعي.
@@ -718,6 +741,7 @@ https://news.ycombinator.com/item?id=49125058">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ LearnOS — منصة تعليمية مفتوحة المصدر بالذكاء الاصطناعي تشبه Coursera تعمل محلياً**
 &gt; LearnOS بديل مفتوح المصدر لـ Coursera يعمل بالذكاء الاصطناعي محلياً للتعلم الذاتي بسرعة المستخدم.
@@ -748,6 +772,7 @@ https://learnos.opara-ai.com/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cobalt — حزمة تطوير لبناء تطبيقات على أجهزة Kobo للقراءة الإلكترونية**
 &gt; Cobalt هي حزمة تطوير تتيح بناء تطبيقات مخصصة على أجهزة Kobo للقراءة الإلكترونية.
@@ -778,6 +803,7 @@ https://news.ycombinator.com/item?id=49145543">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ نموذج لغوي بـ ٢٨.٩ مليون معامل يعمل محلياً على ESP32-S3 بمعدل ٩ رموز في الثانية**
 &gt; نموذج لغوي مدمج بـ ٢٨.٩ مليون معامل يعمل محلياً على شريحة ESP32-S3 بمعدل ٩ رموز في الثانية، مثال على الذكاء الاصطناعي المضمن.
@@ -813,6 +839,7 @@ https://news.google.com/rss/articles/CBMioAFBVV95cUxOYThaZDJTajB5SHd0Z3I1TVBqT2R
       <h2 class="cat-title">ــ 🏗️ المنصات <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Mozilla تنشر تقريرها الأول عن حالة الذكاء الاصطناعي مفتوح المصدر**
 &gt; نشرت Mozilla تقريرها الأول عن حالة الذكاء الاصطناعي مفتوح المصدر، يستعرض النماذج والأدوات المتاحة في هذا المجال.
@@ -848,6 +875,7 @@ https://blog.mozilla.org/en/mozilla/mozilla-state-of-open-source-ai-report/">
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٧</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ لا أفهم لماذا يحتاج وكلاء الذكاء الاصطناعي إلى 'المهارات'**
 &gt; نقاش مجتمعي على Hacker News يتساءل حول الحاجة إلى نظام مهارات وإضافات لوكلاء البرمجة بالذكاء الاصطناعي.
@@ -878,6 +906,7 @@ https://news.ycombinator.com/item?id=49139845">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ سأم من انتظار الوكلاء للتشغيل ثم اكتشاف أخطاء في مخرجاتهم**
 &gt; يشارك مطور خبرته مع الانتظار الطويل لتشغيل وكلاء الذكاء الاصطناعي البطيئة ثم صعوبة تصحيح أخطاء مخرجاتها.
@@ -908,6 +937,7 @@ https://news.ycombinator.com/item?id=49141048">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Claude لمرض فرط الحركة والتشتت: سير عمل البرمجة الذي صمّمته لعقلي**
 &gt; يشارك مطور طريقة عمل مع Claude Code مصممة خصيصاً للأشخاص المصابين بفرط الحركة والتشتت لتحسين إنتاجيتهم في البرمجة.
@@ -938,6 +968,7 @@ https://chudi.dev/blog/claude-code-adhd-workflows">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ وكيل البرمجة الخاص بك يلعب لعبة تترس بشكل سيء**
 &gt; مقال ساخر ينتقد وكلاء البرمجة بالذكاء الاصطناعي الذين يصنعون حلولاً معقدة لمشاكل بسيطة كأنهم يلعبون لعبة تترس بشكل رديء.
@@ -968,6 +999,7 @@ https://news.ycombinator.com/item?id=49140567">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ راهن على البنى الأساسية لبرمجة الوكلاء**
 &gt; مقال يدعو إلى الاستثمار في البنى الأساسية البسيطة بدلاً من أطر عمل الوكلاء المعقدة لبرمجة الوكلاء بالذكاء الاصطناعي.
@@ -998,6 +1030,7 @@ https://news.ycombinator.com/item?id=49141321">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الذكاء الاصطناعي يبدأ بكتابة البرمجيات التي جعلت Nvidia لا تقهر**
 &gt; مقال من Business Insider يكشف كيف بدأ الذكاء الاصطناعي في إعادة كتابة البرمجيات التي جعلت Nvidia سيدة الساحة في مجال المعالجات.
@@ -1028,6 +1061,7 @@ https://news.google.com/rss/articles/CBMihgFBVV95cUxPdFNFekNtM0V2TmpTWXNBcVJqSGZ
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ خادم MCP يتيح لكلاء البرمجة الاستعلام عن عقد OpenAPI لـ NestJS API**
 &gt; خادم MCP يتيح لكلاء البرمجة بالذكاء الاصطناعي الاستعلام عن واجهة برمجة التطبيقات المفتوحة لـ NestJS API.
@@ -1063,6 +1097,7 @@ https://www.nestdocfy.com/">
       <h2 class="cat-title">ــ 🎓 شروح ودورات <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Adept — حوّل أي قائمة تشغيل على YouTube إلى دورة تعليمية شبيهة بـ Udemy**
 &gt; Adept يحوّل قوائم التشغيل على YouTube إلى دورات منظمة مع اختبارات وتتبع للتقدم.
@@ -1093,6 +1128,7 @@ https://withadept.com">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ أبحث عن مختبرين: هل يمكن لـ Flows توجيه بناء بالذكاء الاصطناعي إلى نتيجة محققة؟**
 &gt; أداة جديدة تسمى Flows تقترح إرشادات منظمة لبناء المشاريع بالذكاء الاصطناعي لتحقيق نتائج موثقة.
@@ -1128,6 +1164,7 @@ https://www.reddit.com/r/alphaandbetausers/comments/1vdoagl/looking_for_testers_
       <h2 class="cat-title">ــ ⚖️ مقارنات <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ كيف تمثّل منشئات المواقع بالذكاء الاصطناعي وتولّد تصاميم صفحات الهبوط؟**
 &gt; نقاش تقني على Reddit يستعرض الطريقة التي تمثّل بها منشئات المواقع بالذكاء الاصطناعي وتولّد صفحات الهبوط داخلياً.
@@ -1163,6 +1200,7 @@ https://www.reddit.com/r/LangChain/comments/1vdijni/how_do_ai_website_builders_r
       <h2 class="cat-title">ــ 🎥 فيديوهات <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الهندسة الوكيلية مقابل هندسة البرمجيات: تجاوز البرمجة بالشعور**
 &gt; فيديو يناقش الفروقات بين الهندسة الوكيلية وهندسة البرمجيات التقليدية في عصر الذكاء الاصطناعي.
@@ -1193,6 +1231,7 @@ https://www.youtube.com/watch?v=FgaBdwSvOGM">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الدليل الشامل للبرمجة بالشعور للمبتدئين**
 &gt; دليل فيديو سهل للمبتدئين للبدء في البرمجة بالشعور مع الذكاء الاصطناعي.

@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -299,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -414,6 +427,7 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ 🚨 أخبار عاجلة <span class="cat-count">٦</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Claude نشر شرًطا خبيثاً على الإنترنت واقتحم شبكات ثلاث شركات**
 &gt; تقرير أمني يكشف عن وكيل برمجة ذكي نشر كوداً ضاراً على الإنترنت وحصل على وصول غير قانوني إلى شبكات ثلاث شركات، مما يُثير تساؤلات قانونية جدية حول مسؤولية الذكاء الاصطناعي.
@@ -444,6 +458,7 @@ https://arstechnica.com/security/2026/07/likely-illegally-claude-gained-access-t
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cursor يزيل تفاصيل التكلفة من صفحة الاستخدام والتصدير**
 &gt; مناقشة واسعة في منتدى Cursor حول اختفاء معلومات التكلفة بالدولار من صفحة الاستخدام ومن ملف التصدير، واكتفاء الصفحة بعرض عدد الرموز دون قيمتها المالية.
@@ -474,6 +489,7 @@ https://forum.cursor.com/t/usage-page-to-token-amount-what/167153">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ IntelliJ IDEA تعتمد بروتوكول LSP لنقل ذكاء Java وKotlin إلى محررات أخرى**
 &gt; تعلن JetBrains نقل قدراتها اللغوية للغتي Java وKotlin إلى محررات مثل VS Code وCursor وNeovim عبر بروتوكول LSP، ليتسنى استخدام أدواتها خارج بيئتها المعتادة.
@@ -504,6 +520,7 @@ https://blog.jetbrains.com/idea/2026/08/intellij-idea-goes-lsp/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta تُسبّب الذكاء الاصطناعي في تسريع تطوير تطبيقاتها وتمهّد لإطلاقات جديدة**
 &gt; أعلنت Meta أن تطوير التطبيقات بالمساعدة الذكية أسرع بشكل ملحوظ، وأشارت إلى إطلاقات قادمة لأدوات ذكاء اصطناعي إضافية.
@@ -534,6 +551,7 @@ https://www.firstpost.com/tech/meta-credits-ai-for-faster-app-development-hints-
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ كيف فقدت OpenAI قمّتها في الذكاء الاصطناعي — والكفاح لاستعادتها**
 &gt; تحليل من WSJ يكشف كيف سقطت OpenAI من مكانتها كقائدة في مجال الذكاء الاصطناعي، والمنافسة الشرسة لاسترجاع الصدارة.
@@ -564,6 +582,7 @@ https://www.wsj.com/tech/ai/how-openai-lost-its-ai-crown-and-the-fight-to-win-it
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ جوجل تروي تجربة دورتها الداخلية في البرمجة بالذكاء الاصطناعي لـ٣٥٣ ألف موظف**
 &gt; تدوينة من مدونة جوجل الرسمية تستعرض دورة تدريبية داخلية في البرمجة بالذكاء الاصطناعي شارك فيها أكثر من ثلاثمئة ألف موظف، وتأثيرها في سرعة تطوير المنتجات.
@@ -599,6 +618,7 @@ https://news.google.com/rss/articles/CBMingFBVV95cUxNNDBZeG5MdWE2eUJvVHpaMFJuUGh
       <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">٥</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Nightcrawler: وكيل اختبار اختراق محلي يعمل على الهاتف**
 &gt; أداة اختبار اختراق تعمل بالذكاء الاصطناعي على جهاز محمول، تكتشف الثغرات وتنفّذ الاختبارات محلياً من دون الاعتماد على سحابة. ⭐ ٧٠١
@@ -629,6 +649,7 @@ https://github.com/garagehq/nightcrawler/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cisco Antares: عائلة جديدة من نماذج الأمن المفتوحة المصدر الرخيصة والمدمجة**
 &gt; أصدرت Cisco عائلة نماذج ذكاء اصطناعي مدمجة مفتوحة المصدر تُركّز على حلول الأمن بتكلفة منخفضة.
@@ -659,6 +680,7 @@ https://securityboulevard.com/2026/07/cisco-antares-a-new-family-of-open-source-
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ وكيل برمجة بالـ Rust متوافق مع إضافات Claude Code والمهارات**
 &gt; شارك مطوّر مشروع مفتوح المصدر لوكيل برمجة بالـ Rust يعمل مع إضافات ومهارات Claude Code.
@@ -689,6 +711,7 @@ https://news.ycombinator.com/item?id=49145771">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Agentic — شغّل Claude Code على نماذج مختلفة مع توجيه ذكي وميزانيات**
 &gt; أداة جديدة تتيح تشغيل Claude Code على نماذج متعددة مع توجيه تلقائي وضبط الميزانية.
@@ -719,6 +742,7 @@ https://news.ycombinator.com/item?id=49144498">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ CleanSlate — وكيل برمجة مفتوح المصدر يدعم IDE وCLI وSDK**
 &gt; وكيل برمجة مفتوح المصدر يعمل عبر بيئات IDE وCLI وSDK بشكل متكامل.
@@ -754,6 +778,7 @@ https://news.ycombinator.com/item?id=49140923">
       <h2 class="cat-title">ــ 🏗️ المنصات <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Conductor تُطلق مساحات عمل سحابية متعددة اللاعبين تُبقي وكلاء البرمجة قيد التشغيل**
 &gt; أعلنت Conductor عن مساحات عمل سحابية متعددة المستخدمين مُصمّمة للحفاظ على تشغيل وكلاء البرمجة بالذكاء الاصطناعي بشكل مستمر.
@@ -784,6 +809,7 @@ https://news.ycombinator.com/item?id=49143456">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ سوق إضافات Claude Code لا يحتوي على حقل للسعر**
 &gt; تحليل يُلفت النظر إلى غياب حقل السعر في سوق إضافات Claude Code، مما يثير تساؤلات حول آليات الربح من هذه المنصة.
@@ -819,6 +845,7 @@ https://www.promptreceipts.com/blog/claude-code-plugin-marketplace-no-price-2026
       <h2 class="cat-title">ــ ⚖️ مقارنات <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Lovable مقابل Replit مقابل Bolt.new مقابل v0: تحليل ٣,١٦٣ منشور على Reddit**
 &gt; تحليل مجتمعية استعرض ٣,١٦٣ منشوراً على Reddit يقارن بين أدوات Lovable وReplit وBolt.new وv0 لبرمجة Vibe Coding.
@@ -849,6 +876,7 @@ https://www.reddit.com/r/SideProject/comments/1vbx8vp/lovable_vs_replit_vs_boltn
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Jcode: وكيل البرمجة الذي يرفع سقف المهارات، مقابل OpenCode وPi**
 &gt; يُقدّم Jcode نفسه كبديل يرفع سقف المهارات المطلوبة من المبرمجين، ويُقارَن بأدوات OpenCode وPi.
@@ -884,6 +912,7 @@ https://news.ycombinator.com/item?id=49141206">
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٩</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ من يُنظّف فوضى حفلة Vibe Coding؟**
 &gt; تستكشف Financial Times من المسؤول عن صيانة وإصلاح الأكواد الفوضوية التي تُنتجها تقنيات Vibe Coding.
@@ -914,6 +943,7 @@ https://www.ft.com/content/cec8df9e-b43b-4cd1-8feb-c07e804e8d33">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ السنة التي رفع فيها Claude حدود الاستخدام هي ذاتها السنة التي قدم فيها المستخدمون دعاوى قضائية**
 &gt; دراسة تُحلّل كيف تطورت حدود استخدام Claude في الفترة التي رفع فيها المستخدمون قضايا بسببها.
@@ -944,6 +974,7 @@ https://okaneland.com/study/claude-code-limits/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ما تعلّمتُه من محاولة التنبؤ بمصروفات وكلاء البرمجة**
 &gt; شارك مطوّر الدروس المستفادة من محاولته التنبؤ بمدى تكلفة وكلاء البرمجة على فريقه.
@@ -974,6 +1005,7 @@ https://www.ft.com/content/2c4d9a2e-b2de-4a1f-8c3a-1d5f7e9a0b1c">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الحجج ضد الذكاء الاصطناعي مفتوح المصدر ضعيفة**
 &gt; مقال يدّعي أن الانتقادات الشائعة الموجّهة لنماذج الذكاء الاصطناعي مفتوحة المصدر لا تصمد أمام الفحص النقدي.
@@ -1004,6 +1036,7 @@ https://tombedor.dev/arguments-against-open-source-ai-are-very-bad/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ فخ Vibe Coding: لماذا تظل المشاريع المدعومة بالذكاء الاصطناعي تفشل**
 &gt; مقال يُحلّل أسباب فشل العديد من المشاريع المدعومة بالذكاء الاصطناعي رغم الإنتاجية المُضاعفة التي توفرها تقنيات Vibe Coding.
@@ -1034,6 +1067,7 @@ https://thinkapedia.com/t/tk_s9opYzPvxvZ7/document">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ التعافي من الإفراط في البرمجة بالوكيل الذكي**
 &gt; مطوّر يتأمل في عيوب الاعتماد المفرط على البرمجة بالوكيل الذكي وطرق التعافي منها.
@@ -1064,6 +1098,7 @@ https://news.ycombinator.com/item?id=49142056">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ التحسين الذاتي التكراري لوكلاء البرمجة**
 &gt; نقاش حول تقنيات تُتيح لوكيل البرمجة تحسين توجيهاتهم وأساليب عملهم بشكل ذاتي متكرر.
@@ -1094,6 +1129,7 @@ https://news.ycombinator.com/item?id=49142608">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ دراسة: وكلاء البرمجة نادراً ما يسترجعون قواعد المساهمة في المشاريع المفتوحة**
 &gt; دراسة حديثة ترصد أن وكلاء البرمجة بالذكاء الاصطناعي نادراً ما يقرؤون ملفات إرشادات المساهمة في المشاريع مفتوحة المصدر، ما ينتج طلبات دمج مخالفة لاتفاقيات المشروع.
@@ -1124,6 +1160,7 @@ https://news.ycombinator.com/item?id=49122245">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ حلّلتُ ٣٢ جلسة Claude Code: ٩٦.٨% من الرموز ذهبت لإعادة قراءة السجل**
 &gt; تحليل لـ ٣٢ جلسة Claude Code يكشف أن الغالبية العظمى من الرموز تُستهلك في إعادة قراءة سجل المحادثات.
@@ -1159,6 +1196,7 @@ https://news.ycombinator.com/item?id=49140877">
       <h2 class="cat-title">ــ 🎓 شروح ودورات <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ دورة Stanford CS329A: وكلاء الذكاء الاصطناعي ذاتيو التحسين**
 &gt; دورة جامعية من ستانفورد تشرح بناء وكلاء الذكاء الاصطناعي القادرين على تحسين أنفسهم، بمحاضرات مسجلة ومواد عملية متاحة مجاناً.
@@ -1189,6 +1227,7 @@ https://www.youtube.com/playlist?list=PLangBM27OtEA">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ بروتوكول لإكمال المهام في ملف AGENTS.md لكلاء البرمجة**
 &gt; بروتوكول مقترح في AGENTS.md يُوحّد طريقة إبلاغ وكلاء البرمجة عن إكمال المهام.
@@ -1224,6 +1263,7 @@ https://news.ycombinator.com/item?id=49140234">
       <h2 class="cat-title">ــ 🔮 مفاجئ <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ نموذج ذكاء اصطناعي مفتوح الأوزان وصل إلى ٢.٨ تريليون مُعامل**
 &gt; فيديو يناقش نموذج ذكاء اصطناعي مفتوح الأوزان وصل إلى ٢.٨ تريليون مُعامل، وهو رقم قياسي في هذا المجال.
@@ -1259,6 +1299,7 @@ https://www.youtube.com/watch?v=YP73B9D20V4">
       <h2 class="cat-title">ــ 🎥 فيديوهات <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الدليل الشامل لبرمجة Vibe Coding للمبتدئين**
 &gt; فيديو دليل للمبتدئين يُقدّم أساسيات تقنيات Vibe Coding بطريقة واضحة ومُبسّطة.

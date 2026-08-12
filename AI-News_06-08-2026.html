@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>البرمجة بالذكاء الاصطناعي — نشرة الروابط | الخميس ٦ أغسطس ٢٠٢٦</title>
+<title>البرمجة بالذكاء الاصطناعي، نشرة الروابط | الخميس ٦ أغسطس ٢٠٢٦</title>
 <meta name="description" content="مدونة روابط يومية لأحدث أخبار البرمجة بالذكاء الاصطناعي وأدواتها.">
 <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي — الخميس ٦ أغسطس ٢٠٢٦">
+<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي، الخميس ٦ أغسطس ٢٠٢٦">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -167,6 +179,23 @@ h1{
 .badge-video{
   background:var(--badge-bg);color:var(--badge-fg);
   box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
+}
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
 }
 
 /* ── Copy button (left edge of each card) ─ */
@@ -282,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -366,7 +396,7 @@ footer a:hover{text-decoration:underline}
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
         </svg>
-        <b>٢٤</b> خبراً
+        <b>٢٤</b> خبر
       </span>
     </div>
     <div class="actions">
@@ -392,6 +422,7 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">١٩</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta Launches Muse Code: 21x Cheaper but Claude Leads - TechJuice**
 &gt; Meta Launches Muse Code: 21x Cheaper but Claude Leads&amp;nbsp;&amp;nbsp;TechJuice
@@ -413,7 +444,7 @@ https://news.google.com/rss/articles/CBMikwFBVV95cUxObVpVaFpvcndRS3lfUFBJa1pHSXR
           <div class="item-foot">
             <span class="item-meta">TechJuice · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxObVpVaFpvcndRS3lfUFBJa1pHSXRUZC0tMFV4cnBWVDZ1RDR1RG02VTRrWE1zNkx5cVk4bVl1cUhhbDhXRWJzWWs1TzZWQlVpR2lfcW1KblVBMF9sa3RERnNGaVV3SzZoOERJSjlETks3bFo4ZTlEWHZ6ZVI4dlVWdmZyQ0FDSnZwcmExN0U5X2M4aVU?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -422,6 +453,7 @@ https://news.google.com/rss/articles/CBMikwFBVV95cUxObVpVaFpvcndRS3lfUFBJa1pHSXR
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta launches Muse Code: an AI agent for large codebases - Techzine Global**
 &gt; Meta launches Muse Code: an AI agent for large codebases&amp;nbsp;&amp;nbsp;Techzine Global
@@ -443,7 +475,7 @@ https://news.google.com/rss/articles/CBMioAFBVV95cUxOdFNSdUw3N29LVDFGb2tGOHprRjB
           <div class="item-foot">
             <span class="item-meta">Techzine Global · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMioAFBVV95cUxOdFNSdUw3N29LVDFGb2tGOHprRjBGcUhKbmlzeTBGYXV3YXpyeHZSZ2V1Um1RTnVaaWo4Z045ZVk4ZXh0bi1qWmZtUF9pWkVyU0duVUt5b1QxSThiTEo4VG5ab2d3dTZSTjU2VXE0S05lTDBhMDcwdF9ab2p1TFdRUmo0d0xFSHpLVUZEOFZVRmpRNDB3ZzdyV0ZJMFMzVzQz?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -452,6 +484,7 @@ https://news.google.com/rss/articles/CBMioAFBVV95cUxOdFNSdUw3N29LVDFGb2tGOHprRjB
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta launches Muse Code, its first AI agent dedicated to software development - marketscreener.com**
 &gt; Meta launches Muse Code, its first AI agent dedicated to software development&amp;nbsp;&amp;nbsp;marketscreener.com
@@ -473,7 +506,7 @@ https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSE55WjQtV3NFUXVBNGstcy1mM01
           <div class="item-foot">
             <span class="item-meta">marketscreener.com · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSE55WjQtV3NFUXVBNGstcy1mM01XZDVqdUxHMXR0RjdJbnB3Nl9ZeXNFZlNkOHFWRGhNSjZvVWxCWkxpSTg5VUFPS3RYaFFIZy1HeDYyT2pHN0gyN3J2MkFsclR0YjZOaFVRN0Rjc1VqV0NVeThoZE12eHJlYlFtMHh6ek1EMmVRS1pRZHpDZzJ0aVl3Tks4cVcxZ0hXb3NzRkNmU1RmZU13QjdaQ3Y0MC10V0gzeHMyQUNYUUU1Rnhla0VnOEstVE51d2JRQ2VtbHV4RVFreTNlX3IwQWxiUWZ6c1p6bUNXR1VrWWlPNDVYendw?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -482,6 +515,7 @@ https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSE55WjQtV3NFUXVBNGstcy1mM01
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Muse Code: Meta finally launches its first-ever coding agent to take on OpenAI and Anthropic - Firstpost**
 &gt; Muse Code: Meta finally launches its first-ever coding agent to take on OpenAI and Anthropic&amp;nbsp;&amp;nbsp;Firstpost
@@ -503,7 +537,7 @@ https://news.google.com/rss/articles/CBMi0gFBVV95cUxORTdfT1djaFA5Z1NyZGFDblZPQlB
           <div class="item-foot">
             <span class="item-meta">Firstpost · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxORTdfT1djaFA5Z1NyZGFDblZPQlBsSm93YXpwaG53bGo0aGJ4QzZHTWk5N1haS1ZwSUF3T3d3SElpUGFZRTJ3MjJqS2JlNXVjRG5XS2YzNDRYS2V0dWFBdFNWVXRMdHM1ek9jenowSFoxNFdVWkMtQnBuN0NSbGE4bWpZSmV0Ti1LTGNrOTg3aEU5SjV3R2Q3TTJEbldXcWNrZ3E0eXc4b2NKbTYtSk11RklxcHhaaWdaMXBMQnQxSXlkZDZOWERNVklVZTlwanh5aHfSAdcBQVVfeXFMTWhFR0hLUlJtVXpfLUZyZU5lRXlwcnJOOVhjR3lYMzdvU0lzVEdsX01SOHEtM0cxRkdEZEd0Y3lkeGlxYVpkRnNCX2U1SnRYRW9wOUJfYTlzVGgwajlWX3ljTWJicE0yeEVrbHNRdGN3U0VUa1dwY3pUd0twVkUzakplalVKVnZDSXNkUG0xNTRhakRWQ2N0UnBkTGJEdGRVR2F0bDNVQUpSZ2FFc1RqdERKVmxSaktJTWtPWHQtVmJ3b1poZlVCOXpWQ3BjOXFQNHc3TVd6Ymc?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -512,6 +546,7 @@ https://news.google.com/rss/articles/CBMi0gFBVV95cUxORTdfT1djaFA5Z1NyZGFDblZPQlB
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta Launches Muse Code To Compete With Codex, Claude Code- Details - News18**
 &gt; Meta Launches Muse Code To Compete With Codex, Claude Code- Details&amp;nbsp;&amp;nbsp;News18
@@ -533,7 +568,7 @@ https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRnNUZEhDNWZ6dXJJbHQ2cV9xdlJ
           <div class="item-foot">
             <span class="item-meta">News18 · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRnNUZEhDNWZ6dXJJbHQ2cV9xdlJPTUo2TFV1Ykdxd01MRlAyOUFqUGJxS3BQNVlDaV9XdkEwYl8xbmQyUk5rakJOU1FEVzdRajEzcHA3aG5VUmk0cWZZd194NnNWUFpUdzZvTjc4eFRzU3F4UTc0a0dLbDYzQ00tSXZ2SnVDM3FoaGxFTmh1eWtEUnBXTlFPeldDQ3hmNXRaMk1vdlpmT24yZkHSAbABQVVfeXFMT2o2aHhUbzdSaTNMYmN0ZXcxS2xJZmpiUTlHUkI5WE9ETndWbFU4UWJRaXRja3VULVhVU2Zrekk4Rl9pZEVmekJaUzI2ZjVpanFGMWtoNV92WjVycHZwUkRKMVlSM1Z2MzBjbE5faGJYdXNGbGh5aGVnamFrSDRfZW5YQWV3NlZJeTJxWmxKelh3NXFMazJ0WFRmcEstUk14bXVkQXhidDR2ZnpRcDhXeWU?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -542,6 +577,7 @@ https://news.google.com/rss/articles/CBMiqwFBVV95cUxPRnNUZEhDNWZ6dXJJbHQ2cV9xdlJ
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta launches Muse Code, its first AI coding agent to rival OpenAI and Anthropic - The Times of India**
 &gt; Meta launches Muse Code, its first AI coding agent to rival OpenAI and Anthropic&amp;nbsp;&amp;nbsp;The Times of India
@@ -563,7 +599,7 @@ https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSkZ6R0Fta0dyU2dVQ1RlZ2FLVVN
           <div class="item-foot">
             <span class="item-meta">The Times of India · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSkZ6R0Fta0dyU2dVQ1RlZ2FLVVNyc0tSekd2VnBuX0xLdzZIaXl1eUVtUThaZXN6N0NrWUdpZVZzQUlvdk9zRFg5RFZqZ2pZdVNmSHZ4M2NOYXdoUVVmLWxhMmpiQVlLNFNQekUtdmpPcjNOSHB4ei1PV0NpNHhvLTZBM0JpN21oc213OWxoVmpHenJxUVptRWg3ekp0UFptMldHM2hwQlBJNVMwWGNXUmQwa1h1VzFVSEFldGo1S2FxeVMycjlBbUVYa1pyRjZvbjJvdTJFNGJRUnlHU1NqUWlpSzk3UTJzcHB0TXBuYzBSTWFL?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -572,6 +608,7 @@ https://news.google.com/rss/articles/CBMi9AFBVV95cUxQSkZ6R0Fta0dyU2dVQ1RlZ2FLVVN
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta debuts AI coding agent Muse Code in race with OpenAI and Anthropic - Business Standard**
 &gt; Meta debuts AI coding agent Muse Code in race with OpenAI and Anthropic&amp;nbsp;&amp;nbsp;Business Standard
@@ -593,7 +630,7 @@ https://news.google.com/rss/articles/CBMi5AFBVV95cUxPbWlHNDdkRW1OcFJYM0dGalZsUVd
           <div class="item-foot">
             <span class="item-meta">Business Standard · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxPbWlHNDdkRW1OcFJYM0dGalZsUVdRSGdQQlRwVURzeG1XMWpuX01JS1M2T2ZWb1ZHSDFlODBYQnNoaGlMaGlZem1HbkpFb1RaMXoyRjQzTDdRazF5VlE2WVZqNEJNcXJwZ2ZleFN3M3hoMVpvQlJ2VnFzLXR3ZVpNa05CNGdrMHZoSGVjbWt5WmlYM1paekV1dnZTeXlRajBwUzhwdDA1MXNMQnZXUkR4N2JEVUdGUFowc1l6V2xfMU5RNUoySW1YMDVKT3MxRUJ1LTVBbTRGMnpQM3QwRVRRaDJFVEPSAeQBQVVfeXFMT21pRzQ3ZEVtTnBSWDNHRmpWbFFXUUhnUEJUcFVEc3htVzFqbl9NSUtTNk9mVm9WR0gxZTgwWEJzaGhpTGhpWXptR25KRW9UWjF6MkY0M0w3UWsxeVZRNllWajRCTXFycGdmZXhTdzN4aDFab0JSdlZxcy10d2VaTWtOQjRnazB2aEhlY21reVppWDNaWnpFdXZ2U3l5UWowcFM4cHQwNTFzTEJ2V1JEeDdiRFVHRlBaMHNZeldsXzFOUTVKMkltWDA1Sk9zMUVCdS01QW00RjJ6UDN0MEVUUWgyRVRD?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -602,6 +639,7 @@ https://news.google.com/rss/articles/CBMi5AFBVV95cUxPbWlHNDdkRW1OcFJYM0dGalZsUVd
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta takes on Claude Code and Codex with its new Muse Code agent, with a privacy tradeoff - Neowin**
 &gt; Meta takes on Claude Code and Codex with its new Muse Code agent, with a privacy tradeoff&amp;nbsp;&amp;nbsp;Neowin
@@ -623,7 +661,7 @@ https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcVdPejdJeHAzWjBUNDVJN0hQcW5
           <div class="item-foot">
             <span class="item-meta">Neowin · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcVdPejdJeHAzWjBUNDVJN0hQcW5Fcnk2REZkcHo5MHdZb0xkeW16YjAtUlNWaTdYb0FRZFczSDkzcHNJQXpVOWxON0JDYXNkMHZjVkxUbW9PVV9PNUFQUnpub01kQXpZTWx6TXlOdm1obG1mbTJraU1SQV96NmRRT3A1VGdOclJJRDJFdlNPbEc0Y1lrOXVEb1FZdlFCRkJsSzRIclZMNkhVUEJpVF9FNC0zdlRWUkJ00gG3AUFVX3lxTE0tbmpDUFR6RWk4V3lRWkJtM2NtaFBEdW5nUzNyVDRaZzZMbGFONWcxYVdWRjNoWnl4Q0lVbzRVOU9WOFZ0QTUxZm5xcEJsVmdMRzhnYWRZWFpuSkFLb1BMdllBeXRJQWlMMFZXT3hOajRnQ2YtUElOZ1JSQXExMW9zeGl0WWhLQWs1bkZqUXRwQ3FTazQ5bUtkTnBZdWtIdHcxXzJYSVBpdzNpQXdQWGU3c2FwM055QQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -632,6 +670,7 @@ https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcVdPejdJeHAzWjBUNDVJN0hQcW5
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ After telling employees to stop using Claude Code, Microsoft's internal memo has more 'bad news' for Anth - The Times of India**
 &gt; After telling employees to stop using Claude Code, Microsoft's internal memo has more 'bad news' for Anth&amp;nbsp;&amp;nbsp;The Times of India
@@ -653,7 +692,7 @@ https://news.google.com/rss/articles/CBMimAJBVV95cUxNQ3N3RVJ3aVBDNWo5RHpwcExRUy0
           <div class="item-foot">
             <span class="item-meta">The Times of India · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMimAJBVV95cUxNQ3N3RVJ3aVBDNWo5RHpwcExRUy0wU1FLbFVkdWxIdTZvcUlBV3Q5NGt4NFc0OHBkRmFub2Fsd0o2YXBlWWpyMTIxa3RiOUZrOWNiOXpSTUgwazFFczFObXBEMXB3UWRpaVVfdnBNZk5wRi0yZUtTdFZmNFBuZHVabmFHemRoeHRBMFJqeHdpeVIxOHQ2bGVDSTNxQ1RyejNiZmRieHY3V25WREsxSHM3Z1MtQkM4Z3NKcE1wSkRPRUxXbmJCbUZCd1l5X1hpX2RlTG5PMUhOREVLUGEtU1BCaF9wVVZxZjNfeW5oUER5QkVrOVJycUJySFUtWG9La190MG9ydDFpLWVwRGFhWFItMk1ZQXlUOS1D0gGeAkFVX3lxTE1VSTFESVUzMHBrcUQtVGlmNlQ0TVdvVU5rUHF4OUktZmVCYVJZaVVDZ25PMEtnT3gtZ01LRnVfbTk1cURwbmR1WE1wWEVDMFhrZFBHN3MySXJLTXFQUjI0LVFVWDItWC1XamJ4N1p0ZU1iNmhOblFnVHVsT0RPRGh1Y3lUUDJFazJNNEVCYVlUMjkyS1lVSUdhY3g1WjJHQ2RzTDZwZXZlZDZyVnE1RS1TcU51ZzBrMVFOd25yQ2dWVzdWb2xxYS1SRDJ0NURHZFplcU9YM1ZZSlg0QjZuVWQ3aTBybDdBRnVPcnlET1dKeW82d2VUaHM1V2lGOWE5QlF1TmFNTUNmcUZzZThvZ0hyQzhYMS1OMEhPWnREaHc?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -662,6 +701,7 @@ https://news.google.com/rss/articles/CBMimAJBVV95cUxNQ3N3RVJ3aVBDNWo5RHpwcExRUy0
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta takes on Anthropic and OpenAI with its first AI coding agent, Muse Code - SiliconANGLE**
 &gt; Meta takes on Anthropic and OpenAI with its first AI coding agent, Muse Code&amp;nbsp;&amp;nbsp;SiliconANGLE
@@ -683,7 +723,7 @@ https://news.google.com/rss/articles/CBMinAFBVV95cUxPVXlyLWVNUVVnOGZkbnNjNGMzS3V
           <div class="item-foot">
             <span class="item-meta">SiliconANGLE · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMinAFBVV95cUxPVXlyLWVNUVVnOGZkbnNjNGMzS3VnRHh3VWRlbXVWYkVyMFM0VjBNSXhFUWE0S3VWNXFBdzFfaWd3ZnJndk9DZzFUVVFUcjBCV09Uc1Z0NnpJNS01VU40RnA1cXBGZFdTMjIzOHdQUzU5RmVNTmF0WlpQdWltdy00UzlMR3dscS1hVDBSUVpPS0FoQWNETFpjbXJQOEU?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -692,6 +732,7 @@ https://news.google.com/rss/articles/CBMinAFBVV95cUxPVXlyLWVNUVVnOGZkbnNjNGMzS3V
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Gadgets: Personal app vibe coding that is actually safe — Kenton Varda, Cloudflare｜AI Engineer - finance.biggo.com**
 &gt; Gadgets: Personal app vibe coding that is actually safe — Kenton Varda, Cloudflare｜AI Engineer&amp;nbsp;&amp;nbsp;finance.biggo.com
@@ -713,7 +754,7 @@ https://news.google.com/rss/articles/CBMiX0FVX3lxTE4xeURxMFVnZUprTU1wdW82Zkxxa2h
           <div class="item-foot">
             <span class="item-meta">finance.biggo.com · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE4xeURxMFVnZUprTU1wdW82Zkxxa2hOdmFtTVFHRDJoNjN1VEtpaDZLV1M3WDhMNFBGU1oxVG5GQkI5a2NWeEdJSE01c2h2VkdmYzl2MXNSRlJ1STB3bldr?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -722,6 +763,7 @@ https://news.google.com/rss/articles/CBMiX0FVX3lxTE4xeURxMFVnZUprTU1wdW82Zkxxa2h
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta launches its first AI coding agent to compete with Anthropic and OpenAI - De Último Minuto**
 &gt; Meta launches its first AI coding agent to compete with Anthropic and OpenAI&amp;nbsp;&amp;nbsp;De Último Minuto
@@ -743,7 +785,7 @@ https://news.google.com/rss/articles/CBMivgFBVV95cUxPWWo2THF4NmFEbFh4ekRSYkcybm1
           <div class="item-foot">
             <span class="item-meta">De Último Minuto · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxPWWo2THF4NmFEbFh4ekRSYkcybm1jN1pWUS0wTlJpZXBXVHlUbER1WmZyNjM2RURNWkNaRzB3cThmVWswUzl3SHQzY0pmWURmQ29QWm5EeWRjQlF0QzVFTjJqQ20xSEEwUmd5V2lLek43U2p3djB4VXY0SjJQempfeHJGeXQ0SHZ0bm1FUWdVV1NkakdtbS1BRy1KNWhwaU9qVmtFTkZnYVpLY1VGTHFKVE1mckpYajVnOFVDWHdn?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -752,6 +794,7 @@ https://news.google.com/rss/articles/CBMivgFBVV95cUxPWWo2THF4NmFEbFh4ekRSYkcybm1
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta launches Muse Code beta, undercutting Claude and OpenAI on price - Gagadget.com**
 &gt; Meta launches Muse Code beta, undercutting Claude and OpenAI on price&amp;nbsp;&amp;nbsp;Gagadget.com
@@ -773,7 +816,7 @@ https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ2pvV192dm1reUE4Wjh1NkhaODR
           <div class="item-foot">
             <span class="item-meta">Gagadget.com · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ2pvV192dm1reUE4Wjh1NkhaODR4VjluMDg5MmE1MDFYcjJzMUF1UlQzUGR2dE93SW9SY2FqRE0ydVV1QnRYSnpySnl0QlNKZUtCVEFKZ0lubXRXRi1iNjZzem53Nkh4MHhIVzNudkF6Vk9wUi1ubTdBWXctRTBacUkzZHNOUGwyNEoxbk12Znpld2RkeVdxblZxd2lxSTJwN1HSAacBQVVfeXFMTWlZNXBLSHozSXBLazRZZE1udENvcHk4V2ZqbFhTbkx6RFNsNzQ1UkxjZjVQUG15LVNkZDkzclNDZmgxRTRCY0pWUmMyLTZnS3hUZDBzME5vZUpjWWVoN09EOEtHZ0hEaGdiTW55dTM3R3ljRV83R29CTTBFZk83dEpfRkZ5dW5TRHJCQl9HUUJuTW5jTUtrRWpVMW1FUUV3c2ZYRDg5WUU?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -782,6 +825,7 @@ https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ2pvV192dm1reUE4Wjh1NkhaODR
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta wants to get inside your terminal with its new coding agent - The Register**
 &gt; Meta wants to get inside your terminal with its new coding agent&amp;nbsp;&amp;nbsp;The Register
@@ -803,7 +847,7 @@ https://news.google.com/rss/articles/CBMivgFBVV95cUxNbzliUVBuNGtqR2NrWGlVUFY2WVN
           <div class="item-foot">
             <span class="item-meta">The Register · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNbzliUVBuNGtqR2NrWGlVUFY2WVN6YXNYZWhxLVJGamNCRDZqT0dqNHpQbFNxOW1RUnZncjlzc2tIZWU3ZnFrdmdUeURGTElqUUZWbzVRbTJDR3VNQUtQVkh3Y2NyTVBRb2p3TXBHa0gzOVh1TkhRY2t4OXBlZTFlS193Y2JLdHVaTjRycG4yU3EzbzhUeE1ERHVXd2N3WVRsRHhjYTVoZXA3RFppZ0ZQQ3BFeXN5VDR6S01XM0Vn?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -812,6 +856,7 @@ https://news.google.com/rss/articles/CBMivgFBVV95cUxNbzliUVBuNGtqR2NrWGlVUFY2WVN
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta Steps Up AI Race With New Coding Agent And Muse Spark Update - BusinessToday Malaysia**
 &gt; Meta Steps Up AI Race With New Coding Agent And Muse Spark Update&amp;nbsp;&amp;nbsp;BusinessToday Malaysia
@@ -833,7 +878,7 @@ https://news.google.com/rss/articles/CBMirwFBVV95cUxNbzNjOXI2ak9oOVYtdk1uTjVoeTJ
           <div class="item-foot">
             <span class="item-meta">BusinessToday Malaysia · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMirwFBVV95cUxNbzNjOXI2ak9oOVYtdk1uTjVoeTJHdm5qV3cxaXllYjF2SEtBYTFoUmRQeGpGTzI0OXdCbG0wYUNtM2tDeUp4Y0ZxU1BRT0pudHVPeDUxSDRMU09rVjVyODdPT21peVFXelFLUWNIOEZNSGdIMnRieUJjZVdhOXRoekVUMTVQTnFzNHFuMjFJYUdrc1hqWkRTOEdtZTdUVlpSU1lIS3RGNk1SY0puanBr?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -842,6 +887,7 @@ https://news.google.com/rss/articles/CBMirwFBVV95cUxNbzNjOXI2ak9oOVYtdk1uTjVoeTJ
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Microsoft’s SkillOpt Shows Optimized Agent Skill Artifacts Transfer Across Model Scales and Between Codex and Claude Code Harnesses - MarkTechPost**
 &gt; Microsoft’s SkillOpt Shows Optimized Agent Skill Artifacts Transfer Across Model Scales and Between Codex and Claude Code Harnesses&amp;nbsp;&amp;nbsp;MarkTechPost
@@ -863,7 +909,7 @@ https://news.google.com/rss/articles/CBMilwFBVV95cUxONWs2V1FSc2NhZkhUc2drS3JZRUd
           <div class="item-foot">
             <span class="item-meta">MarkTechPost · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMilwFBVV95cUxONWs2V1FSc2NhZkhUc2drS3JZRUdiUWtLTFoyWjFrLXNkR1g0S0U4dm1yeEtEOWJyWlVlTllsOUVQbE5vZm41QW5Ya2dUYzhUNFFnbVU0SnVNX0xuRVJYSDRqWUgwYUJuSGpIR2lnalNyYWx0TVlHdW1kd0NTdFBlVzJ6Q3RrZkFtMk9pbTZkWE1TcWR5Zjkw0gGcAUFVX3lxTE9GV1U0TTRSR0NQSHdZZTB2TkNUQ09CdWMwd0pRV2szSHYyY0k2VHUzVUhORVBrOXdwbU9YNUFZU1c2TkFnWmlRWjg3Y1ZTMXJjLXpRRWl0VXpZLWgzSlZyTjduUVg1ZTBRaTJJZk9pZzhuQnhlQ3ZPajRReldjbzE0Z0dhNTdWLW5oR1RZcFBxa0U3UGg0QzlGUzRpOA?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -872,6 +918,7 @@ https://news.google.com/rss/articles/CBMilwFBVV95cUxONWs2V1FSc2NhZkhUc2drS3JZRUd
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Sinch Launches Agent Tools to Help Developers Build AI-Powered Communication Applications - The Fast Mode**
 &gt; Sinch Launches Agent Tools to Help Developers Build AI-Powered Communication Applications&amp;nbsp;&amp;nbsp;The Fast Mode
@@ -893,7 +940,7 @@ https://news.google.com/rss/articles/CBMi3AFBVV95cUxOb1VETHJqcFRwZGN4ekc5dnRJeGJ
           <div class="item-foot">
             <span class="item-meta">The Fast Mode · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOb1VETHJqcFRwZGN4ekc5dnRJeGJZQmk1eHg2T0tqZ3NrcnVQWTZ2ME52clIwdkJqdU82RndTUXc2NDhPTXBUSFpCbjRHakxIYUVJQ3M5bVd3T3RkcVZwdEZ0ZDRyTEJ1ekR0V29tZTRWaUdRQVFsVHR6Q1FSbS01R1ZiazBHdkt2eVJLLXlsaXIyN2hsdzdfZkxzYzRQZjRiT3Jfb0h2bjBUdUhnV1lpVU13LUZBVENvbU9IY1pLLWl6SDdtMk51aU1HbnhuVGVXVmJld1RtX25feEk3?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -902,6 +949,7 @@ https://news.google.com/rss/articles/CBMi3AFBVV95cUxOb1VETHJqcFRwZGN4ekc5dnRJeGJ
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta’s Muse Code Pushes AI Deeper into Software Engineering - ADTmag**
 &gt; Meta’s Muse Code Pushes AI Deeper into Software Engineering&amp;nbsp;&amp;nbsp;ADTmag
@@ -923,7 +971,7 @@ https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUEdGQ2t5Y1B6U0REbnVoa1FiNTJ
           <div class="item-foot">
             <span class="item-meta">ADTmag · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUEdGQ2t5Y1B6U0REbnVoa1FiNTJ2NEZYeWtSMlB3c3ZoRFo5Y0ZDMkxwc3JYbHBxLVZWdnUyS0tid1hqU1pNMmRCckp5QzVKLUFWd29OdUZIYUFVbFVxTjBKekJJY2o1ZGhhbTZxTjhvZnQ1eklYSVBxbTlITGZfRl9VZkYta1poQnR6WlNnY0w1TU5PSFlsMDBfMldidWJRWERSanZEZVlkSGM?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -932,6 +980,7 @@ https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUEdGQ2t5Y1B6U0REbnVoa1FiNTJ
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta launches its first AI coding agent, Muse Code, to take on Anthropic and OpenAI - t2ONLINE**
 &gt; Meta launches its first AI coding agent, Muse Code, to take on Anthropic and OpenAI&amp;nbsp;&amp;nbsp;t2ONLINE
@@ -953,7 +1002,7 @@ https://news.google.com/rss/articles/CBMiygFBVV95cUxPMmZEdE9kNUROV1R4UkVKVldfX3F
           <div class="item-foot">
             <span class="item-meta">t2ONLINE · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPMmZEdE9kNUROV1R4UkVKVldfX3FPczJoR2Y3aTFpeWpqVGlEYWRuRGxaelVScmJoc1hEVW4xSjVqNFI0b09BeWtvRmU2R3NxanB1aEtmV0tUWE53TFNiNWZxOU1QcEFXNUE5QUZ6Zy1BeUJsMDZIa25XZnpFem56bGtxYnZpd0t6X2N5RUdBNmM5OVhqREJucGxBWjZlTEloLXU4eVl1bFVSMWZZQ18zQ2FrOEN6UERHRWlYRGhoWEllMGxueGZjNFpn?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -967,6 +1016,7 @@ https://news.google.com/rss/articles/CBMiygFBVV95cUxPMmZEdE9kNUROV1R4UkVKVldfX3F
       <h2 class="cat-title">ــ 🧭 تحليلات ونقد <span class="cat-count">٤</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ The Harness Is the Attack Surface - Phoenix Security launches Exploit Hunt at Black Hat USA 2026 to find zero day - EIN News**
 &gt; The Harness Is the Attack Surface - Phoenix Security launches Exploit Hunt at Black Hat USA 2026 to find zero day&amp;nbsp;&amp;nbsp;EIN News
@@ -988,7 +1038,7 @@ https://news.google.com/rss/articles/CBMi6AFBVV95cUxQU0pLM2czTFpHTV83S3dIRGhLbFl
           <div class="item-foot">
             <span class="item-meta">EIN News · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxQU0pLM2czTFpHTV83S3dIRGhLbFlDNkxPZ25aYkk1QXV4VWRMREpFeDBZRkItVENKZjhxWFgzSlNnNmUzb2I0S0dYblpEUkNTZkNhY3J6dU5KMXVwZ0IxUmIzYXl2MXdQb2RoTjFZbll2QWhXZTg0V05WRzFqRS0yVXNfbEFrWUlWakhhZ1lTZHVLTHpTa2RTb1luVUx3bVVhSkxESldGeEtWWk9tRTQ4WGJYbnhvWVUwalZieWh6ejBBX3NjUXdHc0h3b2RyV3ZGQjJUU3lGQmsxZWdDRFVUWXQ3Q3BVM2Fz?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -997,6 +1047,7 @@ https://news.google.com/rss/articles/CBMi6AFBVV95cUxQU0pLM2czTFpHTV83S3dIRGhLbFl
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ 1-Click RCE Flaw in Cursor, VS Code, and Google Antigravity Exposes 50M Developers to Cyberattacks - CyberSecurityNews**
 &gt; 1-Click RCE Flaw in Cursor, VS Code, and Google Antigravity Exposes 50M Developers to Cyberattacks&amp;nbsp;&amp;nbsp;CyberSecurityNews
@@ -1018,7 +1069,7 @@ https://news.google.com/rss/articles/CBMifEFVX3lxTFB3bVpWTk4wVFJDQTFYOEVkU1RHeEt
           <div class="item-foot">
             <span class="item-meta">CyberSecurityNews · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMifEFVX3lxTFB3bVpWTk4wVFJDQTFYOEVkU1RHeEtqWnBmZzRNYnRxS3hEQmxKTzJLR29KWmEyc3FMNHBsSHlmajlETEZBeUU1cWxzcXh1elFiSkU4d2NVUklTWGc0ZWlRdlVXUE1zLXNKQmtGQkpGVWJvUHpYSXhmV1BxY3rSAYIBQVVfeXFMTUJ5NGtUYXItTlBvUEZqZHdGNXV1WUNRVEhselZZUWNOb3UxckpCV1F3NDdFeUdaOEhkMUlhOHJFZ2djYVU2ZHBod1VoeWd1ZXVUZWxzRURUU0x0c3IxY0YyQXpPQ2dfaFA3ckgtMGRfUjZLRFVCRTNUWHNMRVYzd0djZw?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1027,6 +1078,7 @@ https://news.google.com/rss/articles/CBMifEFVX3lxTFB3bVpWTk4wVFJDQTFYOEVkU1RHeEt
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Ship Safe, an open source security scanner for coding agents**
 &gt; 
@@ -1048,7 +1100,7 @@ https://github.com/asamassekou10/ship-safe">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/asamassekou10/ship-safe" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1057,6 +1109,7 @@ https://github.com/asamassekou10/ship-safe">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ AI-Generated Code Security Stalls at 56% Pass Rate [2026] - tech-insider.org**
 &gt; AI-Generated Code Security Stalls at 56% Pass Rate [2026]&amp;nbsp;&amp;nbsp;tech-insider.org
@@ -1078,7 +1131,7 @@ https://news.google.com/rss/articles/CBMibEFVX3lxTFBfZ21UcnlfcDhjQ3JtZU5JdHVKUFp
           <div class="item-foot">
             <span class="item-meta">tech-insider.org · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMibEFVX3lxTFBfZ21UcnlfcDhjQ3JtZU5JdHVKUFpMZ0VkUTlvbUJBZmpDbUlwVFB5alNSbDNZM2FIQ2FoUGRPRU14MVc0WGRYYUlZWHFvU1ZJLW5vdW9fcnNIUUE4aHF3THpIWUwxRk52U05VMA?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1092,6 +1145,7 @@ https://news.google.com/rss/articles/CBMibEFVX3lxTFBfZ21UcnlfcDhjQ3JtZU5JdHVKUFp
       <h2 class="cat-title">ــ 🏗️ المنصات <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cloudflare CTO Blocks &quot;Yeet&quot; Release of Vibe-Coding Platform as Varda Declares XSS Dead - finance.biggo.com**
 &gt; Cloudflare CTO Blocks &quot;Yeet&quot; Release of Vibe-Coding Platform as Varda Declares XSS Dead&amp;nbsp;&amp;nbsp;finance.biggo.com
@@ -1113,7 +1167,7 @@ https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xaks4dU5ib08wT0tOZm1oNWd1eE5
           <div class="item-foot">
             <span class="item-meta">finance.biggo.com · ٠٦-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xaks4dU5ib08wT0tOZm1oNWd1eE5QbUpPTG5oUHh0VWFuQk0zLVJYQ2xzM2JucjE3a1FOcUVNUVBBcmF0YXhzeXVyanU5OS0wb1RWWDUzY0VnNjQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1138,7 +1192,7 @@ https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xaks4dU5ib08wT0tOZm1oNWd1eE5
       <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count">٣٢ خبر</span></a>
-      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ خبر</span></a>
       <a class="arc-item is-current" href="./AI-News_06-08-2026.html"><span class="arc-date">الخميس ٦ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_05-08-2026.html"><span class="arc-date">الأربعاء ٥ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_04-08-2026.html"><span class="arc-date">الثلاثاء ٤ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
@@ -1167,7 +1221,7 @@ https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xaks4dU5ib08wT0tOZm1oNWd1eE5
     <path d="M12 19V5M5 12l7-7 7 7"/>
   </svg>
 </button>
-<div class="toast" id="toast" role="status" aria-live="polite">تم نسخ الخبر</div>
+<div class="toast" id="toast" role="status" aria-live="polite">نُسخ الخبر</div>
 <script>
 (function () {
   var toast = document.getElementById('toast');
@@ -1201,7 +1255,7 @@ https://news.google.com/rss/articles/CBMiW0FVX3lxTE1xaks4dU5ib08wT0tOZm1oNWd1eE5
     function done(ok) {
       if (!ok) { showToast('تعذّر النسخ'); return; }
       btn.classList.add('is-copied');
-      showToast('تم نسخ الخبر');
+      showToast('نُسخ الخبر');
       setTimeout(function () { btn.classList.remove('is-copied'); }, 1900);
     }
 

@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>البرمجة بالذكاء الاصطناعي — نشرة الروابط | الأربعاء ٥ أغسطس ٢٠٢٦</title>
+<title>البرمجة بالذكاء الاصطناعي، نشرة الروابط | الأربعاء ٥ أغسطس ٢٠٢٦</title>
 <meta name="description" content="مدونة روابط يومية لأحدث أخبار البرمجة بالذكاء الاصطناعي وأدواتها.">
 <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي — الأربعاء ٥ أغسطس ٢٠٢٦">
+<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي، الأربعاء ٥ أغسطس ٢٠٢٦">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -167,6 +179,23 @@ h1{
 .badge-video{
   background:var(--badge-bg);color:var(--badge-fg);
   box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
+}
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
 }
 
 /* ── Copy button (left edge of each card) ─ */
@@ -282,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -366,7 +396,7 @@ footer a:hover{text-decoration:underline}
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
         </svg>
-        <b>٢٤</b> خبراً
+        <b>٢٤</b> خبر
       </span>
     </div>
     <div class="actions">
@@ -392,8 +422,9 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">١٩</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: أداة CostClaw تكشف تسريبات إنفاق Claude Code على جهازك**
+                  data-copy="**ــ أداة CostClaw تكشف تسريبات إنفاق Claude Code على جهازك**
 &gt; يقدّم CostClaw أداةً طرفيةً محليّةً تحلّل فواتير استخدام Claude Code وتكشف الأماكن التي تُهدر فيها الميزانية، دون إرسال البيانات إلى خارج الجهاز.
 https://www.costclaw.io/">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -407,13 +438,13 @@ https://www.costclaw.io/">
             </svg>
           </button>
           <a class="item-link" href="https://www.costclaw.io/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: أداة CostClaw تكشف تسريبات إنفاق Claude Code على جهازك</h3>
+            <h3 class="item-title">أداة CostClaw تكشف تسريبات إنفاق Claude Code على جهازك</h3>
           </a>
           <p class="item-summary">يقدّم CostClaw أداةً طرفيةً محليّةً تحلّل فواتير استخدام Claude Code وتكشف الأماكن التي تُهدر فيها الميزانية، دون إرسال البيانات إلى خارج الجهاز.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.costclaw.io/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -422,8 +453,9 @@ https://www.costclaw.io/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: Lapse — تطبيق ملاحظاتٍ بفضاء ذاكرةٍ مشتركٍ لوكلائك عبر MCP**
+                  data-copy="**ــ Lapse — تطبيق ملاحظاتٍ بفضاء ذاكرةٍ مشتركٍ لوكلائك عبر MCP**
 &gt; يدمج Lapse بين تدوين الملاحظات وتوفير ذاكرةٍ مشتركة يتصل بها وكلاؤك البرمجيون عبر بروتوكول MCP، ما يتيح لهم استرجاع السياق عبر جلساتٍ متفرّقة.
 https://lapse.in">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -437,13 +469,13 @@ https://lapse.in">
             </svg>
           </button>
           <a class="item-link" href="https://lapse.in" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: Lapse — تطبيق ملاحظاتٍ بفضاء ذاكرةٍ مشتركٍ لوكلائك عبر MCP</h3>
+            <h3 class="item-title">Lapse — تطبيق ملاحظاتٍ بفضاء ذاكرةٍ مشتركٍ لوكلائك عبر MCP</h3>
           </a>
           <p class="item-summary">يدمج Lapse بين تدوين الملاحظات وتوفير ذاكرةٍ مشتركة يتصل بها وكلاؤك البرمجيون عبر بروتوكول MCP، ما يتيح لهم استرجاع السياق عبر جلساتٍ متفرّقة.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://lapse.in" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -452,8 +484,9 @@ https://lapse.in">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Ask HN: هل ثمّة نمط صوتٍ مزدوجٍ في Claude Code؟**
+                  data-copy="**ــ هل ثمّة نمط صوتٍ مزدوجٍ في Claude Code؟**
 &gt; تساءل أحد المطوّرين في Hacker News عمّا إن كانت أداة Claude Code تدعم التفاعل الصوتي المزدوج المباشر أثناء العمل، وجذب نقاشاً حول حدود الواجهات الصوتية للوكلاء.
 https://news.ycombinator.com/item?id=49178894">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -467,13 +500,13 @@ https://news.ycombinator.com/item?id=49178894">
             </svg>
           </button>
           <a class="item-link" href="https://news.ycombinator.com/item?id=49178894" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Ask HN: هل ثمّة نمط صوتٍ مزدوجٍ في Claude Code؟</h3>
+            <h3 class="item-title">هل ثمّة نمط صوتٍ مزدوجٍ في Claude Code؟</h3>
           </a>
           <p class="item-summary">تساءل أحد المطوّرين في Hacker News عمّا إن كانت أداة Claude Code تدعم التفاعل الصوتي المزدوج المباشر أثناء العمل، وجذب نقاشاً حول حدود الواجهات الصوتية للوكلاء.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.ycombinator.com/item?id=49178894" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -482,6 +515,7 @@ https://news.ycombinator.com/item?id=49178894">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ نواة تدريبٍ تسرّع تطوير الذكاء الاصطناعي**
 &gt; استعرض مقال Open Source For You نواةً مفتوحة المصدر لتسريع عمليات التدريب، ما يخفّض زمن بناء نماذج البرمجة المساعدة للمطوّرين.
@@ -503,7 +537,7 @@ https://news.google.com/rss/articles/CBMigwFBVV95cUxPVmJKWEoyaEdBV3UtRFkyVEs4V1Z
           <div class="item-foot">
             <span class="item-meta">Open Source For You · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPVmJKWEoyaEdBV3UtRFkyVEs4V1ZTaWdEV1pyRFlvblU5UE05VWJqM0dwbzh0YVdFdmppSlVXOFItTERVMHZmSjdOYjlQS015QWsyb2dNWjRzb1JmZjVCNFNrZlJoWnpKWW82OGw4Y2NWeXYtQXdXd3RTTU5wN29TTXBiSQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -512,6 +546,7 @@ https://news.google.com/rss/articles/CBMigwFBVV95cUxPVmJKWEoyaEdBV3UtRFkyVEs4V1Z
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ كم جنى فعلاً ابتزاز بيتكوين عبر البريد الإلكتروني**
 &gt; حلّل المقال أرقامَ العوائد الحقيقية لحملات الابتزاز التي تدّعي امتلاك تسجيلاتٍ محرجة، وكشف تفاوتاً كبيراً بين الضجّة والعائد الفعلي.
@@ -533,7 +568,7 @@ https://claude.ai/code/artifact/4806cb5d-8582-460e-ab31-2a321f1b23cb">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://claude.ai/code/artifact/4806cb5d-8582-460e-ab31-2a321f1b23cb" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -542,8 +577,9 @@ https://claude.ai/code/artifact/4806cb5d-8582-460e-ab31-2a321f1b23cb">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: Memcode تطلق وكيل برمجةٍ طرفيّاً جديداً**
+                  data-copy="**ــ Memcode تطلق وكيل برمجةٍ طرفيّاً جديداً**
 &gt; أعلن فريق Memcode عن وكيلٍ يعمل من سطر الأوامر يتولّى مهامّ التطوير الروتينية، ويستهدف المطوّرين الذين يفضّلون بيئات العمل النصّية.
 https://www.memcode.ai/">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -557,13 +593,13 @@ https://www.memcode.ai/">
             </svg>
           </button>
           <a class="item-link" href="https://www.memcode.ai/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: Memcode تطلق وكيل برمجةٍ طرفيّاً جديداً</h3>
+            <h3 class="item-title">Memcode تطلق وكيل برمجةٍ طرفيّاً جديداً</h3>
           </a>
           <p class="item-summary">أعلن فريق Memcode عن وكيلٍ يعمل من سطر الأوامر يتولّى مهامّ التطوير الروتينية، ويستهدف المطوّرين الذين يفضّلون بيئات العمل النصّية.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.memcode.ai/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -572,6 +608,7 @@ https://www.memcode.ai/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cursor تُضيف إضافات Google Workspace لوكلاء البرمجة بالذكاء الاصطناعي**
 &gt; وفق Techiexpert، بات بإمكان وكلاء Cursor الاتصال بخدمات Google Workspace مباشرةً، ما ييسّر أتمتة المهام عبر المستندات والبريد والتقويم.
@@ -593,7 +630,7 @@ https://news.google.com/rss/articles/CBMikgFBVV95cUxPLV9qclM4ZGZON0FVUTlCVGpaQ09
           <div class="item-foot">
             <span class="item-meta">Techiexpert.com · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPLV9qclM4ZGZON0FVUTlCVGpaQ09zbEw3c19WRnRLQUpLXzktdERjdDRJTVk3eWVldFhqckcyd2VUXy1waXRwclFOdi1Xam9HRTQ1UTdjMGhaX1VzWjVMa1BrMklULWhrc1NTMFItQ3laR2s0Z3J2YjBoaHNLejYwZ3BIVXpZZElaNTdyM2dVYXB2Zw?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -602,6 +639,7 @@ https://news.google.com/rss/articles/CBMikgFBVV95cUxPLV9qclM4ZGZON0FVUTlCVGpaQ09
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ لوحة CtrlVibe الذكية: بديلٌ مفتوح المصدر عن OpenAI Codex Micro لمسارات العمل الذكية**
 &gt; عرضت CNX Software مشروعاً تمويلياً يقدّم لوحة مفاتيح ذكية تربط سير العمل بوكلاء البرمجة، بوصفه بديلاً منخفض الكلفة عن Codex Micro.
@@ -623,7 +661,7 @@ https://news.google.com/rss/articles/CBMiugFBVV95cUxOakx0M04tUnQ5UkRYUllHNEcwa0x
           <div class="item-foot">
             <span class="item-meta">CNX Software · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOakx0M04tUnQ5UkRYUllHNEcwa0xFUy1kSjhhU1pSRXFrYVN2N1hSa1l1TzVhejlVTWV4dnpCdWJQSnpoRGtNd05ZX3JZMzlSSUlHUXFmRmlvdXFidkNpbmFJdWFfSkk0Ui13bWZKbExMZ3pjVnFQSmh0YVpqLUtYRzBPUnJRb2t6clExSTZTTUI3ME1fbGVkMUVCQkNpUVNuNno1azJrU3ZfQlFJT1lFbWtSTHhjZkdCMHfSAcIBQVVfeXFMTUI4NGh6eEpHWFFtSldHMW4wMlZaTjU2TE5WcWF4OWxhYXFFbTN1eUdxSk91UEtfLWw1aFZpTlJLaEZ3SWNxVFhDd3pmTXloM1NFZGNFbFZ4czhXc09SejdPcDlhVmxXZHdzUFAwajk1VUQ3bEcwdmxpaGVNVUdSR3FfWGJTT2F2RTdTOFgtYW1VYkNqRC04emtSRWZFSHYwM09oaTNOYmNvaDd5YVdacXd3MGxZVU02enZuRlZTUVE1S3c?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -632,6 +670,7 @@ https://news.google.com/rss/articles/CBMiugFBVV95cUxOakx0M04tUnQ5UkRYUllHNEcwa0x
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ أنجز مهامّ Codex من أيّ مكان — OpenAI**
 &gt; أبرزت OpenAI إمكانية تشغيل وكلاء Codex عن بُعد والإشراف عليها من أيّ جهاز، ما يوسّع نطاق العمل دون التقيّد بمحطّة تطويرٍ واحدة.
@@ -653,7 +692,7 @@ https://news.google.com/rss/articles/CBMibkFVX3lxTFAyWk95ZlhZeDJJeHZFVDNGYmVOM1l
           <div class="item-foot">
             <span class="item-meta">OpenAI · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMibkFVX3lxTFAyWk95ZlhZeDJJeHZFVDNGYmVOM1l4VlJ1ZVZHSzBZbl9OblFndWQxVGRweFRLMm1PdjJJWTVGT1RSSWtRSUpPWnNQTE9lcGtnOFl5YTVTUzFFX2V6OTMzdWR2Sl85NzdoTF9rWnpB?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -662,6 +701,7 @@ https://news.google.com/rss/articles/CBMibkFVX3lxTFAyWk95ZlhZeDJJeHZFVDNGYmVOM1l
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ أكبر مشكلتين تواجهان وكلاء البرمجة بالذكاء الاصطناعي: عزل السياق وتنسيق المهام**
 &gt; بيّنت HackerNoon أنّ تشتّت السياق بين الوكلاء وضعف تنسيق المهام المتوازية هما العائقان الأكبر أمام إنجاز مشاريعَ حقيقيةٍ بالكامل.
@@ -683,7 +723,7 @@ https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTWlGWnpObGpIeXMza2E1dFo3RDh
           <div class="item-foot">
             <span class="item-meta">HackerNoon · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTWlGWnpObGpIeXMza2E1dFo3RDhPTGlrdHhtRk9Obm91R1JDRjRXWUNBWlAxa3R3My1TZHpTRE9teXZXOVZ3RFZJdnlHRHhiTlJtaE9rOUVqRlliWFNaQk9LcmFjMmJNOVBNUGNuOTNkUW83cENINmNueEZCejNRNUJVTC1vMnVROUFQWDl0QkhLY09pT3E3VkVha0w2ang4UjNGRmlfUlI?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -692,8 +732,9 @@ https://news.google.com/rss/articles/CBMiqAFBVV95cUxQTWlGWnpObGpIeXMza2E1dFo3RDh
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: وكيل برمجةٍ طرفيٍّ يُصرَّف أصلياً على Termux بلا صلاحيات جذر**
+                  data-copy="**ــ وكيل برمجةٍ طرفيٍّ يُصرَّف أصلياً على Termux بلا صلاحيات جذر**
 &gt; قدّم مطوّرٌ وكيلاً يُبنى ويعمل داخل بيئة Termux على أندرويد دون الحاجة إلى صلاحيات الروت، ما يقرّب البرمجة الوكيلة من الهواتف.
 https://www.reddit.com/r/termux/s/FqS76rc2z3">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -707,13 +748,13 @@ https://www.reddit.com/r/termux/s/FqS76rc2z3">
             </svg>
           </button>
           <a class="item-link" href="https://www.reddit.com/r/termux/s/FqS76rc2z3" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: وكيل برمجةٍ طرفيٍّ يُصرَّف أصلياً على Termux بلا صلاحيات جذر</h3>
+            <h3 class="item-title">وكيل برمجةٍ طرفيٍّ يُصرَّف أصلياً على Termux بلا صلاحيات جذر</h3>
           </a>
           <p class="item-summary">قدّم مطوّرٌ وكيلاً يُبنى ويعمل داخل بيئة Termux على أندرويد دون الحاجة إلى صلاحيات الروت، ما يقرّب البرمجة الوكيلة من الهواتف.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/termux/s/FqS76rc2z3" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -722,8 +763,9 @@ https://www.reddit.com/r/termux/s/FqS76rc2z3">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: Mint MCP — توليد أصولٍ ثلاثية الأبعاد من وكلاء البرمجة**
+                  data-copy="**ــ Mint MCP — توليد أصولٍ ثلاثية الأبعاد من وكلاء البرمجة**
 &gt; يربط Mint MCP وكلاء البرمجة بأنظمة توليد ثلاثي الأبعاد، فيتيح إنتاج نماذجَ ومرئياتَ مباشرةً من وصفٍ نصّيٍّ ضمن سير العمل.
 https://mcp.mint.gg">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -737,13 +779,13 @@ https://mcp.mint.gg">
             </svg>
           </button>
           <a class="item-link" href="https://mcp.mint.gg" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: Mint MCP — توليد أصولٍ ثلاثية الأبعاد من وكلاء البرمجة</h3>
+            <h3 class="item-title">Mint MCP — توليد أصولٍ ثلاثية الأبعاد من وكلاء البرمجة</h3>
           </a>
           <p class="item-summary">يربط Mint MCP وكلاء البرمجة بأنظمة توليد ثلاثي الأبعاد، فيتيح إنتاج نماذجَ ومرئياتَ مباشرةً من وصفٍ نصّيٍّ ضمن سير العمل.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://mcp.mint.gg" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -752,8 +794,9 @@ https://mcp.mint.gg">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: Collab Word في المتصفح — محرّر مستنداتٍ تعاونيٍّ قريبٍ من توافق MS Word**
+                  data-copy="**ــ Collab Word في المتصفح — محرّر مستنداتٍ تعاونيٍّ قريبٍ من توافق MS Word**
 &gt; يقدّم المشروع محرّراً تعاونياً يعمل في المتصفح ويستهدف التوافق مع صيغة مستندات Word، ليسهّل تحرير النصوص فريقياً.
 https://collab.word-in-web.com/">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -767,13 +810,13 @@ https://collab.word-in-web.com/">
             </svg>
           </button>
           <a class="item-link" href="https://collab.word-in-web.com/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: Collab Word في المتصفح — محرّر مستنداتٍ تعاونيٍّ قريبٍ من توافق MS Word</h3>
+            <h3 class="item-title">Collab Word في المتصفح — محرّر مستنداتٍ تعاونيٍّ قريبٍ من توافق MS Word</h3>
           </a>
           <p class="item-summary">يقدّم المشروع محرّراً تعاونياً يعمل في المتصفح ويستهدف التوافق مع صيغة مستندات Word، ليسهّل تحرير النصوص فريقياً.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://collab.word-in-web.com/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -782,6 +825,7 @@ https://collab.word-in-web.com/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ البرمجة الذرّية بالذكاء الاصطناعي**
 &gt; طرح المقال أسلوباً يُقسّم بناء الميزات إلى وحداتٍ صغيرةٍ منفصلة يتولّاها الوكيل تباعاً، ما يرفع موثوقية المخرجات ويخفّف الأخطاء.
@@ -803,7 +847,7 @@ https://unengineered.substack.com/p/atomic-vibe-coding">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://unengineered.substack.com/p/atomic-vibe-coding" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -812,8 +856,9 @@ https://unengineered.substack.com/p/atomic-vibe-coding">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: Watchfire — غرفة تحكّمٍ مفتوحة المصدر لوكلاء البرمجة**
+                  data-copy="**ــ Watchfire — غرفة تحكّمٍ مفتوحة المصدر لوكلاء البرمجة**
 &gt; يوفّر Watchfire لوحةً مركزية لمراقبة عدّة وكلاء برمجة وإدارتهم، ما ييسّر الإشراف على سير العمل داخل الفرق.
 https://github.com/watchfire-io/watchfire">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -827,13 +872,13 @@ https://github.com/watchfire-io/watchfire">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/watchfire-io/watchfire" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: Watchfire — غرفة تحكّمٍ مفتوحة المصدر لوكلاء البرمجة</h3>
+            <h3 class="item-title">Watchfire — غرفة تحكّمٍ مفتوحة المصدر لوكلاء البرمجة</h3>
           </a>
           <p class="item-summary">يوفّر Watchfire لوحةً مركزية لمراقبة عدّة وكلاء برمجة وإدارتهم، ما ييسّر الإشراف على سير العمل داخل الفرق.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/watchfire-io/watchfire" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -842,6 +887,7 @@ https://github.com/watchfire-io/watchfire">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ أسرع طريقة لتشغيل ghidrasql: وجّه وكيل البرمجة إلى مطالبة المثبّت**
 &gt; يشرح المقال كيف يكفي توجيه وكيل ذكي إلى شاشة تثبيت الأداة ليُنجز إعداد قاعدة البيانات البرمجية ghidrasql آلياً.
@@ -863,7 +909,7 @@ https://github.com/0xeb/ghidrasql">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/0xeb/ghidrasql" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -872,8 +918,9 @@ https://github.com/0xeb/ghidrasql">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: Hyperlane — بيئة تطويرٍ تدمج فروع عمل الوكلاء بأدواتٍ أصيلة**
+                  data-copy="**ــ Hyperlane — بيئة تطويرٍ تدمج فروع عمل الوكلاء بأدواتٍ أصيلة**
 &gt; يدمج Hyperlane بيئة التطوير المتكاملة مع مساحات العمل المعزولة للوكلاء عبر أدواتٍ أصيلة، ما يسهّل اختبار عدّة مساراتٍ بالتوازي.
 https://hyperlaneide.com">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -887,13 +934,13 @@ https://hyperlaneide.com">
             </svg>
           </button>
           <a class="item-link" href="https://hyperlaneide.com" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: Hyperlane — بيئة تطويرٍ تدمج فروع عمل الوكلاء بأدواتٍ أصيلة</h3>
+            <h3 class="item-title">Hyperlane — بيئة تطويرٍ تدمج فروع عمل الوكلاء بأدواتٍ أصيلة</h3>
           </a>
           <p class="item-summary">يدمج Hyperlane بيئة التطوير المتكاملة مع مساحات العمل المعزولة للوكلاء عبر أدواتٍ أصيلة، ما يسهّل اختبار عدّة مساراتٍ بالتوازي.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://hyperlaneide.com" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -902,6 +949,7 @@ https://hyperlaneide.com">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ تحليل نتائج Roblox للربع الثاني من ٢٠٢٦**
 &gt; تناول المقال أداء Roblox المالي في الربع الثاني، وما يعنيه من إقبالٍ على تجارب البناء المدعومة بالذكاء الاصطناعي.
@@ -923,7 +971,7 @@ https://claude.ai/code/artifact/fc33898e-7e43-4db0-8e03-f3b336da7d76">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://claude.ai/code/artifact/fc33898e-7e43-4db0-8e03-f3b336da7d76" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -932,8 +980,9 @@ https://claude.ai/code/artifact/fc33898e-7e43-4db0-8e03-f3b336da7d76">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: وكيل برمجةٍ أسرع من Codex وClaude Code**
+                  data-copy="**ــ وكيل برمجةٍ أسرع من Codex وClaude Code**
 &gt; ادّعى مطوّرٌ أنّ وكيله يتفوّق في السرعة على أدواتي OpenAI وAnthropic، وطرحه للتجربة أمام مجتمع Hacker News.
 https://www.codewithbullet.com">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -947,13 +996,13 @@ https://www.codewithbullet.com">
             </svg>
           </button>
           <a class="item-link" href="https://www.codewithbullet.com" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: وكيل برمجةٍ أسرع من Codex وClaude Code</h3>
+            <h3 class="item-title">وكيل برمجةٍ أسرع من Codex وClaude Code</h3>
           </a>
           <p class="item-summary">ادّعى مطوّرٌ أنّ وكيله يتفوّق في السرعة على أدواتي OpenAI وAnthropic، وطرحه للتجربة أمام مجتمع Hacker News.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.codewithbullet.com" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -967,6 +1016,7 @@ https://www.codewithbullet.com">
       <h2 class="cat-title">ــ 🧭 تحليلات ونقد <span class="cat-count">٤</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ نظرة أولى على Evo Agentic AppSec: المعالجة الوكيلة والدفاع ضد الشيفرة الخبيثة — Snyk**
 &gt; استعرضت Snyk أداتها Evo التي توكلُ إلى وكلاء ذكيين مهمةَ إصلاح الثغرات وإبطال الشيفرة الخبيثة آلياً ضمن خطّ الإنتاج.
@@ -988,7 +1038,7 @@ https://news.google.com/rss/articles/CBMic0FVX3lxTE8zWWF4ekxjRk4wOHQxZXZjc2cxb29
           <div class="item-foot">
             <span class="item-meta">Snyk · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMic0FVX3lxTE8zWWF4ekxjRk4wOHQxZXZjc2cxb29oZGx6cHlZWTFLcUlZeXAyRXpxZk4tVS1MYjh3ajM2ei1oV1RXMW1qRDdCb092UG54SFRMM3VoaUs2QUVvSWQwSGpjaGQ0UklJS1hXbVZxSlVjdEdISHc?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -997,6 +1047,7 @@ https://news.google.com/rss/articles/CBMic0FVX3lxTE8zWWF4ekxjRk4wOHQxZXZjc2cxb29
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ثغرة تنفيذٍ عن بُعد بضغطةٍ واحدة في Cursor وVS Code وGoogle Antigravity تعرّض ٥٠ مليون مطوّرٍ للهجوم**
 &gt; حذّرت CyberSecurityNews من ثغرة RCE تُستغلّ بضغطةٍ واحدة وتطال عشرات الملايين من مستخدمي بيئات البرمجة الشائعة، ودعت إلى تحديث الأدوات فوراً.
@@ -1018,7 +1069,7 @@ https://news.google.com/rss/articles/CBMiggFBVV95cUxNQnk0a1Rhci1OUG9QRmpkd0Y1dXV
           <div class="item-foot">
             <span class="item-meta">CyberSecurityNews · ٠٥-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNQnk0a1Rhci1OUG9QRmpkd0Y1dXVZQ1FUSGx6VllRY05vdTFySkJXUXc0N0V5R1o4SGQxSWE4ckVnZ2NhVTZkcGh3VWh5Z3VldVRlbHNFRFRTTHRzcjFjRjJBek9DZ19oUDdySC0wZF9SNktEVUJFM1RYc0xFVjN3R2Nn0gGCAUFVX3lxTE1CeTRrVGFyLU5Qb1BGamR3RjV1dVlDUVRIbHpWWVFjTm91MXJKQldRdzQ3RXlHWjhIZDFJYThyRWdnY2FVNmRwaHdVaHlndWV1VGVsc0VEVFNMdHNyMWNGMkF6T0NnX2hQN3JILTBkX1I2S0RVQkUzVFhzTEVWM3dHY2c?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1027,6 +1078,7 @@ https://news.google.com/rss/articles/CBMiggFBVV95cUxNQnk0a1Rhci1OUG9QRmpkd0Y1dXV
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Tenable توسّع تغطيتها الأمنية للذكاء الاصطناعي لتشمل Google Gemini**
 &gt; أوردت ChannelLife UK توسيع منصّة Tenable رصدها لأنظمة الذكاء الاصطناعي ليشمل Gemini، بما يعزّز حماية الوكلاء داخل المؤسّسات.
@@ -1048,7 +1100,7 @@ https://news.google.com/rss/articles/CBMijgFBVV95cUxPR3d2NE5sLVFZR2l4NVFJYTlpMml
           <div class="item-foot">
             <span class="item-meta">ChannelLife UK · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPR3d2NE5sLVFZR2l4NVFJYTlpMml4NFJTT21NS2RiZU1mRjhRWnkwc2s1a0VEOGFHSHVWV2xxMk1zcVczS1VXSUh3R3hzdXh0NVlEaVpQQlVVSVh1anMyMHhfN01UeFgzakx2ZUdXQ05RM0tIQ2lTZkhsUDJiSl9vZUZ2dEFOcjBjajdIc2ZB?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1057,6 +1109,7 @@ https://news.google.com/rss/articles/CBMijgFBVV95cUxPR3d2NE5sLVFZR2l4NVFJYTlpMml
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ نظرة أولى على Agentic AppSec: المعالجة الوكيلة والدفاع ضد الشيفرة الخبيثة — Snyk**
 &gt; تناولت Snyk من زاويةٍ أخرى كيف يتولّى الوكيل تلقائياً رصد الشيفرة الخبيثة وإصلاحها، ضمن مقاربةٍ أمنيةٍ تقوم على الأتمتة.
@@ -1078,7 +1131,7 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTFBaU0M5enJxVXVUSkh2cm9oZkJFTGJ
           <div class="item-foot">
             <span class="item-meta">Snyk · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBaU0M5enJxVXVUSkh2cm9oZkJFTGJHNFZZUno2ZVE3U1FRQXVRbFVxV0MyRjdxX2NLVEVPR1NoLWp6Z1BENHk3YkpVSlh6eGNhTVdKZVV1dlJNWUpGbFN4WkswWERhMk00WVNfcjdjNA?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1092,6 +1145,7 @@ https://news.google.com/rss/articles/CBMib0FVX3lxTFBaU0M5enJxVXVUSkh2cm9oZkJFTGJ
       <h2 class="cat-title">ــ 🏗️ المنصات <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ تسريع تطوير البرمجيات بـ ChatGPT Codex من OpenAI على Amazon Bedrock — AWS**
 &gt; استعرضت AWS تشغيل Codex فوق بنيتها Bedrock، ما يتيح للمؤسّسات بناء تطبيقات بالذكاء الاصطناعي داخل بيئةٍ سحابيةٍ منضبطة.
@@ -1113,7 +1167,7 @@ https://news.google.com/rss/articles/CBMisAFBVV95cUxQQ1BuSFBaZm9DemlMR0FHZ084X0V
           <div class="item-foot">
             <span class="item-meta">Amazon Web Services (AWS) · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMisAFBVV95cUxQQ1BuSFBaZm9DemlMR0FHZ084X0VFaFpUMFhmbWZhdUFpNTlLeTJ6YU9zRkJNbE9JOThtNER6dWVoZFJKWjcyYXRocGhzUG55ajc2LUd3N2hTdUpYYXlRZTRNSnpQd1lpVXFDaWRvTUZibjJsSE4xUTV6SGJGX3dzNEdNRlM1NFdWQUNONW93a0xtVW1TNnZpUkJ2Wmlzei15a3JqVlkwSnFicGNyMmxzbQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1138,7 +1192,7 @@ https://news.google.com/rss/articles/CBMisAFBVV95cUxQQ1BuSFBaZm9DemlMR0FHZ084X0V
       <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count">٣٢ خبر</span></a>
-      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ خبر</span></a>
       <a class="arc-item" href="./AI-News_06-08-2026.html"><span class="arc-date">الخميس ٦ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item is-current" href="./AI-News_05-08-2026.html"><span class="arc-date">الأربعاء ٥ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_04-08-2026.html"><span class="arc-date">الثلاثاء ٤ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
@@ -1167,7 +1221,7 @@ https://news.google.com/rss/articles/CBMisAFBVV95cUxQQ1BuSFBaZm9DemlMR0FHZ084X0V
     <path d="M12 19V5M5 12l7-7 7 7"/>
   </svg>
 </button>
-<div class="toast" id="toast" role="status" aria-live="polite">تم نسخ الخبر</div>
+<div class="toast" id="toast" role="status" aria-live="polite">نُسخ الخبر</div>
 <script>
 (function () {
   var toast = document.getElementById('toast');
@@ -1201,7 +1255,7 @@ https://news.google.com/rss/articles/CBMisAFBVV95cUxQQ1BuSFBaZm9DemlMR0FHZ084X0V
     function done(ok) {
       if (!ok) { showToast('تعذّر النسخ'); return; }
       btn.classList.add('is-copied');
-      showToast('تم نسخ الخبر');
+      showToast('نُسخ الخبر');
       setTimeout(function () { btn.classList.remove('is-copied'); }, 1900);
     }
 

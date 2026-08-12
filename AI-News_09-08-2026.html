@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>البرمجة بالذكاء الاصطناعي — نشرة الروابط | الأحد ٩ أغسطس ٢٠٢٦</title>
+<title>البرمجة بالذكاء الاصطناعي، نشرة الروابط | الأحد ٩ أغسطس ٢٠٢٦</title>
 <meta name="description" content="مدونة روابط يومية لأحدث أخبار البرمجة بالذكاء الاصطناعي وأدواتها.">
 <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي — الأحد ٩ أغسطس ٢٠٢٦">
+<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي، الأحد ٩ أغسطس ٢٠٢٦">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -167,6 +179,23 @@ h1{
 .badge-video{
   background:var(--badge-bg);color:var(--badge-fg);
   box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
+}
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
 }
 
 /* ── Copy button (left edge of each card) ─ */
@@ -282,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -366,7 +396,7 @@ footer a:hover{text-decoration:underline}
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
         </svg>
-        <b>٣٠</b> خبراً
+        <b>٣٠</b> خبر
       </span>
     </div>
     <div class="actions">
@@ -396,6 +426,7 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ 🚨 أخبار عاجلة <span class="cat-count">٤</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ملخص أخبار الذكاء الاصطناعي الأسبوعي: OpenAI توقف Astra بسبب مخاطر إلكترونية، والذكاء الاصطناعي يصمم كائنات حية**
 &gt; ملخص أسبوعي لأخبار الذكاء الاصطناعي يغطي قرار OpenAI بإيقاف مشروع Astra بسبب مخاطر أمنية إلكترونية، إلى جانب إنجازات جديدة في تصميم كائنات حية اصطناعية باستخدام الذكاء الاصطناعي.
@@ -417,7 +448,7 @@ https://www.reddit.com/r/u_enoumen/comments/1vjs97d/ai_weekly_news_rundown_opena
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/u_enoumen/comments/1vjs97d/ai_weekly_news_rundown_openai_halts_astra_over/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -426,6 +457,7 @@ https://www.reddit.com/r/u_enoumen/comments/1vjs97d/ai_weekly_news_rundown_opena
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ CyberKimi يحقق نتائج مبهرة على واحدة من أصعب ثغرات V8 في ExploitBench**
 &gt; وكيل ذكاء اصطناعي يُدعى CyberKimi حقق نتائج قوية على ثغرة V8 معقدة ضمن benchmarks ExploitBench، مما يُظهر تطور قدرات الذكاء الاصطناعي في اكتشاف الثغرات الأمنية.
@@ -447,7 +479,7 @@ https://www.reddit.com/r/CyberNews/comments/1vjtmw7/cyberkimi_just_dropped_stron
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/CyberNews/comments/1vjtmw7/cyberkimi_just_dropped_strong_results_on_one_of/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -456,6 +488,7 @@ https://www.reddit.com/r/CyberNews/comments/1vjtmw7/cyberkimi_just_dropped_stron
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ملخص الشركات الناشئة ninth أغسطس: استثمار Google بمبلغ مليار ونصف دولار في Mechanize، وCloudflare تقدم استضافة مجانية لوكيلات الذكاء الاصطناعي**
 &gt; ملخص الشركات الناشئة يغطي استثمار Google الضخم بمبلغ مليار ونصف دولار في Mechanize، وعرض Cloudflare لاستضافة مجانية لوكيلات الذكاء الاصطناعي.
@@ -477,7 +510,7 @@ https://www.reddit.com/r/Superframeworks/comments/1vjr2o6/startup_roundup_aug_09
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/Superframeworks/comments/1vjr2o6/startup_roundup_aug_09_googles_15b_mechani/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -486,6 +519,7 @@ https://www.reddit.com/r/Superframeworks/comments/1vjr2o6/startup_roundup_aug_09
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ OpenAI تكشف السبب وراء حد Codex لحجم السياق ٢٧٢ ألف: التكلفة وليس النموذج**
 &gt; OpenAI توضح أن الحد الأقصى لحجم السياق في Codex وهو ٢٧٢ ألف رمز يُحددها تكلفة قراءة التخزين المؤقت وليس بنية النموذج نفسه.
@@ -507,7 +541,7 @@ https://www.reddit.com/r/artificial/comments/1vjvpwb/openais_stated_reason_for_c
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/artificial/comments/1vjvpwb/openais_stated_reason_for_codexs_272k_context_c/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -521,6 +555,7 @@ https://www.reddit.com/r/artificial/comments/1vjvpwb/openais_stated_reason_for_c
       <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">١١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Codex-DeepSeek-Handoff: تسلسل نموذجي يربط OpenAI Codex مع DeepSeek في خط أنابيب واحد**
 &gt; أداة جديدة تربط نموذجي OpenAI Codex و DeepSeek في خط أنابيب برمجة واحد، مما يُتيح الاستفادة من قوتي النموذجين في تدفق عمل واحد.
@@ -542,7 +577,7 @@ https://www.reddit.com/r/codex/comments/1vjvpc5/codexdeepseekhandoff/">
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/codex/comments/1vjvpc5/codexdeepseekhandoff/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -551,6 +586,7 @@ https://www.reddit.com/r/codex/comments/1vjvpc5/codexdeepseekhandoff/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ codex-search-opencode: استخدم محرك بحث Codex المستقل بدون أي رموز GPT**
 &gt; أداة تُتيح للمطورين استخدام محرك البحث الخاص بـ Codex دون استهلاك أي رموز GPT، مما يوفر التكاليف بشكل كبير.
@@ -572,7 +608,7 @@ https://www.reddit.com/r/opencodeCLI/comments/1vjursp/codexsearchopencode_zero_g
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/opencodeCLI/comments/1vjursp/codexsearchopencode_zero_gpt_tokens_use_codexs/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -581,6 +617,7 @@ https://www.reddit.com/r/opencodeCLI/comments/1vjursp/codexsearchopencode_zero_g
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ AccordAgents: تطبيق مفتوح المصدر لسلاسل عمل ووكيلات متعددة من سطر الأوامر**
 &gt; تطبيق مكتبي مفتوح المصدر يُدير ويُنسق مجموعة من وكلاء البرمجة المتعددين في آن واحد من خلال واجهة سطر الأوامر.
@@ -602,7 +639,7 @@ https://www.reddit.com/r/codex/comments/1vjlnbi/accordagents_an_opensource_deskt
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/codex/comments/1vjlnbi/accordagents_an_opensource_desktop_app_for/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -611,6 +648,7 @@ https://www.reddit.com/r/codex/comments/1vjlnbi/accordagents_an_opensource_deskt
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ CrewCode: إشراف على طاقم من وكلاء البرمجة عبر أشجار العمل**
 &gt; أداة تُتيح للمطورين الإشراف على طاقم من وكلاء البرمجة الذين يعملون عبر أشجار عمل Git المختلفة في وقت واحد.
@@ -632,7 +670,7 @@ https://www.reddit.com/r/coding_agents/comments/1vjcag7/crewcode_supervise_a_cre
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/coding_agents/comments/1vjcag7/crewcode_supervise_a_crew_of_ai_coding_agent/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -641,6 +679,7 @@ https://www.reddit.com/r/coding_agents/comments/1vjcag7/crewcode_supervise_a_cre
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ لقد بنيت هارنس حول وكلاء البرمجة لأن النماذج الأفضل لم تكن تحل المشاكل**
 &gt; مطور شارك تجربته في بناء نظام تنسيق متكامل حول وكلاء البرمجة بعد اكتشاف أن تحسين النماذج وحدها لا يكفي لحل المشاكل العملية.
@@ -662,7 +701,7 @@ https://www.reddit.com/r/vibecoding/comments/1vjhzbl/i_built_a_harness_around_ai
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/vibecoding/comments/1vjhzbl/i_built_a_harness_around_ai_coding_agents_becau/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -671,6 +710,7 @@ https://www.reddit.com/r/vibecoding/comments/1vjhzbl/i_built_a_harness_around_ai
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ بنيت استوديو مفتوح المصدر للرسوم ثنائية البُعد والأنيميشن مدعومًا بـ Codex CLI**
 &gt; استوديو مفتوح المصدر يجمع بين الذكاء الاصطناعي لإنشاء الرSprites ثنائية البُعد والأنيميشن، يستخدم Codex CLI كمحرك لتوليد الكود.
@@ -692,7 +732,7 @@ https://www.reddit.com/r/aigamedev/comments/1vk2bq7/i_built_an_opensource_ai_2d_
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/aigamedev/comments/1vk2bq7/i_built_an_opensource_ai_2d_sprite_and_animation/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -701,6 +741,7 @@ https://www.reddit.com/r/aigamedev/comments/1vk2bq7/i_built_an_opensource_ai_2d_
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ شاركت تجربتي المفتوحة في ذاكرة الوكيل المستمرة**
 &gt; مطور شارك نظام ذاكرة مستمر تجريبي مفتوح المصدر لوكيلات البرمجة، يُتيح لها تذكر السياق عبر جلسات متعددة.
@@ -722,7 +763,7 @@ https://www.reddit.com/r/mcp/comments/1vjzgq5/i_open_sourced_my_small_experiment
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/mcp/comments/1vjzgq5/i_open_sourced_my_small_experiment_in_agent_memory/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -731,6 +772,7 @@ https://www.reddit.com/r/mcp/comments/1vjzgq5/i_open_sourced_my_small_experiment
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الطريقة المعتمدة لاستخدام Hermes مع اشتراك Codex دون تسريب بيانات الشخصية**
 &gt; طريقة معتمدة لاستخدام Hermes Agent مع اشتراك Codex مع الحفاظ على خصوصية بيانات الشخصية وعدم مشاركتها مع الأطراف الخارجية.
@@ -752,7 +794,7 @@ https://www.reddit.com/r/hermesagent/comments/1vjttkd/sanctioned_way_to_use_herm
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/hermesagent/comments/1vjttkd/sanctioned_way_to_use_hermes_with_codex/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -761,6 +803,7 @@ https://www.reddit.com/r/hermesagent/comments/1vjttkd/sanctioned_way_to_use_herm
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ أدير مجتمعًا صغيرًا لوكيلات الذكاء الاصطناعي بأموال حقيقية وديمقراطية مباشرة**
 &gt; مطور يدير مجتمعًا من وكلاء الذكاء الاصطناعي يعمل بمعاملات اقتصادية حقيقية ونظام حوكمة ديمقراطية مباشرة.
@@ -782,7 +825,7 @@ https://www.reddit.com/r/OpenAI/comments/1vjzlk7/i_run_a_small_society_for_ai_ag
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/OpenAI/comments/1vjzlk7/i_run_a_small_society_for_ai_agents_with_real/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -791,6 +834,7 @@ https://www.reddit.com/r/OpenAI/comments/1vjzlk7/i_run_a_small_society_for_ai_ag
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ NAEOS: بناء نظام هندسة مفتوح المصدر لعصر الذكاء الاصطناعي الأصلي**
 &gt; NAEOS هو نظام هندسة تشغيل شامل مفتوح المصدر مُصمم خصيصًا لتدفقات العمل البرمجية المبنية على الذكاء الاصطناعي الأصلي.
@@ -812,7 +856,7 @@ https://www.reddit.com/r/OpenSourceAI/comments/1vjwp0e/naeos_building_an_opensou
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/OpenSourceAI/comments/1vjwp0e/naeos_building_an_opensource_engineering_syst/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -821,6 +865,7 @@ https://www.reddit.com/r/OpenSourceAI/comments/1vjwp0e/naeos_building_an_opensou
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ هل تتطلب حسابات Codex التجارية هوية حقيقية لكل عضو؟**
 &gt; مناقشة حول ما إذا كانت حسابات Codex التجارية تتطلب التحقق من الهوية الحقيقية لكل فريق عمل، وتأثير ذلك على الخصوصية والعمل الجماعي.
@@ -842,7 +887,7 @@ https://www.reddit.com/r/codex/comments/1vjw1uk/do_business_accounts_require_rea
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/codex/comments/1vjw1uk/do_business_accounts_require_real_id_for_each/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -856,6 +901,7 @@ https://www.reddit.com/r/codex/comments/1vjw1uk/do_business_accounts_require_rea
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٦</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ هل ٢٠٢٦ هي سنة وكلاء البرمجة؟**
 &gt; نقاش مجتمعي حاد حول ما إذا كانت ٢٠٢٦ ستكون سنة الاختراق لوكلاء البرمجة المستقلة، مع آراء متباينة حول مدى استعداد السوق والتقنيات.
@@ -877,7 +923,7 @@ https://www.reddit.com/r/FoundationalAI/comments/1vjwxap/2026_is_the_year_of_cod
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/FoundationalAI/comments/1vjwxap/2026_is_the_year_of_coding_agents/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -886,6 +932,7 @@ https://www.reddit.com/r/FoundationalAI/comments/1vjwxap/2026_is_the_year_of_cod
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Claude Code في أقل من مئتي سطر من Go**
 &gt; مطور أعاد تنفيذ الوظائف الأساسية لـ Claude Code باستخدام أقل من مئتي سطر من لغة Go، مما يُثبت أن الأدوات المعقدة يمكن تبسيطها.
@@ -907,7 +954,7 @@ https://www.reddit.com/r/golang/comments/1vjrsez/claude_code_in_200_lines_go/">
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/golang/comments/1vjrsez/claude_code_in_200_lines_go/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -916,6 +963,7 @@ https://www.reddit.com/r/golang/comments/1vjrsez/claude_code_in_200_lines_go/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ أجريت تجربة لمدة عشر ساعات لمعرفة ما إذا كان بإمكاني توفير رموز Claude عبر التفويض**
 &gt; مطور اختبر ما إذا كان تفويض المهام الفرعية إلى نماذج أرخص يمكن أن يُقلل من إنفاق رموز Claude بشكل ملحوظ.
@@ -937,7 +985,7 @@ https://www.reddit.com/r/ClaudeCode/comments/1vjfsss/i_ran_a_10_hour_experiment_
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/ClaudeCode/comments/1vjfsss/i_ran_a_10_hour_experiment_to_see_if_i_could_sa/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -946,6 +994,7 @@ https://www.reddit.com/r/ClaudeCode/comments/1vjfsss/i_ran_a_10_hour_experiment_
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ إضافات مهارات الوكيل تعاني من ثغرة في إدارة التبعيات**
 &gt; تحليل تقني يُكشف عن ثغرة حرجة في إدارة التبعيات الخاصة بإضافات مهارات الوكيلات، مما يُشكل تهديدًا أمنيًا وعمليًا.
@@ -967,7 +1016,7 @@ https://www.reddit.com/r/LLMDevs/comments/1vk2yen/agent_skill_plugins_have_a_dep
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/LLMDevs/comments/1vk2yen/agent_skill_plugins_have_a_dependencymanagement/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -976,6 +1025,7 @@ https://www.reddit.com/r/LLMDevs/comments/1vk2yen/agent_skill_plugins_have_a_dep
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ استخدام نماذج اللغة المفتوحة في أعمال تطوير البرمجيات الصغيرة**
 &gt; تجربة عملية لاستخدام نماذج اللغة المفتوحة المصدر في شركة برمجيات صغيرة، تُظهر الفوائد والتحديات الحقيقية.
@@ -997,7 +1047,7 @@ https://www.reddit.com/r/LocalLLM/comments/1vjzozj/open_source_llms_in_a_smaller
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/LocalLLM/comments/1vjzozj/open_source_llms_in_a_smaller_software/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1006,6 +1056,7 @@ https://www.reddit.com/r/LocalLLM/comments/1vjzozj/open_source_llms_in_a_smaller
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Opus 5 مخيب للآمال جدًا**
 &gt; مستخدمون ي bàyون استياءهم من مشكلات مُدركة في جودة Claude Opus 5 عند استخدامه في مهام البرمجة.
@@ -1027,7 +1078,7 @@ https://www.reddit.com/r/claude/comments/1vjp1m2/opus_5_is_so_awful/">
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/claude/comments/1vjp1m2/opus_5_is_so_awful/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1041,6 +1092,7 @@ https://www.reddit.com/r/claude/comments/1vjp1m2/opus_5_is_so_awful/">
       <h2 class="cat-title">ــ 🎓 شروح ودورات <span class="cat-count">٤</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ دليل مقارن: كيف تُحمّل عملاء الذكاء الاصطناعي ملف CLAUDE.md والتعليمات الأخرى**
 &gt; دليل مقارن يفحص كيف تُحمّل عملاء البرمجة بالذكاء الاصطناعي المختلفة ملفات التعليمات مثل CLAUDE.md وتُفسرها.
@@ -1062,7 +1114,7 @@ https://www.reddit.com/r/ClaudeWorkflows/comments/1vjl9eb/workflow_comparative_g
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/ClaudeWorkflows/comments/1vjl9eb/workflow_comparative_guide_how_ai_clients_/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1071,6 +1123,7 @@ https://www.reddit.com/r/ClaudeWorkflows/comments/1vjl9eb/workflow_comparative_g
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ دليل عملي: إضافات الوكيل مع Supabase**
 &gt; دليل تطبيقي خطوة بخطوة لبناء إضافات الوكيل متكاملة مع Supabase، يُغطي الإعداد والأتمتة والنشر.
@@ -1092,7 +1145,7 @@ https://www.reddit.com/r/Buildcamp/comments/1vjliqr/practical_guide_agent_plugin
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/Buildcamp/comments/1vjliqr/practical_guide_agent_plugins_with_supabase/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1101,6 +1154,7 @@ https://www.reddit.com/r/Buildcamp/comments/1vjliqr/practical_guide_agent_plugin
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ إدارة مهام البرمجة بالذكاء الاصطناعي باستخدام أشجار Git لحفظ السياق**
 &gt; سِلسلة عمل تُستخدم أشجار Git Worktrees للحفاظ على السياق عبر جلسات برمجة بالذكاء الاصطناعي المتعددة.
@@ -1122,7 +1176,7 @@ https://www.reddit.com/r/ClaudeWorkflows/comments/1vjy1xt/workflow_managing_ai_c
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/ClaudeWorkflows/comments/1vjy1xt/workflow_managing_ai_coding_tasks_with_git/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1131,6 +1185,7 @@ https://www.reddit.com/r/ClaudeWorkflows/comments/1vjy1xt/workflow_managing_ai_c
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ سِلسلة عمل: البرمجة الفعّالة بالذكاء الاصطناعي — إدارة سياق المشروع والتعاون متعدد الوكيلات**
 &gt; دليل سِلسلة عمل لإدارة سياق المشروع بفعالية عبر وكلاء برمجة بالذكاء الاصطناعي متعددين، مع تعاون فعّال بينهما.
@@ -1152,7 +1207,7 @@ https://www.reddit.com/r/ClaudeWorkflows/comments/1vk47q1/workflow_efficient_ai_
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/ClaudeWorkflows/comments/1vk47q1/workflow_efficient_ai_coding_managing_proj/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1166,6 +1221,7 @@ https://www.reddit.com/r/ClaudeWorkflows/comments/1vk47q1/workflow_efficient_ai_
       <h2 class="cat-title">ــ ⚖️ مقارنات <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cursor Pro مقابل Claude Code مقابل OpenAI Codex CLI: أي أداة بأربعين دولارًا شهريًا تتعامل مع أكواد أكبر؟**
 &gt; مقارنة تفصيلية بين Cursor Pro و Claude Code و Codex CLI في التعامل مع مشاريع كبيرة، وتحديد أيها يستحق اشتراكه الشهري.
@@ -1187,7 +1243,7 @@ https://www.reddit.com/r/cursor/comments/1vjqrum/cursor_pro_vs_claude_code_vs_op
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/cursor/comments/1vjqrum/cursor_pro_vs_claude_code_vs_openai_codex_cli/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1201,6 +1257,7 @@ https://www.reddit.com/r/cursor/comments/1vjqrum/cursor_pro_vs_claude_code_vs_op
       <h2 class="cat-title">ــ 🔮 مفاجئ <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ DeepSeek-V4-Flash بنموذج ٢٨٤ مليار معامل على Mac M5 Pro بذاكرة ٦٤ جيجابايت — ٦.٥ رمز لكل ثانية مع ٣٠ جيجابايت VRAM**
 &gt; فيديو يناقش محاولة Anthropic العلنية لتوظيف قائد فريق Codex في OpenAI، وتأثيرها على سوق المنافسة في مجال الذكاء الاصطناعي.
@@ -1222,7 +1279,7 @@ https://www.reddit.com/r/LocalLLM/comments/1vjwfa5/deepseekv4flash0731284b_on_a_
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/LocalLLM/comments/1vjwfa5/deepseekv4flash0731284b_on_a_64g_m5_pro_mac_65/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1236,6 +1293,7 @@ https://www.reddit.com/r/LocalLLM/comments/1vjwfa5/deepseekv4flash0731284b_on_a_
       <h2 class="cat-title">ــ 🎥 فيديوهات <span class="cat-count">٣</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الحلقة السادسة: Anthropic حاولت توظيف قائد Codex في OpenAI — علنًا**
 &gt; دليل فيديو شامل لتقنيات استخدام Claude Code المتقدمة، يُغطي الإعداد المخصص وسلاسل العمل وأفضل الممارسات.
@@ -1257,7 +1315,7 @@ https://www.youtube.com/watch?v=PuXcH6vhSh8">
           <div class="item-foot">
             <span class="item-meta">YouTube · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.youtube.com/watch?v=PuXcH6vhSh8" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1266,6 +1324,7 @@ https://www.youtube.com/watch?v=PuXcH6vhSh8">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ كيف تستخدم Claude Code بشكل أفضل من تسع وninety بالمئة من الناس — الدليل الكامل**
 &gt; دليل فيديو شامل لتقنيات استخدام Claude Code المتقدمة، يُغطي الإعداد المخصص والـ workflows والأفضل practices.
@@ -1287,7 +1346,7 @@ https://www.youtube.com/watch?v=ttVVwK7cik8">
           <div class="item-foot">
             <span class="item-meta">YouTube · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.youtube.com/watch?v=ttVVwK7cik8" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1296,6 +1355,7 @@ https://www.youtube.com/watch?v=ttVVwK7cik8">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ إعدادي على Claude Code كان فوضى — القواعد الثلاث التي أصلحته**
 &gt; مطور يشارك القواعد الثلاث التي حوّلت إعداد Claude Code الفوضوي إلى نظام نظيف ومنظم وفعّال.
@@ -1317,7 +1377,7 @@ https://www.youtube.com/watch?v=38u7KwEouoA">
           <div class="item-foot">
             <span class="item-meta">YouTube · ٠٩-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.youtube.com/watch?v=38u7KwEouoA" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1342,7 +1402,7 @@ https://www.youtube.com/watch?v=38u7KwEouoA">
       <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item is-current" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count">٣٢ خبر</span></a>
-      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ خبر</span></a>
       <a class="arc-item" href="./AI-News_06-08-2026.html"><span class="arc-date">الخميس ٦ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_05-08-2026.html"><span class="arc-date">الأربعاء ٥ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_04-08-2026.html"><span class="arc-date">الثلاثاء ٤ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
@@ -1371,7 +1431,7 @@ https://www.youtube.com/watch?v=38u7KwEouoA">
     <path d="M12 19V5M5 12l7-7 7 7"/>
   </svg>
 </button>
-<div class="toast" id="toast" role="status" aria-live="polite">تم نسخ الخبر</div>
+<div class="toast" id="toast" role="status" aria-live="polite">نُسخ الخبر</div>
 <script>
 (function () {
   var toast = document.getElementById('toast');
@@ -1405,7 +1465,7 @@ https://www.youtube.com/watch?v=38u7KwEouoA">
     function done(ok) {
       if (!ok) { showToast('تعذّر النسخ'); return; }
       btn.classList.add('is-copied');
-      showToast('تم نسخ الخبر');
+      showToast('نُسخ الخبر');
       setTimeout(function () { btn.classList.remove('is-copied'); }, 1900);
     }
 

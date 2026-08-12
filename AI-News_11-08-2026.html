@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -299,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -383,7 +396,7 @@ footer a:hover{text-decoration:underline}
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
         </svg>
-        <b>٢١</b> خبر
+        <b>٢٠</b> خبر
       </span>
     </div>
     <div class="actions">
@@ -408,9 +421,10 @@ footer a:hover{text-decoration:underline}
 
   <main>
     <section class="cat" id="cat-مقالات-بارزة">
-      <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٣</span></h2>
+      <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ تجربة: برمجة تطبيق كامل بالذكاء الاصطناعي لمعرفة الشعور**
 &gt; كاتب يروي تجربته في بناء تطبيق كامل بأسلوب البرمجة بالذكاء الاصطناعي وما تعلّمه من قيود وفرص.
@@ -441,36 +455,7 @@ https://rz01.org/vibecoding/">
           </div>
         </li>
         <li class="item">
-          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ ساوَس كامل بالبرمجة بالذكاء الاصطناعي يحقق ألف دولار إيراداً شهرياً**
-&gt; منشور على Reddit عن تجربة بناء منصة لمناقصات التوريد بأسلوب البرمجة بالذكاء الاصطناعي بنسبة مئة بالمئة، بنموذج مجاني يحقق إيراداً شهرياً متكرراً.
-https://www.reddit.com/r/ChileIA/comments/1vkxosp/hice_un_saas_para_licitaciones_100_vibe_coding_y/">
-            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="9" y="9" width="13" height="13" rx="2"/>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-            </svg>
-            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 6 9 17l-5-5"/>
-            </svg>
-          </button>
-          <a class="item-link" href="https://www.reddit.com/r/ChileIA/comments/1vkxosp/hice_un_saas_para_licitaciones_100_vibe_coding_y/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">ساوَس كامل بالبرمجة بالذكاء الاصطناعي يحقق ألف دولار إيراداً شهرياً</h3>
-          </a>
-          <p class="item-summary">منشور على Reddit عن تجربة بناء منصة لمناقصات التوريد بأسلوب البرمجة بالذكاء الاصطناعي بنسبة مئة بالمئة، بنموذج مجاني يحقق إيراداً شهرياً متكرراً.</p>
-          <div class="item-foot">
-            <span class="item-meta">Reddit · ١١-٠٨-٢٠٢٦</span>
-            <a class="item-url" href="https://www.reddit.com/r/ChileIA/comments/1vkxosp/hice_un_saas_para_licitaciones_100_vibe_coding_y/" target="_blank" rel="noopener noreferrer">
-              فتح الرابط
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M19 12H5M12 19l-7-7 7-7"/>
-              </svg>
-            </a>
-          </div>
-        </li>
-        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ هل يمكن بناء برمجيات حقيقية وصيانتها بالبرمجة بالذكاء الاصطناعي؟**
 &gt; نقاش في مجتمع Reddit حول إمكانية الاعتماد على البرمجة بالذكاء الاصطناعي لبناء برمجيات فعلية وصيانتها على المدى الطويل مع وظيفة موازية.
@@ -506,6 +491,7 @@ https://www.reddit.com/r/vibecoding/comments/1vkxnmr/can_i_build_and_maintain_re
       <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">١٠</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Aegis: فرض سياسات التشغيل على وكلاء الذكاء الاصطناعي**
 &gt; أداة تفرض سياسات وقت التشغيل على الوكلاء مع سجل تدقيق مشفّر وموافقات بشرية ومفتاح إيقاف فوري، دون تغيير في الأكواد. ⭐ ٣٤٣
@@ -536,6 +522,7 @@ https://github.com/Justin0504/Aegis">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Agentplane: تحكم في سير عمل وكلاء البرمجة عبر Git**
 &gt; أداة تحكم بسير عمل الوكلاء عبر Git: خطط معتمدة وتحقق وأدلة قابلة للمراجعة لـClaude Code وCodex وCursor وAider. ⭐ ٧٢
@@ -566,6 +553,7 @@ https://github.com/basilisk-labs/agentplane">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Ante: وكيل برمجة في ملف واحد يعمل دون اتصال**
 &gt; وكيل برمجة مفتوح المصدر يعمل بالكامل دون اتصال في ملف تنفيذي واحد، من دون الاعتماد على خدمات سحابية.
@@ -596,6 +584,7 @@ https://github.com/AntigmaLabs/ante">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ EchoBird: تثبيت بضغطة واحدة لمجموعة وكلاء البرمجة**
 &gt; أداة تثبّت وكلاء البرمجة بنقرة واحدة وتتيح التبديل بين النماذج: Claude Code وCodex وGrok Build وKimi وQwen وAider وOpenCode والمزيد. ⭐ ٣٠٠٥
@@ -626,6 +615,7 @@ https://github.com/edison7009/EchoBird">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Kiln: خادم MCP مفتوح المصدر للطباعة ثلاثية الأبعاد**
 &gt; وكلاء الذكاء الاصطناعي يصممون الأجزاء ويولّدونها ويقطعونها ويرسلونها إلى الطابعة عبر خادم MCP يدعم ماركات كثيرة. ⭐ ٤٥
@@ -656,6 +646,7 @@ https://github.com/codeofaxel/Kiln">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ إطار Omnigent مفتوح المصدر لتنسيق وكلاء البرمجة**
 &gt; منظومة مفتوحة المصدر تنسّق بين Claude Code وCodex وCursor وPi وتتيح تبديل الأدوات دون إعادة كتابة، مع فرض سياسات وعزل آمن وتعاون فوري بين الأجهزة. ⭐ ٨٤٩٢
@@ -686,6 +677,7 @@ https://github.com/omnigent-ai/omnigent">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ محاكي وكلاء مستقلين لاختبار النماذج في منتدى محلي**
 &gt; محاكٍ يبني منتدى Reddit محلياً لاختبار النماذج اللغوية والوكلاء المستقلين وتفاعلاتهم دون إنترنت. ⭐ ١٥٣
@@ -716,6 +708,7 @@ https://github.com/rafaelmateo123/Arena-of-Autonomous-Threads">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ واجهة سطر أوامر لهندسة السياق عبر Git**
 &gt; أداة CLI وخادم MCP لحفظ المواصفات وقرارات البنية والقواعد والخطط في Git لتعمل بها وكلاء البرمجة. ⭐ ٦٠
@@ -746,6 +739,7 @@ https://github.com/archcore-ai/cli">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ واجهة طرفية لاستعراض نماذج الذكاء الاصطناعي ومزوّديها**
 &gt; أداة TUI وCLI لتصفح نماذج الذكاء الاصطناعي ومعايير التقييم ووكلاء البرمجة وحالة مزوّدي الخدمات من محطة الأوامر. ⭐ ٤٨٥
@@ -776,6 +770,7 @@ https://github.com/reyamira/models">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ وكيل ضمان جودة مفتوح المصدر يحسّن نفسه ذاتياً لفِرق البرمجيات**
 &gt; منشور على Reddit يقدّم وكيل ذكاء اصطناعي مفتوح المصدر لاختبار الجودة يتعلم من أخطائه ويتحسن مع كل تشغيل داخل فريق البرمجيات.
@@ -811,6 +806,7 @@ https://www.reddit.com/r/vibecoding/comments/1vkxi29/opensource_self_improving_q
       <h2 class="cat-title">ــ 🏗️ المنصات <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Google تطلق مجموعة أدوات TypeScript لبناء الوكلاء**
 &gt; إطار مفتوح المصدر من Google لبناء وكلاء ذكاء اصطناعي متقدمين وتقييمهم ونشرهم بلغة TypeScript مع تحكم كامل في التفاصيل. ⭐ ١٣٤١
@@ -841,6 +837,7 @@ https://github.com/google/adk-js">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ حزم Nix لوكلاء الذكاء الاصطناعي وبيئات التطوير**
 &gt; مستودع يوفّر حزم Nix محدّثة يومياً لوكلاء البرمجة وأدوات التطوير، لتشغيلها في بيئات قابلة للتكرار والاعتماد. ⭐ ١٧٢٥
@@ -876,6 +873,7 @@ https://github.com/numtide/llm-agents.nix">
       <h2 class="cat-title">ــ 🧭 تحليلات ونقد <span class="cat-count">٤</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الإنسان في الحلقة يغفل عن ثلث طلبات الوكلاء الخطرة**
 &gt; دراسة تكشف أن المراجعين البشر يفوّتون نحو ثلث الطلبات الخطرة الصادرة عن وكلاء البرمجة.
@@ -906,6 +904,7 @@ https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ البرمجة بالذكاء الاصطناعي: تصفح بلا هدف مع محرر أكواد؟**
 &gt; منشور على Reddit يناقش انتقاداً شائعاً: أن البرمجة بالذكاء الاصطناعي قد تتحول إلى مراوحة بلا هدف حقيقي إن افتقرت إلى تخطيط مسبق.
@@ -936,6 +935,7 @@ https://www.reddit.com/r/AI_Agents/comments/1vkxv4i/vibe_coding_is_doomscrolling
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ربطت ٤ نماذج معاً في Claude Code فتعثّر ب٤ طرق**
 &gt; تجربة عملية لدمج أربعة نماذج في سير عمل Claude Code انتهت بالفشل بطرق متعددة على اختبار Terminal-Bench.
@@ -966,6 +966,7 @@ https://quesma.com/blog/tbench-orchestrator-refuses/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ مشكلة الإطراء في البرمجة بالذكاء الاصطناعي**
 &gt; مقال ينتقد ميل أدوات البرمجة بالذكاء الاصطناعي إلى المجاملة بدل النقد البنّاء، وما يترتب على ذلك من جودة أدنى.
@@ -1001,6 +1002,7 @@ https://tedium.co/2026/08/09/vibe-coding-insincerity/">
       <h2 class="cat-title">ــ 🎥 فيديوهات <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ مفاجأة: ChatGPT (Codex) أصبح جيداً جداً**
 &gt; فيديو يقيّم أداء ChatGPT بعد اندماجه مع وكيل Codex البرمجي، واصفاً تحسناً كبيراً في جودة توليد الأكواد وثباتها.
@@ -1031,6 +1033,7 @@ https://www.youtube.com/watch?v=jEi9IsMwFBk">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ نماذج رخيصة للعمل مع Claude Code: Fable وOpus وGrok**
 &gt; فيديو يستعرض نماذج لغوية منخفضة التكلفة يمكن ربطها بـClaude Code لتقليص فاتورة الاستخدام، مع مقارنة عملية بين Fable وOpus وGrok.
@@ -1073,7 +1076,7 @@ https://www.youtube.com/watch?v=FD87V5oj5qw">
       الأرشيف
     </h2>
     <div class="arc-list">
-      <a class="arc-item is-current" href="./AI-News_11-08-2026.html"><span class="arc-date">الثلاثاء ١١ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ خبر</span></a>
+      <a class="arc-item is-current" href="./AI-News_11-08-2026.html"><span class="arc-date">الثلاثاء ١١ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count">٣٢ خبر</span></a>

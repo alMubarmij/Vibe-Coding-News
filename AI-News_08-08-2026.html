@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>البرمجة بالذكاء الاصطناعي — نشرة الروابط | السبت ٨ أغسطس ٢٠٢٦</title>
+<title>البرمجة بالذكاء الاصطناعي، نشرة الروابط | السبت ٨ أغسطس ٢٠٢٦</title>
 <meta name="description" content="مدونة روابط يومية لأحدث أخبار البرمجة بالذكاء الاصطناعي وأدواتها.">
 <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي — السبت ٨ أغسطس ٢٠٢٦">
+<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي، السبت ٨ أغسطس ٢٠٢٦">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -299,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -383,7 +396,7 @@ footer a:hover{text-decoration:underline}
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
         </svg>
-        <b>٣٢</b> خبراً
+        <b>٣٢</b> خبر
       </span>
     </div>
     <div class="actions">
@@ -415,6 +428,7 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ 🚨 أخبار عاجلة <span class="cat-count">٥</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Meta تدخل سباق وكلاء البرمجة بإطلاق Muse Code**
 &gt; أعلنت Meta أول وكيل برمجي لديها تحت اسم Muse Code، لتنافس مباشرةً Anthropic وOpenAI في سوق أدوات البرمجة بالذكاء الاصطناعي.
@@ -436,7 +450,7 @@ https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-o
           <div class="item-foot">
             <span class="item-meta">CNBC · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-openai-.html" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -445,6 +459,7 @@ https://www.cnbc.com/2026/08/05/meta-debuts-muse-code-to-take-on-anthropic-and-o
           </div>
         </li>
         <li class="item is-dead">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18.84 12.25 1.72-1.71h-.02a5.004 5.004 0 0 0-.12-7.07 5.006 5.006 0 0 0-6.95 0l-1.72 1.71"/><path d="m5.17 11.75-1.71 1.71a5.004 5.004 0 0 0 .12 7.07 5.006 5.006 0 0 0 6.95 0l1.71-1.71"/><line x1="8" x2="16" y1="2" y2="22"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الصفحة الرسمية لوكيل Muse Code من Meta**
 &gt; نشرت Meta صفحة المنتج الرسمية لوكيل Muse Code، وتعرض فيها قدراته وطريقة دمجه في مسار التطوير.
@@ -469,6 +484,7 @@ https://developer.meta.com/ai/products/muse-code/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Claude Code يجعل الوضع التلقائي للأذونات هو الافتراضي في الرابع عشر من أغسطس**
 &gt; أعلن فريق Claude Code أن وضع الأذونات التلقائي سيصبح الإعداد الافتراضي، ما يقلّص مطالبات التأكيد أثناء تشغيل الوكيل.
@@ -490,7 +506,7 @@ https://twitter.com/ClaudeDevs/status/2085794862608318627">
           <div class="item-foot">
             <span class="item-meta">X / ClaudeDevs · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://twitter.com/ClaudeDevs/status/2085794862608318627" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -499,6 +515,7 @@ https://twitter.com/ClaudeDevs/status/2085794862608318627">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ثغرات هروب من العزل تضرب Cursor وCodex وGemini CLI وAntigravity**
 &gt; كشف باحثون عن ثغرات تتيح الهروب من بيئة العزل في أربع أدوات برمجة بالذكاء الاصطناعي دفعةً واحدة، ما يعرّض أجهزة المطوّرين لتنفيذ شيفرة غير موثوقة.
@@ -520,7 +537,7 @@ https://www.bleepingcomputer.com/news/security/cursor-codex-gemini-cli-antigravi
           <div class="item-foot">
             <span class="item-meta">BleepingComputer · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.bleepingcomputer.com/news/security/cursor-codex-gemini-cli-antigravity-hit-by-sandbox-escapes/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -529,6 +546,7 @@ https://www.bleepingcomputer.com/news/security/cursor-codex-gemini-cli-antigravi
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ المراجعة البشرية تُفوّت ثلث الطلبات الخطرة لوكلاء البرمجة**
 &gt; خلصت دراسة نقلها The Register إلى أن المطوّرين يوافقون على نحو ثلث الأوامر الخطرة التي يقترحها الوكيل دون انتباه، ما يهدم افتراض أمان «الإنسان في الحلقة».
@@ -550,7 +568,7 @@ https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third
           <div class="item-foot">
             <span class="item-meta">The Register · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third-of-dangerous-ai-coding-agent-requests/5284236" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -564,6 +582,7 @@ https://www.theregister.com/ai-and-ml/2026/08/06/humans-in-the-loop-miss-a-third
       <h2 class="cat-title">ــ 🛠️ أدوات Vibe Coding <span class="cat-count">٥</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ جلسات Claude Code صارت تتراسل فيما بينها**
 &gt; أضافت Anthropic التراسل بين الجلسات، فيستطيع وكيلان يعملان على المشروع نفسه تبادل النتائج بدل تكرار العمل.
@@ -585,7 +604,7 @@ https://code.claude.com/docs/en/cross-session-messaging">
           <div class="item-foot">
             <span class="item-meta">Claude Docs · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://code.claude.com/docs/en/cross-session-messaging" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -594,6 +613,7 @@ https://code.claude.com/docs/en/cross-session-messaging">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cowchat يتيح لـClaude وCodex وغيرهما التحاور محلياً**
 &gt; أداة تفتح قناة حوار محلية بين وكلاء برمجة مختلفين، فيتشاور كل وكيل مع الآخر قبل تعديل الشيفرة.
@@ -615,7 +635,7 @@ https://cowchat.cowboy.inc/">
           <div class="item-foot">
             <span class="item-meta">Cowchat · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://cowchat.cowboy.inc/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -624,6 +644,7 @@ https://cowchat.cowboy.inc/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Graphify يخفض استهلاك الرموز في Claude Code**
 &gt; يبني Graphify رسماً بيانياً للمشروع يمنح الوكيل السياق اللازم فحسب، فينخفض استهلاك الرموز وتكلفة التشغيل.
@@ -645,7 +666,7 @@ https://github.com/Graphify-Labs/graphify">
           <div class="item-foot">
             <span class="item-meta">GitHub · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -654,6 +675,7 @@ https://github.com/Graphify-Labs/graphify">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Wienerdog يمنح Claude Code وCodex ذاكرة ومهارات تتحسّن ذاتياً**
 &gt; يحفظ Wienerdog ما تعلّمه الوكيل في جلسات سابقة ويحوّله إلى مهارات قابلة لإعادة الاستعمال.
@@ -675,7 +697,7 @@ https://github.com/wienerdog-ai/wienerdog/">
           <div class="item-foot">
             <span class="item-meta">GitHub · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/wienerdog-ai/wienerdog/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -684,6 +706,7 @@ https://github.com/wienerdog-ai/wienerdog/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Neal: Codex يكتب الشيفرة وClaude يراجعها**
 &gt; منظومة تقسّم العمل بين نموذجين، فيتولى Codex الكتابة ويتولى Claude المراجعة النقدية قبل الدمج.
@@ -705,7 +728,7 @@ https://github.com/navels/neal">
           <div class="item-foot">
             <span class="item-meta">GitHub · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/navels/neal" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -719,6 +742,7 @@ https://github.com/navels/neal">
       <h2 class="cat-title">ــ 🧰 أدوات جديدة <span class="cat-count">٨</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Sprocket يقدّم نفسه وكيلاً للذكاء الاصطناعي في تطوير العتاد والبرمجيات معاً**
 &gt; تصدّر Sprocket نقاشات Hacker News بوعده بوكيل واحد يغطي تصميم العتاد وكتابة البرمجيات في آنٍ.
@@ -740,7 +764,7 @@ https://sprocket-demo.spikonado.com">
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://sprocket-demo.spikonado.com" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -749,6 +773,7 @@ https://sprocket-demo.spikonado.com">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Hoplite ينشر وكلاء البرمجة على السحابة بلا عناء**
 &gt; منصة من دفعة YC S26 تتولى تشغيل وكلاء البرمجة في السحابة، فيكتفي المطوّر بوصف المهمة.
@@ -770,7 +795,7 @@ https://hoplite.sh">
           <div class="item-foot">
             <span class="item-meta">Hoplite · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://hoplite.sh" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -779,6 +804,7 @@ https://hoplite.sh">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ HyperProbe يشخّص الأعطال في بيئة الإنتاج بصلاحية القراءة فقط**
 &gt; وكلاء يفحصون النظام الحي دون صلاحية الكتابة، فيقدّمون تشخيصاً آمناً لا يخاطر بالخدمة.
@@ -800,7 +826,7 @@ https://www.hyperprobe.co">
           <div class="item-foot">
             <span class="item-meta">HyperProbe · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.hyperprobe.co" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -809,6 +835,7 @@ https://www.hyperprobe.co">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ MicroCodex: إعادة بناء وكيل OpenAI Codex بلغة C++ في أقل من ميغابايت**
 &gt; مشروع مفتوح المصدر يعيد تنفيذ الوكيل في ملف تنفيذي واحد صغير، بلا اعتماديات ثقيلة.
@@ -830,7 +857,7 @@ https://github.com/paoloanzn/microcodex">
           <div class="item-foot">
             <span class="item-meta">GitHub · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/paoloanzn/microcodex" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -839,6 +866,7 @@ https://github.com/paoloanzn/microcodex">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Isolade: ورشة عمل محلية لوكلاء البرمجة داخل آلات دقيقة معزولة**
 &gt; يشغّل Isolade كل وكيل داخل microVM بلا أسرار مخزّنة، فيحدّ من أثر أي أمر خاطئ.
@@ -860,7 +888,7 @@ https://github.com/isolade/isolade">
           <div class="item-foot">
             <span class="item-meta">GitHub · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/isolade/isolade" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -869,6 +897,7 @@ https://github.com/isolade/isolade">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Zaivern Code: قمرة قيادة بلغة Rust لتشغيل وكلاء متوازين**
 &gt; واجهة تدير عدة وكلاء يعملون في الوقت نفسه على فروع مختلفة من المشروع.
@@ -890,7 +919,7 @@ https://github.com/tacyan/zaivern-code">
           <div class="item-foot">
             <span class="item-meta">GitHub · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/tacyan/zaivern-code" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -899,6 +928,7 @@ https://github.com/tacyan/zaivern-code">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Bourdon يوحّد ملف الذاكرة بين Claude Code وCodex وCursor**
 &gt; ملف ذاكرة واحد مشترك يقرأه كل وكيل، فتتوقف إعادة شرح المشروع مع كل أداة.
@@ -920,7 +950,7 @@ https://bourdon.ai">
           <div class="item-foot">
             <span class="item-meta">Bourdon · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://bourdon.ai" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -929,6 +959,7 @@ https://bourdon.ai">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Sif 1.0 يضع النموذج اللغوي في موقع الموجّه ويترك التنفيذ لمترجم حتمي**
 &gt; تجربة تفصل الإبداع عن الدقة: النموذج يقرّر، ومحرّك حتمي يكتب الشيفرة النهائية.
@@ -950,7 +981,7 @@ https://github.com/Mac-at-SifSys/Sif-1.0">
           <div class="item-foot">
             <span class="item-meta">GitHub · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/Mac-at-SifSys/Sif-1.0" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -964,6 +995,7 @@ https://github.com/Mac-at-SifSys/Sif-1.0">
       <h2 class="cat-title">ــ 🌐 منصات <span class="cat-count">٣</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Replit يؤمّن كل طبقة من منظومة البرمجة بالذكاء الاصطناعي**
 &gt; شرحت Replit استراتيجية الدفاع المتعمّق لديها، من عزل التنفيذ إلى ضبط صلاحيات الوكيل.
@@ -985,7 +1017,7 @@ https://replit.com/blog/defense-in-depth-how-replit-secures-every-layer-of-the-v
           <div class="item-foot">
             <span class="item-meta">Replit Blog · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://replit.com/blog/defense-in-depth-how-replit-secures-every-layer-of-the-vibe-coding-stack" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -994,6 +1026,7 @@ https://replit.com/blog/defense-in-depth-how-replit-secures-every-layer-of-the-v
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Aurora: بوابة نماذج مفتوحة المصدر مكتوبة بلغة Go**
 &gt; بوابة موحّدة توجّه الطلبات إلى مزوّدي النماذج المختلفين وتراقب الاستهلاك.
@@ -1015,7 +1048,7 @@ https://github.com/aurorallm/aurora">
           <div class="item-foot">
             <span class="item-meta">GitHub · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/aurorallm/aurora" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1024,6 +1057,7 @@ https://github.com/aurorallm/aurora">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Mirafold يمنح Codex وClaude Code وGemini واجهة توليدية**
 &gt; يحوّل مخرجات الوكيل إلى واجهة تفاعلية بدل نصٍّ في الطرفية.
@@ -1045,7 +1079,7 @@ https://mirafold.com/">
           <div class="item-foot">
             <span class="item-meta">Mirafold · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://mirafold.com/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1059,6 +1093,7 @@ https://mirafold.com/">
       <h2 class="cat-title">ــ ⚖️ مقارنات <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ أيّهما أجدى: Qwen Code محلياً أم اشتراك Claude Pro؟**
 &gt; نقاش في r/vibecoding يوازن بين التشغيل المحلي المجاني وبين جودة النموذج المدفوع.
@@ -1080,7 +1115,7 @@ https://www.reddit.com/r/vibecoding/comments/1vis89k/qwen_code_locally_or_claude
           <div class="item-foot">
             <span class="item-meta">Reddit · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.reddit.com/r/vibecoding/comments/1vis89k/qwen_code_locally_or_claude_pro/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1089,6 +1124,7 @@ https://www.reddit.com/r/vibecoding/comments/1vis89k/qwen_code_locally_or_claude
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ AIUsageBar يرصد استهلاك Claude وCodex وCursor وGemini من شريط قوائم macOS**
 &gt; أداة صغيرة تعرض ما تستهلكه كل أداة من رموز وتكلفة في لمحة واحدة.
@@ -1110,7 +1146,7 @@ https://www.aiusagebar.com">
           <div class="item-foot">
             <span class="item-meta">AIUsageBar · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.aiusagebar.com" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1124,6 +1160,7 @@ https://www.aiusagebar.com">
       <h2 class="cat-title">ــ 📚 شروح <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ إدارة السياق في Claude Code: متى تستعمل clear ومتى تستعمل compact**
 &gt; دليل عملي يفصّل الفارق بين تفريغ المحادثة وضغطها، وأثر كلٍّ منهما على جودة الإجابات.
@@ -1145,7 +1182,7 @@ https://tim-schipper.nl/en/blog/claude-code-context-management">
           <div class="item-foot">
             <span class="item-meta">Tim Schipper · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://tim-schipper.nl/en/blog/claude-code-context-management" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1154,6 +1191,7 @@ https://tim-schipper.nl/en/blog/claude-code-context-management">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ حين تسوء البرمجة بالذكاء الاصطناعي: تنقيح شيفرة كتبها النموذج**
 &gt; مقال يشرح منهجاً منظّماً لتتبّع الأخطاء في شيفرة لم يكتبها الإنسان ولا يعرف بنيتها.
@@ -1175,7 +1213,7 @@ https://magill.dev/post/vibe-coding-gone-wrong-debugging-ai-generated-code">
           <div class="item-foot">
             <span class="item-meta">magill.dev · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://magill.dev/post/vibe-coding-gone-wrong-debugging-ai-generated-code" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1189,6 +1227,7 @@ https://magill.dev/post/vibe-coding-gone-wrong-debugging-ai-generated-code">
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٣</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ لماذا يفشل استنساخ التطبيقات بالبرمجة بالذكاء الاصطناعي؟**
 &gt; تحليل يبيّن أن نسخ واجهة تطبيق ناجح لا ينسخ منطقه ولا بياناته ولا سوقه.
@@ -1210,7 +1249,7 @@ https://livablesoftware.com/why-cloning-an-app-with-vibe-coding-fails/">
           <div class="item-foot">
             <span class="item-meta">Livable Software · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://livablesoftware.com/why-cloning-an-app-with-vibe-coding-fails/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1219,6 +1258,7 @@ https://livablesoftware.com/why-cloning-an-app-with-vibe-coding-fails/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الرصد والمراقبة يحوّلان البرمجة بالذكاء الاصطناعي إلى هندسة حقيقية**
 &gt; ترى Dynatrace أن قياس سلوك النظام في الإنتاج هو ما يرفع الشيفرة المولّدة إلى مستوى الهندسة.
@@ -1240,7 +1280,7 @@ https://www.dynatrace.com/news/blog/how-observability-transforms-vibe-coding-int
           <div class="item-foot">
             <span class="item-meta">Dynatrace · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.dynatrace.com/news/blog/how-observability-transforms-vibe-coding-into-ai-engineering/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1249,6 +1289,7 @@ https://www.dynatrace.com/news/blog/how-observability-transforms-vibe-coding-int
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الفجوة المؤسسية: من البرمجة بالذكاء الاصطناعي إلى بنية تقنية قابلة للتنفيذ**
 &gt; مقال يناقش ما تحتاجه المؤسسات لتحويل النماذج الأولية السريعة إلى أنظمة تصمد في الإنتاج.
@@ -1270,7 +1311,7 @@ https://wolkensteiner.substack.com/p/the-enterprise-gap-from-vibe-coding">
           <div class="item-foot">
             <span class="item-meta">Substack · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://wolkensteiner.substack.com/p/the-enterprise-gap-from-vibe-coding" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1284,6 +1325,7 @@ https://wolkensteiner.substack.com/p/the-enterprise-gap-from-vibe-coding">
       <h2 class="cat-title">ــ 😮 مفاجئ <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ تشغيل نموذج بـ٢٩٥ مليار معامل من ملف GGUF على حاسب بذاكرة ٦٤ غيغابايت**
 &gt; يستعمل مشروع RunNburn تحميلاً تدريجياً للطبقات ليشغّل نموذج MoE ضخماً على عتاد منزلي.
@@ -1305,7 +1347,7 @@ https://github.com/coderredlab/runNburn">
           <div class="item-foot">
             <span class="item-meta">GitHub · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/coderredlab/runNburn" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1314,6 +1356,7 @@ https://github.com/coderredlab/runNburn">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ لوحة مفاتيح CtrlVibe المخصّصة لسير عمل الذكاء الاصطناعي**
 &gt; جهاز طرفي صغير يطلق أوامر الوكلاء بضغطة واحدة، ويجمع تمويله عبر منصة تمويل جماعي.
@@ -1335,7 +1378,7 @@ https://www.cnx-software.com/2026/08/05/ctrlvibe-ai-console-keypad-an-openai-cod
           <div class="item-foot">
             <span class="item-meta">CNX Software · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://www.cnx-software.com/2026/08/05/ctrlvibe-ai-console-keypad-an-openai-codex-micro-alternative-for-ai-workflows/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1349,6 +1392,7 @@ https://www.cnx-software.com/2026/08/05/ctrlvibe-ai-console-keypad-an-openai-cod
       <h2 class="cat-title">ــ 🆓 مصادر مجانية <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ TokenMaxxer يتتبّع كل رمز تنفقه عبر أدوات البرمجة لديك**
 &gt; لوحة واحدة تجمع استهلاك الرموز من جميع الأدوات، فتكشف أين تذهب الميزانية.
@@ -1370,7 +1414,7 @@ https://tokenmaxxer.xyz">
           <div class="item-foot">
             <span class="item-meta">TokenMaxxer · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://tokenmaxxer.xyz" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1379,6 +1423,7 @@ https://tokenmaxxer.xyz">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ mere-run: نصّ وصورة وفيديو وموسيقى ونماذج ثلاثية الأبعاد محلياً من سطر أوامر واحد**
 &gt; أداة واحدة تشغّل نماذج توليدية متعددة على الجهاز دون الحاجة إلى Python.
@@ -1400,7 +1445,7 @@ https://github.com/sawfwair/mere-run">
           <div class="item-foot">
             <span class="item-meta">GitHub · ٠٨-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/sawfwair/mere-run" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1454,7 +1499,7 @@ https://github.com/sawfwair/mere-run">
     <path d="M12 19V5M5 12l7-7 7 7"/>
   </svg>
 </button>
-<div class="toast" id="toast" role="status" aria-live="polite">تم نسخ الخبر</div>
+<div class="toast" id="toast" role="status" aria-live="polite">نُسخ الخبر</div>
 <script>
 (function () {
   var toast = document.getElementById('toast');
@@ -1488,7 +1533,7 @@ https://github.com/sawfwair/mere-run">
     function done(ok) {
       if (!ok) { showToast('تعذّر النسخ'); return; }
       btn.classList.add('is-copied');
-      showToast('تم نسخ الخبر');
+      showToast('نُسخ الخبر');
       setTimeout(function () { btn.classList.remove('is-copied'); }, 1900);
     }
 

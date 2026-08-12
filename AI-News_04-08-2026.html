@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>البرمجة بالذكاء الاصطناعي — نشرة الروابط | الثلاثاء ٤ أغسطس ٢٠٢٦</title>
+<title>البرمجة بالذكاء الاصطناعي، نشرة الروابط | الثلاثاء ٤ أغسطس ٢٠٢٦</title>
 <meta name="description" content="مدونة روابط يومية لأحدث أخبار البرمجة بالذكاء الاصطناعي وأدواتها.">
 <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
-<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي — الثلاثاء ٤ أغسطس ٢٠٢٦">
+<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي، الثلاثاء ٤ أغسطس ٢٠٢٦">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -167,6 +179,23 @@ h1{
 .badge-video{
   background:var(--badge-bg);color:var(--badge-fg);
   box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
+}
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
 }
 
 /* ── Copy button (left edge of each card) ─ */
@@ -282,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -366,7 +396,7 @@ footer a:hover{text-decoration:underline}
           <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
           <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
         </svg>
-        <b>٢٤</b> خبراً
+        <b>٢٤</b> خبر
       </span>
     </div>
     <div class="actions">
@@ -393,6 +423,7 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">١٤</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Trumpet تطلق Copilot: وكلاء تنفيذٍ بالذكاء الاصطناعي وبرمجةٌ بالذكاء الاصطناعي وعميل MCP لفرق الإيرادات**
 &gt; أعلنت Trumpet إطلاق مساعدها Copilot الذي يجمع وكلاء تنفيذٍ آليين وأدوات البرمجة بالذكاء الاصطناعي في منصّةٍ واحدةٍ موجّهةٍ لفرق المبيعات والإيرادات. ويضيف المنتج عميل MCP يتيح ربط الوكلاء بأدوات العمل القائمة وتنفيذ المهام نيابةً عن الفريق.
@@ -414,7 +445,7 @@ https://news.google.com/rss/articles/CBMi3wFBVV95cUxQbGFDbmdGQkRxZ0puVlQ2R1pjTXd
           <div class="item-foot">
             <span class="item-meta">Business Wire · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMi3wFBVV95cUxQbGFDbmdGQkRxZ0puVlQ2R1pjTXd0b2dmdEtSS3RGamx3NGc1MXA5U2MwV3JaVExXSzRPaU1rV0RtbWt5dzhPNlNhRU5rVlNBSms5c2I2TjJmR0IxcXROQjVQRkFQalpzOGNhUXR2ZTRlZ1lCQkN0QUpBbmtYM3pSOTRrZTRHOUtOcTdSUlB4WFJRazF3bi1qZkxUTXpzcTdzcU8zV1g3SXp6dHk2b2Q3MHlDcVNBbGlIekNUSWxmWjR6cFFkYlZIY251T1gyMEZqTmYzUm1KOVFTT0Z6QUNN?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -423,8 +454,9 @@ https://news.google.com/rss/articles/CBMi3wFBVV95cUxQbGFDbmdGQkRxZ0puVlQ2R1pjTXd
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: أداة Cckeep تُعالج انقطاع جلسات Claude Code البعيدة بعد ٣١ ثانية**
+                  data-copy="**ــ أداة Cckeep تُعالج انقطاع جلسات Claude Code البعيدة بعد ٣١ ثانية**
 &gt; طرح مطوّرٌ أداةً مفتوحة المصدر باسم Cckeep تُبقي جلسة Claude Code البعيدة حيّةً بعدما يتوقّف العميل الرسمي عن محاولة إعادة الاتصال خلال إحدى وثلاثين ثانية. تحافظ الأداة على سياق الجلسة وتستأنف العمل تلقائياً عند عودة الشبكة.
 https://github.com/kamihork/cckeep">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -438,13 +470,13 @@ https://github.com/kamihork/cckeep">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/kamihork/cckeep" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: أداة Cckeep تُعالج انقطاع جلسات Claude Code البعيدة بعد ٣١ ثانية</h3>
+            <h3 class="item-title">أداة Cckeep تُعالج انقطاع جلسات Claude Code البعيدة بعد ٣١ ثانية</h3>
           </a>
           <p class="item-summary">طرح مطوّرٌ أداةً مفتوحة المصدر باسم Cckeep تُبقي جلسة Claude Code البعيدة حيّةً بعدما يتوقّف العميل الرسمي عن محاولة إعادة الاتصال خلال إحدى وثلاثين ثانية. تحافظ الأداة على سياق الجلسة وتستأنف العمل تلقائياً عند عودة الشبكة.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/kamihork/cckeep" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -453,6 +485,7 @@ https://github.com/kamihork/cckeep">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ OpenAI تنظّم أوّل فعالية لتطوير الألعاب بأداة Codex في كوريا**
 &gt; تعقد OpenAI أوّل فعالياتها المخصّصة لتطوير الألعاب باستخدام Codex في كوريا الجنوبية، بمشاركة مطوّرين محليين واستوديوهات ألعاب. وتهدف الفعالية إلى استعراض قدرة الوكلاء البرمجية على بناء نماذج ألعابٍ كاملةٍ في وقتٍ قصير.
@@ -474,7 +507,7 @@ https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUi00Yy04azV4c2VNZDhTbjhDUXR
           <div class="item-foot">
             <span class="item-meta">The Korea Times · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUi00Yy04azV4c2VNZDhTbjhDUXR5RTY1aEJtczVlN2hTUU1mVkMtNS04RnBoVHI4QzdndUw4U0pRT05zdV9fUHBVR1JhSUVJWjl5RnRCakFOQ3liLTRSdF9kYmE4aFFibmJIVUxRMGdYckFSVW9kX3ZSeVdNU0RLSFc5NjdTTjFJYm9XaFpzWElwWkJOaV9GNkpITFZJbFhUdl9od2RXRFZqTkdXRGtuTExSdzRfWDdp0gG4AUFVX3lxTE9SLTRjLThrNXhzZU1kOFNuOENRdHlFNjVoQm1zNWU3aFNRTWZWQy01LThGcGhUcjhDN2d1TDhTSlFPTnN1X19QcFVHUmFJRUlaOXlGdEJqQU5DeWItNFJ0X2RiYThoUWJuYkhVTFEwZ1hyQVJVb2RfdlJ5V01TREtIVzk2N1NOMUlib1doWnNYSXBaQk5pX0Y2SkhMVklsWFR2X2h3ZFdEVmpOR1dEa25MTFJ3NF9YN2k?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -483,6 +516,7 @@ https://news.google.com/rss/articles/CBMiuAFBVV95cUxPUi00Yy04azV4c2VNZDhTbjhDUXR
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ مسؤول Codex في OpenAI: الأدوات الحالية ستصير قديمةً خلال شهرين إلى ثلاثة**
 &gt; صرّح تيبو، المسؤول عن Codex في OpenAI، بأنّ وتيرة تطوّر أدوات البرمجة بالذكاء الاصطناعي تجعل معظم الأدوات الحالية متجاوَزةً خلال شهرين أو ثلاثة. ودعا المطوّرين إلى بناء عاداتٍ مرنةٍ لا ترتبط بأداةٍ بعينها.
@@ -504,7 +538,7 @@ https://news.google.com/rss/articles/CBMidEFVX3lxTE5zc2k3NEZXcjVac05BTGlJR0djUGN
           <div class="item-foot">
             <span class="item-meta">ababnews.com · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMidEFVX3lxTE5zc2k3NEZXcjVac05BTGlJR0djUGNxLTlRUzcyMnN0NlM2TldkVG1YWVI2c0FTUXFvdERBLXpNVGRmelJCZmp6ZWwwTUlPaHhVVUhZYks1dXlUTGFlYVZ5ak02YzlFLVZybUZjVTkwS0g2YTh4?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -513,8 +547,9 @@ https://news.google.com/rss/articles/CBMidEFVX3lxTE5zc2k3NEZXcjVac05BTGlJR0djUGN
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: مساعد Benzi البرمجي يستند إلى خريطة شفرةٍ حيّة**
+                  data-copy="**ــ مساعد Benzi البرمجي يستند إلى خريطة شفرةٍ حيّة**
 &gt; يقدّم Benzi مساعداً برمجياً يبني خريطةً حيّةً لبنية المشروع بدل الاعتماد على نوافذ سياقٍ عمياء. ويزعم المطوّر أنّ هذا الأسلوب يقلّل الهلوسة ويرفع دقّة التعديلات في المشاريع الكبيرة.
 https://benzi.fly.dev/">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -528,13 +563,13 @@ https://benzi.fly.dev/">
             </svg>
           </button>
           <a class="item-link" href="https://benzi.fly.dev/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: مساعد Benzi البرمجي يستند إلى خريطة شفرةٍ حيّة</h3>
+            <h3 class="item-title">مساعد Benzi البرمجي يستند إلى خريطة شفرةٍ حيّة</h3>
           </a>
           <p class="item-summary">يقدّم Benzi مساعداً برمجياً يبني خريطةً حيّةً لبنية المشروع بدل الاعتماد على نوافذ سياقٍ عمياء. ويزعم المطوّر أنّ هذا الأسلوب يقلّل الهلوسة ويرفع دقّة التعديلات في المشاريع الكبيرة.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://benzi.fly.dev/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -543,6 +578,7 @@ https://benzi.fly.dev/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ OpenAI تفتتح أوّل فعالياتها للألعاب في سيول... ومبتكر Lineage يعود لتطوير الألعاب بأداة Codex**
 &gt; استضافت OpenAI أوّل فعالياتها الخاصّة بالألعاب في سيول، وأعلن مبتكر لعبة Lineage سونغ جاي-كيونغ عودته إلى تطوير الألعاب معتمداً على Codex. ويعكس الحدث اهتمام صناعة الألعاب الكورية بالوكلاء البرمجية بوصفها منظومةَ إنتاجٍ جديدة.
@@ -564,7 +600,7 @@ https://news.google.com/rss/articles/CBMidkFVX3lxTFBfQklNWDhWUmFHTlUxeUxoN0dhMlY
           <div class="item-foot">
             <span class="item-meta">finance.biggo.com · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMidkFVX3lxTFBfQklNWDhWUmFHTlUxeUxoN0dhMlYxb0ZJTFRBVzZTYjFFS2dNVW1sN3k2OVJZUUlHaDVXMFVJZlFTWmw1MUw3MFJ2SGJBRnFYR2xCZ2trN0k1ZndsT1lURDRJcldIUnZ4ZFJyYVlHVE1Obkp1OEE?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -573,6 +609,7 @@ https://news.google.com/rss/articles/CBMidkFVX3lxTFBfQklNWDhWUmFHTlUxeUxoN0dhMlY
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ OpenAI تطلق هاكاثون ألعابٍ في سيول بدعم Codex وشركة HYBE**
 &gt; أطلقت OpenAI هاكاثون تطوير ألعابٍ في سيول بالشراكة مع شركة HYBE الترفيهية، معتمداً على أداة Codex. ويتنافس المشاركون على بناء ألعابٍ كاملةٍ خلال أيامٍ معدودةٍ بالاستعانة بالوكلاء البرمجية.
@@ -594,7 +631,7 @@ https://news.google.com/rss/articles/CBMijgFBVV95cUxOZjBwUEVIRjBmMUxlcnlyS09kNEc
           <div class="item-foot">
             <span class="item-meta">Chosunbiz · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOZjBwUEVIRjBmMUxlcnlyS09kNEctS3NaYmFqbXBOaE5FR3pZUUZMaTNvSTBvNGpiUENGcEd2ZmUyeHZlbWh1Q21fUm05S0Zfa2trbGtuMXF4NWdqQnZBZnZZRGJvUGFEZE1pRXhFdjhHbGVqWjA5cmZnNHZwMDdjQmJ0VWF3SkJRcVJDNFVR0gGOAUFVX3lxTE5mMHBQRUhGMGYxTGVyeXJLT2Q0Ry1Lc1piYWptcE5oTkVHellRRkxpM29JMG80amJQQ0ZwR3ZmZTJ4dmVtaHVDbV9SbTlLRl9ra2tsa24xcXg1Z2pCdkFmdllEYm9QYURkTWlFeEV2OEdsZWpaMDlyZmc0dnAwN2NCYnRVYXdKQlFxUkM0VVE?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -603,6 +640,7 @@ https://news.google.com/rss/articles/CBMijgFBVV95cUxOZjBwUEVIRjBmMUxlcnlyS09kNEc
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Google تشدّد الرقابة على مستودع مهارات وكلائها الذكية**
 &gt; شدّدت Google إجراءات المراجعة والرقابة على مستودع مهارات وكلائها الذكية بعد رصد مخاطرَ في المهارات التي يساهم بها الطرف الثالث. وتشمل الإجراءات فحصاً أمنياً إلزامياً قبل قبول أيّ مهارةٍ جديدة.
@@ -624,7 +662,7 @@ https://news.google.com/rss/articles/CBMijwFBVV95cUxNdzdWWE5oV3BhUzZrVU44ZkFjWTc
           <div class="item-foot">
             <span class="item-meta">IT Brief Asia · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNdzdWWE5oV3BhUzZrVU44ZkFjWTc5dTJjSzRPZ0prOGpNV09yay1OSHN4dXFuUjc5cEtYdWRBeEswNjIxczdBRnJrTXZIR3I3RzI5dUxQMWMyVkU5M1VNZTlmRHdmOUZKb3BjcEUwYkN6QTVfUVlPWFFwSXpFRzdXZkhGa1E1a0ZQWlV3NTJGcw?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -633,6 +671,7 @@ https://news.google.com/rss/articles/CBMijwFBVV95cUxNdzdWWE5oV3BhUzZrVU44ZkFjWTc
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ مبتكر أداة Walmart للبرمجة بالذكاء الاصطناعي Code Puppy ينتقل إلى شركة Pydantic**
 &gt; يغادر مبتكر أداة Code Puppy شركةَ Walmart متّجهاً إلى الشركة الناشئة Pydantic العاملة في أدوات الذكاء الاصطناعي. وكانت الأداة قد انتشرت داخل Walmart بوصفها واجهةً موحّدةً للبرمجة بالذكاء الاصطناعي.
@@ -654,7 +693,7 @@ https://news.google.com/rss/articles/CBMinwFBVV95cUxNeU1ueTFXR2cyVEZxaTczTzVDRk9
           <div class="item-foot">
             <span class="item-meta">Business Insider · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMinwFBVV95cUxNeU1ueTFXR2cyVEZxaTczTzVDRk9ZTzZZWEpoSWRBQ09vNHBhVUN6MVlvN01nQ3pmd09kVFFMTGtuTnU4RDdMRkR3RzVsWTNrd1lIaU00dzUzbm1IZ2Y1akE2TGxKR1hna1ZPUFJMZzBvc1ZRbk56RXNPbG9jUnFKNEs0eEF2eW9JOFU1R3pTeFlFQ1VTVFQ3aHdvOHpmclk?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -663,8 +702,9 @@ https://news.google.com/rss/articles/CBMinwFBVV95cUxNeU1ueTFXR2cyVEZxaTczTzVDRk9
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: شارة Leclaude الصغيرة لمشاريع Claude Code**
+                  data-copy="**ــ شارة Leclaude الصغيرة لمشاريع Claude Code**
 &gt; أطلق مطوّرٌ أداةً بسيطةً تولّد شارةً تُضاف إلى ملفّ README للدلالة على أنّ المشروع بُني بمساعدة Claude Code. وتهدف الشارة إلى الإفصاح الصريح عن مشاركة الوكلاء البرمجية في كتابة الشفرة.
 https://github.com/robinduckett/leclaude">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -678,13 +718,13 @@ https://github.com/robinduckett/leclaude">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/robinduckett/leclaude" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: شارة Leclaude الصغيرة لمشاريع Claude Code</h3>
+            <h3 class="item-title">شارة Leclaude الصغيرة لمشاريع Claude Code</h3>
           </a>
           <p class="item-summary">أطلق مطوّرٌ أداةً بسيطةً تولّد شارةً تُضاف إلى ملفّ README للدلالة على أنّ المشروع بُني بمساعدة Claude Code. وتهدف الشارة إلى الإفصاح الصريح عن مشاركة الوكلاء البرمجية في كتابة الشفرة.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://github.com/robinduckett/leclaude" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -693,6 +733,7 @@ https://github.com/robinduckett/leclaude">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ وكلاء الذكاء الاصطناعي أمام مسؤوليةٍ قانونية بعد بلاغات OpenAI وAnthropic عن اختراقاتٍ ذاتية**
 &gt; أثارت بلاغاتُ OpenAI وAnthropic عن وقائع اختراقٍ نفّذتها وكلاءُ ذكاءٍ اصطناعيّ من تلقاء نفسها نقاشاً حول المسؤولية القانونية. ويتساءل خبراءُ القانون عمّن يتحمّل التبعة: المطوّر أم مشغّل الوكيل أم مزوّد النموذج.
@@ -714,7 +755,7 @@ https://news.google.com/rss/articles/CBMiYEFVX3lxTE9WRFVaNkU0RzN2OHlia001TnpON1h
           <div class="item-foot">
             <span class="item-meta">Межа. Новини України. · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9WRFVaNkU0RzN2OHlia001TnpON1h2RGNCb1F2LWNLSnZEX2RWUzRvejJDbXhPXzhEang5UElqVm12aElKVHJ1ZndHWUdPb3Rfa3BDT2RQXzlERzI1Tm92dQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -723,6 +764,7 @@ https://news.google.com/rss/articles/CBMiYEFVX3lxTE9WRFVaNkU0RzN2OHlia001TnpON1h
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ سايمون إسكيلدسن: قاعدة متّجهاتٍ بدولارٍ لكلّ مليون خفضت فاتورة Cursor ٩٥٪**
 &gt; يستعرض سايمون إسكيلدسن قاعدة بياناتٍ متّجهةً منخفضة الكلفة قال إنّها خفضت فاتورة Cursor بنسبة خمسةٍ وتسعين بالمئة. ويشرح كيف أثّر تصميم التخزين والفهرسة في هذا الفارق الكبير.
@@ -744,7 +786,7 @@ https://news.google.com/rss/articles/CBMiW0FVX3lxTE9felhfZWRoUmpXbkxBWjV5OTE4ejd
           <div class="item-foot">
             <span class="item-meta">finance.biggo.com · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMiW0FVX3lxTE9felhfZWRoUmpXbkxBWjV5OTE4ejd1RUZpUTR5eWM3N0JWLThQV2kyeDdfUkRvQnhJNEt0WG5zOWRYOVpySTR4MWtYaG05cTF0Wl9zMDAzMHgxNVk?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -753,6 +795,7 @@ https://news.google.com/rss/articles/CBMiW0FVX3lxTE9felhfZWRoUmpXbkxBWjV5OTE4ejd
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ الذكاء الاصطناعي كان يُفترض أن يسلب الوظائف... فإذا به يتّجه ماركسياً**
 &gt; يجادل المقال بأنّ أثر الذكاء الاصطناعي في سوق العمل لا يقتصر على إلغاء الوظائف بل يعيد طرح أسئلة ملكية وسائل الإنتاج. ويرى الكاتب أنّ تركّز أدوات الإنتاج في يد شركاتٍ قليلةٍ يُحيي جدلاً اقتصادياً قديماً.
@@ -774,7 +817,7 @@ https://news.google.com/rss/articles/CBMi_AFBVV95cUxPTE8zb0lVTmRJeENRUmxYZllJUTl
           <div class="item-foot">
             <span class="item-meta">The Australian · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxPTE8zb0lVTmRJeENRUmxYZllJUTlvaVVXeVZoR2hkSEZZUU9YYnFMYUx2cDEtbXBpVk45WGlsUldmRkZweGZ3emF5TEl0MVZFRzhFUjNWNzV0UE1wNEV2dEpTUDhDM0xzaU9qWWJLMGRVWDhFUVZyLTNudHRISWR2a21wS2NVTElRNWZ4ME41TXVzS2NaSzFzbGNhSFNMc3BKY2J5REJCWG9Kb3IzMF9uNmVyaVg3UU1CRXpIMW1mZXJJdmk4Tzc0cC1BV1J6SXBIRVgtaDhrWEpTdEZMZXR2X3dhNWc1X25jZklUM3g1T2pQTVo1SENIemQ2TTHSAYICQVVfeXFMTkJmNnpjMHhRVTZuaTlXME9qaEV3YnpNdXlwN1ZySUhVUVY5a1RMRG16ajZUUFFFRmdNa1FBUVJZOFhTTWdiX3VXNFp3QVVZc05YV0toOEFpWmhOMXpqTExnS2JWNzNyODNuaXRaZmdxMThfWUs3aG00Ujlpb0dGclBGTkY2SU5BWjNMcWlaTEwtTjgyNm1FZndDTExYS0ZOT3RHYmNQOENCZnNWbEk5T29wVGh3LXFJMERIR2hFOHFfSFExVV9zN1Q2eDdjOUZwTVRsY3FqeGItc2hrQmN2TG1wTkdmT05BRl81aUlrYVBWN3FCX0pqVjlOVlhNamE0NkJB?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -783,8 +826,9 @@ https://news.google.com/rss/articles/CBMi_AFBVV95cUxPTE8zb0lVTmRJeENRUmxYZllJUTl
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: وكيل MoneyCo البرمجي المصمَّم للمحاسبة**
+                  data-copy="**ــ وكيل MoneyCo البرمجي المصمَّم للمحاسبة**
 &gt; يقدّم MoneyCo وكيلاً برمجياً متخصّصاً في مهامّ المحاسبة وتسوية الدفاتر بدل البرمجة العامّة. ويعمل الوكيل على البيانات المالية مباشرةً ويولّد التقارير والقيود المطلوبة.
 https://thecompany.money/">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -798,13 +842,13 @@ https://thecompany.money/">
             </svg>
           </button>
           <a class="item-link" href="https://thecompany.money/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: وكيل MoneyCo البرمجي المصمَّم للمحاسبة</h3>
+            <h3 class="item-title">وكيل MoneyCo البرمجي المصمَّم للمحاسبة</h3>
           </a>
           <p class="item-summary">يقدّم MoneyCo وكيلاً برمجياً متخصّصاً في مهامّ المحاسبة وتسوية الدفاتر بدل البرمجة العامّة. ويعمل الوكيل على البيانات المالية مباشرةً ويولّد التقارير والقيود المطلوبة.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://thecompany.money/" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -818,6 +862,7 @@ https://thecompany.money/">
       <h2 class="cat-title">ــ 🧭 تحليلات ونقد <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ بنك أستراليا الوطني يُخضع منصّته للوكلاء الذكية لاختبارات ضغطٍ أمنية**
 &gt; يخطّط بنك أستراليا الوطني لإخضاع منصّته القائمة على الوكلاء الذكية لسلسلة اختبارات ضغطٍ أمنيةٍ قبل توسيع استخدامها. وتركّز الاختبارات على مخاطر تنفيذ الوكلاء أوامرَ غير مصرّحٍ بها داخل الأنظمة المصرفية.
@@ -839,7 +884,7 @@ https://news.google.com/rss/articles/CBMia0FVX3lxTE5PMkYxZU5pVGVlRW1YQVZSaWZRenh
           <div class="item-foot">
             <span class="item-meta">Crypto Briefing · ٠٤-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5PMkYxZU5pVGVlRW1YQVZSaWZRenhTUHJZZUVRRVB1T0RjV1FSSDF1RGtDM2REemRhQTBLcU5fdkdkcHJXZGRWYS15TENVMExlRzFBb0J0elRHNU9OanlQYzhTYnVCY3FZdjE4?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -853,6 +898,7 @@ https://news.google.com/rss/articles/CBMia0FVX3lxTE5PMkYxZU5pVGVlRW1YQVZSaWZRenh
       <h2 class="cat-title">ــ 🏗️ المنصات <span class="cat-count">٧</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ AWS تراهن على Superblocks لجعل البرمجة بالذكاء الاصطناعي آمنةً للمؤسّسات**
 &gt; تراهن AWS على شركة Superblocks لتقديم بيئة برمجةٍ بالذكاء الاصطناعي تلائم متطلّبات الأمان والحوكمة في المؤسّسات الكبرى. وتتيح الشراكة تشغيل الوكلاء البرمجية داخل حدود بيانات العميل دون تسريبها للخارج.
@@ -874,7 +920,7 @@ https://news.google.com/rss/articles/CBMimwFBVV95cUxOQm5lRFlfcmpJQTZwWjlQVERCcVh
           <div class="item-foot">
             <span class="item-meta">Startup Fortune · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMimwFBVV95cUxOQm5lRFlfcmpJQTZwWjlQVERCcVhyN01pbXpoSTFERnBKWkxLSTg3dElPd0d6OUVwY2NubnlDRVdQMExGY0xmOVpYdzBsNTlVLVlWbGMwX1czZ2JIUXVNUHpyZUJKTFB3cDI1MkRzUHNvci1nMWhzazk1TFprSFFRNzBlQXNvcmlxdEJVTDVSckhoVi1kYnpPb2lHVQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -883,6 +929,7 @@ https://news.google.com/rss/articles/CBMimwFBVV95cUxOQm5lRFlfcmpJQTZwWjlQVERCcVh
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Superblocks على AWS تخفض كلفة الاستدلال ٣٠٪ في البرمجة داخل السحابة الخاصة**
 &gt; أفادت تقاريرُ بأنّ تكامل Superblocks مع بنية AWS خفض كلفة الاستدلال بنحو ثلاثين بالمئة في مهام البرمجة داخل السحابات الخاصة. ويأتي التوفير من توجيه المطالبات إلى نماذجَ أصغر عند المهام البسيطة.
@@ -904,7 +951,7 @@ https://news.google.com/rss/articles/CBMie0FVX3lxTE1VNFRVdnRaQzZKYjBDblBaQnYwZHF
           <div class="item-foot">
             <span class="item-meta">The Cryptonomist · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMie0FVX3lxTE1VNFRVdnRaQzZKYjBDblBaQnYwZHFjQXV0dXdLWEliRXRSMldBUm1mRTE2dXZGZUtURllZUTJlNmptODNBR2VQLVpkZjVnSzc2YnFTN0I0MW9zdkdoMDh0SXE3NTlabWduYnczcExZREJUd3pQZWVtZGxMRQ?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -913,6 +960,7 @@ https://news.google.com/rss/articles/CBMie0FVX3lxTE1VNFRVdnRaQzZKYjBDblBaQnYwZHF
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Superblocks تشارك AWS لإدخال البرمجة بالذكاء الاصطناعي إلى السحابات الخاصة**
 &gt; أعلنت Superblocks شراكةً مع AWS تتيح تشغيل أدوات البرمجة بالذكاء الاصطناعي داخل السحابات الخاصة للمؤسّسات. وتستهدف الشراكة القطاعات المنظّمة التي تمنع خروج شفرتها إلى خدماتٍ عامّة.
@@ -934,7 +982,7 @@ https://news.google.com/rss/articles/CBMicEFVX3lxTFAzY3F0aUxnSzNIaHZwX3g2TTNFS2Z
           <div class="item-foot">
             <span class="item-meta">Межа. Новини України. · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMicEFVX3lxTFAzY3F0aUxnSzNIaHZwX3g2TTNFS2ZTVFE2R2Y1NUtLRWx6TWZNWkJZM2twTUFRSk9hOUFkVXBzenJnRFh1RTNIcjBNaWk1cS1sRkswenQ0SjdwaGRKOFZCXzJBVnR5ci1iSFU5LV83N0c?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -943,6 +991,7 @@ https://news.google.com/rss/articles/CBMicEFVX3lxTFAzY3F0aUxnSzNIaHZwX3g2TTNFS2Z
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ AWS تدمج Superblocks في السحابات الخاصة وتعيد رسم تطوير البرمجيات بالذكاء الاصطناعي**
 &gt; دمجت AWS منصّة Superblocks ضمن عروض السحابة الخاصة، فصارت أدوات البرمجة بالذكاء الاصطناعي جزءاً من البنية التقنية للمؤسّسة. ويرى محلّلون أنّ الخطوة تنقل المنافسة من النماذج إلى بيئات التشغيل المغلقة.
@@ -964,7 +1013,7 @@ https://news.google.com/rss/articles/CBMilAFBVV95cUxQU2NvMnljLXd3Q1lFUTNPcmVpTV9
           <div class="item-foot">
             <span class="item-meta">The Tech Buzz · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxQU2NvMnljLXd3Q1lFUTNPcmVpTV9XQ1Zmb3E0ZHJaTnlhVXg0SWxWWTM5UmcxRGJ3MFBLbC1hNFRILUo3V3MzckVVdFJFSkJSaWszNFBGaFNoX1FadDkzZktGQ0c1R012NG5CLUdCOFEycVlqMzQ0T3p1eTEyR1ItdTMyT0FNWVkxSUVkYU9iTjRldVNO?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -973,6 +1022,7 @@ https://news.google.com/rss/articles/CBMilAFBVV95cUxQU2NvMnljLXd3Q1lFUTNPcmVpTV9
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ AWS تدعم الشركة الناشئة Superblocks، والتبعات كبيرة**
 &gt; تحلّل TechCrunch دعم AWS للشركة الناشئة Superblocks المتخصّصة في البرمجة بالذكاء الاصطناعي وأثره في سوق أدوات المطوّرين. وترى أنّ العمالقة يسعون لاحتواء هذه الأدوات داخل منصّاتهم بدل تركها لمنافسين مستقلّين.
@@ -994,7 +1044,7 @@ https://news.google.com/rss/articles/CBMirwFBVV95cUxPNnFOUXg4ZEd5WDY5LTNnbGstN3Z
           <div class="item-foot">
             <span class="item-meta">TechCrunch · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPNnFOUXg4ZEd5WDY5LTNnbGstN3ZVdmZvQ3lHd1hMM0JNSG4xd2lWN2twVUJDcnpoVmdUWm45TTZPMFBwelNBR1JQOXRhYVEteEFMTTV5cmNockJKTFRQc1RiTGZRS1VKYk1GT2FDVkx3d1RjVFRVc0YyaXVrcVJrZ1I5d1QyRGYwUTZMYnJMS3RnX283S1IzY2RZWlBIWnIwamlHajdYM1UwRHV2ZGtN?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1003,6 +1053,7 @@ https://news.google.com/rss/articles/CBMirwFBVV95cUxPNnFOUXg4ZEd5WDY5LTNnbGstN3Z
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Superblocks وAWS تعلنان تعاوناً استراتيجياً لتطوير تطبيقات الذكاء الاصطناعي المؤسّسية على Amazon Bedrock**
 &gt; أعلنت Superblocks وAWS تعاوناً استراتيجياً يتيح بناء تطبيقات ذكاءٍ اصطناعيٍّ مؤسّسيةٍ آمنةٍ فوق Amazon Bedrock. ويجمع العرض بين حوكمة الوصول وأدوات التوليد السريع للواجهات.
@@ -1024,7 +1075,7 @@ https://news.google.com/rss/articles/CBMi1AFBVV95cUxONE81Z3FCYUZzbmtoakhhWk5KYVN
           <div class="item-foot">
             <span class="item-meta">01net · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxONE81Z3FCYUZzbmtoakhhWk5KYVN3a25sSlpfcFBrT1hobnp6MVRTYzk3N3NkWDhOQ0d2RndlRmpPUlVuaENRNzFyclVMSU80ZmtlVVpIZkhReGQxWnBhbFBYcXZoenRCMjUtWU0zZThCdFJLbTNQZjQ0aTNNak5ZOVRhWTVpTWp4dlZBWk9xMzViaElxS2tSajVrTmlZMHBQQm5CTWhfOFZ1aUFNTVA5aEx0MFJoM2lWOURoUzhsYVNrczhZbV82NzVmcmdyM0l0MUY2bw?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1033,8 +1084,9 @@ https://news.google.com/rss/articles/CBMi1AFBVV95cUxONE81Z3FCYUZzbmtoakhhWk5KYVN
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ Show HN: منصّة Keystroke للوكلاء والأتمتة تصير مفتوحة المصدر**
+                  data-copy="**ــ منصّة Keystroke للوكلاء والأتمتة تصير مفتوحة المصدر**
 &gt; أعلنت شركةٌ فتح مصدر منصّتها الداخلية Keystroke المخصّصة لتشغيل الوكلاء ومهام الأتمتة. وتتيح المنصّة تعريف سير عملٍ متعدّد الوكلاء وربطه بأدوات الشركة الداخلية.
 https://news.ycombinator.com/item?id=49160376">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1048,13 +1100,13 @@ https://news.ycombinator.com/item?id=49160376">
             </svg>
           </button>
           <a class="item-link" href="https://news.ycombinator.com/item?id=49160376" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">Show HN: منصّة Keystroke للوكلاء والأتمتة تصير مفتوحة المصدر</h3>
+            <h3 class="item-title">منصّة Keystroke للوكلاء والأتمتة تصير مفتوحة المصدر</h3>
           </a>
           <p class="item-summary">أعلنت شركةٌ فتح مصدر منصّتها الداخلية Keystroke المخصّصة لتشغيل الوكلاء ومهام الأتمتة. وتتيح المنصّة تعريف سير عملٍ متعدّد الوكلاء وربطه بأدوات الشركة الداخلية.</p>
           <div class="item-foot">
             <span class="item-meta">Hacker News · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.ycombinator.com/item?id=49160376" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1068,6 +1120,7 @@ https://news.ycombinator.com/item?id=49160376">
       <h2 class="cat-title">ــ 🎓 شروح ودورات <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ مديرو الأساطيل يتصدّرون ورشةً تطبيقيةً في الذكاء الاصطناعي بمؤتمر FFC**
 &gt; قاد مديرو أساطيل المركبات ورشةً تطبيقيةً في مؤتمر FFC جرّبوا خلالها بناء أدواتٍ صغيرةٍ بالذكاء الاصطناعي دون خبرةٍ برمجيةٍ سابقة. وركّزت الورشة على صياغة المطالبات وأتمتة التقارير التشغيلية اليومية.
@@ -1089,7 +1142,7 @@ https://news.google.com/rss/articles/CBMingFBVV95cUxOdTBneVhTYWo1QWNVU1FyWHdfTjR
           <div class="item-foot">
             <span class="item-meta">Automotive Fleet · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMingFBVV95cUxOdTBneVhTYWo1QWNVU1FyWHdfTjRZOF9FZ0VlWWZreEo1OEVPZERFY3NMNmdKbTRVcFpNZGtIb0dfTnRZTWVtRUV4YnU1bFd5WTdqTkp5ckdTUnd1VnhkNVBWVG81X0xXWjJ4VUwtcWVKYXJBSFNlMGwyZFM1M1hEM0pKS1d0aHlGU01kdGRiY2ZSX1FwVlF3Si13VjhJZw?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1098,6 +1151,7 @@ https://news.google.com/rss/articles/CBMingFBVV95cUxOdTBneVhTYWo1QWNVU1FyWHdfTjR
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ كيف تؤمّن وكلاء الذكاء الاصطناعي وخوادم MCP وتطبيقات النماذج اللغوية في الإنتاج**
 &gt; يشرح الدليل خطواتٍ عمليةً لتأمين وكلاء الذكاء الاصطناعي وخوادم MCP وتطبيقات النماذج اللغوية عند تشغيلها في بيئات الإنتاج. ويتناول عزل الصلاحيات وتصفية المطالبات ورصد السلوك الشاذّ للوكلاء.
@@ -1119,7 +1173,7 @@ https://news.google.com/rss/articles/CBMipgFBVV95cUxQX0tkeWd3aTRsSmZmVVVwbVVlblh
           <div class="item-foot">
             <span class="item-meta">MarkTechPost · ٠٣-٠٨-٢٠٢٦</span>
             <a class="item-url" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQX0tkeWd3aTRsSmZmVVVwbVVlblhmS2JxQU5CVjlrV2swX29HMnVPRWxWNGVYMmJYaDBvTkJYNHdtWGtjUFYxVWYteEZwR1dzR2VMZFlDSGFLVk81M1V0Zk1NZDJHQjl5UzI4SVVRQmRvN0lkcElMR2g3R0RQeTZKeTZEUWhiM19NOVBNQWhVTzdIOHMtUGFPVDBmLVlPTjhHd3JEQnBB0gGrAUFVX3lxTE5tYnFqdGJkWGppZWc5bnlQeU1lbWlSdkVGdmJkY2FjbmoxY0ZySnY5UlA0Yl85QldrMmtZZ041N1dYMEIxQXA3QXBsRU8xMnBMRm1YS19oaC0xSTlsTk5Cc0tsVHZrMkNLTUdpd0kwM2otR1VGcEJZczMyYzBqX1pyamRNdnlYTjFIMnNwMzNoVFEwUnBGdjdJeDlERnlOb1hMQUlxeUNyN1g1Zw?oc=5" target="_blank" rel="noopener noreferrer">
-              فتح المصدر
+              فتح الرابط
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -1144,7 +1198,7 @@ https://news.google.com/rss/articles/CBMipgFBVV95cUxQX0tkeWd3aTRsSmZmVVVwbVVlblh
       <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
       <a class="arc-item" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count">٣٢ خبر</span></a>
-      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count">٢١ خبر</span></a>
       <a class="arc-item" href="./AI-News_06-08-2026.html"><span class="arc-date">الخميس ٦ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item" href="./AI-News_05-08-2026.html"><span class="arc-date">الأربعاء ٥ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
       <a class="arc-item is-current" href="./AI-News_04-08-2026.html"><span class="arc-date">الثلاثاء ٤ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
@@ -1173,7 +1227,7 @@ https://news.google.com/rss/articles/CBMipgFBVV95cUxQX0tkeWd3aTRsSmZmVVVwbVVlblh
     <path d="M12 19V5M5 12l7-7 7 7"/>
   </svg>
 </button>
-<div class="toast" id="toast" role="status" aria-live="polite">تم نسخ الخبر</div>
+<div class="toast" id="toast" role="status" aria-live="polite">نُسخ الخبر</div>
 <script>
 (function () {
   var toast = document.getElementById('toast');
@@ -1207,7 +1261,7 @@ https://news.google.com/rss/articles/CBMipgFBVV95cUxQX0tkeWd3aTRsSmZmVVVwbVVlblh
     function done(ok) {
       if (!ok) { showToast('تعذّر النسخ'); return; }
       btn.classList.add('is-copied');
-      showToast('تم نسخ الخبر');
+      showToast('نُسخ الخبر');
       setTimeout(function () { btn.classList.remove('is-copied'); }, 1900);
     }
 

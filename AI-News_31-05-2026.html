@@ -126,8 +126,20 @@ h1{
 .item{
   position:relative;
   background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-  padding:var(--s3);padding-left:3.6rem;
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
   transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
 }
 .item::after{
   content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
@@ -299,6 +311,7 @@ body.corp .to-top:hover{background:var(--accent);color:#fff}
 body.corp .badge{border-radius:3px}
 body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
 body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
 body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
 body.corp .progress-fill{background:var(--accent);box-shadow:none}
@@ -411,8 +424,9 @@ footer a:hover{text-decoration:underline}
       <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">١٦</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: JDS — مجموعة مهارات لـ Copilot تضبط سلوك البرمجة بالذكاء**
+                  data-copy="**ــ JDS — مجموعة مهارات لـ Copilot تضبط سلوك البرمجة بالذكاء**
 &gt; حزمة مهارات توجّه Copilot نحو سلوك ترميزي منهجي ومنضبط.
 https://github.com/josipmusa/jds">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -426,7 +440,7 @@ https://github.com/josipmusa/jds">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/josipmusa/jds" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: JDS — مجموعة مهارات لـ Copilot تضبط سلوك البرمجة بالذكاء</h3>
+            <h3 class="item-title">JDS — مجموعة مهارات لـ Copilot تضبط سلوك البرمجة بالذكاء</h3>
           </a>
           <p class="item-summary">حزمة مهارات توجّه Copilot نحو سلوك ترميزي منهجي ومنضبط.</p>
           <div class="item-foot">
@@ -441,6 +455,7 @@ https://github.com/josipmusa/jds">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ GitHub Copilot يطلق نسخة أولية من الفوترة حسب الاستخدام**
 &gt; بدأت GitHub تجربة تسعير يعتمد على حجم الاستخدام بدل اشتراك ثابت.
@@ -471,8 +486,9 @@ https://news.ycombinator.com/item?id=48144488">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: ملف Markdown واحد يضبط Claude وCodex وCursor وCopilot**
+                  data-copy="**ــ ملف Markdown واحد يضبط Claude وCodex وCursor وCopilot**
 &gt; أداة توحّد إعداد كل الأدوات في ملف واحد قابل لإعادة الاستخدام.
 https://github.com/kernalix7/ai-project-setup">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -486,7 +502,7 @@ https://github.com/kernalix7/ai-project-setup">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/kernalix7/ai-project-setup" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: ملف Markdown واحد يضبط Claude وCodex وCursor وCopilot</h3>
+            <h3 class="item-title">ملف Markdown واحد يضبط Claude وCodex وCursor وCopilot</h3>
           </a>
           <p class="item-summary">أداة توحّد إعداد كل الأدوات في ملف واحد قابل لإعادة الاستخدام.</p>
           <div class="item-foot">
@@ -501,8 +517,9 @@ https://github.com/kernalix7/ai-project-setup">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Strava للبرمجة بالذكاء — تحليلات استخدامك لـ Copilot وClaude وCodex**
+                  data-copy="**ــ Strava للبرمجة بالذكاء — تحليلات استخدامك لـ Copilot وClaude وCodex**
 &gt; أداة تقيس إنتاجيتك عبر الأدوات المختلفة وتعرضها كإحصاءات رياضية.
 https://github.com/microsoft/AI-Engineering-Coach">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -516,7 +533,7 @@ https://github.com/microsoft/AI-Engineering-Coach">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/microsoft/AI-Engineering-Coach" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Strava للبرمجة بالذكاء — تحليلات استخدامك لـ Copilot وClaude وCodex</h3>
+            <h3 class="item-title">Strava للبرمجة بالذكاء — تحليلات استخدامك لـ Copilot وClaude وCodex</h3>
           </a>
           <p class="item-summary">أداة تقيس إنتاجيتك عبر الأدوات المختلفة وتعرضها كإحصاءات رياضية.</p>
           <div class="item-foot">
@@ -531,8 +548,9 @@ https://github.com/microsoft/AI-Engineering-Coach">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: DDS Vibe Academy — ٣١ دورة مجانية بنتها وكلاء الذكاء**
+                  data-copy="**ــ DDS Vibe Academy — ٣١ دورة مجانية بنتها وكلاء الذكاء**
 &gt; أكاديمية تقدّم دورات برمجة مجانية بالذكاء الاصطناعي ولّدها وكلاء بالكامل.
 https://news.ycombinator.com/item?id=48198681">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -546,7 +564,7 @@ https://news.ycombinator.com/item?id=48198681">
             </svg>
           </button>
           <a class="item-link" href="https://news.ycombinator.com/item?id=48198681" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: DDS Vibe Academy — ٣١ دورة مجانية بنتها وكلاء الذكاء</h3>
+            <h3 class="item-title">DDS Vibe Academy — ٣١ دورة مجانية بنتها وكلاء الذكاء</h3>
           </a>
           <p class="item-summary">أكاديمية تقدّم دورات برمجة مجانية بالذكاء الاصطناعي ولّدها وكلاء بالكامل.</p>
           <div class="item-foot">
@@ -561,8 +579,9 @@ https://news.ycombinator.com/item?id=48198681">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: PrismoDev — أداة محلية لرصد هدر الرموز في Claude Code وCodex**
+                  data-copy="**ــ PrismoDev — أداة محلية لرصد هدر الرموز في Claude Code وCodex**
 &gt; أداة سطر أوامر تحلّل استهلاك الرموز وتحدّد مواطن الهدر.
 https://github.com/shanirsh/prismodev">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -576,7 +595,7 @@ https://github.com/shanirsh/prismodev">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/shanirsh/prismodev" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: PrismoDev — أداة محلية لرصد هدر الرموز في Claude Code وCodex</h3>
+            <h3 class="item-title">PrismoDev — أداة محلية لرصد هدر الرموز في Claude Code وCodex</h3>
           </a>
           <p class="item-summary">أداة سطر أوامر تحلّل استهلاك الرموز وتحدّد مواطن الهدر.</p>
           <div class="item-foot">
@@ -591,8 +610,9 @@ https://github.com/shanirsh/prismodev">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: ATM — مدير مهام صغير في الطرفية للوكلاء المحليين**
+                  data-copy="**ــ ATM — مدير مهام صغير في الطرفية للوكلاء المحليين**
 &gt; أداة خفيفة تنظّم مهام الوكلاء العاملين على الجهاز.
 https://news.ycombinator.com/item?id=48223680">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -606,7 +626,7 @@ https://news.ycombinator.com/item?id=48223680">
             </svg>
           </button>
           <a class="item-link" href="https://news.ycombinator.com/item?id=48223680" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: ATM — مدير مهام صغير في الطرفية للوكلاء المحليين</h3>
+            <h3 class="item-title">ATM — مدير مهام صغير في الطرفية للوكلاء المحليين</h3>
           </a>
           <p class="item-summary">أداة خفيفة تنظّم مهام الوكلاء العاملين على الجهاز.</p>
           <div class="item-foot">
@@ -621,8 +641,9 @@ https://news.ycombinator.com/item?id=48223680">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: وكلاء سحابية مجانية بضغطة عبر OpenCode وDaytona وCloudflare**
+                  data-copy="**ــ وكلاء سحابية مجانية بضغطة عبر OpenCode وDaytona وCloudflare**
 &gt; توليفة مجانية تشغّل وكيلًا سحابيًا لإنجاز مهمة كاملة دفعة واحدة.
 https://oneshot.runcord.com">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -636,7 +657,7 @@ https://oneshot.runcord.com">
             </svg>
           </button>
           <a class="item-link" href="https://oneshot.runcord.com" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: وكلاء سحابية مجانية بضغطة عبر OpenCode وDaytona وCloudflare</h3>
+            <h3 class="item-title">وكلاء سحابية مجانية بضغطة عبر OpenCode وDaytona وCloudflare</h3>
           </a>
           <p class="item-summary">توليفة مجانية تشغّل وكيلًا سحابيًا لإنجاز مهمة كاملة دفعة واحدة.</p>
           <div class="item-foot">
@@ -651,8 +672,9 @@ https://oneshot.runcord.com">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: CoreMem — سياق محمول للوكلاء**
+                  data-copy="**ــ CoreMem — سياق محمول للوكلاء**
 &gt; أداة تحفظ سياق الوكيل في صيغة محمولة تعمل عبر الأدوات.
 https://coremem.app">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -666,7 +688,7 @@ https://coremem.app">
             </svg>
           </button>
           <a class="item-link" href="https://coremem.app" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: CoreMem — سياق محمول للوكلاء</h3>
+            <h3 class="item-title">CoreMem — سياق محمول للوكلاء</h3>
           </a>
           <p class="item-summary">أداة تحفظ سياق الوكيل في صيغة محمولة تعمل عبر الأدوات.</p>
           <div class="item-foot">
@@ -681,8 +703,9 @@ https://coremem.app">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: بنيتُ وكيل RAG ورسمًا معرفيًا يعمل محليًا**
+                  data-copy="**ــ بنيتُ وكيل RAG ورسمًا معرفيًا يعمل محليًا**
 &gt; أداة تجمع البحث الع retrieval مع رسم معرفي وتعمل دون اتصال خارجي.
 https://news.ycombinator.com/item?id=48246659">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -696,7 +719,7 @@ https://news.ycombinator.com/item?id=48246659">
             </svg>
           </button>
           <a class="item-link" href="https://news.ycombinator.com/item?id=48246659" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: بنيتُ وكيل RAG ورسمًا معرفيًا يعمل محليًا</h3>
+            <h3 class="item-title">بنيتُ وكيل RAG ورسمًا معرفيًا يعمل محليًا</h3>
           </a>
           <p class="item-summary">أداة تجمع البحث الع retrieval مع رسم معرفي وتعمل دون اتصال خارجي.</p>
           <div class="item-foot">
@@ -711,8 +734,9 @@ https://news.ycombinator.com/item?id=48246659">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: أول تطبيق لي صُنع بالبرمجة بالذكاء على مدى أربعة أشهر**
+                  data-copy="**ــ أول تطبيق لي صُنع بالبرمجة بالذكاء على مدى أربعة أشهر**
 &gt; تجربة شخصية في بناء تطبيق كامل عبر الوكلاء خلال فصل.
 https://mijn-travelly.nl/en/">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -726,7 +750,7 @@ https://mijn-travelly.nl/en/">
             </svg>
           </button>
           <a class="item-link" href="https://mijn-travelly.nl/en/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: أول تطبيق لي صُنع بالبرمجة بالذكاء على مدى أربعة أشهر</h3>
+            <h3 class="item-title">أول تطبيق لي صُنع بالبرمجة بالذكاء على مدى أربعة أشهر</h3>
           </a>
           <p class="item-summary">تجربة شخصية في بناء تطبيق كامل عبر الوكلاء خلال فصل.</p>
           <div class="item-foot">
@@ -741,8 +765,9 @@ https://mijn-travelly.nl/en/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Agent Launch — واجهة واحدة لـ Codex وClaude Code وCursor وGemini وOpenCode**
+                  data-copy="**ــ Agent Launch — واجهة واحدة لـ Codex وClaude Code وCursor وGemini وOpenCode**
 &gt; أداة توحّد تشغيل كل الوكلاء والنماذج من سطر أوامر واحد.
 https://news.ycombinator.com/item?id=48278148">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -756,7 +781,7 @@ https://news.ycombinator.com/item?id=48278148">
             </svg>
           </button>
           <a class="item-link" href="https://news.ycombinator.com/item?id=48278148" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Agent Launch — واجهة واحدة لـ Codex وClaude Code وCursor وGemini وOpenCode</h3>
+            <h3 class="item-title">Agent Launch — واجهة واحدة لـ Codex وClaude Code وCursor وGemini وOpenCode</h3>
           </a>
           <p class="item-summary">أداة توحّد تشغيل كل الوكلاء والنماذج من سطر أوامر واحد.</p>
           <div class="item-foot">
@@ -771,8 +796,9 @@ https://news.ycombinator.com/item?id=48278148">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: مرفقات قطع تُصحّح شيفرة الوكيل قبل الدفع إلى CI**
+                  data-copy="**ــ مرفقات قطع تُصحّح شيفرة الوكيل قبل الدفع إلى CI**
 &gt; أداة تفصل أجزاء الشيفرة للتحقق منها قبل إدماجها في خط التكامل.
 https://circleci.com/blog/chunk-sidecars/">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -786,7 +812,7 @@ https://circleci.com/blog/chunk-sidecars/">
             </svg>
           </button>
           <a class="item-link" href="https://circleci.com/blog/chunk-sidecars/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: مرفقات قطع تُصحّح شيفرة الوكيل قبل الدفع إلى CI</h3>
+            <h3 class="item-title">مرفقات قطع تُصحّح شيفرة الوكيل قبل الدفع إلى CI</h3>
           </a>
           <p class="item-summary">أداة تفصل أجزاء الشيفرة للتحقق منها قبل إدماجها في خط التكامل.</p>
           <div class="item-foot">
@@ -801,6 +827,7 @@ https://circleci.com/blog/chunk-sidecars/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ عصر البرمجة بالذكاء: لماذا لن يحلّ الذكاء محل مهندسي البرمجيات**
 &gt; فيديو يجادل بأن الوكلاء ترفع كفاءة المهندس لا تلغيه.
@@ -831,8 +858,9 @@ https://www.youtube.com/watch?v=xYU7zaaRjmE">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: Zorilla — برمجة لعبة ثلاثية الأبعاد في المتصفح**
+                  data-copy="**ــ Zorilla — برمجة لعبة ثلاثية الأبعاد في المتصفح**
 &gt; أداة تتيح توليد لعبة ثلاثية الأبعاد عبر حوار مع وكيل في المتصفح.
 https://www.zoril.la/">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -846,7 +874,7 @@ https://www.zoril.la/">
             </svg>
           </button>
           <a class="item-link" href="https://www.zoril.la/" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: Zorilla — برمجة لعبة ثلاثية الأبعاد في المتصفح</h3>
+            <h3 class="item-title">Zorilla — برمجة لعبة ثلاثية الأبعاد في المتصفح</h3>
           </a>
           <p class="item-summary">أداة تتيح توليد لعبة ثلاثية الأبعاد عبر حوار مع وكيل في المتصفح.</p>
           <div class="item-foot">
@@ -861,8 +889,9 @@ https://www.zoril.la/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
-                  data-copy="**ــ عرض HN: VAEN — حزم ومنصات تشغيل وكلاء البرمجة المحمولة**
+                  data-copy="**ــ VAEN — حزم ومنصات تشغيل وكلاء البرمجة المحمولة**
 &gt; أداة توحّد إعداد بيئات الوكلاء وتتيح نقلها بين المشاريع.
 https://github.com/sjhalani7/vaen">
             <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -876,7 +905,7 @@ https://github.com/sjhalani7/vaen">
             </svg>
           </button>
           <a class="item-link" href="https://github.com/sjhalani7/vaen" target="_blank" rel="noopener noreferrer">
-            <h3 class="item-title">عرض HN: VAEN — حزم ومنصات تشغيل وكلاء البرمجة المحمولة</h3>
+            <h3 class="item-title">VAEN — حزم ومنصات تشغيل وكلاء البرمجة المحمولة</h3>
           </a>
           <p class="item-summary">أداة توحّد إعداد بيئات الوكلاء وتتيح نقلها بين المشاريع.</p>
           <div class="item-foot">
@@ -896,6 +925,7 @@ https://github.com/sjhalani7/vaen">
       <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">١٩</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ مستجدّات تسعير GitHub Copilot حسب الاستخدام**
 &gt; تفاصيل إضافية عن خطة الفوترة الجديدة وتأثيرها على المستخدمين.
@@ -926,6 +956,7 @@ https://github.blog/news-insights/company-news/github-copilot-individual-plans-i
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ GitHub تستهدف Claude Code وCodex بتطبيق Copilot الجديد**
 &gt; أطلقت GitHub تطبيق Copilot الذي ينافس مباشرة أدوات الوكلاء الأخرى.
@@ -956,6 +987,7 @@ https://thenewstack.io/github-copilot-desktop-app/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Cursor تُطلق Composer 2.5**
 &gt; كشف Cursor عن تحديث كبرى لمحرّك Composer مع تحسينات في الجودة.
@@ -986,6 +1018,7 @@ https://cursor.com/blog/composer-2-5">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Sieve — تفحص سجلّ المحادثات في Cursor وClaude بحثًا عن مفاتيح مسرّبة**
 &gt; أداة تكشف مفاتيح الواجهات المكشوفة في المحادثات قبل نشر الشيفرة.
@@ -1016,6 +1049,7 @@ https://apps.apple.com/us/app/sieve-secret-scanner/id6767409365?mt=12">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ Gemini 3.5 Flash يرفع مضاعف التكلفة ١٤ ضعفًا في GitHub Copilot**
 &gt; رصد مستخدمون قفزة في تكلفة استدعاء Gemini داخل Copilot.
@@ -1046,6 +1080,7 @@ https://github.blog/changelog/2026-05-19-gemini-3-5-flash-is-generally-available
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ اترك Copilot يدير إعداد Azure المحلي عبر MCP**
 &gt; دليل يستعين بـ Copilot وMCP لإعداد بيئة Azure دون عناء يدوي.
@@ -1076,6 +1111,7 @@ https://topaz.thecloudtheory.com/blog/topaz-mcp-github-copilot/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ابتداءً من ١ يونيو ستستهلك مراجعات Copilot دقائق على GitHub**
 &gt; تغيير في سياسة الفوترة يخصم مراجعات الشيفرة من رصيد الدقائق.
@@ -1106,6 +1142,7 @@ https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing"
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ إطلاق HN: Runtime (YC P26) — وكلاء برمجة معزولة لكل فريق**
 &gt; شركة ناشئة توفّر وكلاء برمجة داخل بيئات معزولة لكل عضو في الفريق.
@@ -1136,6 +1173,7 @@ https://www.runtm.com/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ OpenCode وComposer 2.5 من Cursor**
 &gt; مقارنة سريعة بين تحديث OpenCode وتحديث Composer 2.5.
@@ -1166,6 +1204,7 @@ https://cursor-api.standardagents.ai">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ تطبيق GitHub Copilot**
 &gt; استعراض لتطبيق Copilot المستقل وما يميّزه عن الإضافة داخل المحرّر.
@@ -1196,6 +1235,7 @@ https://github.com/github/app">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ إنجازات علوم الحاسوب ومهارة الكتابة تتنبأ ببراعة البرمجة بالذكاء**
 &gt; دراسة تربط بين خلفية المطوّر الأكاديمية ومهارته في البرمجة بالذكاء الاصطناعي.
@@ -1226,6 +1266,7 @@ https://dl.acm.org/doi/10.1145/3772318.3791666">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ برمجة بنيتك التحتية بالذكاء الاصطناعي**
 &gt; مقال يستعرض توظيف الوكلاء في إعداد البنية التحتية كخدمة.
@@ -1256,6 +1297,7 @@ https://www.ivan.codes/blog/vibe-coding-infrastructure">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ذكاء ING للبرمجة بالذكاء يبني أنظمة تداولها الجديدة**
 &gt; تقرير عن اعتماد بنك ING على البرمجة بالذكاء الاصطناعي في أنظمته المالية.
@@ -1286,6 +1328,7 @@ https://www.bloomberg.com/news/articles/2026-05-26/ing-s-vibe-coding-ai-is-build
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ GitHub Copilot يعاني تراجعًا في الأداء**
 &gt; تقرير عن بطء وتذبذب في استجابة Copilot خلال فترة معيّنة.
@@ -1316,6 +1359,7 @@ https://www.githubstatus.com/incidents/xflkh26pm7vv">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ FlowLink: وسيط MCP يحجب أوامر الوكلاء التدميرية**
 &gt; أداة تعترض أوامر الوكلاء وتوقف ما قد يضرّ النظام قبل تنفيذه.
@@ -1346,6 +1390,7 @@ https://news.ycombinator.com/item?id=48283348">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ نجوم الذكاء الاصطناعي الذين يحذّرون من أزمة «نفايات الذكاء»**
 &gt; تقرير عن خبراء يرون أن كثرة الشيفرة الرديئة المولّدة ستسبب أزمة صيانة.
@@ -1376,6 +1421,7 @@ https://www.wsj.com/tech/ai/vibe-coding-slop-ai-tools-e6a99394">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ مغامرات البرمجة بالذكاء: ملحق pelican-copy-code**
 &gt; مشروع صغير يستعرض استخدام الوكلاء في تطوير ملحقات مدوّنة.
@@ -1406,6 +1452,7 @@ https://blog.fidelramos.net/software/vibe-coding-escapades-pelican-copy-code">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ وكيل برمجة بالذكاء الاصطناعي يعمل محليًا في المتصفح**
 &gt; أداة تتيح بناء مشاريع بالكامل داخل المتصفح بلا خادم خارجي.
@@ -1436,6 +1483,7 @@ https://alexwortega.github.io/pi-agent/">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ بناء مشروع جانبي بالذكاء الاصطناعي وأنت تتابع التلفاز**
 &gt; تجربة خفيفة في إنجاز مشروع جانبي بصحبة الوكلاء دون تركيز كامل.
@@ -1471,6 +1519,7 @@ https://marindedic.com/swipertab/">
       <h2 class="cat-title">ــ ⚖️ مقارنات <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ المنظومة التقنية خلف GitHub Copilot في VS Code**
 &gt; مقال يكشف بنية Copilot داخل VS Code وكيف تتفاعل مع المحرّر.
@@ -1506,6 +1555,7 @@ https://code.visualstudio.com/blogs/2026/05/15/agent-harnesses-github-copilot-vs
       <h2 class="cat-title">ــ 🔍 تحليلات ونقد <span class="cat-count">١</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ البرمجة بالذكاء الاصطناعي من منظور مهندس أمن**
 &gt; مقال يبحث كيف يتعامل مهندس الأمن مع مخرجات الوكلاء بعين ناقدة.
@@ -1541,6 +1591,7 @@ https://rakkhi.substack.com/p/vibe-coding-as-security-architect">
       <h2 class="cat-title">ــ 🎥 فيديوهات Free API <span class="cat-count">٢</span></h2>
       <ul class="items">
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ البرمجة لم تعد القيد: توسيع تجربة المطوّر ليشمل الفرق والوكلاء**
 &gt; فيديو من قناة Claude يناقش كيف تغيّر وكلاء البرمجة قيود الإنتاجية، وانتقال التركيز من كتابة الشيفرة إلى هندسة تدفق العمل للفرق.
@@ -1571,6 +1622,7 @@ https://www.youtube.com/watch?v=zFslvuvYifQ">
           </div>
         </li>
         <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
           <button class="copy-btn" type="button" aria-label="انسخ الخبر"
                   data-copy="**ــ ابنِ مواقع بعشرة آلاف دولار باستخدام Claude Code (الدليل الشامل)**
 &gt; دليل عملي يشرح منهجية بناء مواقع احترافية عالية القيمة تجاريًا عبر Claude Code، من التصميم إلى النشر.
