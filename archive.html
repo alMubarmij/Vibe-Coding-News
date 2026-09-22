@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>أرشيف نشرة البرمجة بالذكاء الاصطناعي</title>
+<meta name="description" content="فهرس جميع أعداد نشرة البرمجة بالذكاء الاصطناعي منذ انطلاقتها.">
+<meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="أرشيف نشرة البرمجة بالذكاء الاصطناعي">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#18181B; --on-primary:#FFFFFF; --secondary:#3F3F46;
+  --accent:#4D7C0F; --accent-fill:#A3E635; --accent-2:#38BDF8;
+  --ring:#4D7C0F; --on-accent:#09090B;
+  --badge-bg:#4D7C0F; --badge-fg:#FFFFFF;
+  --bg:#FAFAFA; --fg:#09090B; --muted:#E8ECF0;
+  --surface:#FFFFFF; --border:#E4E4E7;
+  --dim:#52525B;
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s6:3rem; --s8:4rem;
+  --r:14px;
+  --ease:cubic-bezier(.22,.8,.26,1);
+  --glass:var(--surface); --glass-strong:var(--surface);
+  --shadow:0 1px 2px rgba(9,9,11,.05);
+  --shadow-lg:0 2px 6px rgba(9,9,11,.06),0 22px 44px -18px rgba(163,230,53,.30);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --primary:#FAFAFA; --on-primary:#09090B; --secondary:#A1A1AA;
+    --accent:#BEF264; --accent-fill:#A3E635; --accent-2:#7DD3FC;
+    --ring:#BEF264; --on-accent:#09090B;
+    --badge-bg:#A3E635; --badge-fg:#09090B;
+    --bg:#09090B; --fg:#FAFAFA; --muted:#18181B;
+    --surface:#131316; --border:#27272A;
+    --dim:#A1A1AA;
+    --glass:var(--surface); --glass-strong:var(--surface);
+    --shadow:0 1px 2px rgba(0,0,0,.5);
+    --shadow-lg:0 2px 6px rgba(0,0,0,.6),0 24px 48px -18px rgba(163,230,53,.28);
+    color-scheme:dark;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--accent-fill) 45%,var(--border)) transparent}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:'Tajawal',system-ui,sans-serif; font-size:17px; line-height:1.8;
+  font-weight:400; text-rendering:optimizeLegibility;
+  padding-inline:var(--s3); padding-block-end:var(--s8);
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(52rem 30rem at 88% -6%,color-mix(in srgb,var(--accent-fill) 20%,transparent),transparent 62%),
+    radial-gradient(46rem 28rem at 4% 10%,color-mix(in srgb,var(--accent-2) 18%,transparent),transparent 60%),
+    radial-gradient(42rem 32rem at 50% 112%,color-mix(in srgb,var(--accent-fill) 13%,transparent),transparent 62%);
+}
+::selection{background:color-mix(in srgb,var(--accent-fill) 30%,transparent)}
+h1,h2,h3{font-family:'Cairo',system-ui,sans-serif;line-height:1.3;margin:0}
+a{color:inherit}
+.wrap{max-width:1100px;margin-inline:auto}
+
+.hero{
+  position:relative;padding-block:var(--s8) var(--s6);
+  border-block-end:1px solid var(--border);
+}
+.hero::after{
+  content:""; position:absolute; inset-inline:0; bottom:-1px; height:1px;
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--accent-fill) 60%,transparent) 30%,color-mix(in srgb,var(--accent-2) 60%,transparent) 70%,transparent);
+}
+h1{
+  font-size:clamp(1.2rem,4.6vw,2.9rem);font-weight:900;letter-spacing:-.02em;
+  margin-block-end:var(--s2);
+}
+.h1-accent{color:var(--accent)}
+.lede{font-size:1.06rem;color:var(--dim);max-width:60ch;margin:0 0 var(--s3)}
+.stamp{
+  display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);align-items:center;
+  font-family:'Cairo',sans-serif;font-size:.86rem;font-weight:600;color:var(--dim);
+}
+.stamp-item{display:inline-flex;align-items:center;gap:.45rem}
+.stamp-item svg{width:15px;height:15px;color:var(--accent);flex:none}
+.stamp b{color:var(--fg)}
+
+.intro{
+  margin-block-start:var(--s4);
+  padding:var(--s3);
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
+  font-size:.97rem;color:var(--dim);
+}
+.intro p{margin:0 0 var(--s1)}
+.intro p:last-child{margin-block-end:0}
+
+/* ── Stats ──────────────────────────────── */
+.stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--s2);
+  margin-block-start:var(--s4);
+}
+.stat{
+  text-align:center;padding:var(--s3);
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
+}
+.stat-num{font-family:'Cairo',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);line-height:1.2}
+.stat-label{font-size:.82rem;color:var(--dim);font-weight:600}
+
+/* ── Month sections ─────────────────────── */
+.month-section{padding-block:var(--s4) var(--s2)}
+.month-title{
+  font-size:1.35rem;font-weight:800;letter-spacing:-.02em;
+  display:flex;align-items:center;gap:.6rem;margin-block-end:var(--s3);
+  padding-block-end:var(--s2);border-block-end:2px solid var(--border);
+}
+.month-count{
+  font-size:.72rem;font-weight:700;color:var(--dim);background:var(--muted);
+  border:1px solid var(--border);border-radius:999px;padding:.15rem .65rem;
+}
+
+/* ── Archive grid (responsive multi-column) */
+.arc-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:var(--s2);
+}
+.arc-item{
+  display:flex;justify-content:space-between;align-items:center;gap:var(--s2);
+  min-height:48px;padding:.55rem var(--s2);border:1px solid var(--border);
+  border-radius:12px;background:var(--surface);text-decoration:none;
+  font-family:'Cairo',sans-serif;font-size:.88rem;font-weight:600;
+  cursor:pointer;transition:border-color .2s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease),background .2s ease;
+}
+.arc-item:hover{
+  border-color:color-mix(in srgb,var(--accent-fill) 55%,var(--border));
+  transform:translateX(-3px);box-shadow:var(--shadow);
+}
+.arc-date{flex:1}
+.arc-count{font-size:.76rem;color:var(--dim);font-weight:500;white-space:nowrap}
+.arc-count .num{color:var(--accent);font-weight:700}
+
+footer{
+  margin-block-start:var(--s8);padding-block-start:var(--s3);
+  border-block-start:1px solid var(--border);
+  font-size:.85rem;color:var(--dim);text-align:center;
+}
+footer a{color:var(--accent);text-decoration:none;font-weight:600}
+footer a:hover{text-decoration:underline}
+
+@media (max-width:700px){
+  .arc-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+}
+@media (max-width:480px){
+  body{padding-inline:var(--s2);font-size:16px}
+  .hero{padding-block:var(--s4) var(--s3)}
+  .arc-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>أرشيف <span class="h1-accent">البرمجة بالذكاء الاصطناعي</span></h1>
+    <p class="lede">فهرس جميع أعداد النشرة منذ العدد الأول في يناير ٢٠٢٦.</p>
+    <div class="stamp">
+      <span class="stamp-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+        </svg>
+        <b>٣٧</b> عددًا منشورًا
+      </span>
+      <span class="stamp-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M16 2v4M8 2v4M3 10h18"/>
+        </svg>
+        <b>من ٣١ يناير ٢٠٢٦</b> إلى اليوم
+      </span>
+    </div>
+  </header>
+
+  <div class="intro">
+    <p>تجمع هذه الصفحة جميع أعداد نشرة البرمجة بالذكاء الاصطناعي في مكان واحد، مرتبة حسب الشهر ومعروضة في شبكة متجاوبة. كل عدد يحتوي على روابط وأخبار وأدوات تتعلق بمنظومة البرمجة بالذكاء الاصطناعي.</p>
+    <p>انقر على أي عدد لتصفح محتواه الكامل.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">٣٧</div>
+      <div class="stat-label">عدد منشور</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">٩</div>
+      <div class="stat-label">أشهر</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">٩٥٠+</div>
+      <div class="stat-label">خبر مُصنّف</div>
+    </div>
+  </div>
+
+  <!-- September 2026 -->
+  <section class="month-section" id="month-2026-09">
+    <h2 class="month-title">
+      سبتمبر ٢٠٢٦
+      <span class="month-count">٧ أعداد</span>
+    </h2>
+    <div class="arc-grid">
+      <a class="arc-item" href="./AI-News_22-09-2026.html"><span class="arc-date">الثلاثاء ٢٢ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٨</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_21-09-2026.html"><span class="arc-date">الاثنين ٢١ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٢</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_18-09-2026.html"><span class="arc-date">الجمعة ١٨ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٥</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_17-09-2026.html"><span class="arc-date">الخميس ١٧ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٣٣</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_10-09-2026.html"><span class="arc-date">الخميس ١٠ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٧</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_09-09-2026.html"><span class="arc-date">الأربعاء ٩ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٤</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-09-2026.html"><span class="arc-date">الاثنين ٧ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٤</span> خبر</span></a>
+    </div>
+  </section>
+
+  <!-- August 2026 -->
+  <section class="month-section" id="month-2026-08">
+    <h2 class="month-title">
+      أغسطس ٢٠٢٦
+      <span class="month-count">٢٣ عددًا</span>
+    </h2>
+    <div class="arc-grid">
+      <a class="arc-item" href="./AI-News_31-08-2026.html"><span class="arc-date">الاثنين ٣١ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٤</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_28-08-2026.html"><span class="arc-date">الجمعة ٢٨ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">١٢</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_22-08-2026.html"><span class="arc-date">السبت ٢٢ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٣٦</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_21-08-2026.html"><span class="arc-date">الجمعة ٢١ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٢</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_20-08-2026.html"><span class="arc-date">الخميس ٢٠ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٤٠</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_19-08-2026.html"><span class="arc-date">الأربعاء ١٩ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٥</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_18-08-2026.html"><span class="arc-date">الثلاثاء ١٨ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٤</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_17-08-2026.html"><span class="arc-date">الاثنين ١٧ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">١٧</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_16-08-2026.html"><span class="arc-date">الأحد ١٦ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٣</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_14-08-2026.html"><span class="arc-date">الجمعة ١٤ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٣١</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_13-08-2026.html"><span class="arc-date">الخميس ١٣ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٧</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_12-08-2026.html"><span class="arc-date">الأربعاء ١٢ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٣</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_11-08-2026.html"><span class="arc-date">الثلاثاء ١١ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٠</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_10-08-2026.html"><span class="arc-date">الاثنين ١٠ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٠</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_09-08-2026.html"><span class="arc-date">الأحد ٩ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٣٠</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_08-08-2026.html"><span class="arc-date">السبت ٨ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٣٢</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-08-2026.html"><span class="arc-date">الجمعة ٧ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢١</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_06-08-2026.html"><span class="arc-date">الخميس ٦ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٤</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_05-08-2026.html"><span class="arc-date">الأربعاء ٥ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٤</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_04-08-2026.html"><span class="arc-date">الثلاثاء ٤ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٤</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_03-08-2026.html"><span class="arc-date">الاثنين ٣ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢١</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_02-08-2026.html"><span class="arc-date">الأحد ٢ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٦</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_01-08-2026.html"><span class="arc-date">السبت ١ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٨</span> خبر</span></a>
+    </div>
+  </section>
+
+  <!-- July 2026 -->
+  <section class="month-section" id="month-2026-07">
+    <h2 class="month-title">
+      يوليو ٢٠٢٦
+      <span class="month-count">عدد واحد</span>
+    </h2>
+    <div class="arc-grid">
+      <a class="arc-item" href="./AI-News_31-07-2026.html"><span class="arc-date">الجمعة ٣١ يوليو ٢٠٢٦</span><span class="arc-count"><span class="num">٤٠</span> خبر</span></a>
+    </div>
+  </section>
+
+  <!-- June 2026 -->
+  <section class="month-section" id="month-2026-06">
+    <h2 class="month-title">
+      يونيو ٢٠٢٦
+      <span class="month-count">عدد واحد</span>
+    </h2>
+    <div class="arc-grid">
+      <a class="arc-item" href="./AI-News_30-06-2026.html"><span class="arc-date">الثلاثاء ٣٠ يونيو ٢٠٢٦</span><span class="arc-count"><span class="num">٣٠</span> خبر</span></a>
+    </div>
+  </section>
+
+  <!-- May 2026 -->
+  <section class="month-section" id="month-2026-05">
+    <h2 class="month-title">
+      مايو ٢٠٢٦
+      <span class="month-count">عدد واحد</span>
+    </h2>
+    <div class="arc-grid">
+      <a class="arc-item" href="./AI-News_31-05-2026.html"><span class="arc-date">الأحد ٣١ مايو ٢٠٢٦</span><span class="arc-count"><span class="num">٣٩</span> خبر</span></a>
+    </div>
+  </section>
+
+  <!-- April 2026 -->
+  <section class="month-section" id="month-2026-04">
+    <h2 class="month-title">
+      أبريل ٢٠٢٦
+      <span class="month-count">عدد واحد</span>
+    </h2>
+    <div class="arc-grid">
+      <a class="arc-item" href="./AI-News_30-04-2026.html"><span class="arc-date">الخميس ٣٠ أبريل ٢٠٢٦</span><span class="arc-count"><span class="num">٣٩</span> خبر</span></a>
+    </div>
+  </section>
+
+  <!-- March 2026 -->
+  <section class="month-section" id="month-2026-03">
+    <h2 class="month-title">
+      مارس ٢٠٢٦
+      <span class="month-count">عدد واحد</span>
+    </h2>
+    <div class="arc-grid">
+      <a class="arc-item" href="./AI-News_31-03-2026.html"><span class="arc-date">الثلاثاء ٣١ مارس ٢٠٢٦</span><span class="arc-count"><span class="num">٤٠</span> خبر</span></a>
+    </div>
+  </section>
+
+  <!-- February 2026 -->
+  <section class="month-section" id="month-2026-02">
+    <h2 class="month-title">
+      فبراير ٢٠٢٦
+      <span class="month-count">عدد واحد</span>
+    </h2>
+    <div class="arc-grid">
+      <a class="arc-item" href="./AI-News_28-02-2026.html"><span class="arc-date">السبت ٢٨ فبراير ٢٠٢٦</span><span class="arc-count"><span class="num">٤٠</span> خبر</span></a>
+    </div>
+  </section>
+
+  <!-- January 2026 (First Issue) -->
+  <section class="month-section" id="month-2026-01">
+    <h2 class="month-title">
+      يناير ٢٠٢٦
+      <span class="month-count">العدد الأول ✨</span>
+    </h2>
+    <div class="arc-grid">
+      <a class="arc-item" href="./AI-News_31-01-2026.html"><span class="arc-date">السبت ٣١ يناير ٢٠٢٦</span><span class="arc-count"><span class="num">٤٠</span> خبر</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>تُحدَّث النشرة يومياً · حقوق المحتوى متاحة للجميع</p>
+    <p><a href="./index.html">أحدث عدد</a> · <a href="https://github.com/alMubarmij/Vibe-Coding-News">المستودع على GitHub</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
