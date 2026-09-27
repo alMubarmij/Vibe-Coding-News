@@ -63,7 +63,6 @@ body::before{
 h1,h2,h3{font-family:'Cairo',system-ui,sans-serif;line-height:1.3;margin:0}
 a{color:inherit}
 .wrap{max-width:1100px;margin-inline:auto}
-
 .hero{
   position:relative;padding-block:var(--s8) var(--s6);
   border-block-end:1px solid var(--border);
@@ -85,7 +84,6 @@ h1{
 .stamp-item{display:inline-flex;align-items:center;gap:.45rem}
 .stamp-item svg{width:15px;height:15px;color:var(--accent);flex:none}
 .stamp b{color:var(--fg)}
-
 .intro{
   margin-block-start:var(--s4);
   padding:var(--s3);
@@ -94,8 +92,6 @@ h1{
 }
 .intro p{margin:0 0 var(--s1)}
 .intro p:last-child{margin-block-end:0}
-
-/* ── Stats ──────────────────────────────── */
 .stats{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--s2);
   margin-block-start:var(--s4);
@@ -106,8 +102,6 @@ h1{
 }
 .stat-num{font-family:'Cairo',sans-serif;font-size:2rem;font-weight:800;color:var(--accent);line-height:1.2}
 .stat-label{font-size:.82rem;color:var(--dim);font-weight:600}
-
-/* ── Month sections ─────────────────────── */
 .month-section{padding-block:var(--s4) var(--s2)}
 .month-title{
   font-size:1.35rem;font-weight:800;letter-spacing:-.02em;
@@ -118,8 +112,6 @@ h1{
   font-size:.72rem;font-weight:700;color:var(--dim);background:var(--muted);
   border:1px solid var(--border);border-radius:999px;padding:.15rem .65rem;
 }
-
-/* ── Archive grid (responsive multi-column) */
 .arc-grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
@@ -136,10 +128,10 @@ h1{
   border-color:color-mix(in srgb,var(--accent-fill) 55%,var(--border));
   transform:translateX(-3px);box-shadow:var(--shadow);
 }
+.arc-item:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
 .arc-date{flex:1}
 .arc-count{font-size:.76rem;color:var(--dim);font-weight:500;white-space:nowrap}
 .arc-count .num{color:var(--accent);font-weight:700}
-
 footer{
   margin-block-start:var(--s8);padding-block-start:var(--s3);
   border-block-start:1px solid var(--border);
@@ -147,7 +139,6 @@ footer{
 }
 footer a{color:var(--accent);text-decoration:none;font-weight:600}
 footer a:hover{text-decoration:underline}
-
 @media (max-width:700px){
   .arc-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
 }
@@ -155,6 +146,10 @@ footer a:hover{text-decoration:underline}
   body{padding-inline:var(--s2);font-size:16px}
   .hero{padding-block:var(--s4) var(--s3)}
   .arc-grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .arc-item:hover{transform:none}
 }
 </style>
 </head>
@@ -170,7 +165,7 @@ footer a:hover{text-decoration:underline}
              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
         </svg>
-        <b>٣٧</b> عددًا منشورًا
+        <b>٣٩</b> عددًا منشورًا
       </span>
       <span class="stamp-item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -178,7 +173,7 @@ footer a:hover{text-decoration:underline}
           <rect x="3" y="4" width="18" height="18" rx="2"/>
           <path d="M16 2v4M8 2v4M3 10h18"/>
         </svg>
-        <b>من ٣١ يناير ٢٠٢٦</b> إلى اليوم
+        <b>من ٢٠٢٦ يناير ٣١</b> إلى اليوم
       </span>
     </div>
   </header>
@@ -190,7 +185,7 @@ footer a:hover{text-decoration:underline}
 
   <div class="stats">
     <div class="stat">
-      <div class="stat-num">٣٧</div>
+      <div class="stat-num">٣٩</div>
       <div class="stat-label">عدد منشور</div>
     </div>
     <div class="stat">
@@ -198,18 +193,19 @@ footer a:hover{text-decoration:underline}
       <div class="stat-label">أشهر</div>
     </div>
     <div class="stat">
-      <div class="stat-num">٩٥٠+</div>
+      <div class="stat-num">١٠٦٠</div>
       <div class="stat-label">خبر مُصنّف</div>
     </div>
   </div>
 
-  <!-- September 2026 -->
+  <!-- 2026-09 -->
   <section class="month-section" id="month-2026-09">
-    <h2 class="month-title">
-      سبتمبر ٢٠٢٦
-      <span class="month-count">٧ أعداد</span>
+    <h2 class="month-title">سبتمبر ٢٠٢٦
+      <span class="month-count">٩ أعداد</span>
     </h2>
     <div class="arc-grid">
+      <a class="arc-item" href="./AI-News_27-09-2026.html"><span class="arc-date">الأحد ٢٧ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">١٣</span> خبر</span></a>
+      <a class="arc-item" href="./AI-News_23-09-2026.html"><span class="arc-date">الأربعاء ٢٣ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٢</span> خبر</span></a>
       <a class="arc-item" href="./AI-News_22-09-2026.html"><span class="arc-date">الثلاثاء ٢٢ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٨</span> خبر</span></a>
       <a class="arc-item" href="./AI-News_21-09-2026.html"><span class="arc-date">الاثنين ٢١ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٢</span> خبر</span></a>
       <a class="arc-item" href="./AI-News_18-09-2026.html"><span class="arc-date">الجمعة ١٨ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٥</span> خبر</span></a>
@@ -219,11 +215,9 @@ footer a:hover{text-decoration:underline}
       <a class="arc-item" href="./AI-News_07-09-2026.html"><span class="arc-date">الاثنين ٧ سبتمبر ٢٠٢٦</span><span class="arc-count"><span class="num">٢٤</span> خبر</span></a>
     </div>
   </section>
-
-  <!-- August 2026 -->
+  <!-- 2026-08 -->
   <section class="month-section" id="month-2026-08">
-    <h2 class="month-title">
-      أغسطس ٢٠٢٦
+    <h2 class="month-title">أغسطس ٢٠٢٦
       <span class="month-count">٢٣ عددًا</span>
     </h2>
     <div class="arc-grid">
@@ -252,77 +246,63 @@ footer a:hover{text-decoration:underline}
       <a class="arc-item" href="./AI-News_01-08-2026.html"><span class="arc-date">السبت ١ أغسطس ٢٠٢٦</span><span class="arc-count"><span class="num">٢٨</span> خبر</span></a>
     </div>
   </section>
-
-  <!-- July 2026 -->
+  <!-- 2026-07 -->
   <section class="month-section" id="month-2026-07">
-    <h2 class="month-title">
-      يوليو ٢٠٢٦
+    <h2 class="month-title">يوليو ٢٠٢٦
       <span class="month-count">عدد واحد</span>
     </h2>
     <div class="arc-grid">
       <a class="arc-item" href="./AI-News_31-07-2026.html"><span class="arc-date">الجمعة ٣١ يوليو ٢٠٢٦</span><span class="arc-count"><span class="num">٤٠</span> خبر</span></a>
     </div>
   </section>
-
-  <!-- June 2026 -->
+  <!-- 2026-06 -->
   <section class="month-section" id="month-2026-06">
-    <h2 class="month-title">
-      يونيو ٢٠٢٦
+    <h2 class="month-title">يونيو ٢٠٢٦
       <span class="month-count">عدد واحد</span>
     </h2>
     <div class="arc-grid">
       <a class="arc-item" href="./AI-News_30-06-2026.html"><span class="arc-date">الثلاثاء ٣٠ يونيو ٢٠٢٦</span><span class="arc-count"><span class="num">٣٠</span> خبر</span></a>
     </div>
   </section>
-
-  <!-- May 2026 -->
+  <!-- 2026-05 -->
   <section class="month-section" id="month-2026-05">
-    <h2 class="month-title">
-      مايو ٢٠٢٦
+    <h2 class="month-title">مايو ٢٠٢٦
       <span class="month-count">عدد واحد</span>
     </h2>
     <div class="arc-grid">
       <a class="arc-item" href="./AI-News_31-05-2026.html"><span class="arc-date">الأحد ٣١ مايو ٢٠٢٦</span><span class="arc-count"><span class="num">٣٩</span> خبر</span></a>
     </div>
   </section>
-
-  <!-- April 2026 -->
+  <!-- 2026-04 -->
   <section class="month-section" id="month-2026-04">
-    <h2 class="month-title">
-      أبريل ٢٠٢٦
+    <h2 class="month-title">أبريل ٢٠٢٦
       <span class="month-count">عدد واحد</span>
     </h2>
     <div class="arc-grid">
       <a class="arc-item" href="./AI-News_30-04-2026.html"><span class="arc-date">الخميس ٣٠ أبريل ٢٠٢٦</span><span class="arc-count"><span class="num">٣٩</span> خبر</span></a>
     </div>
   </section>
-
-  <!-- March 2026 -->
+  <!-- 2026-03 -->
   <section class="month-section" id="month-2026-03">
-    <h2 class="month-title">
-      مارس ٢٠٢٦
+    <h2 class="month-title">مارس ٢٠٢٦
       <span class="month-count">عدد واحد</span>
     </h2>
     <div class="arc-grid">
       <a class="arc-item" href="./AI-News_31-03-2026.html"><span class="arc-date">الثلاثاء ٣١ مارس ٢٠٢٦</span><span class="arc-count"><span class="num">٤٠</span> خبر</span></a>
     </div>
   </section>
-
-  <!-- February 2026 -->
+  <!-- 2026-02 -->
   <section class="month-section" id="month-2026-02">
-    <h2 class="month-title">
-      فبراير ٢٠٢٦
+    <h2 class="month-title">فبراير ٢٠٢٦
       <span class="month-count">عدد واحد</span>
     </h2>
     <div class="arc-grid">
       <a class="arc-item" href="./AI-News_28-02-2026.html"><span class="arc-date">السبت ٢٨ فبراير ٢٠٢٦</span><span class="arc-count"><span class="num">٤٠</span> خبر</span></a>
     </div>
   </section>
-
-  <!-- January 2026 (First Issue) -->
+  <!-- 2026-01 -->
   <section class="month-section" id="month-2026-01">
-    <h2 class="month-title">
-      يناير ٢٠٢٦
+    <h2 class="month-title">يناير ٢٠٢٦
       <span class="month-count">العدد الأول ✨</span>
     </h2>
     <div class="arc-grid">
