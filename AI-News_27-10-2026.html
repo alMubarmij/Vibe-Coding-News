@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>البرمجة بالذكاء الاصطناعي، نشرة الروابط | الثلاثاء ٢٧ أكتوبر ٢٠٢٦</title>
+<meta name="description" content="مدونة روابط يومية لأحدث أخبار البرمجة بالذكاء الاصطناعي وأدواتها.">
+<meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي، الثلاثاء ٢٧ أكتوبر ٢٠٢٦">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#18181B; --on-primary:#FFFFFF; --secondary:#3F3F46;
+  --accent:#4D7C0F; --accent-fill:#A3E635; --accent-2:#38BDF8;
+  --ring:#4D7C0F; --on-accent:#09090B;
+  --badge-bg:#4D7C0F; --badge-fg:#FFFFFF;
+  --bg:#FAFAFA; --fg:#09090B; --muted:#E8ECF0;
+  --surface:#FFFFFF; --border:#E4E4E7;
+  --dim:#52525B;
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s6:3rem; --s8:4rem;
+  --r:14px;
+  --ease:cubic-bezier(.22,.8,.26,1);
+  --glass:var(--surface); --glass-strong:var(--surface);
+  --shadow:0 1px 2px rgba(9,9,11,.05);
+  --shadow-lg:0 2px 6px rgba(9,9,11,.06),0 22px 44px -18px rgba(163,230,53,.30);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --primary:#FAFAFA; --on-primary:#09090B; --secondary:#A1A1AA;
+    --accent:#BEF264; --accent-fill:#A3E635; --accent-2:#7DD3FC;
+    --ring:#BEF264; --on-accent:#09090B;
+    --badge-bg:#A3E635; --badge-fg:#09090B;
+    --bg:#09090B; --fg:#FAFAFA; --muted:#18181B;
+    --surface:#131316; --border:#27272A;
+    --dim:#A1A1AA;
+    --glass:var(--surface); --glass-strong:var(--surface);
+    --shadow:0 1px 2px rgba(0,0,0,.5);
+    --shadow-lg:0 2px 6px rgba(0,0,0,.6),0 24px 48px -18px rgba(163,230,53,.28);
+    color-scheme:dark;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--accent-fill) 45%,var(--border)) transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--accent-fill) 45%,var(--border));border-radius:999px;border:3px solid transparent;background-clip:content-box}
+::-webkit-scrollbar-thumb:hover{background-color:var(--accent-fill)}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:'Tajawal',system-ui,sans-serif; font-size:17px; line-height:1.8;
+  font-weight:400; text-rendering:optimizeLegibility;
+  padding-inline:var(--s3); padding-block-end:var(--s8);
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(52rem 30rem at 88% -6%,color-mix(in srgb,var(--accent-fill) 20%,transparent),transparent 62%),
+    radial-gradient(46rem 28rem at 4% 10%,color-mix(in srgb,var(--accent-2) 18%,transparent),transparent 60%),
+    radial-gradient(42rem 32rem at 50% 112%,color-mix(in srgb,var(--accent-fill) 13%,transparent),transparent 62%);
+}
+::selection{background:color-mix(in srgb,var(--accent-fill) 30%,transparent)}
+h1,h2,h3{font-family:'Cairo',system-ui,sans-serif;line-height:1.3;margin:0}
+a{color:inherit}
+.wrap{max-width:820px;margin-inline:auto}
+
+/* ── Header ─────────────────────────────── */
+.hero{
+  position:relative;padding-block:var(--s8) var(--s6);
+  border-block-end:1px solid var(--border);
+}
+.hero::after{
+  content:""; position:absolute; inset-inline:0; bottom:-1px; height:1px;
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--accent-fill) 60%,transparent) 30%,color-mix(in srgb,var(--accent-2) 60%,transparent) 70%,transparent);
+}
+h1{
+  font-size:clamp(1.05rem,4.6vw,2.9rem);font-weight:900;letter-spacing:-.02em;
+  margin-block-end:var(--s2);white-space:nowrap;
+}
+.h1-accent{color:var(--accent)}
+.lede{font-size:1.06rem;color:var(--dim);max-width:60ch;margin:0 0 var(--s3)}
+.stamp{
+  display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);align-items:center;
+  font-family:'Cairo',sans-serif;font-size:.86rem;font-weight:600;color:var(--dim);
+}
+.stamp-item{display:inline-flex;align-items:center;gap:.45rem}
+.stamp-item svg{width:15px;height:15px;color:var(--accent);flex:none}
+.stamp b{color:var(--fg)}
+
+/* ── Category chips ─────────────────────── */
+.chips{
+  display:flex;gap:var(--s1);flex-wrap:wrap;
+  padding-block:var(--s3);position:relative;z-index:20;
+  background:var(--surface);
+  border-block-end:1px solid var(--border);
+  box-shadow:0 6px 20px -20px rgba(9,9,11,.25);
+}
+.chip{
+  display:inline-flex;align-items:center;min-height:38px;padding:0 .95rem;
+  font-family:'Cairo',sans-serif;font-size:.83rem;font-weight:600;
+  border:1px solid var(--border);border-radius:999px;
+  background:var(--surface);color:var(--fg);text-decoration:none;cursor:pointer;
+  transition:border-color .22s var(--ease),background .22s var(--ease),color .22s var(--ease),transform .22s var(--ease),box-shadow .22s var(--ease);
+}
+.chip:hover{
+  border-color:color-mix(in srgb,var(--accent-fill) 60%,var(--border));
+  color:var(--accent);transform:translateY(-1px);
+  box-shadow:0 6px 16px -12px color-mix(in srgb,var(--accent-fill) 55%,transparent);
+}
+
+/* ── Items ──────────────────────────────── */
+.cat{padding-block:var(--s6) var(--s2);scroll-margin-top:80px}
+.cat-title{
+  font-size:clamp(1.35rem,3.6vw,1.85rem);font-weight:800;letter-spacing:-.02em;
+  display:flex;align-items:center;gap:.6rem;margin-block-end:var(--s3);
+}
+.cat-count{
+  font-size:.72rem;font-weight:700;color:var(--dim);background:var(--muted);
+  border:1px solid var(--border);border-radius:999px;padding:.15rem .65rem;
+}
+.items{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.item{
+  position:relative;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
+  transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
+}
+.item::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  opacity:0;transition:opacity .25s ease;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--accent-fill) 8%,transparent),transparent 48%);
+}
+.item:hover{
+  border-color:color-mix(in srgb,var(--accent-fill) 55%,var(--border));
+  box-shadow:var(--shadow-lg);
+}
+.item:hover::after{opacity:1}
+.item-link{text-decoration:none;display:block}
+.item-title{
+  font-size:1.14rem;font-weight:700;letter-spacing:-.01em;
+  display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;
+  transition:color .2s ease,transform .25s var(--ease);
+}
+.item-link:hover .item-title{color:var(--accent);transform:translateX(-4px)}
+.item-summary{margin:.6rem 0 var(--s2);color:var(--dim);font-size:.97rem}
+.item-foot{
+  display:flex;justify-content:space-between;align-items:center;gap:var(--s2);
+  flex-wrap:wrap;padding-block-start:var(--s1);border-block-start:1px dashed var(--border);
+}
+.item-meta{font-family:'Cairo',sans-serif;font-size:.78rem;color:var(--dim);font-weight:600}
+.item-url{
+  display:inline-flex;align-items:center;gap:.4rem;min-height:44px;
+  font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:700;
+  color:var(--accent);text-decoration:none;cursor:pointer;
+  transition:color .2s ease;
+}
+.item-url svg{width:15px;height:15px;transition:transform .2s var(--ease)}
+.item-url:hover svg{transform:translateX(-4px)}
+.badge{
+  font-family:'Cairo',sans-serif;font-size:.68rem;font-weight:700;
+  padding:.12rem .5rem;border-radius:999px;
+}
+.badge-video{
+  background:var(--badge-bg);color:var(--badge-fg);
+  box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
+}
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
+}
+
+/* ── Copy button (left edge of each card) ─ */
+.copy-btn{
+  position:absolute;top:var(--s2);left:var(--s2);
+  width:44px;height:44px;display:grid;place-items:center;
+  background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  color:var(--dim);cursor:pointer;padding:0;
+  box-shadow:0 1px 2px rgba(9,9,11,.05);
+  transition:background .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease);
+}
+.copy-btn:hover{background:var(--fg);color:var(--bg);border-color:var(--fg);transform:translateY(-1px)}
+.copy-btn svg{width:17px;height:17px;transition:transform .25s var(--ease)}
+.copy-btn .ic-done{display:none}
+.copy-btn.is-copied{
+  background:var(--accent-fill);border-color:transparent;color:var(--on-accent);
+  box-shadow:0 8px 20px -10px color-mix(in srgb,var(--accent-fill) 70%,transparent);
+}
+.copy-btn.is-copied .ic-copy{display:none}
+.copy-btn.is-copied .ic-done{display:block;animation:pop .3s var(--ease)}
+.copy-btn.is-copied svg{transform:scale(1.12)}
+@keyframes pop{from{transform:scale(.35);opacity:0}to{transform:scale(1);opacity:1}}
+
+.toast{
+  position:fixed;bottom:var(--s3);left:50%;transform:translateX(-50%) translateY(140%);
+  background:var(--surface);color:var(--fg);padding:.7rem 1.3rem;border-radius:999px;
+  font-family:'Cairo',sans-serif;font-size:.86rem;font-weight:700;
+  border:1px solid var(--border);
+  z-index:60;opacity:0;transition:transform .28s var(--ease),opacity .28s ease;
+  pointer-events:none;box-shadow:var(--shadow-lg);
+}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* ── Reading progress bar ───────────────── */
+.progress{
+  position:fixed;top:0;right:0;left:0;height:3px;z-index:70;
+  background:transparent;pointer-events:none;
+}
+.progress-fill{
+  height:100%;width:100%;
+  background:var(--accent-fill);
+  transform:scaleX(0);transform-origin:right center;
+  transition:transform .08s linear;
+}
+
+/* ── Header actions ─────────────────────── */
+.actions{display:flex;gap:var(--s1);flex-wrap:wrap;margin-block-start:var(--s3)}
+.act-btn{
+  display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:0 1rem;
+  font-family:'Cairo',sans-serif;font-size:.83rem;font-weight:700;
+  background:var(--surface);color:var(--fg);
+  border:1px solid var(--border);border-radius:999px;cursor:pointer;
+  transition:border-color .2s var(--ease),background .2s var(--ease),color .2s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease);
+}
+.act-btn:hover{
+  border-color:color-mix(in srgb,var(--accent-fill) 55%,var(--border));
+  color:var(--accent);transform:translateY(-1px);
+  box-shadow:0 8px 18px -14px color-mix(in srgb,var(--accent-fill) 50%,transparent);
+}
+.act-btn svg{width:16px;height:16px}
+.act-btn[aria-pressed="true"]{
+  background:var(--accent-fill);border-color:transparent;color:var(--on-accent);
+  box-shadow:0 10px 22px -14px color-mix(in srgb,var(--accent-fill) 65%,transparent);
+}
+
+/* ── Back to top ────────────────────────── */
+.to-top{
+  position:fixed;bottom:var(--s3);right:var(--s3);
+  width:48px;height:48px;display:grid;place-items:center;
+  background:var(--fg);color:var(--bg);border:none;border-radius:50%;
+  cursor:pointer;z-index:55;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .25s ease,transform .25s var(--ease),visibility .25s,background .25s ease,box-shadow .25s ease;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:hover{
+  background:var(--accent-fill);color:var(--on-accent);
+  box-shadow:0 12px 26px -12px color-mix(in srgb,var(--accent-fill) 65%,transparent);
+}
+.to-top svg{width:20px;height:20px}
+
+/* ── Corporate professional mode ────────── */
+body.corp{
+  --accent:#1D4ED8; --accent-fill:#1D4ED8; --accent-2:#1D4ED8; --ring:#1D4ED8;
+  --on-accent:#FFFFFF; --badge-bg:#1D4ED8; --badge-fg:#FFFFFF;
+  --bg:#FFFFFF; --surface:#FFFFFF; --muted:#F1F5F9;
+  --border:#CBD5E1; --fg:#0F172A; --dim:#475569;
+  --r:4px;
+  --glass:var(--surface); --glass-strong:var(--surface);
+  --shadow:0 1px 2px rgba(15,23,42,.06);
+  --shadow-lg:0 1px 2px rgba(15,23,42,.06),0 12px 26px -16px rgba(15,23,42,.18);
+  font-size:16px;
+}
+@media (prefers-color-scheme:dark){
+  body.corp{
+    --accent:#60A5FA; --accent-fill:#60A5FA; --accent-2:#60A5FA; --ring:#60A5FA;
+    --on-accent:#FFFFFF; --badge-bg:#60A5FA; --badge-fg:#FFFFFF;
+    --bg:#0B1120; --surface:#111827; --muted:#1E293B;
+    --border:#334155; --fg:#F1F5F9; --dim:#94A3B8;
+  }
+}
+body.corp::before{background:none}
+body.corp .hero::after{display:none}
+body.corp h1{font-weight:700;letter-spacing:-.01em}
+body.corp .cat-title{font-weight:700}
+body.corp .item{border-radius:4px}
+body.corp .item::after{display:none}
+body.corp .item:hover{transform:none;border-color:var(--accent);box-shadow:var(--shadow)}
+body.corp .chip,body.corp .act-btn,body.corp .arc-item{border-radius:4px}
+body.corp .chip:hover,body.corp .act-btn:hover{transform:none}
+body.corp .to-top{border-radius:4px}
+body.corp .to-top:hover{background:var(--accent);color:#fff}
+body.corp .badge{border-radius:3px}
+body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
+body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
+body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
+body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
+body.corp .progress-fill{background:var(--accent);box-shadow:none}
+body.corp .item-title{font-weight:600}
+body.corp .hero{border-block-end-width:1px}
+body.corp .archive{border-block-start-width:1px}
+
+/* ── Archive ────────────────────────────── */
+.archive{
+  margin-block-start:var(--s8);padding-block-start:var(--s4);
+  border-block-start:1px solid var(--border);position:relative;
+}
+.archive::before{
+  content:"";position:absolute;inset-inline:0;top:-1px;height:1px;
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--accent-2) 60%,transparent) 40%,transparent);
+}
+.archive h2{
+  font-size:1.5rem;font-weight:800;margin-block-end:var(--s3);
+  display:flex;align-items:center;gap:.55rem;
+}
+.archive h2 svg{width:22px;height:22px;color:var(--accent);flex:none}
+.arc-list{display:grid;gap:.5rem}
+.arc-item{
+  display:flex;justify-content:space-between;align-items:center;gap:var(--s2);
+  min-height:48px;padding:.35rem var(--s2);border:1px solid var(--border);
+  border-radius:12px;background:var(--surface);text-decoration:none;
+  font-family:'Cairo',sans-serif;font-size:.88rem;font-weight:600;
+  cursor:pointer;transition:border-color .2s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease),background .2s ease;
+}
+.arc-item:hover{
+  border-color:color-mix(in srgb,var(--accent-fill) 55%,var(--border));
+  transform:translateX(-3px);box-shadow:var(--shadow);
+}
+.arc-item.is-current{
+  border-color:var(--accent);color:var(--accent);
+  background:color-mix(in srgb,var(--accent-fill) 8%,var(--surface));
+}
+.arc-item.is-current .arc-count{color:var(--accent)}
+.arc-count{font-size:.76rem;color:var(--dim);font-weight:500}
+
+footer{
+  margin-block-start:var(--s8);padding-block-start:var(--s3);
+  border-block-start:1px solid var(--border);
+  font-size:.85rem;color:var(--dim);text-align:center;
+}
+footer a{color:var(--accent);text-decoration:none;font-weight:600}
+footer a:hover{text-decoration:underline}
+
+:where(a,button):focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+@media (max-width:560px){
+  h1{white-space:normal}
+}
+@media (max-width:480px){
+  body{padding-inline:var(--s2);font-size:16px}
+  .hero{padding-block:var(--s4) var(--s3)}
+}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>البرمجة <span class="h1-accent">بالذكاء الاصطناعي</span></h1>
+    <p class="lede">تغطية يومية مختارة لأحدث أخبار البرمجة بالذكاء الاصطناعي (Vibe Coding) من مصادر عالمية موثوقة.</p>
+    <div class="stamp">
+      <span class="stamp-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M16 2v4M8 2v4M3 10h18"/>
+        </svg>
+        <b>الثلاثاء ٢٧ أكتوبر ٢٠٢٦</b>
+      </span>
+      <span class="stamp-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+        </svg>
+        <b>٢٥</b> خبر
+      </span>
+    </div>
+    <div class="actions">
+      <button class="act-btn" type="button" id="corpToggle" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="7" width="18" height="13" rx="2"/>
+          <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/>
+        </svg>
+        <span id="corpLabel">النمط المؤسسي</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="chips" aria-label="الفئات">
+      <a class="chip" href="#cat-مقالات-بارزة">مقالات بارزة</a>
+      <a class="chip" href="#cat-أدوات-جديدة">أدوات جديدة</a>
+      <a class="chip" href="#cat-مصادر-مجانية">مصادر مجانية</a>
+      <a class="chip" href="#cat-مقارنات">مقارنات</a>
+      <a class="chip" href="#cat-شروح-ودورات">شروح ودورات</a>
+      <a class="chip" href="#cat-المنصات">المنصات</a>
+      <a class="chip" href="#cat-فيديوهات">فيديوهات</a>
+      <a class="chip" href="#cat-أخبار-عاجلة">أخبار عاجلة</a>
+  </nav>
+
+  <main>
+    <section class="cat" id="cat-مقالات-بارزة">
+      <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٣</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ إعلان: باحث عن عمل حر (فري لانس) على Reddit**
+&gt; منشور في r/freelances_forhire يقدم فيه /u/Sad-Competition٩٨٢٣ خدماته كعامل حر.
+https://www.reddit.com/r/freelances_forhire/comments/1xguvxa/freelancer_for_hire/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.reddit.com/r/freelances_forhire/comments/1xguvxa/freelancer_for_hire/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">إعلان: باحث عن عمل حر (فري لانس) على Reddit</h3>
+          </a>
+          <p class="item-summary">منشور في r/freelances_forhire يقدم فيه /u/Sad-Competition٩٨٢٣ خدماته كعامل حر.</p>
+          <div class="item-foot">
+            <span class="item-meta">Reddit · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.reddit.com/r/freelances_forhire/comments/1xguvxa/freelancer_for_hire/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ رؤية Prime للبرمجة بالذكاء الاصطناعي: من إزالة Copilot إلى سير عمل من ٧ مراحل**
+&gt; منشور في r/theprimeagen يلخص فيه المستخدمون رؤية المبرمج Prime، الذي انتقل من إزالة GitHub Copilot إلى سير عمل مع النماذج اللغوية من ٧ مراحل.
+https://www.reddit.com/r/theprimeagen/comments/1xguinr/primes_take_on_ai_coding_in_order_and_in_his_own/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.reddit.com/r/theprimeagen/comments/1xguinr/primes_take_on_ai_coding_in_order_and_in_his_own/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">رؤية Prime للبرمجة بالذكاء الاصطناعي: من إزالة Copilot إلى سير عمل من ٧ مراحل</h3>
+          </a>
+          <p class="item-summary">منشور في r/theprimeagen يلخص فيه المستخدمون رؤية المبرمج Prime، الذي انتقل من إزالة GitHub Copilot إلى سير عمل مع النماذج اللغوية من ٧ مراحل.</p>
+          <div class="item-foot">
+            <span class="item-meta">Reddit · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.reddit.com/r/theprimeagen/comments/1xguinr/primes_take_on_ai_coding_in_order_and_in_his_own/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ رؤية لافتة من Gemini ٤ Argon**
+&gt; منشور على X على يد @PromptLLM يشارك فيه رؤية لافتة من نموذج Gemini ٤ Argon.
+https://x.com/PromptLLM/status/2114803176624791768">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/PromptLLM/status/2114803176624791768" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">رؤية لافتة من Gemini ٤ Argon</h3>
+          </a>
+          <p class="item-summary">منشور على X على يد @PromptLLM يشارك فيه رؤية لافتة من نموذج Gemini ٤ Argon.</p>
+          <div class="item-foot">
+            <span class="item-meta">X · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/PromptLLM/status/2114803176624791768" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-أدوات-جديدة">
+      <h2 class="cat-title">ــ 🛠️ أدوات جديدة <span class="cat-count">٢</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ OffRecord: تطبيق لتحويل الصوت إلى نص يعمل ١٠٠٪ دون اتصال و بتركيز على الخصوصية**
+&gt; منشور في r/AndroidAppTesters عن تطبيق OffRecord لتحويل الصوت إلى نص يعمل بالكامل دون اتصال بالإنترنت، مع بطاقة اختبار مجانية لفترة لا تقل عن ١٤ يوماً.
+https://www.reddit.com/r/AndroidAppTesters/comments/1xguv1f/mutual_test_offrecord_100_offline_ai_voicetotext/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.reddit.com/r/AndroidAppTesters/comments/1xguv1f/mutual_test_offrecord_100_offline_ai_voicetotext/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">OffRecord: تطبيق لتحويل الصوت إلى نص يعمل ١٠٠٪ دون اتصال و بتركيز على الخصوصية</h3>
+          </a>
+          <p class="item-summary">منشور في r/AndroidAppTesters عن تطبيق OffRecord لتحويل الصوت إلى نص يعمل بالكامل دون اتصال بالإنترنت، مع بطاقة اختبار مجانية لفترة لا تقل عن ١٤ يوماً.</p>
+          <div class="item-foot">
+            <span class="item-meta">Reddit · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.reddit.com/r/AndroidAppTesters/comments/1xguv1f/mutual_test_offrecord_100_offline_ai_voicetotext/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ تريد بديلًا لـ OpenCode؟ Mimo Code من Xiaomi هنا (مجاني ١٠٠٪)**
+&gt; فيديو لقناة Code With Yousaf يتعرّض فيه لأداة Mimo Code الجديدة من Xiaomi للبرمجة بالذكاء الاصطناعي، وهي مجانية بالكامل.
+https://www.youtube.com/watch?v=1xQCswGsA0A">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=1xQCswGsA0A" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">تريد بديلًا لـ OpenCode؟ Mimo Code من Xiaomi هنا (مجاني ١٠٠٪)<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو لقناة Code With Yousaf يتعرّض فيه لأداة Mimo Code الجديدة من Xiaomi للبرمجة بالذكاء الاصطناعي، وهي مجانية بالكامل.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٠٩-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=1xQCswGsA0A" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-مصادر-مجانية">
+      <h2 class="cat-title">ــ 🆓 مصادر مجانية <span class="cat-count">٧</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ هاكاثون ألعاب مجاني مع أرصدة Meshy Pro للجميع**
+&gt; منشور في r/meshyai يعلن عن هاكاثون ألعاب مجاني يمنح الجميع أرصدة Pro من Meshy لبناء نماذج ثلاثية الأبعاد.
+https://www.reddit.com/r/meshyai/comments/1xguu5v/free_game_jam_with_meshy_pro_credits_for_everyone/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.reddit.com/r/meshyai/comments/1xguu5v/free_game_jam_with_meshy_pro_credits_for_everyone/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">هاكاثون ألعاب مجاني مع أرصدة Meshy Pro للجميع</h3>
+          </a>
+          <p class="item-summary">منشور في r/meshyai يعلن عن هاكاثون ألعاب مجاني يمنح الجميع أرصدة Pro من Meshy لبناء نماذج ثلاثية الأبعاد.</p>
+          <div class="item-foot">
+            <span class="item-meta">Reddit · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.reddit.com/r/meshyai/comments/1xguu5v/free_game_jam_with_meshy_pro_credits_for_everyone/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ أفضل مولدات الفيديو بالذكاء الاصطناعي المجانية حاليًا**
+&gt; سؤال ونقاش في r/generativeAI حول أفضل الأدوات المجانية لإنشاء الفيديوهات بالذكاء الاصطناعي.
+https://www.reddit.com/r/generativeAI/comments/1xgun0f/what_are_the_best_free_ai_video_generators_right/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.reddit.com/r/generativeAI/comments/1xgun0f/what_are_the_best_free_ai_video_generators_right/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">أفضل مولدات الفيديو بالذكاء الاصطناعي المجانية حاليًا</h3>
+          </a>
+          <p class="item-summary">سؤال ونقاش في r/generativeAI حول أفضل الأدوات المجانية لإنشاء الفيديوهات بالذكاء الاصطناعي.</p>
+          <div class="item-foot">
+            <span class="item-meta">Reddit · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.reddit.com/r/generativeAI/comments/1xgun0f/what_are_the_best_free_ai_video_generators_right/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ توقف عن الدفع من أجل الذكاء الاصطناعي: ٢٠ مليون رمز مجاني كل يوم**
+&gt; فيديو لقناة Code With Yousaf يشرح فيه كيفية الحصول على ٢٠ مليون رمز (token) مجاني يوميًا بدلًا من الدفع.
+https://www.youtube.com/watch?v=53ANlIhWLKI">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=53ANlIhWLKI" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">توقف عن الدفع من أجل الذكاء الاصطناعي: ٢٠ مليون رمز مجاني كل يوم<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو لقناة Code With Yousaf يشرح فيه كيفية الحصول على ٢٠ مليون رمز (token) مجاني يوميًا بدلًا من الدفع.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=53ANlIhWLKI" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ أفضل نموذج ذكاء اصطناعي مجاني بدون قيود**
+&gt; فيديو لقناة al٠hamwi يستعرض فيه أفضل نموذج ذكاء اصطناعي مجاني دون قيود.
+https://www.youtube.com/watch?v=Yzs_bgWU0N0">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=Yzs_bgWU0N0" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">أفضل نموذج ذكاء اصطناعي مجاني بدون قيود<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو لقناة al٠hamwi يستعرض فيه أفضل نموذج ذكاء اصطناعي مجاني دون قيود.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=Yzs_bgWU0N0" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ وجدت مساحة عمل ذكاء اصطناعي مجانية تضم Claude Opus ٥.٥ و GPT-٦ Astra**
+&gt; فيديو لقناة Yash Decode AI يعرض فيه مساحة عمل مجانية للذكاء الاصطناعي تتضمن Claude Opus ٥.٥ و GPT-٦ Astra.
+https://www.youtube.com/watch?v=XZK4AQ5ZFkw">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=XZK4AQ5ZFkw" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">وجدت مساحة عمل ذكاء اصطناعي مجانية تضم Claude Opus ٥.٥ و GPT-٦ Astra<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو لقناة Yash Decode AI يعرض فيه مساحة عمل مجانية للذكاء الاصطناعي تتضمن Claude Opus ٥.٥ و GPT-٦ Astra.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٠٦-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=XZK4AQ5ZFkw" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ استخدم هذا لجعل Hermes Agent مجانيًا تقريبًا**
+&gt; فيديو لقناة AI LABS يشرح فيه كيفية استخدام أداة معينة لتقليل تكلفة تشغيل Hermes Agent وجعله مجانيًا تقريبًا.
+https://www.youtube.com/watch?v=5d02TYoOzfE">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=5d02TYoOzfE" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">استخدم هذا لجعل Hermes Agent مجانيًا تقريبًا<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو لقناة AI LABS يشرح فيه كيفية استخدام أداة معينة لتقليل تكلفة تشغيل Hermes Agent وجعله مجانيًا تقريبًا.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٠١-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=5d02TYoOzfE" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ نموذج Claude Code أصبح مجانيًا؟! استخدم كل نماذج Claude مجانًا (إعداد VS Code)**
+&gt; فيديو لقناة AI with FZ يشرح فيه كيفية استخدام جميع نماذج Claude مجانًا داخل VS Code.
+https://www.youtube.com/watch?v=ZtORZlBSbKY">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=ZtORZlBSbKY" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">نموذج Claude Code أصبح مجانيًا؟! استخدم كل نماذج Claude مجانًا (إعداد VS Code)<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو لقناة AI with FZ يشرح فيه كيفية استخدام جميع نماذج Claude مجانًا داخل VS Code.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٢٧-٠٦-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=ZtORZlBSbKY" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-مقارنات">
+      <h2 class="cat-title">ــ 📊 مقارنات <span class="cat-count">١</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ أيهما أفضل: GLM ٥.٣ FLASH أم DEEPSEEK V٤.١ FLASH أم GEMINI ٣.٨ FLASH؟**
+&gt; نقاش في r/AntigravityGoogle لمقارنة ثلاث نماذج سريعة متاحة مجانًا ضمن تطبيق Antigravity من Google.
+https://www.reddit.com/r/AntigravityGoogle/comments/1xgurcp/which_model_is_better_glm_53_flash_or_deepseek/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.reddit.com/r/AntigravityGoogle/comments/1xgurcp/which_model_is_better_glm_53_flash_or_deepseek/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">أيهما أفضل: GLM ٥.٣ FLASH أم DEEPSEEK V٤.١ FLASH أم GEMINI ٣.٨ FLASH؟</h3>
+          </a>
+          <p class="item-summary">نقاش في r/AntigravityGoogle لمقارنة ثلاث نماذج سريعة متاحة مجانًا ضمن تطبيق Antigravity من Google.</p>
+          <div class="item-foot">
+            <span class="item-meta">Reddit · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.reddit.com/r/AntigravityGoogle/comments/1xgurcp/which_model_is_better_glm_53_flash_or_deepseek/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-شروح-ودورات">
+      <h2 class="cat-title">ــ 🎓 شروح ودورات <span class="cat-count">٦</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ ١٢٥ رمز في الثانية على RTX ٤٠٧٠ Ti SUPER: كيف جعلت نموذجًا محليًا يعمل كوكيل برمجة كامل**
+&gt; منشور في r/ollama يشرح فيه /u/ievkz كيف شغّل نموذجًا محليًا للغة على كرت شاشة RTX ٤٠٧٠ Ti SUPER ليؤدي مهام وكيل برمجة بأداء عالٍ.
+https://www.reddit.com/r/ollama/comments/1xguqao/125_tokens_per_second_on_an_rtx_4070_ti_super_how/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.reddit.com/r/ollama/comments/1xguqao/125_tokens_per_second_on_an_rtx_4070_ti_super_how/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">١٢٥ رمز في الثانية على RTX ٤٠٧٠ Ti SUPER: كيف جعلت نموذجًا محليًا يعمل كوكيل برمجة كامل</h3>
+          </a>
+          <p class="item-summary">منشور في r/ollama يشرح فيه /u/ievkz كيف شغّل نموذجًا محليًا للغة على كرت شاشة RTX ٤٠٧٠ Ti SUPER ليؤدي مهام وكيل برمجة بأداء عالٍ.</p>
+          <div class="item-foot">
+            <span class="item-meta">Reddit · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.reddit.com/r/ollama/comments/1xguqao/125_tokens_per_second_on_an_rtx_4070_ti_super_how/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ [سير عمل] تطوير ألعاب ويب ثلاثية الأبعاد بسرعة باستخدام Claude Code**
+&gt; سير عمل متقدم للمساعدة بالذكاء الاصطناعي في الكتابة والاختبار والنشر لعروض ألعاب ويب ثلاثية الأبعاد، منشور في r/ClaudeWorkflows.
+https://www.reddit.com/r/ClaudeWorkflows/comments/1xguq48/workflow_rapid_3d_web_game_development_with/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.reddit.com/r/ClaudeWorkflows/comments/1xguq48/workflow_rapid_3d_web_game_development_with/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">[سير عمل] تطوير ألعاب ويب ثلاثية الأبعاد بسرعة باستخدام Claude Code</h3>
+          </a>
+          <p class="item-summary">سير عمل متقدم للمساعدة بالذكاء الاصطناعي في الكتابة والاختبار والنشر لعروض ألعاب ويب ثلاثية الأبعاد، منشور في r/ClaudeWorkflows.</p>
+          <div class="item-foot">
+            <span class="item-meta">Reddit · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.reddit.com/r/ClaudeWorkflows/comments/1xguq48/workflow_rapid_3d_web_game_development_with/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ كيف تبني موقعك الأول باستخدام Claude Code و Seedance ٢.٥**
+&gt; فيديو تعليمي لقناة Mikey Website يشرح بناء أول موقع ويب باستخدام Claude Code و Seedance ٢.٥.
+https://www.youtube.com/watch?v=5QM78yqpONI">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=5QM78yqpONI" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">كيف تبني موقعك الأول باستخدام Claude Code و Seedance ٢.٥<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو تعليمي لقناة Mikey Website يشرح بناء أول موقع ويب باستخدام Claude Code و Seedance ٢.٥.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=5QM78yqpONI" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ هندسة السياق لوكلاء الذكاء الاصطناعي: ٤ حالات فشل يجب تجنبها**
+&gt; فيديو لقناة IBM Technology يشرح فيه مفاهيم هندسة السياق لوكلاء الذكاء الاصطناعي وأربع حالات فشل شائعة يجب تجنبها.
+https://www.youtube.com/watch?v=BwXremQ-i6I">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=BwXremQ-i6I" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">هندسة السياق لوكلاء الذكاء الاصطناعي: ٤ حالات فشل يجب تجنبها<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو لقناة IBM Technology يشرح فيه مفاهيم هندسة السياق لوكلاء الذكاء الاصطناعي وأربع حالات فشل شائعة يجب تجنبها.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ١٥-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=BwXremQ-i6I" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ شغّل نماذج مفتوحة الوزن مجانًا: DeepSeek و Qwen و GLM على ModelScope**
+&gt; فيديو تعليمي لقناة Jon Law يشرح كيفية تشغيل نماذج مفتوحة الوزن (DeepSeek و Qwen و GLM) مجانًا على منصة ModelScope.
+https://www.youtube.com/watch?v=2uOajE45F_k">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=2uOajE45F_k" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">شغّل نماذج مفتوحة الوزن مجانًا: DeepSeek و Qwen و GLM على ModelScope<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو تعليمي لقناة Jon Law يشرح كيفية تشغيل نماذج مفتوحة الوزن (DeepSeek و Qwen و GLM) مجانًا على منصة ModelScope.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ١٥-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=2uOajE45F_k" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Claude Desktop و Claude Code مجانًا! إعداد كامل مع نماذج Anthropic الحقيقية**
+&gt; فيديو لقناة Danish Sofi يشرح فيه إعداد Claude Desktop و Claude Code مجانًا مع النماذج الحقيقية من Anthropic في VS Code.
+https://www.youtube.com/watch?v=wdlwuoSXci4">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=wdlwuoSXci4" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Claude Desktop و Claude Code مجانًا! إعداد كامل مع نماذج Anthropic الحقيقية<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو لقناة Danish Sofi يشرح فيه إعداد Claude Desktop و Claude Code مجانًا مع النماذج الحقيقية من Anthropic في VS Code.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٠٧-٠٧-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=wdlwuoSXci4" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-المنصات">
+      <h2 class="cat-title">ــ 🏗️ المنصات <span class="cat-count">٢</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ GitHub Copilot تجاوز البرمجة الآن: وكلاء وسير عمل وتطبيقات (نسخة تجريبية)**
+&gt; منشور في r/GithubCopilot يناقش فيه المستخدمون الميزات الجديدة لـ GitHub Copilot: الوكلاء وسير العمل والتطبيقات في نسخة المعاينة.
+https://www.reddit.com/r/GithubCopilot/comments/1xguikl/github_copilot_now_goes_beyond_coding_agents/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.reddit.com/r/GithubCopilot/comments/1xguikl/github_copilot_now_goes_beyond_coding_agents/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">GitHub Copilot تجاوز البرمجة الآن: وكلاء وسير عمل وتطبيقات (نسخة تجريبية)</h3>
+          </a>
+          <p class="item-summary">منشور في r/GithubCopilot يناقش فيه المستخدمون الميزات الجديدة لـ GitHub Copilot: الوكلاء وسير العمل والتطبيقات في نسخة المعاينة.</p>
+          <div class="item-foot">
+            <span class="item-meta">Reddit · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.reddit.com/r/GithubCopilot/comments/1xguikl/github_copilot_now_goes_beyond_coding_agents/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ لماذا يطلق ModelFront نظام إدارة ترجمة (TMS) مجانيًا أصليًا للذكاء الاصطناعي**
+&gt; حلقة رقم ٢٩٥ في بودكاست ModelFront تتناول إطلاق نظام إدارة ترجمة مجاني مبني أصليًا على الذكاء الاصطناعي.
+https://www.reddit.com/r/ModelFront/comments/1xguhx3/295_why_modelfront_is_launching_a_free_ainative/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.reddit.com/r/ModelFront/comments/1xguhx3/295_why_modelfront_is_launching_a_free_ainative/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">لماذا يطلق ModelFront نظام إدارة ترجمة (TMS) مجانيًا أصليًا للذكاء الاصطناعي</h3>
+          </a>
+          <p class="item-summary">حلقة رقم ٢٩٥ في بودكاست ModelFront تتناول إطلاق نظام إدارة ترجمة مجاني مبني أصليًا على الذكاء الاصطناعي.</p>
+          <div class="item-foot">
+            <span class="item-meta">Reddit · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.reddit.com/r/ModelFront/comments/1xguhx3/295_why_modelfront_is_launching_a_free_ainative/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-فيديوهات">
+      <h2 class="cat-title">ــ 🎥 فيديوهات <span class="cat-count">١</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ جرّبت كل مولدات الصور بالذكاء الاصطناعي المجانية في ٢٠٢٦ (هذه فعلاً جيدة)**
+&gt; فيديو لقناة Youri van Hofwegen يختبر فيه مختلف المولدات المجانية للصور بالذكاء الاصطناعي ويبرز الجيد منها.
+https://www.youtube.com/watch?v=tVb3rQuTB1g">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=tVb3rQuTB1g" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">جرّبت كل مولدات الصور بالذكاء الاصطناعي المجانية في ٢٠٢٦ (هذه فعلاً جيدة)<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو لقناة Youri van Hofwegen يختبر فيه مختلف المولدات المجانية للصور بالذكاء الاصطناعي ويبرز الجيد منها.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=tVb3rQuTB1g" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-أخبار-عاجلة">
+      <h2 class="cat-title">ــ 🚨 أخبار عاجلة <span class="cat-count">٣</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ هل حظر Claude فعلاً REA؟ (تحقق من الحقيقة)**
+&gt; فيديو لقناة Code Bear يتحقق فيه من صحة أنباء حظر Claude لأداة REA.
+https://www.youtube.com/watch?v=eYFiyX0ew7A">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=eYFiyX0ew7A" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">هل حظر Claude فعلاً REA؟ (تحقق من الحقيقة)<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو لقناة Code Bear يتحقق فيه من صحة أنباء حظر Claude لأداة REA.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٢٦-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=eYFiyX0ew7A" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ GPT-٦.١ Terra دخل المدار الآن**
+&gt; فيديو رسمي لقناة OpenAI يعلن فيه عن إطلاق نموذج GPT-٦.١ Terra.
+https://www.youtube.com/watch?v=tTuk4pGnT0A">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=tTuk4pGnT0A" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">GPT-٦.١ Terra دخل المدار الآن<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">فيديو رسمي لقناة OpenAI يعلن فيه عن إطلاق نموذج GPT-٦.١ Terra.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٢٦-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=tTuk4pGnT0A" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ GPT-٦.١ Terra من OpenAI متاح الآن على OpenRouter**
+&gt; منشور على X على يد @OpenRouter يعلن فيه عن توفر نموذج GPT-٦.١ Terra من OpenAI على OpenRouter، بمقارنة أداءه بنموذج GPT-٦ Astra وبسعر أقل بعشر مرات للرمز.
+https://x.com/OpenRouter/status/2114791584755839168">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/OpenRouter/status/2114791584755839168" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">GPT-٦.١ Terra من OpenAI متاح الآن على OpenRouter</h3>
+          </a>
+          <p class="item-summary">منشور على X على يد @OpenRouter يعلن فيه عن توفر نموذج GPT-٦.١ Terra من OpenAI على OpenRouter، بمقارنة أداءه بنموذج GPT-٦ Astra وبسعر أقل بعشر مرات للرمز.</p>
+          <div class="item-foot">
+            <span class="item-meta">X · ٢٧-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/OpenRouter/status/2114791584755839168" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <section class="archive" aria-labelledby="arc-h">
+    <h2 id="arc-h">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+      </svg>
+      الأرشيف
+    </h2>
+    <div class="arc-list">
+      <a class="arc-item is-current" href="./AI-News_27-10-2026.html"><span class="arc-date">الثلاثاء ٢٧ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٥ خبر</span></a>
+      <a class="arc-item" href="./AI-News_26-10-2026.html"><span class="arc-date">الاثنين ٢٦ أكتوبر ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_23-10-2026.html"><span class="arc-date">الجمعة ٢٣ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٧ خبر</span></a>
+      <a class="arc-item" href="./AI-News_22-10-2026.html"><span class="arc-date">الخميس ٢٢ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٢ خبر</span></a>
+      <a class="arc-item" href="./AI-News_13-10-2026.html"><span class="arc-date">الثلاثاء ١٣ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٢ خبر</span></a>
+      <a class="arc-item" href="./AI-News_12-10-2026.html"><span class="arc-date">الاثنين ١٢ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_11-10-2026.html"><span class="arc-date">الأحد ١١ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٨ خبر</span></a>
+      <a class="arc-item" href="./AI-News_10-10-2026.html"><span class="arc-date">السبت ١٠ أكتوبر ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_09-10-2026.html"><span class="arc-date">الجمعة ٩ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٥ خبر</span></a>
+      <a class="arc-item" href="./AI-News_08-10-2026.html"><span class="arc-date">الخميس ٨ أكتوبر ٢٠٢٦</span><span class="arc-count">٤٩ خبر</span></a>
+      <a class="arc-item" href="./AI-News_05-10-2026.html"><span class="arc-date">الاثنين ٥ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_04-10-2026.html"><span class="arc-date">الأحد ٤ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٨ خبر</span></a>
+      <a class="arc-item" href="./AI-News_27-09-2026.html"><span class="arc-date">الأحد ٢٧ سبتمبر ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_23-09-2026.html"><span class="arc-date">الأربعاء ٢٣ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٢ خبر</span></a>
+      <a class="arc-item" href="./AI-News_22-09-2026.html"><span class="arc-date">الثلاثاء ٢٢ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٨ خبر</span></a>
+      <a class="arc-item" href="./AI-News_21-09-2026.html"><span class="arc-date">الاثنين ٢١ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٢ خبر</span></a>
+      <a class="arc-item" href="./AI-News_18-09-2026.html"><span class="arc-date">الجمعة ١٨ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٥ خبر</span></a>
+      <a class="arc-item" href="./AI-News_17-09-2026.html"><span class="arc-date">الخميس ١٧ سبتمبر ٢٠٢٦</span><span class="arc-count">٣٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_10-09-2026.html"><span class="arc-date">الخميس ١٠ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٧ خبر</span></a>
+      <a class="arc-item" href="./AI-News_09-09-2026.html"><span class="arc-date">الأربعاء ٩ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
+      <a class="arc-item" href="./AI-News_07-09-2026.html"><span class="arc-date">الاثنين ٧ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
+      <a class="arc-item" href="./AI-News_31-08-2026.html"><span class="arc-date">الاثنين ٣١ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
+      <a class="arc-item" href="./AI-News_28-08-2026.html"><span class="arc-date">الجمعة ٢٨ أغسطس ٢٠٢٦</span><span class="arc-count">١٢ خبر</span></a>
+      <a class="arc-item" href="./AI-News_22-08-2026.html"><span class="arc-date">السبت ٢٢ أغسطس ٢٠٢٦</span><span class="arc-count">٣٦ خبر</span></a>
+      <a class="arc-item" href="./AI-News_21-08-2026.html"><span class="arc-date">الجمعة ٢١ أغسطس ٢٠٢٦</span><span class="arc-count">٢٢ خبر</span></a>
+      <a class="arc-item" href="./AI-News_20-08-2026.html"><span class="arc-date">الخميس ٢٠ أغسطس ٢٠٢٦</span><span class="arc-count">٤٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_19-08-2026.html"><span class="arc-date">الأربعاء ١٩ أغسطس ٢٠٢٦</span><span class="arc-count">٢٥ خبر</span></a>
+      <a class="arc-item" href="./AI-News_18-08-2026.html"><span class="arc-date">الثلاثاء ١٨ أغسطس ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
+      <a class="arc-item" href="./AI-News_17-08-2026.html"><span class="arc-date">الاثنين ١٧ أغسطس ٢٠٢٦</span><span class="arc-count">١٧ خبر</span></a>
+      <a class="arc-item" href="./AI-News_16-08-2026.html"><span class="arc-date">الأحد ١٦ أغسطس ٢٠٢٦</span><span class="arc-count">٢٣ خبر</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>تُحدَّث النشرة يومياً · حقوق المحتوى متاحة للجميع</p>
+    <p><a href="./archive.html">أرشيف النشرات السابقة</a> · <a href="./index.html">أحدث عدد</a></p>
+  </footer>
+
+</div>
+<button class="to-top" type="button" id="toTop" aria-label="العودة إلى الأعلى">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+<div class="toast" id="toast" role="status" aria-live="polite">نُسخ الخبر</div>
+<script>
+(function () {
+  var toast = document.getElementById('toast');
+  var timer = null;
+
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.classList.remove('show'); }, 1900);
+  }
+
+  function legacyCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:-9999px;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.copy-btn');
+    if (!btn) return;
+    var text = btn.getAttribute('data-copy') || '';
+
+    function done(ok) {
+      if (!ok) { showToast('تعذّر النسخ'); return; }
+      btn.classList.add('is-copied');
+      showToast('نُسخ الخبر');
+      setTimeout(function () { btn.classList.remove('is-copied'); }, 1900);
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(
+        function () { done(true); },
+        function () { done(legacyCopy(text)); }
+      );
+    } else {
+      done(legacyCopy(text));
+    }
+  });
+})();
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(function () {});
+}
+
+/* ── Reading progress + back to top ─────── */
+(function () {
+  var fill = document.getElementById('progressFill');
+  var top = document.getElementById('toTop');
+  var ticking = false;
+
+  function update() {
+    var d = document.documentElement;
+    var max = d.scrollHeight - window.innerHeight;
+    var y = window.scrollY || d.scrollTop || 0;
+    var pct = max > 0 ? (y / max) * 100 : 0;
+    if (pct < 0) pct = 0;
+    if (pct > 100) pct = 100;
+    fill.style.transform = 'scaleX(' + (pct / 100) + ')';
+    if (y > 400) { top.classList.add('show'); } else { top.classList.remove('show'); }
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+
+  top.addEventListener('click', function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+})();
+
+/* ── Corporate professional mode ────────── */
+(function () {
+  var btn = document.getElementById('corpToggle');
+  var label = document.getElementById('corpLabel');
+  var KEY = 'vibe-news-corp';
+
+  function apply(on) {
+    document.body.classList.toggle('corp', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    label.textContent = on ? 'النمط التحريري' : 'النمط المؤسسي';
+    try { sessionStorage.setItem(KEY, on ? '1' : '0'); } catch (e) {}
+  }
+
+  var saved = '0';
+  try { saved = sessionStorage.getItem(KEY) || '0'; } catch (e) {}
+  apply(saved === '1');
+
+  btn.addEventListener('click', function () {
+    apply(!document.body.classList.contains('corp'));
+  });
+})();
+</script>
+</body>
+</html>
