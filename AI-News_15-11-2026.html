@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>البرمجة بالذكاء الاصطناعي، نشرة الروابط | الأحد ١٥ نوفمبر ٢٠٢٦</title>
+<meta name="description" content="مدونة روابط يومية لأحدث أخبار البرمجة بالذكاء الاصطناعي وأدواتها.">
+<meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="نشرة البرمجة بالذكاء الاصطناعي، الأحد ١٥ نوفمبر ٢٠٢٦">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800;900&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#18181B; --on-primary:#FFFFFF; --secondary:#3F3F46;
+  --accent:#4D7C0F; --accent-fill:#A3E635; --accent-2:#38BDF8;
+  --ring:#4D7C0F; --on-accent:#09090B;
+  --badge-bg:#4D7C0F; --badge-fg:#FFFFFF;
+  --bg:#FAFAFA; --fg:#09090B; --muted:#E8ECF0;
+  --surface:#FFFFFF; --border:#E4E4E7;
+  --dim:#52525B;
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s6:3rem; --s8:4rem;
+  --r:14px;
+  --ease:cubic-bezier(.22,.8,.26,1);
+  --glass:var(--surface); --glass-strong:var(--surface);
+  --shadow:0 1px 2px rgba(9,9,11,.05);
+  --shadow-lg:0 2px 6px rgba(9,9,11,.06),0 22px 44px -18px rgba(163,230,53,.30);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --primary:#FAFAFA; --on-primary:#09090B; --secondary:#A1A1AA;
+    --accent:#BEF264; --accent-fill:#A3E635; --accent-2:#7DD3FC;
+    --ring:#BEF264; --on-accent:#09090B;
+    --badge-bg:#A3E635; --badge-fg:#09090B;
+    --bg:#09090B; --fg:#FAFAFA; --muted:#18181B;
+    --surface:#131316; --border:#27272A;
+    --dim:#A1A1AA;
+    --glass:var(--surface); --glass-strong:var(--surface);
+    --shadow:0 1px 2px rgba(0,0,0,.5);
+    --shadow-lg:0 2px 6px rgba(0,0,0,.6),0 24px 48px -18px rgba(163,230,53,.28);
+    color-scheme:dark;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--accent-fill) 45%,var(--border)) transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--accent-fill) 45%,var(--border));border-radius:999px;border:3px solid transparent;background-clip:content-box}
+::-webkit-scrollbar-thumb:hover{background-color:var(--accent-fill)}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:'Tajawal',system-ui,sans-serif; font-size:17px; line-height:1.8;
+  font-weight:400; text-rendering:optimizeLegibility;
+  padding-inline:var(--s3); padding-block-end:var(--s8);
+}
+body::before{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(52rem 30rem at 88% -6%,color-mix(in srgb,var(--accent-fill) 20%,transparent),transparent 62%),
+    radial-gradient(46rem 28rem at 4% 10%,color-mix(in srgb,var(--accent-2) 18%,transparent),transparent 60%),
+    radial-gradient(42rem 32rem at 50% 112%,color-mix(in srgb,var(--accent-fill) 13%,transparent),transparent 62%);
+}
+::selection{background:color-mix(in srgb,var(--accent-fill) 30%,transparent)}
+h1,h2,h3{font-family:'Cairo',system-ui,sans-serif;line-height:1.3;margin:0}
+a{color:inherit}
+.wrap{max-width:820px;margin-inline:auto}
+
+/* ── Header ─────────────────────────────── */
+.hero{
+  position:relative;padding-block:var(--s8) var(--s6);
+  border-block-end:1px solid var(--border);
+}
+.hero::after{
+  content:""; position:absolute; inset-inline:0; bottom:-1px; height:1px;
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--accent-fill) 60%,transparent) 30%,color-mix(in srgb,var(--accent-2) 60%,transparent) 70%,transparent);
+}
+h1{
+  font-size:clamp(1.05rem,4.6vw,2.9rem);font-weight:900;letter-spacing:-.02em;
+  margin-block-end:var(--s2);white-space:nowrap;
+}
+.h1-accent{color:var(--accent)}
+.lede{font-size:1.06rem;color:var(--dim);max-width:60ch;margin:0 0 var(--s3)}
+.stamp{
+  display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);align-items:center;
+  font-family:'Cairo',sans-serif;font-size:.86rem;font-weight:600;color:var(--dim);
+}
+.stamp-item{display:inline-flex;align-items:center;gap:.45rem}
+.stamp-item svg{width:15px;height:15px;color:var(--accent);flex:none}
+.stamp b{color:var(--fg)}
+
+/* ── Category chips ─────────────────────── */
+.chips{
+  display:flex;gap:var(--s1);flex-wrap:wrap;
+  padding-block:var(--s3);position:relative;z-index:20;
+  background:var(--surface);
+  border-block-end:1px solid var(--border);
+  box-shadow:0 6px 20px -20px rgba(9,9,11,.25);
+}
+.chip{
+  display:inline-flex;align-items:center;min-height:38px;padding:0 .95rem;
+  font-family:'Cairo',sans-serif;font-size:.83rem;font-weight:600;
+  border:1px solid var(--border);border-radius:999px;
+  background:var(--surface);color:var(--fg);text-decoration:none;cursor:pointer;
+  transition:border-color .22s var(--ease),background .22s var(--ease),color .22s var(--ease),transform .22s var(--ease),box-shadow .22s var(--ease);
+}
+.chip:hover{
+  border-color:color-mix(in srgb,var(--accent-fill) 60%,var(--border));
+  color:var(--accent);transform:translateY(-1px);
+  box-shadow:0 6px 16px -12px color-mix(in srgb,var(--accent-fill) 55%,transparent);
+}
+
+/* ── Items ──────────────────────────────── */
+.cat{padding-block:var(--s6) var(--s2);scroll-margin-top:80px}
+.cat-title{
+  font-size:clamp(1.35rem,3.6vw,1.85rem);font-weight:800;letter-spacing:-.02em;
+  display:flex;align-items:center;gap:.6rem;margin-block-end:var(--s3);
+}
+.cat-count{
+  font-size:.72rem;font-weight:700;color:var(--dim);background:var(--muted);
+  border:1px solid var(--border);border-radius:999px;padding:.15rem .65rem;
+}
+.items{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.item{
+  position:relative;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
+  padding:var(--s3);padding-left:3.6rem;padding-right:3rem;
+  transition:border-color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.item-ico{
+  position:absolute;top:var(--s3);right:var(--s2);
+  width:22px;height:22px;display:grid;place-items:center;
+  color:var(--accent);pointer-events:none;
+  transition:color .25s var(--ease),transform .25s var(--ease);
+}
+.item-ico svg{width:22px;height:22px}
+.item:hover .item-ico{color:var(--accent);transform:scale(1.08)}
+.item.is-dead .item-ico{color:#b91c1c}
+@media (prefers-color-scheme:dark){
+  .item.is-dead .item-ico{color:#fca5a5}
+}
+.item::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  opacity:0;transition:opacity .25s ease;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--accent-fill) 8%,transparent),transparent 48%);
+}
+.item:hover{
+  border-color:color-mix(in srgb,var(--accent-fill) 55%,var(--border));
+  box-shadow:var(--shadow-lg);
+}
+.item:hover::after{opacity:1}
+.item-link{text-decoration:none;display:block}
+.item-title{
+  font-size:1.14rem;font-weight:700;letter-spacing:-.01em;
+  display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;
+  transition:color .2s ease,transform .25s var(--ease);
+}
+.item-link:hover .item-title{color:var(--accent);transform:translateX(-4px)}
+.item-summary{margin:.6rem 0 var(--s2);color:var(--dim);font-size:.97rem}
+.item-foot{
+  display:flex;justify-content:space-between;align-items:center;gap:var(--s2);
+  flex-wrap:wrap;padding-block-start:var(--s1);border-block-start:1px dashed var(--border);
+}
+.item-meta{font-family:'Cairo',sans-serif;font-size:.78rem;color:var(--dim);font-weight:600}
+.item-url{
+  display:inline-flex;align-items:center;gap:.4rem;min-height:44px;
+  font-family:'Cairo',sans-serif;font-size:.82rem;font-weight:700;
+  color:var(--accent);text-decoration:none;cursor:pointer;
+  transition:color .2s ease;
+}
+.item-url svg{width:15px;height:15px;transition:transform .2s var(--ease)}
+.item-url:hover svg{transform:translateX(-4px)}
+.badge{
+  font-family:'Cairo',sans-serif;font-size:.68rem;font-weight:700;
+  padding:.12rem .5rem;border-radius:999px;
+}
+.badge-video{
+  background:var(--badge-bg);color:var(--badge-fg);
+  box-shadow:0 4px 12px -6px color-mix(in srgb,var(--accent-fill) 50%,transparent);
+}
+/* ── Dead-link state ────────────────────── */
+.item.is-dead{
+  border-style:dashed;
+  border-color:color-mix(in srgb,var(--border) 60%,#ef4444);
+}
+.item.is-dead .item-link{cursor:default}
+.item.is-dead .item-title{color:var(--dim)}
+.item-dead-note{
+  display:inline-flex;align-items:center;gap:.35rem;
+  font-family:'Cairo',sans-serif;font-size:.76rem;font-weight:700;
+  color:#b91c1c;background:color-mix(in srgb,#ef4444 12%,transparent);
+  border:1px solid color-mix(in srgb,#ef4444 35%,transparent);
+  border-radius:999px;padding:.15rem .6rem;
+}
+@media (prefers-color-scheme:dark){
+  .item-dead-note{color:#fca5a5;background:color-mix(in srgb,#ef4444 18%,transparent)}
+}
+
+/* ── Copy button (left edge of each card) ─ */
+.copy-btn{
+  position:absolute;top:var(--s2);left:var(--s2);
+  width:44px;height:44px;display:grid;place-items:center;
+  background:var(--surface);border:1px solid var(--border);border-radius:12px;
+  color:var(--dim);cursor:pointer;padding:0;
+  box-shadow:0 1px 2px rgba(9,9,11,.05);
+  transition:background .2s var(--ease),color .2s var(--ease),border-color .2s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease);
+}
+.copy-btn:hover{background:var(--fg);color:var(--bg);border-color:var(--fg);transform:translateY(-1px)}
+.copy-btn svg{width:17px;height:17px;transition:transform .25s var(--ease)}
+.copy-btn .ic-done{display:none}
+.copy-btn.is-copied{
+  background:var(--accent-fill);border-color:transparent;color:var(--on-accent);
+  box-shadow:0 8px 20px -10px color-mix(in srgb,var(--accent-fill) 70%,transparent);
+}
+.copy-btn.is-copied .ic-copy{display:none}
+.copy-btn.is-copied .ic-done{display:block;animation:pop .3s var(--ease)}
+.copy-btn.is-copied svg{transform:scale(1.12)}
+@keyframes pop{from{transform:scale(.35);opacity:0}to{transform:scale(1);opacity:1}}
+
+.toast{
+  position:fixed;bottom:var(--s3);left:50%;transform:translateX(-50%) translateY(140%);
+  background:var(--surface);color:var(--fg);padding:.7rem 1.3rem;border-radius:999px;
+  font-family:'Cairo',sans-serif;font-size:.86rem;font-weight:700;
+  border:1px solid var(--border);
+  z-index:60;opacity:0;transition:transform .28s var(--ease),opacity .28s ease;
+  pointer-events:none;box-shadow:var(--shadow-lg);
+}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* ── Reading progress bar ───────────────── */
+.progress{
+  position:fixed;top:0;right:0;left:0;height:3px;z-index:70;
+  background:transparent;pointer-events:none;
+}
+.progress-fill{
+  height:100%;width:100%;
+  background:var(--accent-fill);
+  transform:scaleX(0);transform-origin:right center;
+  transition:transform .08s linear;
+}
+
+/* ── Header actions ─────────────────────── */
+.actions{display:flex;gap:var(--s1);flex-wrap:wrap;margin-block-start:var(--s3)}
+.act-btn{
+  display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:0 1rem;
+  font-family:'Cairo',sans-serif;font-size:.83rem;font-weight:700;
+  background:var(--surface);color:var(--fg);
+  border:1px solid var(--border);border-radius:999px;cursor:pointer;
+  transition:border-color .2s var(--ease),background .2s var(--ease),color .2s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease);
+}
+.act-btn:hover{
+  border-color:color-mix(in srgb,var(--accent-fill) 55%,var(--border));
+  color:var(--accent);transform:translateY(-1px);
+  box-shadow:0 8px 18px -14px color-mix(in srgb,var(--accent-fill) 50%,transparent);
+}
+.act-btn svg{width:16px;height:16px}
+.act-btn[aria-pressed="true"]{
+  background:var(--accent-fill);border-color:transparent;color:var(--on-accent);
+  box-shadow:0 10px 22px -14px color-mix(in srgb,var(--accent-fill) 65%,transparent);
+}
+
+/* ── Back to top ────────────────────────── */
+.to-top{
+  position:fixed;bottom:var(--s3);right:var(--s3);
+  width:48px;height:48px;display:grid;place-items:center;
+  background:var(--fg);color:var(--bg);border:none;border-radius:50%;
+  cursor:pointer;z-index:55;box-shadow:var(--shadow-lg);
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .25s ease,transform .25s var(--ease),visibility .25s,background .25s ease,box-shadow .25s ease;
+}
+.to-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+.to-top:hover{
+  background:var(--accent-fill);color:var(--on-accent);
+  box-shadow:0 12px 26px -12px color-mix(in srgb,var(--accent-fill) 65%,transparent);
+}
+.to-top svg{width:20px;height:20px}
+
+/* ── Corporate professional mode ────────── */
+body.corp{
+  --accent:#1D4ED8; --accent-fill:#1D4ED8; --accent-2:#1D4ED8; --ring:#1D4ED8;
+  --on-accent:#FFFFFF; --badge-bg:#1D4ED8; --badge-fg:#FFFFFF;
+  --bg:#FFFFFF; --surface:#FFFFFF; --muted:#F1F5F9;
+  --border:#CBD5E1; --fg:#0F172A; --dim:#475569;
+  --r:4px;
+  --glass:var(--surface); --glass-strong:var(--surface);
+  --shadow:0 1px 2px rgba(15,23,42,.06);
+  --shadow-lg:0 1px 2px rgba(15,23,42,.06),0 12px 26px -16px rgba(15,23,42,.18);
+  font-size:16px;
+}
+@media (prefers-color-scheme:dark){
+  body.corp{
+    --accent:#60A5FA; --accent-fill:#60A5FA; --accent-2:#60A5FA; --ring:#60A5FA;
+    --on-accent:#FFFFFF; --badge-bg:#60A5FA; --badge-fg:#FFFFFF;
+    --bg:#0B1120; --surface:#111827; --muted:#1E293B;
+    --border:#334155; --fg:#F1F5F9; --dim:#94A3B8;
+  }
+}
+body.corp::before{background:none}
+body.corp .hero::after{display:none}
+body.corp h1{font-weight:700;letter-spacing:-.01em}
+body.corp .cat-title{font-weight:700}
+body.corp .item{border-radius:4px}
+body.corp .item::after{display:none}
+body.corp .item:hover{transform:none;border-color:var(--accent);box-shadow:var(--shadow)}
+body.corp .chip,body.corp .act-btn,body.corp .arc-item{border-radius:4px}
+body.corp .chip:hover,body.corp .act-btn:hover{transform:none}
+body.corp .to-top{border-radius:4px}
+body.corp .to-top:hover{background:var(--accent);color:#fff}
+body.corp .badge{border-radius:3px}
+body.corp .badge-video{background:var(--badge-bg);color:var(--badge-fg);box-shadow:none}
+body.corp .copy-btn{border-radius:4px}
+body.corp .item-ico{transform:none}
+body.corp .copy-btn.is-copied{background:var(--accent);color:#fff;box-shadow:none}
+body.corp .act-btn[aria-pressed="true"]{background:var(--accent);color:#fff;box-shadow:none}
+body.corp .progress-fill{background:var(--accent);box-shadow:none}
+body.corp .item-title{font-weight:600}
+body.corp .hero{border-block-end-width:1px}
+body.corp .archive{border-block-start-width:1px}
+
+/* ── Archive ────────────────────────────── */
+.archive{
+  margin-block-start:var(--s8);padding-block-start:var(--s4);
+  border-block-start:1px solid var(--border);position:relative;
+}
+.archive::before{
+  content:"";position:absolute;inset-inline:0;top:-1px;height:1px;
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--accent-2) 60%,transparent) 40%,transparent);
+}
+.archive h2{
+  font-size:1.5rem;font-weight:800;margin-block-end:var(--s3);
+  display:flex;align-items:center;gap:.55rem;
+}
+.archive h2 svg{width:22px;height:22px;color:var(--accent);flex:none}
+.arc-list{display:grid;gap:.5rem}
+.arc-item{
+  display:flex;justify-content:space-between;align-items:center;gap:var(--s2);
+  min-height:48px;padding:.35rem var(--s2);border:1px solid var(--border);
+  border-radius:12px;background:var(--surface);text-decoration:none;
+  font-family:'Cairo',sans-serif;font-size:.88rem;font-weight:600;
+  cursor:pointer;transition:border-color .2s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease),background .2s ease;
+}
+.arc-item:hover{
+  border-color:color-mix(in srgb,var(--accent-fill) 55%,var(--border));
+  transform:translateX(-3px);box-shadow:var(--shadow);
+}
+.arc-item.is-current{
+  border-color:var(--accent);color:var(--accent);
+  background:color-mix(in srgb,var(--accent-fill) 8%,var(--surface));
+}
+.arc-item.is-current .arc-count{color:var(--accent)}
+.arc-count{font-size:.76rem;color:var(--dim);font-weight:500}
+
+footer{
+  margin-block-start:var(--s8);padding-block-start:var(--s3);
+  border-block-start:1px solid var(--border);
+  font-size:.85rem;color:var(--dim);text-align:center;
+}
+footer a{color:var(--accent);text-decoration:none;font-weight:600}
+footer a:hover{text-decoration:underline}
+
+:where(a,button):focus-visible{outline:3px solid var(--ring);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+@media (max-width:560px){
+  h1{white-space:normal}
+}
+@media (max-width:480px){
+  body{padding-inline:var(--s2);font-size:16px}
+  .hero{padding-block:var(--s4) var(--s3)}
+}
+</style>
+</head>
+<body>
+<div class="progress" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+<div class="wrap">
+
+  <header class="hero">
+    <h1>البرمجة <span class="h1-accent">بالذكاء الاصطناعي</span></h1>
+    <p class="lede">تغطية يومية مختارة لأحدث أخبار البرمجة بالذكاء الاصطناعي (Vibe Coding) من مصادر عالمية موثوقة.</p>
+    <div class="stamp">
+      <span class="stamp-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M16 2v4M8 2v4M3 10h18"/>
+        </svg>
+        <b>الأحد ١٥ نوفمبر ٢٠٢٦</b>
+      </span>
+      <span class="stamp-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+        </svg>
+        <b>٤٤</b> خبر
+      </span>
+    </div>
+    <div class="actions">
+      <button class="act-btn" type="button" id="corpToggle" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="7" width="18" height="13" rx="2"/>
+          <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/>
+        </svg>
+        <span id="corpLabel">النمط المؤسسي</span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="chips" aria-label="الفئات">
+      <a class="chip" href="#cat-فيديوهات">فيديوهات</a>
+      <a class="chip" href="#cat-مقالات-بارزة">مقالات بارزة</a>
+      <a class="chip" href="#cat-شروح-ودورات">شروح ودورات</a>
+      <a class="chip" href="#cat-مصادر-مجانية">مصادر مجانية</a>
+      <a class="chip" href="#cat-تحليلات-ونقد">تحليلات ونقد</a>
+  </nav>
+
+  <main>
+    <section class="cat" id="cat-فيديوهات">
+      <h2 class="cat-title">ــ 🎥 فيديوهات <span class="cat-count">١</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ China's New Free AI Built a ٣D Game in ٨ Minutes (No Coding)**
+&gt; عرض فيديو لذكاء اصطناعي صيني أنشأ لعبة ٣D في ٨ دقائق دون برمجة.
+https://www.youtube.com/watch?v=r9IF2WXAZek">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=r9IF2WXAZek" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">China's New Free AI Built a ٣D Game in ٨ Minutes (No Coding)<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">عرض فيديو لذكاء اصطناعي صيني أنشأ لعبة ٣D في ٨ دقائق دون برمجة.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ١٤-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=r9IF2WXAZek" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-مقالات-بارزة">
+      <h2 class="cat-title">ــ ⭐ مقالات بارزة <span class="cat-count">٢٢</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ أفضل طريقة لتشغيل Claude Code في ٢٠٢٦**
+&gt; دليل شامل لتشغيل Claude Code بكفاءة بأحدث الإعدادات الموصى بها عام ٢٠٢٦.
+https://www.youtube.com/watch?v=73DrNNvEKH0">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=73DrNNvEKH0" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">أفضل طريقة لتشغيل Claude Code في ٢٠٢٦<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">دليل شامل لتشغيل Claude Code بكفاءة بأحدث الإعدادات الموصى بها عام ٢٠٢٦.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ١٤-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=73DrNNvEKH0" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ تغير Claude فجأة: أهم ٦ تحديثات تحتاج إلى معرفتها**
+&gt; ستة تحديثات رئيسية لـ Claude حدثت فجأة وتحتاج إلى معرفتها قبل الاستمرار في العمل.
+https://www.youtube.com/watch?v=Of9ylhwSkJE">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=Of9ylhwSkJE" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">تغير Claude فجأة: أهم ٦ تحديثات تحتاج إلى معرفتها<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">ستة تحديثات رئيسية لـ Claude حدثت فجأة وتحتاج إلى معرفتها قبل الاستمرار في العمل.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ١٤-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=Of9ylhwSkJE" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ أفضل النماذج المجانية للذكاء الاصطناعي في OpenCode: اختبرت الأبرز (٢٠٢٦)**
+&gt; اختبرت وأقارن بين أفضل النماذج المجانية في OpenCode عام ٢٠٢٦ لتجد المثالي لمهامك.
+https://www.youtube.com/watch?v=WY5-O853Xsg">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=WY5-O853Xsg" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">أفضل النماذج المجانية للذكاء الاصطناعي في OpenCode: اختبرت الأبرز (٢٠٢٦)<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">اختبرت وأقارن بين أفضل النماذج المجانية في OpenCode عام ٢٠٢٦ لتجد المثالي لمهامك.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ١٣-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=WY5-O853Xsg" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Codex مقابل Claude Code في ٢٠٢٦: مقارنة صادقة**
+&gt; مقارنة صادقة بين Codex و Claude Code عام ٢٠٢٦، تبيّن الفرق والقوة في كل منهما.
+https://www.youtube.com/watch?v=NWNF-YnKvww">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=NWNF-YnKvww" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Codex مقابل Claude Code في ٢٠٢٦: مقارنة صادقة<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">مقارنة صادقة بين Codex و Claude Code عام ٢٠٢٦، تبيّن الفرق والقوة في كل منهما.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ١٣-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=NWNF-YnKvww" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ OpenCode ٢.٠: أكبر تحديث على الإطلاق (مجاني ونماذج محلية)**
+&gt; دليل على أهم تحديث في OpenCode ٢.٠، وهو الإطلاق المجاني مع دعم النماذج المحلية.
+https://www.youtube.com/watch?v=OyuId4YQiIs">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=OyuId4YQiIs" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">OpenCode ٢.٠: أكبر تحديث على الإطلاق (مجاني ونماذج محلية)<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">دليل على أهم تحديث في OpenCode ٢.٠، وهو الإطلاق المجاني مع دعم النماذج المحلية.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ٢٢-١٠-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=OyuId4YQiIs" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6a2 2 0 0 1 2-2h7l3 3h6a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="m11 10 4 2.5-4 2.5z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ الدليل التمهيدي لاستخدام Codex**
+&gt; دليل البدء باستخدام Codex خطوة بخطوة، من التثبيت إلى أول مشروع.
+https://www.youtube.com/watch?v=px7XlbYgk7I">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.youtube.com/watch?v=px7XlbYgk7I" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">الدليل التمهيدي لاستخدام Codex<span class="badge badge-video">فيديو</span></h3>
+          </a>
+          <p class="item-summary">دليل البدء باستخدام Codex خطوة بخطوة، من التثبيت إلى أول مشروع.</p>
+          <div class="item-foot">
+            <span class="item-meta">YouTube · ١٢-٠١-٢٠٢٦</span>
+            <a class="item-url" href="https://www.youtube.com/watch?v=px7XlbYgk7I" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Claude Code ساعدني في توفير ١٣٠€ في إصلاح بطارية iPad**
+&gt; كيف ساعدتني Claude Code في إصلح بطارية iPad بخسارة تكلفة قليلة جدًا.
+https://thinkingground.net/writing/claude-code-helped-me-save-130-on-an-ipad-battery-repair">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://thinkingground.net/writing/claude-code-helped-me-save-130-on-an-ipad-battery-repair" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Claude Code ساعدني في توفير ١٣٠€ في إصلاح بطارية iPad</h3>
+          </a>
+          <p class="item-summary">كيف ساعدتني Claude Code في إصلح بطارية iPad بخسارة تكلفة قليلة جدًا.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://thinkingground.net/writing/claude-code-helped-me-save-130-on-an-ipad-battery-repair" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ وضع البرمجة في Claude Code (Code mode)**
+&gt; شرح لوضع Claude Code في وضع البرمجة (Code mode) وإعداده للعمل العملي.
+https://code.claude.com/docs/en/code-mode">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://code.claude.com/docs/en/code-mode" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">وضع البرمجة في Claude Code (Code mode)</h3>
+          </a>
+          <p class="item-summary">شرح لوضع Claude Code في وضع البرمجة (Code mode) وإعداده للعمل العملي.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://code.claude.com/docs/en/code-mode" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Fireface UCX على لينكس: عكست المنطق وبنيت مع Claude Code**
+&gt; عرض لكيفية فك تشفير وكيل Fireface UCX على لينكس ثم بناءه باستخدام Claude Code.
+https://johanyngman.com/fireface-ucx-on-linux-reverse-engineered-and-built-with-claude-code.html">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://johanyngman.com/fireface-ucx-on-linux-reverse-engineered-and-built-with-claude-code.html" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Fireface UCX على لينكس: عكست المنطق وبنيت مع Claude Code</h3>
+          </a>
+          <p class="item-summary">عرض لكيفية فك تشفير وكيل Fireface UCX على لينكس ثم بناءه باستخدام Claude Code.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://johanyngman.com/fireface-ucx-on-linux-reverse-engineered-and-built-with-claude-code.html" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ مآرجعة ذاكرتي للذكاء الاصطناعي مثل mem٠**
+&gt; مآرجعة حول طبقات الذاكرة في الذكاء الاصطناعي ومدى فائدة mem٠ في الحفاظ على السياق.
+https://news.ycombinator.com/item?id=50505744">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.ycombinator.com/item?id=50505744" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">مآرجعة ذاكرتي للذكاء الاصطناعي مثل mem٠</h3>
+          </a>
+          <p class="item-summary">مآرجعة حول طبقات الذاكرة في الذكاء الاصطناعي ومدى فائدة mem٠ في الحفاظ على السياق.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://news.ycombinator.com/item?id=50505744" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Codex يعلن عن إيقاف وضع الخطة (Plan mode)**
+&gt; دخول Codex إلى وضع الخطة، وهو تعديل كبير في سير العمل التطويري.
+https://github.com/openai/codex/issues/18490#issuecomment-6890525683">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://github.com/openai/codex/issues/18490#issuecomment-6890525683" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Codex يعلن عن إيقاف وضع الخطة (Plan mode)</h3>
+          </a>
+          <p class="item-summary">دخول Codex إلى وضع الخطة، وهو تعديل كبير في سير العمل التطويري.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://github.com/openai/codex/issues/18490#issuecomment-6890525683" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ هل يمكن بناء VPN decentralised؟ أعتقد أنه الأنسب للمشاريع المنزلية**
+&gt; مناقشة مفاهيم الشبكات الافتراضية الخاصة decentralised وكيفية استخدامها في المشاريع المنزلية.
+https://github.com/CLoaKY233/kith">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://github.com/CLoaKY233/kith" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">هل يمكن بناء VPN decentralised؟ أعتقد أنه الأنسب للمشاريع المنزلية</h3>
+          </a>
+          <p class="item-summary">مناقشة مفاهيم الشبكات الافتراضية الخاصة decentralised وكيفية استخدامها في المشاريع المنزلية.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://github.com/CLoaKY233/kith" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Saylark – الكتابة الصوتية المجانية للمكتب Mac**
+&gt; أداة حركة صوتية مجانية مفتوحة المصدر للمكتب، تشبه Wispr Flow.
+https://github.com/btahir/saylark">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://github.com/btahir/saylark" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Saylark – الكتابة الصوتية المجانية للمكتب Mac</h3>
+          </a>
+          <p class="item-summary">أداة حركة صوتية مجانية مفتوحة المصدر للمكتب، تشبه Wispr Flow.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://github.com/btahir/saylark" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Cshoal – مدرسة من الأسماك المفترسة في طرف الطرفية**
+&gt; مثير تفاعلي لطرفية توهمك بأسماك تسبح في المحيط.
+https://github.com/mcthomas/cshoal">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://github.com/mcthomas/cshoal" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Cshoal – مدرسة من الأسماك المفترسة في طرف الطرفية</h3>
+          </a>
+          <p class="item-summary">مثير تفاعلي لطرفية توهمك بأسماك تسبح في المحيط.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://github.com/mcthomas/cshoal" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Anthropic، هل يمكنك التوقف عن الارتباك مع نماذجك؟**
+&gt; نقاش بين مطورين حول شكوكهم من التنقل بين النماذج في Anthropic.
+https://news.ycombinator.com/item?id=50504061">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.ycombinator.com/item?id=50504061" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Anthropic، هل يمكنك التوقف عن الارتباك مع نماذجك؟</h3>
+          </a>
+          <p class="item-summary">نقاش بين مطورين حول شكوكهم من التنقل بين النماذج في Anthropic.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://news.ycombinator.com/item?id=50504061" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ اختبار A/B: هل السياق المسبق يحسن أداء وكلاء البرمجة؟**
+&gt; تجربة مقارنة لمعرفة مدى فائدة السياق المسبق في مساعدة وكلاء البرمجة على إكمال المهام.
+https://github.com/unblocked/context-engine-simulator">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://github.com/unblocked/context-engine-simulator" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">اختبار A/B: هل السياق المسبق يحسن أداء وكلاء البرمجة؟</h3>
+          </a>
+          <p class="item-summary">تجربة مقارنة لمعرفة مدى فائدة السياق المسبق في مساعدة وكلاء البرمجة على إكمال المهام.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://github.com/unblocked/context-engine-simulator" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ هل التدريب الثانوي يجعل نماذج الذكاء الاصطناعي أبطأ؟**
+&gt; نقاش حول تأثير التدريب الإضافي على قدرات النماذج اللغوية، وهل يقلصها فعليًا أم لا.
+https://news.ycombinator.com/item?id=50502344">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://news.ycombinator.com/item?id=50502344" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">هل التدريب الثانوي يجعل نماذج الذكاء الاصطناعي أبطأ؟</h3>
+          </a>
+          <p class="item-summary">نقاش حول تأثير التدريب الإضافي على قدرات النماذج اللغوية، وهل يقلصها فعليًا أم لا.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٤-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://news.ycombinator.com/item?id=50502344" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ شاهد وألغِ صلاحيات وكلاء البرمجة الذكاء الاصطناعي**
+&gt; دليل لمراجعة وتعطيل الصلاحيات التي يمنحها وكيلك للبرمجة الذكية.
+https://github.com/dirmedmr-alt/ai-access-auditor">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://github.com/dirmedmr-alt/ai-access-auditor" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">شاهد وألغِ صلاحيات وكلاء البرمجة الذكاء الاصطناعي</h3>
+          </a>
+          <p class="item-summary">دليل لمراجعة وتعطيل الصلاحيات التي يمنحها وكيلك للبرمجة الذكية.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٤-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://github.com/dirmedmr-alt/ai-access-auditor" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Coppice – تطبيق سطح مكتب محلي لبرمجة الوكلاء المتعددة**
+&gt; أداة سطح مكتب محلية لتشغيل وكلاء برمجة متعددة في وقت واحد، كل واحد على حده.
+https://github.com/fertile-org/coppice">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://github.com/fertile-org/coppice" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Coppice – تطبيق سطح مكتب محلي لبرمجة الوكلاء المتعددة</h3>
+          </a>
+          <p class="item-summary">أداة سطح مكتب محلية لتشغيل وكلاء برمجة متعددة في وقت واحد، كل واحد على حده.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٤-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://github.com/fertile-org/coppice" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ YVD – أنشئ مقاطع فيديو وصورة وصوت في ثوانٍ مع الذكاء الاصطناعي**
+&gt; أداة توليد وسائط متعددة سريعة تعمل بالذكاء الاصطناعي، تولد مقاطع وصور وموسيقى في ثوانٍ.
+https://yvd.io/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://yvd.io/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">YVD – أنشئ مقاطع فيديو وصورة وصوت في ثوانٍ مع الذكاء الاصطناعي</h3>
+          </a>
+          <p class="item-summary">أداة توليد وسائط متعددة سريعة تعمل بالذكاء الاصطناعي، تولد مقاطع وصور وموسيقى في ثوانٍ.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٤-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://yvd.io/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ CodeRelay – اجعل وكيل البرمجة يوزع العمل على وكيل آخر**
+&gt; أداة تتيح لوكيل البرمجة تفويض المهام للوكلاء الآخرين بالشكل ذاته.
+https://github.com/AymanAhsan/CodeRelay">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://github.com/AymanAhsan/CodeRelay" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">CodeRelay – اجعل وكيل البرمجة يوزع العمل على وكيل آخر</h3>
+          </a>
+          <p class="item-summary">أداة تتيح لوكيل البرمجة تفويض المهام للوكلاء الآخرين بالشكل ذاته.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٤-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://github.com/AymanAhsan/CodeRelay" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ SlopCodeBench: مقارنة مدى تدهور كفاءة وكلاء البرمجة في المهام الطويلة**
+&gt; دليل مقارنة لمدى تدهور كفاءة وكلاء البرمجة في المهام الطويلة والمستمرة.
+https://arxiv.org/abs/2603.24755">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://arxiv.org/abs/2603.24755" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">SlopCodeBench: مقارنة مدى تدهور كفاءة وكلاء البرمجة في المهام الطويلة</h3>
+          </a>
+          <p class="item-summary">دليل مقارنة لمدى تدهور كفاءة وكلاء البرمجة في المهام الطويلة والمستمرة.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٤-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://arxiv.org/abs/2603.24755" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-شروح-ودورات">
+      <h2 class="cat-title">ــ 🎓 شروح ودورات <span class="cat-count">١</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Scatter – طريقة أفضل للتعلم بالذكاء الاصطناعي**
+&gt; أداة تعلم تفاعلية تعتمد على الذكاء الاصطناعي لتعلم الأشياء بكفاءة.
+https://www.scatter.study/">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://www.scatter.study/" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Scatter – طريقة أفضل للتعلم بالذكاء الاصطناعي</h3>
+          </a>
+          <p class="item-summary">أداة تعلم تفاعلية تعتمد على الذكاء الاصطناعي لتعلم الأشياء بكفاءة.</p>
+          <div class="item-foot">
+            <span class="item-meta">Hacker News · ١٤-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://www.scatter.study/" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-مصادر-مجانية">
+      <h2 class="cat-title">ــ 🆓 مصادر مجانية <span class="cat-count">١٦</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ النماذج المجانية في OpenCode**
+&gt; قائمة بالنماذج المجانية المتوفرة في OpenCode: GLM-٥.٣-Flash Free، DeepSeek V٤.١ Flash Free، Exo،Nemotron ٣ Ultra Free، Nemotron ٣.٥ Lightning Free، Big Pickle، Space Bunny Free، Cat Jam Free، LL Alpha Free، LongCat ٢.٥ Preview Free، Muse Spark ١.٣ Contributor Free، Jev ١.١٣ Free.
+https://x.com/Smlay_ero/status/2110990412186059239">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/Smlay_ero/status/2110990412186059239" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">النماذج المجانية في OpenCode</h3>
+          </a>
+          <p class="item-summary">قائمة بالنماذج المجانية المتوفرة في OpenCode: GLM-٥.٣-Flash Free، DeepSeek V٤.١ Flash Free، Exo،Nemotron ٣ Ultra Free، Nemotron ٣.٥ Lightning Free، Big Pickle، Space Bunny Free، Cat Jam Free، LL Alpha Free، LongCat ٢.٥ Preview Free، Muse Spark ١.٣ Contributor Free، Jev ١.١٣ Free.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/Smlay_ero/status/2110990412186059239" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ النماذج والائتمانات المجانية للذكاء الاصطناعي**
+&gt; قائمة بأهم المنتجات المجانية والائتمانات: kilocode، opencode، OpenRouter يدوران على نماذج مجانية باستمرار.
+https://x.com/konig0000/status/2099112015239528503">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/konig0000/status/2099112015239528503" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">النماذج والائتمانات المجانية للذكاء الاصطناعي</h3>
+          </a>
+          <p class="item-summary">قائمة بأهم المنتجات المجانية والائتمانات: kilocode، opencode، OpenRouter يدوران على نماذج مجانية باستمرار.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/konig0000/status/2099112015239528503" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ أهم ١٠ نماذج ذكاء اصطناعي مجانية**
+&gt; أول عشر نماذج ذكاء اصطناعي مجانية: DeepSeek V٤.١ Flash، GLM ٥.٣ Flash، Kimi K٣، Gemini ٣.٨ Flash، Qwen ٣.٨ Max، MiniMax M٣.١ Flash، Nemotron ٣ Ultra، Nemotron ٣.٥ Super VL، Inkling، Flint ٤٠B.
+https://x.com/pengsonal/status/2116780799823388730">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/pengsonal/status/2116780799823388730" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">أهم ١٠ نماذج ذكاء اصطناعي مجانية</h3>
+          </a>
+          <p class="item-summary">أول عشر نماذج ذكاء اصطناعي مجانية: DeepSeek V٤.١ Flash، GLM ٥.٣ Flash، Kimi K٣، Gemini ٣.٨ Flash، Qwen ٣.٨ Max، MiniMax M٣.١ Flash، Nemotron ٣ Ultra، Nemotron ٣.٥ Super VL، Inkling، Flint ٤٠B.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/pengsonal/status/2116780799823388730" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ النماذج المجانية للذكاء الاصطناعي في OpenCode**
+&gt; النماذج المجانية المباشرة في OpenCode: DeepSeek V٤.١ Flash، Muse Spark ١.٣ Contributor، GLM-٥.٣-Flash، Solar Pro ٤، Laguna S ٢.١.
+https://x.com/pengsonal/status/2112229412733403286">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/pengsonal/status/2112229412733403286" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">النماذج المجانية للذكاء الاصطناعي في OpenCode</h3>
+          </a>
+          <p class="item-summary">النماذج المجانية المباشرة في OpenCode: DeepSeek V٤.١ Flash، Muse Spark ١.٣ Contributor، GLM-٥.٣-Flash، Solar Pro ٤، Laguna S ٢.١.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/pengsonal/status/2112229412733403286" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ AIHubMix ٣٨ نموذج ذكاء اصطناعي مجاني**
+&gt; تقدم AIHubMix ٣٨ نموذج ذكاء اصطناعي مجاني عبر API واحد متوافق مع OpenAI للتجريب والتطوير.
+https://x.com/AiHubMix/status/2082449796644970501">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/AiHubMix/status/2082449796644970501" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">AIHubMix ٣٨ نموذج ذكاء اصطناعي مجاني</h3>
+          </a>
+          <p class="item-summary">تقدم AIHubMix ٣٨ نموذج ذكاء اصطناعي مجاني عبر API واحد متوافق مع OpenAI للتجريب والتطوير.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/AiHubMix/status/2082449796644970501" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ أفضل أدوات الذكاء الاصطناعي المجانية في ٢٠٢٦**
+&gt; أفضل الأدوات المجانية: ChatGPT، Cursor الخطة المجانية، ElevenLabs TTS، NotebookLM، وVim.
+https://x.com/rubenhassid/article/2091406808636326330">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/rubenhassid/article/2091406808636326330" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">أفضل أدوات الذكاء الاصطناعي المجانية في ٢٠٢٦</h3>
+          </a>
+          <p class="item-summary">أفضل الأدوات المجانية: ChatGPT، Cursor الخطة المجانية، ElevenLabs TTS، NotebookLM، وVim.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/rubenhassid/article/2091406808636326330" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ إضافات جديدة لمنصات الذكاء الاصطناعي المجانية**
+&gt; أدوات مجانية جديدة: ADCode، AiSpace بدون مفتاح، WorkBuddy، OpenCode، BeatAPI، IteraCompute، Intern Discovery، Dolphin API.
+https://x.com/calbuldelis69/status/2112239888724808067">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/calbuldelis69/status/2112239888724808067" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">إضافات جديدة لمنصات الذكاء الاصطناعي المجانية</h3>
+          </a>
+          <p class="item-summary">أدوات مجانية جديدة: ADCode، AiSpace بدون مفتاح، WorkBuddy، OpenCode، BeatAPI، IteraCompute، Intern Discovery، Dolphin API.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/calbuldelis69/status/2112239888724808067" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ موفّر واجهات برمجة الذكاء الاصطناعي المجانية**
+&gt; موفّر واجهة برمجة مجانية لذكاء اصطناعي مع Claude Opus ٤.٨ وClaude Opus ٥، متوافق مع OpenAI.
+https://x.com/calbuldelis69/status/2093268521002365047">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/calbuldelis69/status/2093268521002365047" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">موفّر واجهات برمجة الذكاء الاصطناعي المجانية</h3>
+          </a>
+          <p class="item-summary">موفّر واجهة برمجة مجانية لذكاء اصطناعي مع Claude Opus ٤.٨ وClaude Opus ٥، متوافق مع OpenAI.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/calbuldelis69/status/2093268521002365047" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ كيف تحصل على مفتاح API مجاني لـ DeepSeek**
+&gt; دليل لشراء مفتاح DeepSeek V٤.١ Flash مجاني عبر Token Harbor، بطاقات ١M، وواجهة Python متوافقة مع OpenAI.
+https://x.com/JulianGoldieSEO/article/2100290562347991255">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/JulianGoldieSEO/article/2100290562347991255" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">كيف تحصل على مفتاح API مجاني لـ DeepSeek</h3>
+          </a>
+          <p class="item-summary">دليل لشراء مفتاح DeepSeek V٤.١ Flash مجاني عبر Token Harbor، بطاقات ١M، وواجهة Python متوافقة مع OpenAI.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/JulianGoldieSEO/article/2100290562347991255" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ GLM ٥.٣ Flash مجاني في OpenCode**
+&gt; أضافت OpenCode نموذج GLM ٥.٣ Flash مجاني، لذا يمكنك البرمجة بالذكاء الاصطناعي دون شراء أي شيء.
+https://x.com/JulianGoldieSEO/status/2111783082927726604">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/JulianGoldieSEO/status/2111783082927726604" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">GLM ٥.٣ Flash مجاني في OpenCode</h3>
+          </a>
+          <p class="item-summary">أضافت OpenCode نموذج GLM ٥.٣ Flash مجاني، لذا يمكنك البرمجة بالذكاء الاصطناعي دون شراء أي شيء.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/JulianGoldieSEO/status/2111783082927726604" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ كيمي K٣: رامي لاشتراك مجاني**
+&gt; كيمي K٣: رامي لاشتراك مجاني، ف PROFITS ٩٠% في ٣ أيام (٥ دولارات) وحتى عام كامل، صالح حتى ٣١ ديسمبر ٢٠٢٦.
+https://x.com/StudentOffersHQ/status/2077937330976137672">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/StudentOffersHQ/status/2077937330976137672" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">كيمي K٣: رامي لاشتراك مجاني</h3>
+          </a>
+          <p class="item-summary">كيمي K٣: رامي لاشتراك مجاني، ف PROFITS ٩٠% في ٣ أيام (٥ دولارات) وحتى عام كامل، صالح حتى ٣١ ديسمبر ٢٠٢٦.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/StudentOffersHQ/status/2077937330976137672" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ $٥٠ ائتمان مجاني مع كيمي K٣ و DeepSeek**
+&gt; $٥٠ إتاحة بلا بطاقة مدفوعة (برنامج مترجم لشركة AMD): DeepSeek V٤ Flash ٠٧٣١، Kimi K٣، Qwen ٣.٨ Max، GLM ٥.٢.
+https://x.com/StudentOffersHQ/status/2087725686618460424">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/StudentOffersHQ/status/2087725686618460424" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">$٥٠ ائتمان مجاني مع كيمي K٣ و DeepSeek</h3>
+          </a>
+          <p class="item-summary">$٥٠ إتاحة بلا بطاقة مدفوعة (برنامج مترجم لشركة AMD): DeepSeek V٤ Flash ٠٧٣١، Kimi K٣، Qwen ٣.٨ Max، GLM ٥.٢.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/StudentOffersHQ/status/2087725686618460424" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Minimax H٣ Max مجاني على fal**
+&gt; دعم مجاني لـ MiniMax H٣ Max على fal، صيغة النص والصورة، ١٥ توليدًا يومياً للمستخدمين الجدد.
+https://x.com/BlendiByl/status/2093484900775317763">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/BlendiByl/status/2093484900775317763" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Minimax H٣ Max مجاني على fal</h3>
+          </a>
+          <p class="item-summary">دعم مجاني لـ MiniMax H٣ Max على fal، صيغة النص والصورة، ١٥ توليدًا يومياً للمستخدمين الجدد.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/BlendiByl/status/2093484900775317763" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ Minimax M٣ مجاني داخل OpenCode**
+&gt; تطلق GMI Cloud نموذج Minimax M٣ و M٢.٧ مجاناً داخل OpenCode، مع عروض ١٤ يوماً مجانية.
+https://x.com/gmi_cloud/status/2092685059761594416">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/gmi_cloud/status/2092685059761594416" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">Minimax M٣ مجاني داخل OpenCode</h3>
+          </a>
+          <p class="item-summary">تطلق GMI Cloud نموذج Minimax M٣ و M٢.٧ مجاناً داخل OpenCode، مع عروض ١٤ يوماً مجانية.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/gmi_cloud/status/2092685059761594416" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ GPT-٥.٦ Sol و Opus ٥ مجاناً بسرف مجاني**
+&gt; عبر gateway Forge، ائتمان API بقيمة ٦٠ دولاراً بدون بطاقة ائتمانية: مفتاح واحد لـ GPT-٥.٦ Sol، Opus ٥، Kimi K٣، GLM ٥.٢.
+https://x.com/FareaNFts/status/2080999195071361174">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/FareaNFts/status/2080999195071361174" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">GPT-٥.٦ Sol و Opus ٥ مجاناً بسرف مجاني</h3>
+          </a>
+          <p class="item-summary">عبر gateway Forge، ائتمان API بقيمة ٦٠ دولاراً بدون بطاقة ائتمانية: مفتاح واحد لـ GPT-٥.٦ Sol، Opus ٥، Kimi K٣، GLM ٥.٢.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/FareaNFts/status/2080999195071361174" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ مُجاني مشغّل Claude Code توجد في مشروع مفتوح المصدر**
+&gt; مشروع مفتوح المصدر يسمح بتشغيل Claude Code و Codex بأدوات مجانية متعددة، مشروع MIT، غير مرتبط بـ Anthropic.
+https://x.com/RoundtableSpace/status/2121003856280657921">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/RoundtableSpace/status/2121003856280657921" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">مُجاني مشغّل Claude Code توجد في مشروع مفتوح المصدر</h3>
+          </a>
+          <p class="item-summary">مشروع مفتوح المصدر يسمح بتشغيل Claude Code و Codex بأدوات مجانية متعددة، مشروع MIT، غير مرتبط بـ Anthropic.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/RoundtableSpace/status/2121003856280657921" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="cat" id="cat-تحليلات-ونقد">
+      <h2 class="cat-title">ــ 🧭 تحليلات ونقد <span class="cat-count">٤</span></h2>
+      <ul class="items">
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ نموذج GLM غير مقيد مجاني**
+&gt; نموذج GLM ٥.٣ Flash غير مقيد، مجاني بدون بطاقة ائتمانية، متاح على Windows وLinux، ودعم macOS قادم قريبًا.
+https://x.com/RealMarvelX/status/2112443848987136013">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/RealMarvelX/status/2112443848987136013" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">نموذج GLM غير مقيد مجاني</h3>
+          </a>
+          <p class="item-summary">نموذج GLM ٥.٣ Flash غير مقيد، مجاني بدون بطاقة ائتمانية، متاح على Windows وLinux، ودعم macOS قادم قريبًا.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/RealMarvelX/status/2112443848987136013" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ GLM ٥.٣ غير المقيد مجاني**
+&gt; أضاف Silen Naihin نموذج GLM ٥.٣ غير المقيد، وهو الأكثر تقدمًا في السوق، مجاني لفترة محدودة: ١.٠٥M token إدخال، ٦٠ token/s.
+https://x.com/silennai/status/2113761839691505955">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/silennai/status/2113761839691505955" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">GLM ٥.٣ غير المقيد مجاني</h3>
+          </a>
+          <p class="item-summary">أضاف Silen Naihin نموذج GLM ٥.٣ غير المقيد، وهو الأكثر تقدمًا في السوق، مجاني لفترة محدودة: ١.٠٥M token إدخال، ٦٠ token/s.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/silennai/status/2113761839691505955" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ GLM ٥.٣ Flash غير المقيد مجاني**
+&gt; نموذج GLM ٥.٣ Flash غير المقيد، مع ~١٣M token/دقيقة، وسرعة ٣٦٠ TPS، لمهام الأمان السيبراني والبرمجة.
+https://x.com/silennai/status/2106181157696270673">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/silennai/status/2106181157696270673" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">GLM ٥.٣ Flash غير المقيد مجاني</h3>
+          </a>
+          <p class="item-summary">نموذج GLM ٥.٣ Flash غير المقيد، مع ~١٣M token/دقيقة، وسرعة ٣٦٠ TPS، لمهام الأمان السيبراني والبرمجة.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/silennai/status/2106181157696270673" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+        <li class="item">
+<span class="item-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+          <button class="copy-btn" type="button" aria-label="انسخ الخبر"
+                  data-copy="**ــ ٣٧ طريقة لاستخدام الذكاء الاصطناعي غير المقيد**
+&gt; دليل لاستخدام الذكاء الاصطناعي غير المقيد والذو قيود أقل، دون تشغيل النماذج محلياً: مواقع دردشة مجانية، وAPI، ونماذج مجانية.
+https://x.com/pengsonal/status/2119832354512576871">
+            <svg class="ic-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+            <svg class="ic-done" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </button>
+          <a class="item-link" href="https://x.com/pengsonal/status/2119832354512576871" target="_blank" rel="noopener noreferrer">
+            <h3 class="item-title">٣٧ طريقة لاستخدام الذكاء الاصطناعي غير المقيد</h3>
+          </a>
+          <p class="item-summary">دليل لاستخدام الذكاء الاصطناعي غير المقيد والذو قيود أقل، دون تشغيل النماذج محلياً: مواقع دردشة مجانية، وAPI، ونماذج مجانية.</p>
+          <div class="item-foot">
+            <span class="item-meta">twitter-keyword · ١٥-١١-٢٠٢٦</span>
+            <a class="item-url" href="https://x.com/pengsonal/status/2119832354512576871" target="_blank" rel="noopener noreferrer">
+              فتح الرابط
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+              </svg>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <section class="archive" aria-labelledby="arc-h">
+    <h2 id="arc-h">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+      </svg>
+      الأرشيف
+    </h2>
+    <div class="arc-list">
+      <a class="arc-item is-current" href="./AI-News_15-11-2026.html"><span class="arc-date">الأحد ١٥ نوفمبر ٢٠٢٦</span><span class="arc-count">٤٤ خبر</span></a>
+      <a class="arc-item" href="./AI-News_14-11-2026.html"><span class="arc-date">السبت ١٤ نوفمبر ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_13-11-2026.html"><span class="arc-date">الجمعة ١٣ نوفمبر ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_12-11-2026.html"><span class="arc-date">الخميس ١٢ نوفمبر ٢٠٢٦</span><span class="arc-count">٤١ خبر</span></a>
+      <a class="arc-item" href="./AI-News_09-11-2026.html"><span class="arc-date">الاثنين ٩ نوفمبر ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_08-11-2026.html"><span class="arc-date">الأحد ٨ نوفمبر ٢٠٢٦</span><span class="arc-count">٢٧ خبر</span></a>
+      <a class="arc-item" href="./AI-News_02-11-2026.html"><span class="arc-date">الاثنين ٢ نوفمبر ٢٠٢٦</span><span class="arc-count">٣٩ خبر</span></a>
+      <a class="arc-item" href="./AI-News_01-11-2026.html"><span class="arc-date">الأحد ١ نوفمبر ٢٠٢٦</span><span class="arc-count">٤٤ خبر</span></a>
+      <a class="arc-item" href="./AI-News_30-10-2026.html"><span class="arc-date">الجمعة ٣٠ أكتوبر ٢٠٢٦</span><span class="arc-count">٤٤ خبر</span></a>
+      <a class="arc-item" href="./AI-News_29-10-2026.html"><span class="arc-date">الخميس ٢٩ أكتوبر ٢٠٢٦</span><span class="arc-count">٥٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_27-10-2026.html"><span class="arc-date">الثلاثاء ٢٧ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٥ خبر</span></a>
+      <a class="arc-item" href="./AI-News_26-10-2026.html"><span class="arc-date">الاثنين ٢٦ أكتوبر ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_23-10-2026.html"><span class="arc-date">الجمعة ٢٣ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٧ خبر</span></a>
+      <a class="arc-item" href="./AI-News_22-10-2026.html"><span class="arc-date">الخميس ٢٢ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٢ خبر</span></a>
+      <a class="arc-item" href="./AI-News_13-10-2026.html"><span class="arc-date">الثلاثاء ١٣ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٢ خبر</span></a>
+      <a class="arc-item" href="./AI-News_12-10-2026.html"><span class="arc-date">الاثنين ١٢ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_11-10-2026.html"><span class="arc-date">الأحد ١١ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٨ خبر</span></a>
+      <a class="arc-item" href="./AI-News_10-10-2026.html"><span class="arc-date">السبت ١٠ أكتوبر ٢٠٢٦</span><span class="arc-count">٣٠ خبر</span></a>
+      <a class="arc-item" href="./AI-News_09-10-2026.html"><span class="arc-date">الجمعة ٩ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٥ خبر</span></a>
+      <a class="arc-item" href="./AI-News_08-10-2026.html"><span class="arc-date">الخميس ٨ أكتوبر ٢٠٢٦</span><span class="arc-count">٤٩ خبر</span></a>
+      <a class="arc-item" href="./AI-News_05-10-2026.html"><span class="arc-date">الاثنين ٥ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_04-10-2026.html"><span class="arc-date">الأحد ٤ أكتوبر ٢٠٢٦</span><span class="arc-count">٢٨ خبر</span></a>
+      <a class="arc-item" href="./AI-News_27-09-2026.html"><span class="arc-date">الأحد ٢٧ سبتمبر ٢٠٢٦</span><span class="arc-count">١٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_23-09-2026.html"><span class="arc-date">الأربعاء ٢٣ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٢ خبر</span></a>
+      <a class="arc-item" href="./AI-News_22-09-2026.html"><span class="arc-date">الثلاثاء ٢٢ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٨ خبر</span></a>
+      <a class="arc-item" href="./AI-News_21-09-2026.html"><span class="arc-date">الاثنين ٢١ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٢ خبر</span></a>
+      <a class="arc-item" href="./AI-News_18-09-2026.html"><span class="arc-date">الجمعة ١٨ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٥ خبر</span></a>
+      <a class="arc-item" href="./AI-News_17-09-2026.html"><span class="arc-date">الخميس ١٧ سبتمبر ٢٠٢٦</span><span class="arc-count">٣٣ خبر</span></a>
+      <a class="arc-item" href="./AI-News_10-09-2026.html"><span class="arc-date">الخميس ١٠ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٧ خبر</span></a>
+      <a class="arc-item" href="./AI-News_09-09-2026.html"><span class="arc-date">الأربعاء ٩ سبتمبر ٢٠٢٦</span><span class="arc-count">٢٤ خبر</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>تُحدَّث النشرة يومياً · حقوق المحتوى متاحة للجميع</p>
+    <p><a href="./archive.html">أرشيف النشرات السابقة</a> · <a href="./index.html">أحدث عدد</a></p>
+  </footer>
+
+</div>
+<button class="to-top" type="button" id="toTop" aria-label="العودة إلى الأعلى">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+       stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+<div class="toast" id="toast" role="status" aria-live="polite">نُسخ الخبر</div>
+<script>
+(function () {
+  var toast = document.getElementById('toast');
+  var timer = null;
+
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.classList.remove('show'); }, 1900);
+  }
+
+  function legacyCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.cssText = 'position:fixed;top:-9999px;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.copy-btn');
+    if (!btn) return;
+    var text = btn.getAttribute('data-copy') || '';
+
+    function done(ok) {
+      if (!ok) { showToast('تعذّر النسخ'); return; }
+      btn.classList.add('is-copied');
+      showToast('نُسخ الخبر');
+      setTimeout(function () { btn.classList.remove('is-copied'); }, 1900);
+    }
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(
+        function () { done(true); },
+        function () { done(legacyCopy(text)); }
+      );
+    } else {
+      done(legacyCopy(text));
+    }
+  });
+})();
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(function () {});
+}
+
+/* ── Reading progress + back to top ─────── */
+(function () {
+  var fill = document.getElementById('progressFill');
+  var top = document.getElementById('toTop');
+  var ticking = false;
+
+  function update() {
+    var d = document.documentElement;
+    var max = d.scrollHeight - window.innerHeight;
+    var y = window.scrollY || d.scrollTop || 0;
+    var pct = max > 0 ? (y / max) * 100 : 0;
+    if (pct < 0) pct = 0;
+    if (pct > 100) pct = 100;
+    fill.style.transform = 'scaleX(' + (pct / 100) + ')';
+    if (y > 400) { top.classList.add('show'); } else { top.classList.remove('show'); }
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+
+  top.addEventListener('click', function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+})();
+
+/* ── Corporate professional mode ────────── */
+(function () {
+  var btn = document.getElementById('corpToggle');
+  var label = document.getElementById('corpLabel');
+  var KEY = 'vibe-news-corp';
+
+  function apply(on) {
+    document.body.classList.toggle('corp', on);
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    label.textContent = on ? 'النمط التحريري' : 'النمط المؤسسي';
+    try { sessionStorage.setItem(KEY, on ? '1' : '0'); } catch (e) {}
+  }
+
+  var saved = '0';
+  try { saved = sessionStorage.getItem(KEY) || '0'; } catch (e) {}
+  apply(saved === '1');
+
+  btn.addEventListener('click', function () {
+    apply(!document.body.classList.contains('corp'));
+  });
+})();
+</script>
+</body>
+</html>
